@@ -154,7 +154,8 @@ function afficher() {
 
   const avecChanson = visibles.filter(aUneChanson).length;
   compteur.textContent =
-    `${visibles.length} points de grammaire · ${avecChanson} illustrés par Aimyon`;
+    `${visibles.length} point${visibles.length > 1 ? "s" : ""} de grammaire · ` +
+    `${avecChanson} illustré${avecChanson > 1 ? "s" : ""} par Aimyon`;
 }
 
 // Crée un bouton de filtre
