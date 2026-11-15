@@ -44,7 +44,7 @@ point("N3", "〜くせに", "« Alors que… pourtant » : reproche ou mépris."
   aimyon("僕[ぼく]のことなんも知[し]らない{くせに}ふざけんな",
     "Tu ne sais rien de moi, alors ne te fiche pas de moi.", "風のささやき", null,
     "知らないくせに = « alors que tu ne sais rien » (reproche). ふざけんな = ふざけるな, interdiction brutale."));
-point("N3", "〜もの / 〜もん", "En fin de phrase : justification familière, un peu enfantine (« parce que, bon… »).",
+point("N3", "〜もの / 〜もん", "En fin de phrase : insistance ou explication familière, perçue comme féminine. もん en est la forme relâchée.",
   modele("だって、知[し]らなかったんだ{もん}。", "Mais enfin, je ne savais pas, moi."),
   aimyon("目[め]を閉[と]じているんだ{もの}",
     "Forcément : tu as les yeux fermés.", "ハッピー", null,
@@ -56,7 +56,7 @@ point("N3", "〜かな", "Se demander à soi-même : « je me demande si… »."
   aimyon("出会[であ]うことは可能[かのう]なの{かな}",
     "Je me demande s'il est possible qu'on se rencontre.", "猫", null,
     "なのかな : on s'interroge à voix haute."));
-point("N3", "〜って (thème)", "Forme orale de は ou というのは : « … , tu sais, … ».",
+point("N3", "〜って (thème)", "Forme orale de というのは : reprend ce dont on parle, avec une légère exclamation.",
   modele("東京[とうきょう]{って}、人[ひと]が多[おお]いですね。", "Tokyo, il y a du monde, hein."));
 point("N3", "まるで〜ようだ", "« Exactement comme si… ».",
   modele("{まるで}夢[ゆめ]{のようです}。", "C'est tout à fait comme un rêve."),
@@ -102,7 +102,7 @@ point("N3", "〜べきだ", "« Il faudrait », « on devrait » (devoir moral).
     "伝える + べき = « devoir dire »."));
 point("N3", "〜ことだ", "Conseil appuyé : « ce qu'il faut, c'est… ».",
   modele("上手[じょうず]になりたければ、毎日[まいにち]練習[れんしゅう]{することだ}。", "Si tu veux progresser, il faut t'entraîner tous les jours."));
-point("N3", "〜ものだ", "Vérité générale (« c'est dans l'ordre des choses »), ou souvenir avec 〜たものだ (« autrefois, je… »).",
+point("N3", "〜ものだ", "Présente quelque chose comme admis de tous ; avec 〜たものだ, évoque un souvenir (« autrefois, je… »).",
   modele("子供[こども]のころ、よくこの川[かわ]で{泳[およ]いだものだ}。", "Enfant, je nageais souvent dans cette rivière."));
 point("N3", "〜ことはない", "« Il n'y a pas lieu de… », « pas la peine de… ».",
   modele("心配[しんぱい]する{ことはありません}。", "Il n'y a pas de quoi s'inquiéter."));
@@ -126,7 +126,7 @@ point("N3", "〜てたまらない / 〜てしょうがない", "Sentiment irré
 // --- Habitude, effort, tentative ---
 point("N3", "〜ようにする", "« Faire en sorte de… », « s'efforcer de… ».",
   modele("毎日[まいにち]野菜[やさい]を{食[た]べるようにしています}。", "Je m'efforce de manger des légumes tous les jours."));
-point("N3", "〜ようとする", "« Essayer de… », « être sur le point de… ».",
+point("N3", "〜ようとする", "Volitif + とする : « essayer de… », « tenter de… ».",
   modele("{出[で]かけようとした}とき、電話[でんわ]が鳴[な]りました。", "Au moment où j'allais sortir, le téléphone a sonné."),
   aimyon("震[ふる]えて 何[なに]か{言[い]おうとしていた}",
     "…tremblait, comme pour dire quelque chose.", "あのね", null,
@@ -137,9 +137,9 @@ point("N3", "〜ことになっている", "Règle établie : « il est prévu /
   modele("ここでは靴[くつ]を{脱[ぬ]ぐことになっています}。", "Ici, on est censé enlever ses chaussures."));
 
 // --- Temps et moment ---
-point("N3", "〜たばかり", "« Venir tout juste de… » (ressenti subjectif).",
+point("N3", "〜たばかり", "« Venir tout juste de… ».",
   modele("日本[にほん]に{来[き]たばかり}です。", "Je viens tout juste d'arriver au Japon."));
-point("N3", "〜うちに", "« Pendant que (c'est encore possible) », ou « à mesure que, sans s'en rendre compte ».",
+point("N3", "〜うちに", "« Pendant que… », « avant que cela ne change » : tant qu'un état dure encore.",
   modele("{熱[あつ]いうちに}食[た]べてください。", "Mangez pendant que c'est chaud."),
   aimyon("{近[ちか]いうちに}愛[あい]されるかな私[わたし]、私[わたし]",
     "Est-ce qu'on m'aimera bientôt, moi ?", "マトリョーシカ", null,
@@ -180,7 +180,7 @@ point("N3", "〜によると", "« D'après… », « selon (une source) ».",
   modele("天気予報[てんきよほう]{によると}、明日[あした]は雨[あめ]だそうです。", "D'après la météo, il pleuvra demain."));
 point("N3", "〜について / 〜に関して", "« Au sujet de… ». に関して est plus formel.",
   modele("日本[にほん]の文化[ぶんか]{について}調[しら]べています。", "Je fais des recherches sur la culture japonaise."));
-point("N3", "〜に対して", "« Envers », « à l'égard de » ; ou « par contraste avec ».",
+point("N3", "〜に対して", "« Envers », « à l'égard de », « face à ».",
   modele("お客[きゃく]さん{に対[たい]して}失礼[しつれい]なことを言[い]ってはいけません。", "Il ne faut pas dire de choses impolies aux clients."));
 point("N3", "〜にとって", "« Pour (quelqu'un) », « du point de vue de… ».",
   modele("私[わたし]{にとって}、音楽[おんがく]はとても大切[たいせつ]です。", "Pour moi, la musique est très importante."));
@@ -198,7 +198,7 @@ point("N3", "〜をはじめ", "« À commencer par… ».",
   modele("京都[きょうと]{をはじめ}、多[おお]くの町[まち]を訪[おとず]れました。", "J'ai visité de nombreuses villes, à commencer par Kyoto."));
 point("N3", "〜向け / 〜向き", "向け : « destiné à… ». 向き : « qui convient à… ».",
   modele("これは{子供向[こどもむ]け}の本[ほん]です。", "C'est un livre destiné aux enfants."));
-point("N3", "〜代わりに", "« À la place de… », « en échange de… ».",
+point("N3", "〜代わりに", "« À la place de… », « au lieu de… ».",
   modele("父[ちち]{の代[か]わりに}私[わたし]が行[い]きます。", "J'irai à la place de mon père."));
 point("N3", "〜とおり", "« Comme », « conformément à… ».",
   modele("先生[せんせい]が言[い]った{とおりに}やってください。", "Faites comme le professeur l'a dit."),
@@ -258,7 +258,7 @@ point("N3", "〜切る", "Base + 切[き]る : faire complètement, jusqu'au bou
   aimyon("{抱[かか]えきれない}ものばかりで",
     "Rien que des choses trop lourdes à porter…", "あした世界が終わるとしても", 2019,
     "抱える + きれない = « ne pas pouvoir porter entièrement »."));
-point("N3", "〜かける", "Base + かける : commencer sans finir, être à moitié fait.",
+point("N3", "〜かける", "Base + かける : action entamée ou sur le point de se faire, pas encore menée à terme.",
   modele("テーブルに{食[た]べかけ}のパンがあります。", "Il y a un pain entamé sur la table."));
 point("N3", "〜っぱなし", "Laisser dans un état, sans s'en occuper.",
   modele("窓[まど]を{開[あ]けっぱなし}にしないでください。", "Ne laissez pas la fenêtre grande ouverte."),
@@ -275,7 +275,7 @@ point("N3", "〜合う", "Base + 合[あ]う : faire mutuellement.",
   aimyon("{ぶつかり合[あ]う}日々[ひび]をやめよう",
     "Arrêtons ces journées passées à nous heurter.", "テレパしい", null,
     "ぶつかる → ぶつかり合う = « se heurter l'un l'autre »."));
-point("N3", "〜込む", "Base + 込[こ]む : faire vers l'intérieur, ou s'absorber dans l'action.",
+point("N3", "〜込む", "Base + 込[こ]む : aller ou mettre à l'intérieur ; ou faire à fond.",
   modele("彼[かれ]は急[いそ]いで電車[でんしゃ]に{飛[と]び込[こ]みました}。", "Il s'est précipité dans le train."),
   aimyon("あまり{考[かんが]え込[こ]む}のは好[す]きじゃないんだ",
     "Je n'aime pas trop ruminer.", "分かってくれよ", null,

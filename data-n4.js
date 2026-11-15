@@ -10,7 +10,7 @@ point("N4", "Forme volitive (〜よう)", "« Faisons… », « je vais… ». F
   aimyon("話[はなし]は{やめよう}",
     "Arrêtons d'en parler.", "駅前喫茶ポプラ", null,
     "やめる → やめよう = « arrêtons »."));
-point("N4", "〜ようと思う", "Volitif + と思う : « je pense faire… », une décision que l'on vient de prendre ou que l'on mûrit.",
+point("N4", "〜ようと思う", "Volitif + と思う : « je pense faire… ». Pour une autre personne, on emploie 〜ようと思っている.",
   modele("来年[らいねん]日本[にほん]に{行[い]こうと思[おも]っています}。", "Je pense aller au Japon l'année prochaine."),
   aimyon("今週末[こんしゅうまつ]{切[き]ろうと思[おも]う}の",
     "Je pense les couper ce week-end.", "あなたのために", null,
@@ -187,7 +187,7 @@ point("N4", "〜かどうか / question indirecte", "« Si… ou non ». Avec un
   modele("駅[えき]がどこにある{か}教[おし]えてください。", "Dites-moi où se trouve la gare, s'il vous plaît."));
 
 // --- But, capacité, habitude ---
-point("N4", "〜ために", "« Pour », « afin de » (but), ou « à cause de ».",
+point("N4", "〜ために", "« Pour », « afin de » : le but, avec un verbe d'action volontaire. Nom + のために : « pour (quelqu'un, quelque chose) ».",
   modele("日本[にほん]で働[はたら]く{ために}、日本語[にほんご]を勉強[べんきょう]しています。", "J'étudie le japonais pour travailler au Japon."),
   aimyon("あなたの{為[ため]に}もう尽[つ]くせないわ",
     "Je ne peux plus me dévouer pour toi.", "チカ", null,
@@ -208,7 +208,7 @@ point("N4", "〜たことがある", "Expérience passée : « il m'est déjà a
     "したことがない = « ne l'avoir jamais fait ». ほど (N3) indique le degré : « au point de pouvoir s'en vanter »."));
 point("N4", "〜ことにする", "« Décider de… » (décision personnelle).",
   modele("毎朝[まいあさ]{走[はし]ることにしました}。", "J'ai décidé de courir tous les matins."));
-point("N4", "〜ことになる", "« Il a été décidé que… » (décision extérieure ou résultat des circonstances).",
+point("N4", "〜ことになる", "« Il a été décidé que… ».",
   modele("来月[らいげつ]、大阪[おおさか]に引[ひ]っ越[こ]す{ことになりました}。", "Il a été décidé que je déménage à Osaka le mois prochain."));
 point("N4", "〜ほうがいい", "Conseil : forme en た + ほうがいい (« tu ferais mieux de… ») ; négatif : 〜ないほうがいい.",
   modele("早[はや]く{寝[ね]たほうがいい}ですよ。", "Vous feriez mieux de vous coucher tôt."));
@@ -253,7 +253,7 @@ point("N4", "〜ばかり", "« Rien que », « ne faire que… ».",
   aimyon("聞[き]き飽[あ]きた台詞[せりふ]{ばかり}",
     "Rien que des répliques entendues mille fois.", "風のささやき", null,
     "Nom + ばかり = « rien que des… »."));
-point("N4", "〜ところ", "Situe l'action : sur le point de (dictionnaire), en train de (ている), venir de (た).",
+point("N4", "〜ところ", "Situe l'action dans le temps : sur le point de (verbe au présent + ところ), venir juste de (forme en た + ところ).",
   modele("今[いま]から{出[で]かけるところ}です。", "Je suis sur le point de sortir."));
 point("N4", "〜間 / 〜間に", "« Pendant tout le temps que… » (間) ou « à un moment pendant que… » (間に).",
   modele("留守[るす]の{間[あいだ]に}、荷物[にもつ]が届[とど]きました。", "Un colis est arrivé pendant mon absence."),

@@ -104,7 +104,7 @@ point("N5", "〜た", "Forme passée familière. Se construit comme la forme en 
   aimyon("甘[あま]い{香[かお]りした}",
     "Ça sentait le sucré.", "おばけがでるぞ", null,
     "する → した au passé. 香り(が)した : la particule が est omise, comme souvent à l'oral."));
-point("N5", "〜て (enchaînement)", "La forme en て relie des actions successives : « … et puis… ».",
+point("N5", "〜て (enchaînement)", "La forme en て relie des actions ou des états, qui se suivent ou vont ensemble : « … et … ».",
   modele("朝[あさ]{起[お]きて}、顔[かお]を洗[あら]います。", "Le matin, je me lève et je me lave le visage."),
   aimyon("{愛[あい]されて} 愛[あい]してみたい",
     "Être aimée, et essayer d'aimer à mon tour.", "朝陽", null,
@@ -145,7 +145,7 @@ point("N5", "〜に行く / 〜に来る", "Base du verbe (sans ます) + に行
   modele("映画[えいが]を{見[み]に行[い]きます}。", "Je vais voir un film."),
   aimyon("{会[あ]いに行[い]く}のに", "Alors que j'irais bien te voir…", "会いに行くのに", 2024,
     "会います → 会い + に行く = « aller voir (quelqu'un) ». のに final (N4) exprime un regret : « et pourtant… »."));
-point("N5", "〜がある / 〜がいる", "« Il y a ». ある pour les choses, いる pour les êtres vivants.",
+point("N5", "〜がある / 〜がいる", "« Il y a ». ある pour les choses inanimées, いる pour ce qui se déplace de soi-même (personnes, animaux).",
   modele("公園[こうえん]に猫[ねこ]{がいます}。", "Il y a un chat dans le parc."),
   aimyon("魔法[まほう]{がある}よ",
     "Il y a de la magie, tu sais.", "葵", null,

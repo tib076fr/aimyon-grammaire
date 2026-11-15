@@ -560,15 +560,11 @@ const SOURCES = {
     { nom: "Tae Kim", page: "Things that should be a certain way", url: "https://guidetojapanese.org/learn/grammar/should#part3" },
     { nom: "Imabi", page: "Obligation: ～べきだ", url: "https://imabi.org/obligation-%ef%bd%9e%e3%81%b9%e3%81%8d%e3%81%a0/#:~:text=%EF%BD%9E%E3%81%B9%E3%81%8D%20Used%20Adjectivally" }
   ],
-  "〜ことだ": [
-    { nom: "Imabi", page: "Phrasal こと", url: "https://imabi.org/phrasal-%e3%81%93%e3%81%a8/#:~:text=%EF%BD%9E%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8%E3%81%A0%EF%BC%88%E4%BC%9D%E8%81%9E%EF%BC%89" }
-  ],
+  "〜ことだ": [],
   "〜ものだ": [
     { nom: "Imabi", page: "Used To: ～たものだ& かつて", url: "https://imabi.org/used-to-%ef%bd%9e%e3%81%9f%e3%82%82%e3%81%ae%e3%81%a0-%e5%98%97%e3%81%a6/#:~:text=Verb%20%EF%BC%8B%20%EF%BD%9E%E3%81%9F%E3%82%82%E3%81%AE%E3%81%A0" }
   ],
-  "〜ことはない": [
-    { nom: "Imabi", page: "Expressions with こと", url: "https://imabi.org/expressions-with-%e3%81%93%e3%81%a8/#:~:text=%E3%81%93%E3%81%A8%E3%81%AF%E3%81%AA%E3%81%84" }
-  ],
+  "〜ことはない": [],
   "〜しかない": [
     { nom: "Tae Kim", page: "Expressing Amounts", url: "https://guidetojapanese.org/learn/grammar/amount#:~:text=%E3%81%97%E3%81%8B%E3%81%AA%E3%81%84" },
     { nom: "Imabi", page: "Shika & Hoka", url: "https://imabi.org/shika-hoka/#:~:text=%E3%81%97%E3%81%8B%E3%81%AA%E3%81%84" }
