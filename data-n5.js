@@ -1,7 +1,7 @@
 // ===================== NIVEAU N5 =====================
 
 // --- Particules ---
-point("N5", "〜です", "Verbe « être » poli, placé en fin de phrase.",
+point("N5", "〜です", "Copule polie : placée après un nom ou un adjectif, elle affirme « A est B ». Ce n'est pas un verbe, même si on la traduit souvent par « être ».",
   modele("私[わたし]は学生[がくせい]{です}。", "Je suis étudiant."),
   aimyon("人[ひと]になれない人[ひと]{です}",
     "Je suis quelqu'un qui n'arrive pas à devenir quelqu'un.", "インタビュー", null,
