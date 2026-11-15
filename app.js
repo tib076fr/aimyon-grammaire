@@ -24,12 +24,14 @@ function furigana(texte) {
   return echapper(texte).replace(
     /([一-龯々0-9]+)\[([^\]]+)\]/g,
     "<ruby>$1<rt>$2</rt></ruby>"
-  );
+  )
+    // {…} entoure la partie de la phrase qui illustre le point de grammaire
+    .replace(/\{/g, "<mark>").replace(/\}/g, "</mark>");
 }
 
 // Enlève les crochets de lecture : sert pour la recherche
 function sansFurigana(texte) {
-  return texte.replace(/\[[^\]]+\]/g, "");
+  return texte.replace(/\[[^\]]+\]/g, "").replace(/[{}]/g, "");
 }
 
 // Une fiche a-t-elle au moins un extrait de chanson ?
@@ -64,10 +66,18 @@ function creerExemple(ex) {
 
   const note = ex.note ? `<p class="note">${echapper(ex.note)}</p>` : "";
 
+  // Ligne d'avant et ligne d'après dans la chanson (data-contexte.js)
+  const cle = ex.chanson + "|" + sansFurigana(ex.japonais).replace(/[\s　「」]/g, "");
+  const contexte = (ex.chanson && CONTEXTE[cle]) || {};
+  const ligne = (c) => (c ? `<p class="contexte" lang="ja">${furigana(c.japonais)}</p>` : "");
+  const ligneFr = (c) => (c ? `<span class="contexte">${echapper(c.traduction)}</span>` : "");
+
   return `
     <blockquote class="${ex.chanson ? "chanson" : "modele"}">
+      ${ligne(contexte.avant)}
       <p class="japonais" lang="ja">${furigana(ex.japonais)}</p>
-      <p class="traduction">${echapper(ex.traduction)}</p>
+      ${ligne(contexte.apres)}
+      <p class="traduction">${ligneFr(contexte.avant)}<span>${echapper(ex.traduction)}</span>${ligneFr(contexte.apres)}</p>
       ${source}
       ${note}
     </blockquote>`;

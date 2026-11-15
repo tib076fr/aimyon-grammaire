@@ -177,3 +177,17 @@ cite a, .sources a { display: inline-block; padding: 6px 0; }
   border-radius: 10px;
   cursor: pointer;
 }
+
+/* Le point de grammaire mis en valeur dans la phrase */
+mark {
+  background: none;
+  color: var(--accent);
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent);
+}
+mark rt { font-weight: 400; }
+
+/* Lignes de contexte (avant / après) : plus petites et plus pâles */
+p.contexte { font-size: 1rem; line-height: 2; color: var(--discret); }
+.traduction span { display: block; }
+.traduction .contexte { font-size: 0.9rem; color: var(--discret); }

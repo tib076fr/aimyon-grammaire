@@ -12,6 +12,8 @@
 //  - aimyon(...) : UNE ligne (ou le titre) d'une chanson. Jamais plus d'une ou
 //    deux lignes par chanson : les paroles sont protégées par le droit d'auteur.
 //  - Furigana : la lecture entre crochets après les kanji, ex. 帽子[ぼうし].
+//  - Mise en valeur : entourez d'accolades la partie qui illustre la règle,
+//    ex. 私[わたし]{は}学生[がくせい]です。
 // ============================================================
 
 const POINTS = [];
