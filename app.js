@@ -105,22 +105,50 @@ function creerFiche(point) {
     </article>`;
 }
 
-// Un point correspond-il aux filtres et à la recherche en cours ?
-function correspond(point) {
-  if (niveauChoisi !== "Tous" && point.niveau !== niveauChoisi) return false;
-  if (seulementChansons && !aUneChanson(point)) return false;
-  if (texteCherche === "") return true;
+// Enlève les accents : "negation" trouve aussi "négation"
+function sansAccents(texte) {
+  return texte.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
-  const morceaux = [point.titre, point.resume];
+// Note une fiche pour la recherche en cours :
+//   0 = ne correspond pas, 1 = correspond dans le texte,
+//   2 = correspond au titre, 3 = correspond exactement au titre en romaji
+// Les meilleures notes sont affichées en premier.
+function noter(point) {
+  if (niveauChoisi !== "Tous" && point.niveau !== niveauChoisi) return 0;
+  if (seulementChansons && !aUneChanson(point)) return 0;
+  if (texteCherche === "") return 1;
+
+  // Recherche en romaji, sur le titre de la fiche
+  if (/^[a-zāīūēōâîûêô\s\-']+$/.test(texteCherche)) {
+    const cherche = simplifierRomaji(texteCherche);
+    const mots = romajiDuTitre(point.titre).split(" ").map(simplifierRomaji);
+    const titreEntier = simplifierRomaji(kanaVersRomaji(point.titre));
+    // Une ou deux lettres ("wa", "ni") : il faut le mot exact, sinon trop de bruit
+    if (mots.includes(cherche)) return 3; // le mot exact : tout en haut
+    if (cherche.length <= 2) return 0;
+    if (mots.some((m) => m.startsWith(cherche)) || titreEntier.includes(cherche)) return 2;
+  }
+
+  // Le titre contient le texte cherché (en kana ou en français)
+  if (sansAccents(point.titre.toLowerCase()).includes(sansAccents(texteCherche))) return 2;
+
+  // Sinon, on cherche dans tout le texte de la fiche
+  const morceaux = [point.resume];
   for (const ex of point.exemples) {
     morceaux.push(sansFurigana(ex.japonais), ex.traduction, ex.chanson || "", ex.note || "");
   }
-  return morceaux.join(" ").toLowerCase().includes(texteCherche);
+  const contenu = sansAccents(morceaux.join(" ").toLowerCase());
+  return contenu.includes(sansAccents(texteCherche)) ? 1 : 0;
 }
 
 // (Re)dessine la liste des fiches
 function afficher() {
-  const visibles = POINTS.filter(correspond);
+  const visibles = POINTS
+    .map((point) => ({ point, note: noter(point) }))
+    .filter((x) => x.note > 0)
+    .sort((a, b) => b.note - a.note) // les titres qui correspondent d'abord
+    .map((x) => x.point);
   zoneFiches.innerHTML = visibles.map(creerFiche).join("");
   messageVide.hidden = visibles.length > 0;
 
@@ -161,10 +189,20 @@ function creerFiltres() {
   boutonChanson.classList.add("a-part");
 }
 
-// À chaque frappe dans le champ de recherche, on met à jour la liste
-champRecherche.addEventListener("input", () => {
+// La recherche se lance en validant : bouton « Chercher » ou touche Entrée
+document.getElementById("formulaire").addEventListener("submit", (evenement) => {
+  evenement.preventDefault(); // empêche le navigateur de recharger la page
   texteCherche = champRecherche.value.trim().toLowerCase();
+  champRecherche.blur(); // referme le clavier sur téléphone
   afficher();
+});
+
+// Si on vide le champ, on réaffiche tout sans avoir à valider
+champRecherche.addEventListener("input", () => {
+  if (champRecherche.value.trim() === "" && texteCherche !== "") {
+    texteCherche = "";
+    afficher();
+  }
 });
 
 creerFiltres();

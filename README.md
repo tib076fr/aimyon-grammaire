@@ -18,6 +18,7 @@ Ouvrir `index.html` dans un navigateur : aucun outil à installer.
 | `data-n5.js`, `data-n4.js`, `data-n3.js` | Les fiches de grammaire, par niveau |
 | `data-sources.js` | Les sources de chaque fiche |
 | `data-paroles.js` | Les liens vers les paroles complètes |
+| `romaji.js` | La recherche des fiches en romaji |
 
 ## Droits
 

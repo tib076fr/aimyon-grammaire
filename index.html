@@ -20,7 +20,10 @@
   <main>
     <!-- Barre de recherche et filtres par niveau -->
     <section class="controles">
-      <input type="search" id="recherche" placeholder="Chercher : たい, négation…" aria-label="Rechercher">
+      <form id="formulaire" class="recherche" role="search">
+        <input type="search" id="recherche" placeholder="たい, tai, négation…" aria-label="Rechercher" autocapitalize="none" autocorrect="off" enterkeyhint="search">
+        <button type="submit">Chercher</button>
+      </form>
       <div id="filtres" class="filtres"></div>
       <p id="compteur" class="compteur"></p>
     </section>
@@ -42,6 +45,7 @@
   <script src="data-n3.js"></script>
   <script src="data-sources.js"></script>
   <script src="data-paroles.js"></script>
+  <script src="romaji.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

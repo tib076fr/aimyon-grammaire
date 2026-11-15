@@ -162,3 +162,18 @@ cite a, .sources a { display: inline-block; padding: 6px 0; }
 
 /* Garde le point séparateur collé à son lien quand la ligne se coupe */
 .ensemble { white-space: nowrap; }
+
+/* Champ de recherche + bouton « Chercher » sur une même ligne */
+.recherche { display: flex; gap: 8px; }
+.recherche #recherche { flex: 1; min-width: 0; }
+.recherche button {
+  padding: 0 18px;
+  min-height: 44px;
+  font: inherit;
+  font-weight: 600;
+  color: #1b1917;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  cursor: pointer;
+}
