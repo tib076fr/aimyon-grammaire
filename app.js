@@ -110,7 +110,7 @@ function creerFiche(point) {
         <span class="niveau">${point.niveau}</span>
       </div>
       <p class="resume">${echapper(point.resume)}</p>
-      ${exemples.map(creerExemple).join("")}
+      <div class="exemples">${exemples.map(creerExemple).join("")}</div>
       ${creerSources(point)}
     </article>`;
 }

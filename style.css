@@ -191,3 +191,28 @@ mark rt { font-weight: 400; }
 p.contexte { font-size: 1rem; line-height: 2; color: var(--discret); }
 .traduction span { display: block; }
 .traduction .contexte { font-size: 0.9rem; color: var(--discret); }
+
+/* ---------- Grand écran (ordinateur) ---------- */
+.exemples { display: grid; gap: 14px; }
+.exemples blockquote { margin: 0; }
+
+@media (min-width: 1000px) {
+  html { font-size: 17px; }
+  header, main, footer { max-width: 1180px; }
+  header { padding-top: 56px; }
+  h1 { font-size: 2.4rem; }
+  .controles { margin: 32px 0; }
+  .fiches { gap: 22px; }
+  .fiche { padding: 28px; }
+
+  /* Les exemples d'une fiche côte à côte : chanson à gauche, modèle à droite */
+  .exemples { grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+  .exemples blockquote:only-child { grid-column: 1 / -1; }
+  /* Un 3e exemple seul sur sa ligne prend toute la largeur */
+  .exemples blockquote:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+@media (min-width: 1500px) {
+  html { font-size: 18px; }
+  header, main, footer { max-width: 1320px; }
+}
