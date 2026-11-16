@@ -216,3 +216,30 @@ p.contexte { font-size: 1rem; line-height: 2; color: var(--discret); }
   html { font-size: 18px; }
   header, main, footer { max-width: 1320px; }
 }
+
+/* Titre de chanson cliquable et infobulle d'anecdotes */
+button.avec-anecdote {
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+  border: 0;
+  border-bottom: 1px dashed var(--accent);
+  padding: 6px 0 2px;
+  cursor: pointer;
+}
+button.avec-anecdote::after { content: " ⓘ"; font-weight: 400; }
+.infobulle {
+  display: block;
+  margin-top: 8px;
+  padding: 12px 14px;
+  background: var(--carte);
+  color: var(--texte);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  font-size: 0.95rem;
+}
+.infobulle[hidden] { display: none; }
+.infobulle .anecdote { display: block; margin-bottom: 8px; }
+.infobulle .anecdote-source { display: block; font-size: 0.85rem; color: var(--discret); }

@@ -58,8 +58,21 @@ function creerExemple(ex) {
     const lienParoles = estAlbum
       ? ""
       : ` <span class="ensemble">· <a href="${paroles}" target="_blank" rel="noopener">Paroles complètes ↗</a></span>`;
-    source = `<cite>♪ <span class="titre-chanson" lang="ja">${echapper(ex.chanson)}</span>${annee}
-      <span class="ensemble">· <a href="${ecouter}" target="_blank" rel="noopener">Écouter ↗</a></span>${lienParoles}</cite>`;
+    // Si une anecdote existe (data-anecdotes.js), le titre devient un bouton
+    const anecdote = ANECDOTES[titre];
+    const titreAffiche = anecdote
+      ? `<button type="button" class="titre-chanson avec-anecdote" lang="ja" aria-expanded="false" title="Anecdotes sur cette chanson">${echapper(ex.chanson)}</button>`
+      : `<span class="titre-chanson" lang="ja">${echapper(ex.chanson)}</span>`;
+    const infobulle = anecdote
+      ? `<span class="infobulle" hidden>
+          ${anecdote.textes.map((t) => `<span class="anecdote">${echapper(t)}</span>`).join("")}
+          <span class="anecdote-source">Source : ${anecdote.sources
+            .map((s) => `<a href="${echapper(s.url)}" target="_blank" rel="noopener">${echapper(s.nom)} ↗</a>`)
+            .join(" · ")}</span>
+        </span>`
+      : "";
+    source = `<cite>♪ ${titreAffiche}${annee}
+      <span class="ensemble">· <a href="${ecouter}" target="_blank" rel="noopener">Écouter ↗</a></span>${lienParoles}${infobulle}</cite>`;
   } else {
     source = `<cite>Phrase modèle</cite>`;
   }
@@ -214,6 +227,31 @@ champRecherche.addEventListener("input", () => {
     texteCherche = "";
     afficher();
   }
+});
+
+// Infobulles d'anecdotes : un clic sur le titre d'une chanson l'ouvre ou la
+// referme ; un clic ailleurs ou la touche Échap referme celle qui est ouverte.
+function fermerInfobulles(sauf) {
+  for (const bouton of document.querySelectorAll('.avec-anecdote[aria-expanded="true"]')) {
+    if (bouton === sauf) continue;
+    bouton.setAttribute("aria-expanded", "false");
+    bouton.closest("cite").querySelector(".infobulle").hidden = true;
+  }
+}
+document.addEventListener("click", (evenement) => {
+  const bouton = evenement.target.closest(".avec-anecdote");
+  if (!bouton) {
+    if (!evenement.target.closest(".infobulle")) fermerInfobulles();
+    return;
+  }
+  fermerInfobulles(bouton);
+  const infobulle = bouton.closest("cite").querySelector(".infobulle");
+  const ouvrir = infobulle.hidden;
+  infobulle.hidden = !ouvrir;
+  bouton.setAttribute("aria-expanded", ouvrir);
+});
+document.addEventListener("keydown", (evenement) => {
+  if (evenement.key === "Escape") fermerInfobulles();
 });
 
 creerFiltres();
