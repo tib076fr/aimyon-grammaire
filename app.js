@@ -29,6 +29,12 @@ function furigana(texte) {
     .replace(/\{/g, "<mark>").replace(/\}/g, "</mark>");
 }
 
+// Texte français : {…} entoure les mots qui traduisent le point de grammaire,
+// affichés dans la même couleur que le point dans la phrase japonaise
+function traduction(texte) {
+  return echapper(texte).replace(/\{/g, "<mark>").replace(/\}/g, "</mark>");
+}
+
 // Enlève les crochets de lecture : sert pour la recherche
 function sansFurigana(texte) {
   return texte.replace(/\[[^\]]+\]/g, "").replace(/[{}]/g, "");
@@ -99,7 +105,7 @@ function creerExemple(ex) {
       ${ligne(contexte.avant)}
       <p class="japonais" lang="ja">${furigana(ex.japonais)}</p>
       ${ligne(contexte.apres)}
-      <p class="traduction">${ligneFr(contexte.avant)}<span>${echapper(ex.traduction)}</span>${ligneFr(contexte.apres)}</p>
+      <p class="traduction">${ligneFr(contexte.avant)}<span>${traduction(ex.traduction)}</span>${ligneFr(contexte.apres)}</p>
       ${source}
       ${note}
     </blockquote>`;
@@ -168,7 +174,7 @@ function noter(point) {
   // Sinon, on cherche dans tout le texte de la fiche
   const morceaux = [point.resume];
   for (const ex of point.exemples) {
-    morceaux.push(sansFurigana(ex.japonais), ex.traduction, ex.chanson || "", ex.note || "");
+    morceaux.push(sansFurigana(ex.japonais), sansFurigana(ex.traduction), ex.chanson || "", ex.note || "");
   }
   const contenu = sansAccents(morceaux.join(" ").toLowerCase());
   return contenu.includes(sansAccents(texteCherche)) ? 1 : 0;

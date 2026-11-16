@@ -14,6 +14,8 @@
 //  - Furigana : la lecture entre crochets après les kanji, ex. 帽子[ぼうし].
 //  - Mise en valeur : entourez d'accolades la partie qui illustre la règle,
 //    ex. 私[わたし]{は}学生[がくせい]です。
+//    Faites de même dans la traduction : les deux prennent la même couleur,
+//    ex. "Je {suis} étudiant."
 // ============================================================
 
 const POINTS = [];
