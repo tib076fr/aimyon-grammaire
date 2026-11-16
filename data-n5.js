@@ -4,7 +4,7 @@
 point("N5", "〜です", "Copule polie : placée après un nom ou un adjectif, elle affirme « A est B ». Ce n'est pas un verbe, même si on la traduit souvent par « être ».",
   modele("私[わたし]は学生[がくせい]{です}。", "Je suis étudiant."),
   aimyon("人[ひと]になれない人[ひと]{です}",
-    "Je suis de ceux qui n'arrivent pas à devenir quelqu'un.", "インタビュー", null,
+    "Je suis quelqu'un qui ne sait pas devenir quelqu'un.", "インタビュー", null,
     "人です = « je suis une personne ». 人になれない (qui ne peut pas devenir quelqu'un) est une proposition relative placée devant 人."));
 point("N5", "は", "Marque le thème de la phrase : « quant à… ». Se prononce « wa ».",
   modele("今日[きょう]{は}暑[あつ]いです。", "Aujourd'hui, il fait chaud."),
@@ -30,7 +30,7 @@ point("N5", "に (lieu, temps, destinataire)", "Indique le moment précis, la de
 point("N5", "へ", "Indique la direction d'un déplacement. Se prononce « e ».",
   modele("日本[にほん]{へ}行[い]きます。", "Je vais au Japon."),
   aimyon("香[かお]りを買[か]いに渋谷[しぶや]{へ}",
-    "Alors je vais à Shibuya, acheter un parfum.", "ポプリの葉", null,
+    "je vais à Shibuya acheter ce parfum.", "ポプリの葉", null,
     "へ indique la direction ; le verbe « aller » est sous-entendu. 買いに (N5) exprime le but du déplacement."));
 point("N5", "で", "Indique le lieu d'une action, ou le moyen utilisé.",
   modele("図書館[としょかん]{で}勉強[べんきょう]します。", "J'étudie à la bibliothèque."),
@@ -56,12 +56,12 @@ point("N5", "の", "Relie deux noms : « A の B » = « le B de A » (possessio
 point("N5", "か", "Placé en fin de phrase, forme une question. Entre deux noms : « ou ».",
   modele("これは何[なん]です{か}。", "Qu'est-ce que c'est ?"),
   aimyon("何[なに]が分[わ]かるの{か}",
-    "Qu'est-ce que tu crois comprendre ?", "リズム64", null,
+    "Qu'est-ce que tu en sais ?", "リズム64", null,
     "の devant か donne à la question un ton de demande d'explication."));
 point("N5", "や", "« Et » entre des noms, pour une liste non exhaustive (« entre autres »).",
   modele("パン{や}卵[たまご]を買[か]いました。", "J'ai acheté du pain, des œufs, etc."),
   aimyon("悲壮感[ひそうかん]{や}憂鬱[ゆううつ]も",
-    "Le tragique, la mélancolie aussi,", "スーパーガール", null,
+    "Mon désespoir, ma mélancolie aussi,", "スーパーガール", null,
     "や relie deux noms pris comme exemples parmi d'autres."));
 point("N5", "〜から〜まで", "« De… à… », « depuis… jusqu'à… » (lieu ou temps).",
   modele("九時[くじ]{から}五時[ごじ]{まで}働[はたら]きます。", "Je travaille de neuf heures à cinq heures."),
@@ -76,12 +76,12 @@ point("N5", "ね / よ", "Particules de fin de phrase : ね cherche l'accord («
 point("N5", "だけ", "« Seulement », « juste ».",
   modele("一[ひと]つ{だけ}ください。", "Donnez-m'en un seul, s'il vous plaît."),
   aimyon("桜[さくら]{だけ}でいい",
-    "…les cerisiers seulement, cela suffit.", "桜が降る夜は", null,
+    "…les cerisiers seuls, cela suffit.", "桜が降る夜は", null,
     "だけでいい = « rien que… suffit »."));
 point("N5", "こ・そ・あ・ど", "Démonstratifs : これ (ceci, près de moi), それ (cela, près de toi), あれ (là-bas), どれ (lequel). Même logique pour この, ここ, etc.",
   modele("{それ}は私[わたし]の傘[かさ]です。", "Ça, c'est mon parapluie."),
   aimyon("{それ}がいい",
-    "ce serait bien ainsi.", "テレパしい", null,
+    "c'est bien ce que je préfère.", "テレパしい", null,
     "それ renvoie à ce que l'interlocuteur vient d'évoquer ; が le désigne comme le bon choix."));
 point("N5", "〜ます / 〜ません", "Forme polie du verbe au présent/futur, affirmative et négative.",
   modele("毎日[まいにち]日本語[にほんご]を{勉強[べんきょう]します}。", "J'étudie le japonais tous les jours."),
@@ -130,7 +130,7 @@ point("N5", "〜てはいけない", "Interdiction : « il ne faut pas… ».",
   modele("ここでたばこを{吸[す]ってはいけません}。", "Il ne faut pas fumer ici."));
 point("N5", "〜たい", "Exprimer ce que l'on veut faire : on remplace ます par たい.",
   modele("日本[にほん]に{行[い]きたい}です。", "Je veux aller au Japon."),
-  aimyon("愛[あい]を{伝[つた]えたい}だとか", "Te dire que je t'aime, ou quelque chose comme ça.", "愛を伝えたいだとか", 2017,
+  aimyon("愛[あい]を{伝[つた]えたい}だとか", "« Te dire mon amour », ce genre de choses…", "愛を伝えたいだとか", 2017,
     "伝えます → 伝えたい. だとか, à la fin, ajoute un flou : « … ou quelque chose comme ça »."));
 point("N5", "〜ましょう", "Proposer de faire quelque chose ensemble : « faisons… ».",
   modele("一緒[いっしょ]に{帰[かえ]りましょう}。", "Rentrons ensemble."),
@@ -141,12 +141,12 @@ point("N5", "〜ませんか", "Inviter poliment : « ne voudriez-vous pas… ? 
   modele("コーヒーを{飲[の]みませんか}。", "Vous ne voudriez pas boire un café ?"));
 point("N5", "〜に行く / 〜に来る", "Base du verbe (sans ます) + に行く : « aller faire quelque chose ».",
   modele("映画[えいが]を{見[み]に行[い]きます}。", "Je vais voir un film."),
-  aimyon("{会[あ]いに行[い]く}のに", "Moi qui irais te voir, pourtant…", "会いに行くのに", 2024,
+  aimyon("{会[あ]いに行[い]く}のに", "Alors, j'irais te retrouver…", "会いに行くのに", 2024,
     "会います → 会い + に行く = « aller voir (quelqu'un) ». のに final (N4) exprime un regret : « et pourtant… »."));
 point("N5", "〜がある / 〜がいる", "« Il y a ». ある pour les choses inanimées, いる pour les êtres animés (personnes, animaux).",
   modele("公園[こうえん]に猫[ねこ]{がいます}。", "Il y a un chat dans le parc."),
   aimyon("魔法[まほう]{がある}よ",
-    "la magie existe, tu sais.", "葵", null,
+    "il existe une magie, tu sais.", "葵", null,
     "魔法 est une chose : on emploie ある."));
 point("N5", "〜前に", "« Avant de… ». Verbe au dictionnaire + 前に, ou nom + の前に.",
   modele("{寝[ね]る前[まえ]に}本[ほん]を読[よ]みます。", "Je lis avant de dormir."),
@@ -182,12 +182,12 @@ point("N5", "〜が好き / 〜が上手", "Ce qu'on aime ou sait bien faire se 
 point("N5", "〜より / 〜のほうが", "Comparaison : « A は B より… » (A est plus… que B), « A のほうが… » (c'est A qui est le plus…).",
   modele("電車[でんしゃ]はバス{より}速[はや]いです。", "Le train est plus rapide que le bus."),
   aimyon("寝癖[ねぐせ]がある君[きみ]{の方[ほう]が}",
-    "C'est toi, avec tes épis du matin, qui…", "あのね", null,
-    "〜の方が désigne celui des deux que l'on préfère ; la phrase reste en suspens."));
+    "Toi, avec tes épis du matin,", "あのね", null,
+    "〜の方が compare : « c'est plutôt toi, décoiffé, qui… ». Ce qui est comparé arrive à la ligne suivante."));
 point("N5", "いちばん", "Superlatif : « le plus… ».",
   modele("果物[くだもの]の中[なか]でりんごが{いちばん}好[す]きです。", "Parmi les fruits, c'est la pomme que je préfère."),
   aimyon("{一番[いちばん]}弱[よわ]い自分[じぶん]の影[かげ]",
-    "l'ombre de celle que je suis au plus faible.", "空の青さを知る人よ", 2019,
+    "l'ombre de moi au plus faible.", "空の青さを知る人よ", 2019,
     "一番 + adjectif = superlatif : 一番弱い = « le plus faible »."));
 point("N5", "〜くなる / 〜になる", "« Devenir ». Adjectif en い → 〜くなる ; nom ou adjectif en な → 〜になる.",
   modele("{寒[さむ]くなりました}。", "Il s'est mis à faire froid."),
@@ -213,7 +213,7 @@ point("N5", "もう / まだ", "もう : « déjà » (ou « ne… plus » avec 
 point("N5", "〜でしょう", "Supposition polie (« probablement ») ou demande de confirmation.",
   modele("明日[あした]は雨[あめ]{でしょう}。", "Demain, il pleuvra sans doute."),
   aimyon("証拠[あかし]になる{でしょう}",
-    "voilà ce qui en sera la preuve.", "あした世界が終わるとしても", 2019,
+    "voilà ce que cela prouvera.", "あした世界が終わるとしても", 2019,
     "でしょう exprime une supposition : « sans doute ». D'après UtaTen, 証拠 se chante ici あかし et non しょうこ."));
 point("N5", "〜つもり", "Verbe au dictionnaire + つもり : « avoir l'intention de… ».",
   modele("来週[らいしゅう]、国[くに]へ{帰[かえ]るつもり}です。", "J'ai l'intention de rentrer dans mon pays la semaine prochaine."),
@@ -254,5 +254,5 @@ point("N5", "〜の / 〜こと (nominalisation)", "Transforme un verbe en nom :
     "涙がでること = « le fait que les larmes coulent »."));
 point("N5", "〜すぎる", "« Trop ». Base du verbe ou radical de l'adjectif + すぎる.",
   modele("昨日[きのう]は{食[た]べすぎました}。", "Hier, j'ai trop mangé."),
-  aimyon("風[かぜ]の強[つよ]さがちょっと 心[こころ]を{揺[ゆ]さぶりすぎて}", "Le vent souffle si fort qu'il me secoue un peu trop le cœur,", "マリーゴールド", 2018,
+  aimyon("風[かぜ]の強[つよ]さがちょっと 心[こころ]を{揺[ゆ]さぶりすぎて}", "Le vent souffle un peu trop fort, il me chavire le cœur :", "マリーゴールド", 2018,
     "揺さぶります → 揺さぶりすぎる (« secouer trop »). La forme en て laisse la phrase en suspens. 強さ : voir la fiche 〜さ."));

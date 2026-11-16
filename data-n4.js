@@ -4,7 +4,7 @@
 point("N4", "〜なければならない", "Obligation : « il faut… », « je dois… ». Variante orale : 〜なきゃ.",
   modele("薬[くすり]を{飲[の]まなければなりません}。", "Je dois prendre mon médicament."),
   aimyon("{許[ゆる]していかなきゃ}",
-    "il faudra bien que j'apprenne à les pardonner.", "さながらロンリー", null,
+    "il faudrait donc tout pardonner.", "さながらロンリー", null,
     "なきゃ est la contraction orale de なければ(ならない). 〜ていく indique une action qui se poursuit vers l'avenir."));
 point("N4", "〜なくてもいい", "Absence d'obligation : « ce n'est pas la peine de… ».",
   modele("明日[あした]は{来[こ]なくてもいい}です。", "Vous n'avez pas besoin de venir demain."),
@@ -38,7 +38,7 @@ point("N4", "〜ようと思う", "Volitif + と思う : « je pense faire… »
 point("N4", "Forme passive (〜られる)", "« Être …é ». Verbes en -u : finale en -a + れる (叱る → 叱られる). Sert aussi à exprimer qu'on subit quelque chose.",
   modele("先生[せんせい]に{褒[ほ]められました}。", "J'ai été félicité par le professeur."),
   aimyon("{嫌[きら]われる}ことを恐[おそ]れてる",
-    "J'ai peur que tu te détournes de moi.", "君がいない夜を越えられやしない", 2022,
+    "j'ai peur que tu cesses de m'aimer.", "君がいない夜を越えられやしない", 2022,
     "嫌う (détester) → 嫌われる (être détesté). こと transforme le verbe en nom : « le fait d'être détestée »."));
 point("N4", "Forme causative (〜させる)", "« Faire faire » ou « laisser faire ». Verbes en -u : finale en -a + せる.",
   modele("母[はは]は弟[おとうと]に野菜[やさい]を{食[た]べさせました}。", "Ma mère a fait manger des légumes à mon petit frère."),
@@ -55,10 +55,7 @@ point("N4", "Impératif et interdiction (〜な)", "Ordre direct (行く → 行
   modele("ここに{入[はい]るな}。", "N'entre pas ici !"),
   aimyon("白[しろ]いカモメは海[うみ]へ{飛[と]べ}",
     "Mouette blanche, vole vers la mer.", "夢追いベンガル", null,
-    "飛ぶ → 飛べ : impératif."),
-  aimyon("手[て]も足[あし]も犠牲[ぎせい]に{なるな}",
-    "Que ni mes mains ni mes pieds ne soient sacrifiés.", "ざらめ", null,
-    "なる + な = « ne deviens pas » : l'interdiction."));
+    "飛ぶ → 飛べ : impératif."));
 point("N4", "〜なさい", "Ordre adouci, d'un parent ou d'un professeur.",
   modele("早[はや]く{寝[ね]なさい}。", "Va vite te coucher."),
   aimyon("ジュリアナ東京[とうきょう]を{見[み]てみなさい}",
@@ -67,12 +64,12 @@ point("N4", "〜なさい", "Ordre adouci, d'un parent ou d'un professeur.",
 point("N4", "〜てみる", "« Essayer de faire » pour voir ce que ça donne.",
   modele("この服[ふく]を{着[き]てみて}もいいですか。", "Puis-je essayer ce vêtement ?"),
   aimyon("{問[と]いかけてみた}けれど",
-    "J'ai tenté de te le demander, mais…", "ハッピー", null,
+    "J'ai bien essayé de te le demander,", "ハッピー", null,
     "問いかける → 問いかけてみた = « j'ai essayé de demander »."));
 point("N4", "〜ておく", "Faire quelque chose à l'avance, en prévision.",
   modele("旅行[りょこう]の前[まえ]にホテルを{予約[よやく]しておきます}。", "Je réserve l'hôtel avant le voyage."),
   aimyon("メモ書[が]きは{残[のこ]しておいた}でしょ",
-    "Je t'avais bien laissé un mot, non ?", "チカ", null,
+    "Je t'ai bien laissé un mot, non ?", "チカ", null,
     "残す → 残しておいた : fait à l'avance, en prévision."));
 point("N4", "〜てしまう", "Action achevée complètement, ou faite par mégarde (regret). Forme orale : 〜ちゃう.",
   modele("財布[さいふ]を{忘[わす]れてしまいました}。", "J'ai oublié mon portefeuille (zut)."),
@@ -81,16 +78,19 @@ point("N4", "〜てしまう", "Action achevée complètement, ou faite par még
     "飽きる → 飽きてしまった : c'est fait, et c'est regrettable."));
 point("N4", "〜てくる / 〜ていく", "Changement ou action qui se rapproche du présent (てくる) ou s'en éloigne vers l'avenir (ていく).",
   modele("だんだん寒[さむ]く{なってきました}。", "Il s'est mis à faire de plus en plus froid."),
-  aimyon("{憧[あこが]れてきた}んだ", "J'en ai toujours rêvé, tu sais.", "憧れてきたんだ", 2017,
+  aimyon("{憧[あこが]れてきた}んだ", "Je vous ai toujours admirés.", "憧れてきたんだ", 2017,
     "憧れる (admirer, rêver de) + てきた : un sentiment qui dure depuis longtemps jusqu'à maintenant. んだ donne du poids à l'aveu."));
 point("N4", "〜てあげる / 〜てくれる / 〜てもらう", "Rendre service (あげる), quelqu'un me rend service (くれる), obtenir un service de quelqu'un (もらう).",
   modele("友達[ともだち]が駅[えき]まで{送[おく]ってくれました}。", "Mon ami m'a accompagné jusqu'à la gare."),
   modele("先生[せんせい]に作文[さくぶん]を{直[なお]してもらいました}。", "J'ai fait corriger ma rédaction par le professeur."),
   aimyon("{守[まも]ってあげたい}",
-    "Je veux te protéger.", "君のこゝろ", null,
+    "et te protéger.", "君のこゝろ", null,
     "守ってあげる = « protéger (pour toi) », à la forme en 〜たい."));
 point("N4", "〜てある", "État résultant d'une action faite volontairement par quelqu'un.",
-  modele("窓[まど]が{開[あ]けてあります}。", "La fenêtre a été ouverte (et l'est restée)."));
+  modele("窓[まど]が{開[あ]けてあります}。", "La fenêtre a été ouverte (et l'est restée)."),
+  aimyon("助[たす]けが来[く]るシステムに{してあるよ}",
+    "tout est prévu pour que du secours arrive.", "プレゼント", null,
+    "システムにする (en faire un système) → してある : c'est déjà mis en place, et cela reste ainsi."));
 point("N4", "〜ないで / 〜ずに", "« Sans faire… ». ずに est plus écrit (する → せずに).",
   modele("朝[あさ]ごはんを{食[た]べないで}出[で]かけました。", "Je suis sorti sans prendre de petit-déjeuner."),
   aimyon("{焦[あせ]らずに}いるよ",
@@ -104,7 +104,7 @@ point("N4", "〜たら", "« Si… », « quand… » : une fois la première ac
 point("N4", "〜ば", "Conditionnel général : « si… ». Finale en -e + ば (行く → 行けば) ; adjectifs : 〜ければ.",
   modele("{安[やす]ければ}買[か]います。", "Si ce n'est pas cher, j'achète."),
   aimyon("明日[あした]に{なれば}私[わたし]",
-    "Quand viendra demain, moi,", "19歳になりたくない", null,
+    "Quand demain sera là, est-ce que moi,", "19歳になりたくない", null,
     "なる → なれば = « si / quand ça devient »."));
 point("N4", "〜なら", "« Si c'est… », « s'il s'agit de… » : reprend une situation donnée.",
   modele("日本[にほん]に行[い]く{なら}、京都[きょうと]がいいですよ。", "Si vous allez au Japon, je vous conseille Kyoto."),
@@ -130,7 +130,7 @@ point("N4", "〜のに", "« Alors que », « bien que » : exprime surprise ou 
 point("N4", "〜し", "Énumérer plusieurs raisons : « et puis… ».",
   modele("この店[みせ]は安[やす]い{し}、おいしい{し}、よく来[き]ます。", "Ce restaurant est bon marché, c'est bon : je viens souvent."),
   aimyon("あまり優[やさ]しくない{し}",
-    "Il n'est pas très tendre, et puis…", "ふたりの世界", null,
+    "Tu n'es pas très tendre, et puis", "ふたりの世界", null,
     "し énumère une raison parmi d'autres ; la suite est sous-entendue."));
 point("N4", "〜と思う", "« Je pense que… ». Précédé de la forme neutre.",
   modele("明日[あした]は晴[は]れる{と思[おも]います}。", "Je pense qu'il fera beau demain."),
@@ -140,7 +140,7 @@ point("N4", "〜と思う", "« Je pense que… ». Précédé de la forme neutr
 point("N4", "〜かもしれない", "« Peut-être », « il se peut que… ».",
   modele("午後[ごご]は雨[あめ]が降[ふ]る{かもしれません}。", "Il se peut qu'il pleuve cet après-midi."),
   aimyon("一緒[いっしょ]に捨[す]ててしまった{かもしれない}",
-    "je l'ai peut-être jeté, lui aussi.", "ねむい", null,
+    "je les ai peut-être jetées, elles aussi.", "ねむい", null,
     "捨ててしまった (jeté par mégarde) + かもしれない."));
 point("N4", "〜はずだ", "« Normalement », « devrait » : attente fondée sur une raison.",
   modele("彼[かれ]は今日[きょう]来[く]る{はず}です。", "Il devrait venir aujourd'hui."),
@@ -216,12 +216,12 @@ point("N4", "〜までに", "« D'ici… », « avant (une échéance) ».",
 point("N4", "〜始める / 〜出す / 〜続ける / 〜終わる", "Base du verbe + auxiliaire : commencer à, se mettre soudain à, continuer à, finir de.",
   modele("急[きゅう]に雨[あめ]が{降[ふ]り出[だ]しました}。", "Il s'est soudain mis à pleuvoir."),
   aimyon("{撒[ま]き続[つづ]ける}のは嫌[いや]",
-    "je ne veux plus en semer.", "わかってない", null,
+    "je ne veux plus continuer à en semer.", "わかってない", null,
     "撒く → 撒き続ける = « continuer à semer ». の en fait un nom : « le fait de continuer »."));
 point("N4", "〜がる / 〜たがる", "Décrire le sentiment ou l'envie d'une autre personne, d'après ce qu'elle montre.",
   modele("子供[こども]は外[そと]で{遊[あそ]びたがっています}。", "L'enfant a envie de jouer dehors."),
   aimyon("泣[な]きたい時[とき]はどうして{強[つよ]がる}の",
-    "quand tu as envie de pleurer, pourquoi jouer les forts ?", "RING DING", null,
+    "quand tu as envie de pleurer, pourquoi faire la forte ?", "RING DING", null,
     "強い → 強がる = « se donner l'air fort »."));
 point("N4", "〜とか", "Donner des exemples : « … ou … par exemple ». Familier.",
   modele("休[やす]みの日[ひ]は映画[えいが]{とか}買[か]い物[もの]{とか}に行[い]きます。", "Les jours de repos, je vais au cinéma, faire les magasins, ce genre de choses."),
@@ -250,7 +250,7 @@ point("N4", "〜ばよかった", "Regret : « j'aurais dû… ».",
 point("N4", "〜てほしい", "Vouloir que quelqu'un d'autre fasse quelque chose.",
   modele("もっとゆっくり{話[はな]してほしい}です。", "J'aimerais que vous parliez plus lentement."),
   aimyon("心[こころ]を読[よ]み{聞[き]かせて欲[ほ]しい}",
-    "je voudrais que tu me lises ton cœur à voix haute.", "ビーナスベルト", null,
+    "je voudrais que tu me lises ton cœur, comme un conte :", "ビーナスベルト", null,
     "読み聞かせる (lire à voix haute pour quelqu'un) + てほしい."));
 point("N4", "〜ようにする", "« Faire en sorte de… », « s'efforcer de… ».",
   modele("毎日[まいにち]野菜[やさい]を{食[た]べるようにしています}。", "Je m'efforce de manger des légumes tous les jours."));

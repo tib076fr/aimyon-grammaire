@@ -23,6 +23,14 @@ Ouvrir `index.html` dans un navigateur : aucun outil à installer.
 | `data-anecdotes.js` | Les anecdotes sourcées sur les chansons (infobulles) |
 | `romaji.js` | La recherche des fiches en romaji |
 
+## Paroles complètes (usage personnel)
+
+Le texte entier des chansons n'est pas dans ce dépôt. Pour le récupérer en local (dossier `paroles-locales/`, ignoré par Git) :
+
+```bash
+python3 outils/telecharger-paroles.py
+```
+
 ## Droits
 
 Les extraits de chansons sont de courtes citations à but pédagogique. Paroles © Aimyon et ses ayants droit.

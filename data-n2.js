@@ -8,7 +8,10 @@ point("N2", "〜としても", "« Même en supposant que… ».",
 point("N2", "〜おそれがある", "« Il y a un risque que… » (formel).",
   modele("台風[たいふう]が来[く]る{おそれがあります}。", "Un typhon risque d'arriver."));
 point("N2", "〜てたまらない / 〜てしょうがない", "Sentiment irrépressible : « tellement… que c'en est insupportable ».",
-  modele("彼女[かのじょ]に{会[あ]いたくてたまらない}。", "Je meurs d'envie de la voir."));
+  modele("彼女[かのじょ]に{会[あ]いたくてたまらない}。", "Je meurs d'envie de la voir."),
+  aimyon("それに{悔[くや]しくてたまらなかった}",
+    "et j'en étais malade de dépit,", "森のくまさん", null,
+    "悔しい → 悔しくて + たまらない, ici au passé : un sentiment si fort qu'on ne peut le contenir."));
 point("N2", "〜ことになっている", "« Il est prévu que… », « on est censé… ».",
   modele("ここでは靴[くつ]を{脱[ぬ]ぐことになっています}。", "Ici, on est censé enlever ses chaussures."));
 point("N2", "〜際に", "« Lors de… », « au moment de… » (formel).",

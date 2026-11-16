@@ -38,10 +38,13 @@ point("N3", "〜っぽい", "« Qui fait… », « qui tire sur… », « qui a 
 point("N3", "〜がち", "« Avoir tendance à… » (plutôt négatif).",
   modele("冬[ふゆ]は運動不足[うんどうぶそく]に{なりがち}です。", "L'hiver, on a tendance à manquer d'exercice."),
   aimyon("理想[りそう]の高[たか]さは人一倍[ひといちばい] {夢見[ゆめみ]がち}なのはわかってる",
-    "Mes idéaux sont plus hauts que ceux des autres ; je sais bien que je rêve trop.", "○○ちゃん", null,
+    "Mes exigences sont plus hautes que celles des autres ; je rêve trop, je le sais bien.", "○○ちゃん", null,
     "夢見る → 夢見がち = « porté à rêver »."));
 point("N3", "〜気味", "« Un peu… », « légèrement… » (sensation).",
-  modele("今日[きょう]は{風邪気味[かぜぎみ]}です。", "Aujourd'hui, je me sens un peu enrhumé."));
+  modele("今日[きょう]は{風邪気味[かぜぎみ]}です。", "Aujourd'hui, je me sens un peu enrhumé."),
+  aimyon("{フライング気味[ぎみ]}にキスをして",
+    "Un baiser un peu trop pressé,", "ユラユラ", null,
+    "フライング (faux départ) + 気味 : « un peu en avance »."));
 point("N3", "〜だらけ", "« Plein de… », « couvert de… » (quelque chose d'indésirable).",
   modele("この作文[さくぶん]は{間違[まちが]いだらけ}です。", "Cette rédaction est pleine de fautes."),
   aimyon("心[こころ]の壁[かべ]も{穴[あな]だらけ}で",
@@ -50,7 +53,7 @@ point("N3", "〜だらけ", "« Plein de… », « couvert de… » (quelque cho
 point("N3", "〜ふりをする", "« Faire semblant de… ».",
   modele("彼[かれ]は知[し]らない{ふりをしました}。", "Il a fait semblant de ne pas savoir."),
   aimyon("どん底[ぞこ]に落[お]ちた女[おんな]の{ふりして}",
-    "je joue la femme tombée au fond du gouffre,", "そんな風に生きている", null,
+    "Je joue la femme tombée au plus bas,", "そんな風に生きている", null,
     "Nom + のふり(を)して = « en faisant semblant d'être… »."));
 point("N3", "〜くせに", "« Alors que… pourtant » : reproche ou mépris.",
   modele("知[し]っている{くせに}、教[おし]えてくれない。", "Il le sait très bien, et pourtant il ne me dit rien."),
@@ -60,16 +63,19 @@ point("N3", "〜くせに", "« Alors que… pourtant » : reproche ou mépris."
 point("N3", "〜もの / 〜もん", "En fin de phrase : donne une raison personnelle sur un ton familier (« parce que… »). もん, plus relâché, peut sonner enfantin ou mignon.",
   modele("だって、知[し]らなかったんだ{もん}。", "Mais enfin, je ne savais pas, moi."),
   aimyon("目[め]を閉[と]じているんだ{もの}",
-    "C'est que tu as les yeux fermés.", "ハッピー", null,
+    "puisque tu as les yeux clos.", "ハッピー", null,
     "〜んだもの : justification sur un ton personnel."));
 point("N3", "〜っけ", "Chercher à se rappeler : « c'était quoi, déjà ? ».",
   modele("試験[しけん]はいつだ{っけ}。", "C'était quand déjà, l'examen ?"));
 point("N3", "〜って (thème)", "Forme orale de は (ou de というのは) : marque familièrement le thème de la phrase.",
-  modele("東京[とうきょう]{って}、人[ひと]が多[おお]いですね。", "Tokyo, il y a du monde, hein."));
+  modele("東京[とうきょう]{って}、人[ひと]が多[おお]いですね。", "Tokyo, il y a du monde, hein."),
+  aimyon("結局[けっきょく]この世[よ]の表現[ひょうげん]{って}のは",
+    "Au fond, l'expression, en ce monde,", "いつまでも", null,
+    "ってのは = というのは : pose le thème dont on va parler."));
 point("N3", "まるで〜ようだ", "« Exactement comme si… ».",
   modele("{まるで}夢[ゆめ]{のようです}。", "C'est tout à fait comme un rêve."),
   aimyon("{まるで}僕[ぼく]たち{のようだ}ね",
-    "on dirait nous, n'est-ce pas.", "ジェニファー", null,
+    "on dirait nous deux, n'est-ce pas.", "ジェニファー", null,
     "まるで renforce のようだ."));
 point("N3", "なかなか", "Avec une négation : « ne… pas facilement ». Avec un positif : « plutôt… ».",
   modele("バスが{なかなか}来[き]ません。", "Le bus n'arrive vraiment pas."));
@@ -84,12 +90,12 @@ point("N3", "〜わけだ", "« C'est pour ça que… », « voilà pourquoi… 
 point("N3", "〜わけではない", "« Ce n'est pas que… » : négation partielle.",
   modele("肉[にく]が嫌[きら]いな{わけではありません}。", "Ce n'est pas que je n'aime pas la viande."),
   aimyon("嫌[きら]いな{わけじゃない}のよ",
-    "Ce n'est pas que je ne l'aime pas.", "ふたりの世界", null,
+    "Ce n'est pas que je ne t'aime pas.", "ふたりの世界", null,
     "わけじゃない est la forme orale de わけではない."));
 point("N3", "〜わけがない / 〜はずがない", "« Il est impossible que… ».",
   modele("彼[かれ]がそんなことを言[い]う{わけがない}。", "Il est impossible qu'il ait dit une chose pareille."),
   aimyon("1人[ひとり]で大丈夫[だいじょうぶ]な{わけがない}",
-    "Comme si je pouvais aller bien toute seule.", "わかってない", null,
+    "comme si je pouvais aller bien toute seule.", "わかってない", null,
     "Adjectif en な + な + わけがない."));
 point("N3", "〜わけにはいかない", "« Je ne peux pas me permettre de… » (pour des raisons morales ou sociales).",
   modele("大事[だいじ]な会議[かいぎ]だから、休[やす]む{わけにはいきません}。", "C'est une réunion importante, je ne peux pas me permettre d'être absent."));
@@ -98,7 +104,10 @@ point("N3", "〜に違いない", "« Sans aucun doute », « ça doit être… 
 point("N3", "〜とは限らない", "« Pas forcément », « pas toujours ».",
   modele("高[たか]いものがいい{とは限[かぎ]りません}。", "Ce qui est cher n'est pas forcément bon."));
 point("N3", "〜ということだ / 〜とのことだ", "« Il paraît que… », ou « cela veut dire que… ».",
-  modele("電車[でんしゃ]は三十分[さんじゅっぷん]遅[おく]れる{ということです}。", "Il paraît que le train aura trente minutes de retard."));
+  modele("電車[でんしゃ]は三十分[さんじゅっぷん]遅[おく]れる{ということです}。", "Il paraît que le train aura trente minutes de retard."),
+  aimyon("手[て]に入[はい]るレベルの魅力[みりょく]{ってこと}かしら",
+    "Un charme à portée de main : c'est ce que ça veut dire ?", "強くなっちゃったんだ、ブルー", null,
+    "ってこと est la forme orale de ということ : « cela veut dire que… »."));
 point("N3", "〜べきだ", "« Il faudrait », « on devrait » (devoir moral). Négatif : 〜べきではない.",
   modele("約束[やくそく]は{守[まも]るべき}です。", "On doit tenir ses promesses."),
   aimyon("今[いま]{伝[つた]えるべき}なのか",
@@ -109,7 +118,10 @@ point("N3", "〜ことだ", "Conseil appuyé : « ce qu'il faut, c'est… ».",
 point("N3", "〜ものだ", "Présente quelque chose comme admis de tous ; avec 〜たものだ, évoque un souvenir (« autrefois, je… »).",
   modele("子供[こども]のころ、よくこの川[かわ]で{泳[およ]いだものだ}。", "Enfant, je nageais souvent dans cette rivière."));
 point("N3", "〜ことはない", "« Il n'y a pas lieu de… », « pas la peine de… ».",
-  modele("心配[しんぱい]する{ことはありません}。", "Il n'y a pas de quoi s'inquiéter."));
+  modele("心配[しんぱい]する{ことはありません}。", "Il n'y a pas de quoi s'inquiéter."),
+  aimyon("何[なに]も一人[ひとり]で{泣[な]くことない}だろう",
+    "Tu n'as aucune raison de pleurer toute seule.", "分かってくれよ", null,
+    "泣くことない = 泣くことはない, « pas la peine de pleurer » : は est omis à l'oral. 何も renforce la négation."));
 point("N3", "〜しかない", "Verbe au dictionnaire + しかない : « il n'y a plus qu'à… ».",
   modele("もう歩[ある]いて{帰[かえ]るしかない}。", "Il n'y a plus qu'à rentrer à pied."));
 point("N3", "〜させてください", "Demander la permission de faire : « laissez-moi… ».",
@@ -120,7 +132,7 @@ point("N3", "〜させてください", "Demander la permission de faire : « la
 point("N3", "〜ようとする", "Volitif + とする : « essayer de… », ou « être sur le point de… ».",
   modele("{出[で]かけようとした}とき、電話[でんわ]が鳴[な]りました。", "Au moment où j'allais sortir, le téléphone a sonné."),
   aimyon("震[ふる]えて 何[なに]か{言[い]おうとしていた}",
-    "a tremblé, comme pour dire quelque chose.", "あのね", null,
+    "tremblait, cherchant à dire quelque chose.", "あのね", null,
     "言う → 言おう + とする = « essayer de dire »."));
 point("N3", "〜ことにしている", "Règle personnelle : « j'ai pour habitude de… ».",
   modele("夜[よる]十時[じゅうじ]以降[いこう]は{食[た]べないことにしています}。", "J'ai pour règle de ne rien manger après dix heures du soir."));
@@ -136,7 +148,7 @@ point("N3", "〜たとたん", "« À l'instant même où… ».",
 point("N3", "〜たびに", "« Chaque fois que… ».",
   modele("この歌[うた]を{聞[き]くたびに}、学生時代[がくせいじだい]を思[おも]い出[だ]します。", "Chaque fois que j'entends cette chanson, je repense à mes années d'études."),
   aimyon("あなたは{会[あ]うたびに}",
-    "Toi, chaque fois que l'on se voyait,", "MIO", null,
+    "Toi, à chacune de nos rencontres,", "MIO", null,
     "会う + たびに."));
 point("N3", "〜てはじめて", "« Ce n'est qu'après avoir… que… ».",
   modele("病気[びょうき]に{なってはじめて}、健康[けんこう]の大切[たいせつ]さが分[わ]かりました。", "Ce n'est qu'en tombant malade que j'ai compris l'importance de la santé."));
@@ -156,7 +168,10 @@ point("N3", "〜せいで", "« À cause de… » (résultat fâcheux).",
     "La faute aux feux d'artifice, aux poissons rouges, sûrement.", "青春と青春と青春", null,
     "Nom + のせいだ = « c'est la faute de… »."));
 point("N3", "〜によって", "« Par » (agent, moyen), « selon », « à cause de ».",
-  modele("国[くに]{によって}習慣[しゅうかん]が違[ちが]います。", "Les coutumes diffèrent selon les pays."));
+  modele("国[くに]{によって}習慣[しゅうかん]が違[ちが]います。", "Les coutumes diffèrent selon les pays."),
+  aimyon("内容[ないよう]{によって}は怒[おこ]るけど",
+    "Selon ce que c'est, je me fâcherai peut-être, mais…", "私に見せてよ", null,
+    "内容によっては = « selon le contenu, dans certains cas »."));
 point("N3", "〜によると", "« D'après… », « selon (une source) ».",
   modele("天気予報[てんきよほう]{によると}、明日[あした]は雨[あめ]だそうです。", "D'après la météo, il pleuvra demain."));
 point("N3", "〜について / 〜に関して", "« Au sujet de… ». に関して est plus formel.",
@@ -180,12 +195,12 @@ point("N3", "〜代わりに", "« À la place de… », « au lieu de… », «
 point("N3", "〜とおり", "« Comme », « conformément à… ».",
   modele("先生[せんせい]が言[い]った{とおりに}やってください。", "Faites comme le professeur l'a dit."),
   aimyon("望[のぞ]み{通[どお]りに}進[すす]めるほど",
-    "pour y marcher tout droit comme on le voudrait,", "ノット・オーケー", null,
+    "pour qu'on y arrive comme on le voudrait,", "ノット・オーケー", null,
     "Nom + 通り se lit どおり : 望み通り = « conformément à ses souhaits »."));
 point("N3", "〜くらい / 〜ほど", "Degré : « au point de… », « à peu près… ».",
   modele("泣[な]きたい{くらい}嬉[うれ]しかった。", "J'étais heureuse à en pleurer."),
   aimyon("どうせ死[し]ぬなら 死[し]にそうな{くらい}デカい声[こえ]で",
-    "Quitte à mourir, que ce soit d'une voix à en crever,", "どうせ死ぬなら", null,
+    "Quitte à mourir, c'est d'une voix à en mourir", "どうせ死ぬなら", null,
     "死にそうなくらい = « au point d'en mourir »."));
 point("N3", "〜ほど〜ない", "« Pas aussi… que… ».",
   modele("今年[ことし]の冬[ふゆ]は去年[きょねん]{ほど}{寒[さむ]くない}。", "Cet hiver n'est pas aussi froid que celui de l'an dernier."));
@@ -207,7 +222,10 @@ point("N3", "〜こそ", "Mise en relief : « c'est justement… ».",
     "C'est toi qui espères quelque chose, non ?", "いいことしましょ", null,
     "あなたこそ = « c'est justement toi qui… »."));
 point("N3", "〜はもちろん", "« Sans parler de… », « bien sûr… mais aussi… ».",
-  modele("この曲[きょく]は日本[にほん]{はもちろん}、海外[かいがい]でも人気[にんき]があります。", "Ce morceau est populaire au Japon, bien sûr, mais aussi à l'étranger."));
+  modele("この曲[きょく]は日本[にほん]{はもちろん}、海外[かいがい]でも人気[にんき]があります。", "Ce morceau est populaire au Japon, bien sûr, mais aussi à l'étranger."),
+  aimyon("貴方[あなた]{はもちろん}のこと",
+    "Toi, bien sûr, cela va sans dire,", "姿", null,
+    "はもちろんのこと : forme développée de はもちろん."));
 point("N3", "〜というより", "« Plutôt que… , je dirais… ».",
   modele("彼[かれ]は友達[ともだち]{というより}、家族[かぞく]のような人[ひと]です。", "Plus qu'un ami, il est comme un membre de la famille."));
 point("N3", "〜といっても", "« On a beau dire… », « certes… mais… ».",
@@ -230,7 +248,7 @@ point("N3", "〜かける", "Base + かける : action entamée ou sur le point 
 point("N3", "〜っぱなし", "Laisser dans un état, sans s'en occuper.",
   modele("窓[まど]を{開[あ]けっぱなし}にしないでください。", "Ne laissez pas la fenêtre grande ouverte."),
   aimyon("イタタ また{付[つ]けっぱなし}の",
-    "Aïe… encore gardées toute la nuit,", "偽者", null,
+    "Aïe… encore gardées pour dormir,", "偽者", null,
     "付ける (mettre) → 付けっぱなし = « gardé sans l'enlever » : ici, des lentilles de contact."));
 point("N3", "〜合う", "Base + 合[あ]う : faire mutuellement.",
   modele("困[こま]ったときは{助[たす]け合[あ]いましょう}。", "Entraidons-nous dans les moments difficiles."),
