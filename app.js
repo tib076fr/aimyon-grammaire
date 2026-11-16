@@ -263,5 +263,38 @@ document.addEventListener("keydown", (evenement) => {
   if (evenement.key === "Escape") fermerInfobulles();
 });
 
-creerFiltres();
-afficher();
+// Adresse d'une fiche : fiches.html?p=<titre de la fiche>
+function lienFiche(point) {
+  return "fiches.html?p=" + encodeURIComponent(point.titre);
+}
+
+// Mode « fiche seule » : la page n'affiche que la fiche demandée,
+// avec des liens vers la précédente et la suivante.
+function afficherFicheSeule(titre) {
+  const index = POINTS.findIndex((p) => p.titre === titre);
+  if (index < 0) return false;
+  const point = POINTS[index];
+  const precedente = POINTS[index - 1];
+  const suivante = POINTS[index + 1];
+
+  document.title = `${point.titre} — Aimyon 文法`;
+  document.querySelector("header h1").textContent = CATEGORIE_DE[point.titre] || "Fiche";
+  document.querySelector(".controles").hidden = true;
+
+  const navigation = document.getElementById("navigation-fiche");
+  navigation.hidden = false;
+  navigation.innerHTML = `
+    <a href="index.html" class="retour">← Sommaire</a>
+    <span class="voisines">
+      ${precedente ? `<a href="${lienFiche(precedente)}" title="Fiche précédente" lang="ja">‹ ${echapper(precedente.titre)}</a>` : ""}
+      ${suivante ? `<a href="${lienFiche(suivante)}" title="Fiche suivante" lang="ja">${echapper(suivante.titre)} ›</a>` : ""}
+    </span>`;
+  zoneFiches.innerHTML = creerFiche(point);
+  return true;
+}
+
+const ficheDemandee = new URLSearchParams(location.search).get("p");
+if (!ficheDemandee || !afficherFicheSeule(ficheDemandee)) {
+  creerFiltres();
+  afficher();
+}

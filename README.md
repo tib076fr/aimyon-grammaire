@@ -7,13 +7,29 @@ La grammaire japonaise (JLPT N5 à N3, plus quelques points N2) expliquée par l
 
 ## Utilisation
 
-Ouvrir `index.html` dans un navigateur : aucun outil à installer.
+Le site compte trois pages :
+
+- `index.html` : le sommaire, toutes les fiches en cartes, avec filtres par niveau, par thème et par présence d'une chanson ;
+- `fiches.html` : les fiches complètes (`fiches.html?p=<titre>` affiche une seule fiche) ;
+- `question.html` : un professeur virtuel (Claude, d'Anthropic) répond aux questions de grammaire.
+
+Les deux premières pages fonctionnent en ouvrant simplement le fichier. La page de questions doit être servie par un serveur web (GitHub Pages, ou `python3 -m http.server` en local), et chaque visiteur y saisit sa propre clé d'API Anthropic : les questions partent directement de son navigateur vers Anthropic et sont facturées sur son compte.
+
+### Garde-fous de la page de questions
+
+- La recherche web du modèle est limitée à Tae Kim, Tofugu, Imabi et Bunpro, et chaque réponse affiche les pages citées.
+- Le modèle ne peut citer que les extraits d'Aimyon déjà vérifiés sur le site ; toute citation qui n'y figure pas est signalée sous la réponse.
+- Les réponses sont affichées sans jamais interpréter de HTML venant du modèle.
 
 ## Organisation
 
 | Fichier | Rôle |
 |---|---|
-| `index.html`, `style.css`, `app.js` | La page, son apparence, son fonctionnement |
+| `index.html`, `sommaire.js` | Le sommaire et ses filtres |
+| `fiches.html`, `app.js` | Les fiches complètes |
+| `question.html`, `question.js` | Les questions au professeur virtuel |
+| `style.css` | L'apparence des trois pages |
+| `data-categories.js` | Le thème de chaque fiche |
 | `data.js` | Mode d'emploi et outils communs aux données |
 | `data-n5.js`, `data-n4.js`, `data-n3.js`, `data-n2.js` | Les fiches de grammaire, par niveau (niveaux de Bunpro) |
 | `data-sources.js` | Les sources de chaque fiche |

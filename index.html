@@ -11,45 +11,72 @@
   <title>Aimyon 文法 — la grammaire japonaise en chansons</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <h1>Aimyon <span lang="ja">文法</span></h1>
-    <p>La grammaire japonaise expliquée par les chansons d'Aimyon</p>
+<body class="page-sommaire">
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="index.html" class="nav-logo">Aimyon <span lang="ja">文法</span></a>
+    <div class="nav-liens">
+      <a href="index.html" aria-current="page">Sommaire</a>
+      <a href="fiches.html">Fiches</a>
+      <a href="question.html">Poser une question</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="hero-sur-titre" lang="ja">あいみょんで学ぶ日本語の文法</p>
+    <h1>La grammaire japonaise,<br>en chansons</h1>
+    <p class="hero-texte">Chaque point de grammaire, du N5 au N2, expliqué et sourcé, puis illustré quand c'est possible par une ligne d'Aimyon.</p>
+    <ul id="chiffres" class="chiffres"></ul>
+    <p class="hero-actions">
+      <a class="bouton-principal" href="#catalogue">Choisir un point</a>
+      <a class="bouton-secondaire" href="question.html">Poser une question</a>
+    </p>
   </header>
 
-  <main>
-    <!-- Barre de recherche et filtres par niveau -->
-    <section class="controles">
-      <form id="formulaire" class="recherche" role="search">
-        <input type="search" id="recherche" placeholder="たい, tai, négation…" aria-label="Rechercher" autocapitalize="none" autocorrect="off" enterkeyhint="search">
+  <main id="catalogue">
+    <section class="panneau-filtres" aria-label="Filtres">
+      <form id="formulaire-sommaire" class="recherche" role="search">
+        <input type="search" id="recherche-sommaire" placeholder="たい, tai, conditionnel…" aria-label="Rechercher un point de grammaire" autocapitalize="none" autocorrect="off" enterkeyhint="search">
         <button type="submit">Chercher</button>
       </form>
-      <div id="filtres" class="filtres"></div>
-      <p id="compteur" class="compteur"></p>
+
+      <div class="groupe-filtres">
+        <span class="etiquette-filtre">Niveau</span>
+        <div id="filtre-niveaux" class="puces"></div>
+      </div>
+      <div class="groupe-filtres">
+        <span class="etiquette-filtre">Thème</span>
+        <div id="filtre-themes" class="puces puces-themes"></div>
+      </div>
+      <div class="ligne-bas-filtres">
+        <label class="interrupteur">
+          <input type="checkbox" id="filtre-chanson">
+          <span class="interrupteur-piste" aria-hidden="true"></span>
+          Seulement les points illustrés par Aimyon
+        </label>
+        <button type="button" id="reinitialiser" class="lien-bouton" hidden>Tout réafficher</button>
+      </div>
     </section>
 
-    <!-- Les fiches de grammaire sont insérées ici par app.js -->
-    <section id="fiches" class="fiches"></section>
-    <p id="vide" class="vide" hidden>Aucun point de grammaire ne correspond.</p>
+    <p id="compteur-sommaire" class="compteur" aria-live="polite"></p>
+    <div id="resultats"></div>
+    <p id="vide-sommaire" class="vide" hidden>
+      Aucun point ne correspond.
+      <a href="question.html">Posez la question</a> : le professeur répondra même si le point n'a pas encore de fiche.
+    </p>
   </main>
 
   <footer>
-    Les phrases modèles sont inventées pour illustrer la règle. Les extraits de chansons sont de courtes citations à but pédagogique. Paroles © Aimyon et ses ayants droit ; pochettes affichées depuis Apple Music —
-    <a href="https://j-lyric.net/artist/a05996f/" target="_blank" rel="noopener">toutes les paroles sur J-Lyric ↗</a>.
+    Les extraits de chansons sont de courtes citations à but pédagogique. Paroles © Aimyon et ses ayants droit ; pochettes affichées depuis Apple Music.
   </footer>
 
-  <!-- L'ordre compte : les données d'abord, puis le code qui les affiche -->
   <script src="data.js"></script>
   <script src="data-n5.js"></script>
   <script src="data-n4.js"></script>
   <script src="data-n3.js"></script>
   <script src="data-n2.js"></script>
-  <script src="data-sources.js"></script>
-  <script src="data-paroles.js"></script>
-  <script src="data-contexte.js"></script>
-  <script src="data-anecdotes.js"></script>
   <script src="data-pochettes.js"></script>
+  <script src="data-categories.js"></script>
   <script src="romaji.js"></script>
-  <script src="app.js"></script>
+  <script src="sommaire.js"></script>
 </body>
 </html>
