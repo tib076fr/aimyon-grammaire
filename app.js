@@ -54,7 +54,16 @@ function creerExemple(ex) {
       PAROLES[titre] ||
       "https://www.google.com/search?q=" +
         encodeURIComponent("あいみょん " + titre + " 歌詞");
-    const annee = ex.annee ? ` (${ex.annee})` : "";
+    // Pochette du single ou de l'album (data-pochettes.js)
+    const pochette = POCHETTES[titre];
+    const anneeConnue = ex.annee || (pochette && pochette.annee);
+    const annee = anneeConnue ? ` (${anneeConnue})` : "";
+    const vignette = pochette
+      ? `<a class="pochette" href="${echapper(pochette.lien)}" target="_blank" rel="noopener"
+           title="${pochette.type === "single" ? "Single" : "Album"} : ${echapper(pochette.disque)}">
+           <img src="${echapper(pochette.image)}" alt="Pochette ${pochette.type === "single" ? "du single" : "de l'album"} ${echapper(pochette.disque)}"
+                width="56" height="56" loading="lazy" onerror="this.parentNode.remove()"></a>`
+      : "";
     const lienParoles = estAlbum
       ? ""
       : ` <span class="ensemble">· <a href="${paroles}" target="_blank" rel="noopener">Paroles complètes ↗</a></span>`;
@@ -71,8 +80,8 @@ function creerExemple(ex) {
             .join(" · ")}</span>
         </span>`
       : "";
-    source = `<cite>♪ ${titreAffiche}${annee}
-      <span class="ensemble">· <a href="${ecouter}" target="_blank" rel="noopener">Écouter ↗</a></span>${lienParoles}${infobulle}</cite>`;
+    source = `<cite>${vignette}<span class="cite-texte">♪ ${titreAffiche}${annee}
+      <span class="ensemble">· <a href="${ecouter}" target="_blank" rel="noopener">Écouter ↗</a></span>${lienParoles}</span>${infobulle}</cite>`;
   } else {
     source = `<cite>Phrase modèle</cite>`;
   }

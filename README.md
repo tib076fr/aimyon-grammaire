@@ -19,6 +19,7 @@ Ouvrir `index.html` dans un navigateur : aucun outil à installer.
 | `data-sources.js` | Les sources de chaque fiche |
 | `data-paroles.js` | Les liens vers les paroles complètes |
 | `data-contexte.js` | La ligne d'avant et d'après chaque extrait de chanson |
+| `data-pochettes.js` | Les pochettes (single ou album), chargées depuis Apple Music |
 | `data-anecdotes.js` | Les anecdotes sourcées sur les chansons (infobulles) |
 | `romaji.js` | La recherche des fiches en romaji |
 

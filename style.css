@@ -243,3 +243,33 @@ button.avec-anecdote::after { content: " ⓘ"; font-weight: 400; }
 .infobulle[hidden] { display: none; }
 .infobulle .anecdote { display: block; margin-bottom: 8px; }
 .infobulle .anecdote-source { display: block; font-size: 0.85rem; color: var(--discret); }
+
+/* ---------- Présentation plus aérée des exemples ---------- */
+blockquote { padding: 20px 22px; }
+blockquote p.contexte { margin: 0; }
+blockquote .japonais { margin: 8px 0; }
+.traduction { margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--bord); line-height: 1.7; }
+.traduction span { padding: 3px 0; }
+blockquote.modele .traduction { margin-top: 10px; padding-top: 0; border-top: 0; }
+cite { margin-top: 16px; }
+.note { margin-top: 16px; padding-top: 14px; line-height: 1.7; }
+.resume { margin-bottom: 18px; line-height: 1.7; }
+.exemples { gap: 18px; }
+.sources { margin-top: 18px; }
+@media (max-width: 480px) {
+  blockquote { padding: 16px; }
+}
+
+/* Vignette de pochette à côté du titre de la chanson */
+cite { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 14px; }
+cite .cite-texte { flex: 1; min-width: 12rem; }
+cite .infobulle { flex-basis: 100%; }
+.pochette { flex: none; padding: 0; line-height: 0; }
+.pochette img {
+  width: 56px; height: 56px;
+  border-radius: 8px;
+  border: 1px solid var(--bord);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+blockquote.modele cite { display: block; }

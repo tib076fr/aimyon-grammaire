@@ -3,7 +3,7 @@
 
 point("N2", "〜としても", "« Même en supposant que… ».",
   modele("今[いま]から走[はし]った{としても}、間[ま]に合[あ]わないでしょう。", "Même en courant maintenant, on n'arriverait pas à temps."),
-  aimyon("あした世界[せかい]が終[お]わる{としても}", "Même si le monde finissait demain.", "あした世界が終わるとしても", 2019,
+  aimyon("あした世界[せかい]が終[お]わる{としても}", "Quand bien même le monde finirait demain.", "あした世界が終わるとしても", 2019,
     "世界が終わる (le monde finit) + としても : une hypothèse que l'on pose pour dire que cela ne changerait rien."));
 point("N2", "〜おそれがある", "« Il y a un risque que… » (formel).",
   modele("台風[たいふう]が来[く]る{おそれがあります}。", "Un typhon risque d'arriver."));
