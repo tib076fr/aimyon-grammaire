@@ -1,6 +1,6 @@
 // ===================== NIVEAU N5 =====================
+// Le niveau de chaque fiche est celui indiqué par Bunpro.
 
-// --- Particules ---
 point("N5", "〜です", "Copule polie : placée après un nom ou un adjectif, elle affirme « A est B ». Ce n'est pas un verbe, même si on la traduit souvent par « être ».",
   modele("私[わたし]は学生[がくせい]{です}。", "Je suis étudiant."),
   aimyon("人[ひと]になれない人[ひと]{です}",
@@ -57,7 +57,7 @@ point("N5", "か", "Placé en fin de phrase, forme une question. Entre deux noms
   modele("これは何[なん]です{か}。", "Qu'est-ce que c'est ?"),
   aimyon("何[なに]が分[わ]かるの{か}",
     "Qu'est-ce que tu peux bien y comprendre ?", "リズム64", null,
-    "のか en fin de phrase : question familière, souvent rhétorique."));
+    "の devant か donne à la question un ton de demande d'explication."));
 point("N5", "や", "« Et » entre des noms, pour une liste non exhaustive (« entre autres »).",
   modele("パン{や}卵[たまご]を買[か]いました。", "J'ai acheté du pain, des œufs, etc."),
   aimyon("悲壮感[ひそうかん]{や}憂鬱[ゆううつ]も",
@@ -83,8 +83,6 @@ point("N5", "こ・そ・あ・ど", "Démonstratifs : これ (ceci, près de mo
   aimyon("{それ}がいい",
     "C'est ça que je veux.", "テレパしい", null,
     "それ renvoie à ce que l'interlocuteur vient d'évoquer ; が le désigne comme le bon choix."));
-
-// --- Verbes ---
 point("N5", "〜ます / 〜ません", "Forme polie du verbe au présent/futur, affirmative et négative.",
   modele("毎日[まいにち]日本語[にほんご]を{勉強[べんきょう]します}。", "J'étudie le japonais tous les jours."),
   modele("お酒[さけ]は{飲[の]みません}。", "Je ne bois pas d'alcool."),
@@ -145,7 +143,7 @@ point("N5", "〜に行く / 〜に来る", "Base du verbe (sans ます) + に行
   modele("映画[えいが]を{見[み]に行[い]きます}。", "Je vais voir un film."),
   aimyon("{会[あ]いに行[い]く}のに", "Alors que j'irais bien te voir…", "会いに行くのに", 2024,
     "会います → 会い + に行く = « aller voir (quelqu'un) ». のに final (N4) exprime un regret : « et pourtant… »."));
-point("N5", "〜がある / 〜がいる", "« Il y a ». ある pour les choses inanimées, いる pour ce qui se déplace de soi-même (personnes, animaux).",
+point("N5", "〜がある / 〜がいる", "« Il y a ». ある pour les choses inanimées, いる pour les êtres animés (personnes, animaux).",
   modele("公園[こうえん]に猫[ねこ]{がいます}。", "Il y a un chat dans le parc."),
   aimyon("魔法[まほう]{がある}よ",
     "Il y a de la magie, tu sais.", "葵", null,
@@ -165,24 +163,12 @@ point("N5", "〜たり〜たりする", "Citer quelques actions parmi d'autres :
   aimyon("ヤキモチ{焼[や]いたり} キス{したり}",
     "Être jalouse, s'embrasser…", "漂白", null,
     "Deux actions citées en exemple ; le する final est sous-entendu."));
-point("N5", "〜なければならない", "Obligation : « il faut… », « je dois… ». Variante orale : 〜なきゃ.",
-  modele("薬[くすり]を{飲[の]まなければなりません}。", "Je dois prendre mon médicament."),
-  aimyon("{許[ゆる]していかなきゃ}",
-    "Il faut que j'apprenne à pardonner.", "さながらロンリー", null,
-    "なきゃ est la contraction orale de なければ(ならない). 〜ていく indique une action qui se poursuit vers l'avenir."));
-point("N5", "〜なくてもいい", "Absence d'obligation : « ce n'est pas la peine de… ».",
-  modele("明日[あした]は{来[こ]なくてもいい}です。", "Vous n'avez pas besoin de venir demain."),
-  aimyon("何[なに]も{描[か]かなくてもいい}",
-    "Pas besoin de dessiner quoi que ce soit.", "今日の芸術", null,
-    "描く → 描かない → 描かなくてもいい."));
-
-// --- Adjectifs et comparaison ---
 point("N5", "Adjectifs en い", "Se placent devant le nom ou en fin de phrase. Négatif : 〜くない. Passé : 〜かった.",
   modele("この本[ほん]は{面白[おもしろ]い}です。", "Ce livre est intéressant."),
   modele("昨日[きのう]は{寒[さむ]くなかった}です。", "Hier, il ne faisait pas froid."),
   aimyon("{痛[いた]い}{痛[いた]い}{痛[いた]い}",
     "Ça fait mal, mal, mal.", "朝陽", null,
-    "痛い, adjectif en い, forme une phrase à lui seul. Jeu de mots avec la ligne d'avant : 逢いたい (je veux te voir) contient « itai »."));
+    "痛い, adjectif en い, forme une phrase à lui seul. La ligne d'avant, 逢いたい (je veux te voir), se termine par les mêmes sons « itai »."));
 point("N5", "Adjectifs en な", "Prennent な devant un nom. Négatif : 〜じゃない. Passé : 〜だった / 〜でした.",
   modele("ここは{静[しず]かな}町[まち]です。", "C'est une ville calme."),
   aimyon("{好[す]きな}人[ひと]の唇[くちびる]奪[うば]う",
@@ -193,11 +179,6 @@ point("N5", "〜が好き / 〜が上手", "Ce qu'on aime ou sait bien faire se 
   aimyon("君[きみ]{が好[す]き}だ",
     "Je t'aime.", "GOOD NIGHT BABY", null,
     "La personne aimée est marquée par が, pas par を."));
-point("N5", "〜がほしい", "Vouloir quelque chose (un objet).",
-  modele("新[あたら]しいかばん{がほしい}です。", "Je voudrais un nouveau sac."),
-  aimyon("赤[あか]いあの風船[ふうせん]{が欲[ほ]しい}の？",
-    "Tu veux ce ballon rouge ?", "彼氏有無", null,
-    "L'objet désiré prend が. の final : question familière."));
 point("N5", "〜より / 〜のほうが", "Comparaison : « A は B より… » (A est plus… que B), « A のほうが… » (c'est A qui est le plus…).",
   modele("電車[でんしゃ]はバス{より}速[はや]いです。", "Le train est plus rapide que le bus."),
   aimyon("寝癖[ねぐせ]がある君[きみ]{の方[ほう]が}",
@@ -214,8 +195,6 @@ point("N5", "〜くなる / 〜になる", "« Devenir ». Adjectif en い → �
   aimyon("嫌[いや]{になった}の？",
     "Tu en as eu assez ?", "3636", null,
     "嫌 (adjectif en な) + になる = « en venir à ne plus supporter »."));
-
-// --- Relier les phrases ---
 point("N5", "〜から (raison)", "« Parce que ». La raison vient avant から.",
   modele("時間[じかん]がない{から}、タクシーで行[い]きます。", "Comme je n'ai pas le temps, j'y vais en taxi."),
   aimyon("恋[こい]をした{から}", "Parce que je suis tombée amoureuse.", "恋をしたから", 2019,
@@ -225,11 +204,6 @@ point("N5", "〜が / 〜けど", "« Mais ». が est plus formel, けど plus 
   aimyon("分[わ]かっていた{けれど}",
     "Je le savais bien, pourtant…", "炎曜日", null,
     "けれど est la forme longue de けど. La phrase s'arrête sur le « mais »."));
-point("N5", "〜とき", "« Quand », « au moment où ».",
-  modele("子供[こども]{のとき}、よく海[うみ]で泳[およ]ぎました。", "Quand j'étais enfant, je nageais souvent dans la mer."),
-  aimyon("私[わたし]笑[わら]える{時[とき]}は笑[わら]ってたい",
-    "Quand je peux rire, je veux rire.", "ねむい", null,
-    "笑える時 = « les moments où je peux rire » (potentiel de 笑う). 笑ってたい = 笑っていたい."));
 point("N5", "もう / まだ", "もう : « déjà » (ou « ne… plus » avec une négation). まだ : « encore » (ou « pas encore »).",
   modele("{もう}宿題[しゅくだい]をしました。", "J'ai déjà fait mes devoirs."),
   modele("{まだ}食[た]べていません。", "Je n'ai pas encore mangé."),
@@ -238,6 +212,47 @@ point("N5", "もう / まだ", "もう : « déjà » (ou « ne… plus » avec 
     "もう + négation = « ne… plus »."));
 point("N5", "〜でしょう", "Supposition polie (« probablement ») ou demande de confirmation.",
   modele("明日[あした]は雨[あめ]{でしょう}。", "Demain, il pleuvra sans doute."),
-  aimyon("証拠[しょうこ]になる{でしょう}",
+  aimyon("証拠[あかし]になる{でしょう}",
     "Ce sera sans doute une preuve.", "あした世界が終わるとしても", 2019,
-    "でしょう exprime une supposition : « sans doute »."));
+    "でしょう exprime une supposition : « sans doute ». D'après UtaTen, 証拠 se chante ici あかし et non しょうこ."));
+point("N5", "〜つもり", "Verbe au dictionnaire + つもり : « avoir l'intention de… ».",
+  modele("来週[らいしゅう]、国[くに]へ{帰[かえ]るつもり}です。", "J'ai l'intention de rentrer dans mon pays la semaine prochaine."),
+  aimyon("いったいこのままいつまで 一人[ひとり]で{いるつもり}だろう", "Jusqu'à quand est-ce que je compte rester seule comme ça ?", "裸の心", 2020,
+    "いるつもり = « avoir l'intention de rester ». だろう ajoute une interrogation tournée vers soi : « je me demande… »."));
+point("N5", "Proposition relative", "Un verbe placé devant un nom le décrit, sans pronom relatif (« qui », « que »).",
+  modele("{昨日[きのう]買[か]った}本[ほん]は面白[おもしろ]いです。", "Le livre que j'ai acheté hier est intéressant."),
+  aimyon("{空[そら]の青[あお]さを知[し]る}人[ひと]よ", "Ô toi qui connais le bleu du ciel.", "空の青さを知る人よ", 2019,
+    "空の青さを知る (connaître le bleu du ciel) + 人 (personne) = « la personne qui connaît le bleu du ciel ». 青さ : voir la fiche 〜さ."),
+  aimyon("黄昏[たそがれ]に{バカ話[ばなし]をした}{あの日[ひ]を思[おも]い出[だ]す}時[とき]を", "Ces moments où je repense à ce jour où l'on disait des bêtises au crépuscule.", "黄昏にバカ話をしたあの日を思い出す時を", 2020,
+    "Deux relatives emboîtées : [バカ話をした] あの日 (ce jour où l'on a dit des bêtises), puis [あの日を思い出す] 時 (le moment où je repense à ce jour)."));
+point("N5", "〜ので", "« Comme », « parce que » : plus doux et objectif que から.",
+  modele("頭[あたま]が痛[いた]い{ので}、早[はや]く帰[かえ]ります。", "Comme j'ai mal à la tête, je rentre tôt."));
+point("N5", "〜と言う / 〜って", "Rapporter des paroles. って est la forme orale de と.",
+  modele("彼[かれ]は明日[あした]来[く]る{と言[い]いました}。", "Il a dit qu'il viendrait demain."),
+  aimyon("好[す]き{って言[い]って}よ", "Dis-moi que tu m'aimes.", "好きって言ってよ", null,
+    "好きって言う = 好きと言う (« dire je t'aime »). 言ってよ : forme en て employée comme demande familière, renforcée par よ."));
+point("N5", "〜んだ / 〜のだ", "Expliquer, souligner ou demander une explication. Poli : 〜んです.",
+  modele("どうして遅[おく]れた{んです}か。", "Pourquoi êtes-vous arrivé en retard ?"),
+  aimyon("生[い]きていた{んだ}よな", "Elle était bien vivante, hein.", "生きていたんだよな", 2016,
+    "生きていた (« elle vivait ») devient 生きていたんだ (« elle vivait bel et bien »). よな, variante familière de よね, cherche l'assentiment : « hein ? »."));
+point("N5", "〜だろう", "Supposition familière (« sans doute »). Forme neutre de でしょう.",
+  modele("彼[かれ]はもう帰[かえ]った{だろう}。", "Il est sans doute déjà rentré."),
+  aimyon("いつか溶[と]ける{だろう}か",
+    "Est-ce que ça fondra un jour ?", "ざらめ", null,
+    "だろうか : on se pose la question à soi-même."));
+point("N5", "〜たことがある", "Expérience passée : « il m'est déjà arrivé de… ».",
+  modele("富士山[ふじさん]に{登[のぼ]ったことがあります}。", "J'ai déjà gravi le mont Fuji."),
+  aimyon("自慢[じまん]できるほどの恋[こい]は{したことがない}けど",
+    "Je n'ai jamais vécu d'amour dont je puisse me vanter, mais…", "ハート", null,
+    "したことがない = « ne l'avoir jamais fait ». ほど (N3) indique le degré : « au point de pouvoir s'en vanter »."));
+point("N5", "〜ほうがいい", "Conseil : forme en た + ほうがいい (« tu ferais mieux de… ») ; négatif : 〜ないほうがいい.",
+  modele("早[はや]く{寝[ね]たほうがいい}ですよ。", "Vous feriez mieux de vous coucher tôt."));
+point("N5", "〜の / 〜こと (nominalisation)", "Transforme un verbe en nom : « le fait de… ».",
+  modele("歌[うた]を{歌[うた]うのが}好[す]きです。", "J'aime chanter."),
+  aimyon("涙[なみだ]が{でることは}解[わか]る",
+    "Que les larmes coulent, ça, je le comprends.", "さよならの今日に", 2020,
+    "涙がでること = « le fait que les larmes coulent »."));
+point("N5", "〜すぎる", "« Trop ». Base du verbe ou radical de l'adjectif + すぎる.",
+  modele("昨日[きのう]は{食[た]べすぎました}。", "Hier, j'ai trop mangé."),
+  aimyon("風[かぜ]の強[つよ]さがちょっと 心[こころ]を{揺[ゆ]さぶりすぎて}", "La force du vent secoue un peu trop mon cœur…", "マリーゴールド", 2018,
+    "揺さぶります → 揺さぶりすぎる (« secouer trop »). La forme en て laisse la phrase en suspens. 強さ : voir la fiche 〜さ."));

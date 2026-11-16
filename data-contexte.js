@@ -11,7 +11,7 @@ const CONTEXTE = {
   },
   "朝が嫌い|私は朝が嫌い": {
     avant: { japonais: "夜[よる]になっても側[そば]にいてほしい", traduction: "Même la nuit venue, je veux que tu restes près de moi." },
-    apres: { japonais: "知[し]らない間[ま]にいなくなっても", traduction: "Même si tu disparais sans que je m'en aperçoive…" }
+    apres: { japonais: "知[し]らない間[あいだ]にいなくなっても", traduction: "Même si tu disparais sans que je m'en aperçoive…" }
   },
   "from 四階の角部屋|それだけが心配": {
     avant: { japonais: "失敗[しっぱい]が1回[いっかい]", traduction: "Un échec, une fois." },
@@ -80,7 +80,7 @@ const CONTEXTE = {
   },
   "桜が降る夜は|今伝えるべきなのか": {
     avant: { japonais: "心[こころ]から思[おも]うこと", traduction: "Ce que je pense du fond du cœur," },
-    apres: { japonais: "考[かんが]えている間[あいだ]に春[はる]は終[お]わる", traduction: "Le temps d'y réfléchir, le printemps s'achève." }
+    apres: { japonais: "考[かんが]えている間[ま]に春[はる]は終[お]わる", traduction: "Le temps d'y réfléchir, le printemps s'achève." }
   },
   "テレパしい|それがいい": {
     avant: { japonais: "抱[だ]きしめて分[わ]かり合[あ]えるなら", traduction: "Si l'on peut se comprendre en se serrant dans les bras," },
@@ -228,7 +228,7 @@ const CONTEXTE = {
     apres: { japonais: "週末[しゅうまつ]の予定[よてい]を決[き]めよう ちょこっと", traduction: "Décidons de nos projets du week-end, vite fait." }
   },
   "駅前喫茶ポプラ|分かりやすいなあ": {
-    avant: { japonais: "ずっと俯[うつむ]いて頬[ほお]を膨[ふく]らます", traduction: "Tu gardes la tête baissée et tu gonfles les joues." },
+    avant: { japonais: "ずっと俯[うつむ]いて頬[ほほ]を膨[ふく]らます", traduction: "Tu gardes la tête baissée et tu gonfles les joues." },
     apres: { japonais: "そういえば僕[ぼく]は君[きみ]のこういうところが大好[だいす]きで", traduction: "Au fait, c'est ce côté-là de toi que j'adore." }
   },
   "あなたのために|今週末切ろうと思うの": {
@@ -345,7 +345,7 @@ const CONTEXTE = {
     apres: { japonais: "傘[かさ]をさしてくれる人[ひと]が", traduction: "…quelqu'un qui tienne un parapluie au-dessus de moi." }
   },
   "さよならの今日に|涙がでることは解る": {
-    avant: { japonais: "河川敷[かせんじき]をなぞり歩[ある]く", traduction: "Je marche en longeant la berge." },
+    avant: { japonais: "河川敷[かせんしき]をなぞり歩[ある]く", traduction: "Je marche en longeant la berge." },
     apres: { japonais: "気持[きも]ちが戻[もど]らないのも知[し]ってる", traduction: "Je sais aussi que les sentiments ne reviendront pas." }
   },
   "さよならの今日に|できればやり直したいけれど": {
@@ -377,11 +377,11 @@ const CONTEXTE = {
     apres: { japonais: "ティファニーブルーの空[そら]の下[した]", traduction: "Sous un ciel bleu Tiffany." }
   },
   "私に見せてよ|知らない間に食べてるそれは何？": {
-    avant: { japonais: "時々[ときどき]淋[さび]しくなるから", traduction: "Parce que je me sens seule, parfois." },
+    avant: { japonais: "時々[ときどき]淋[さみ]しくなるから", traduction: "Parce que je me sens seule, parfois." },
     apres: { japonais: "最近[さいきん]のお気[き]に入[い]りなのかな", traduction: "C'est ton préféré du moment, peut-être ?" }
   },
   "私に見せてよ|小さな傷でも私に見せてよ": {
-    apres: { japonais: "時々[ときどき]淋[さび]しくなるから", traduction: "Parce que je me sens seule, parfois." }
+    apres: { japonais: "時々[ときどき]淋[さみ]しくなるから", traduction: "Parce que je me sens seule, parfois." }
   },
   "わかってない|撒き続けるのは嫌": {
     avant: { japonais: "いつまでも心[こころ]に苦[にが]い種[たね]を", traduction: "Des graines amères dans le cœur, indéfiniment," },

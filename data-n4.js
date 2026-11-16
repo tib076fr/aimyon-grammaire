@@ -1,10 +1,30 @@
 // ===================== NIVEAU N4 =====================
+// Le niveau de chaque fiche est celui indiqué par Bunpro.
 
-// --- Formes du verbe ---
+point("N4", "〜なければならない", "Obligation : « il faut… », « je dois… ». Variante orale : 〜なきゃ.",
+  modele("薬[くすり]を{飲[の]まなければなりません}。", "Je dois prendre mon médicament."),
+  aimyon("{許[ゆる]していかなきゃ}",
+    "Il faut que j'apprenne à pardonner.", "さながらロンリー", null,
+    "なきゃ est la contraction orale de なければ(ならない). 〜ていく indique une action qui se poursuit vers l'avenir."));
+point("N4", "〜なくてもいい", "Absence d'obligation : « ce n'est pas la peine de… ».",
+  modele("明日[あした]は{来[こ]なくてもいい}です。", "Vous n'avez pas besoin de venir demain."),
+  aimyon("何[なに]も{描[えが]かなくてもいい}",
+    "Pas besoin de dessiner quoi que ce soit.", "今日の芸術", null,
+    "描く → 描かない → 描かなくてもいい."));
+point("N4", "〜がほしい", "Vouloir quelque chose (un objet).",
+  modele("新[あたら]しいかばん{がほしい}です。", "Je voudrais un nouveau sac."),
+  aimyon("赤[あか]いあの風船[ふうせん]{が欲[ほ]しい}の？",
+    "Tu veux ce ballon rouge ?", "彼氏有無", null,
+    "L'objet désiré prend が. の final : question familière."));
+point("N4", "〜とき", "« Quand », « au moment où ».",
+  modele("子供[こども]{のとき}、よく海[うみ]で泳[およ]ぎました。", "Quand j'étais enfant, je nageais souvent dans la mer."),
+  aimyon("私[わたし]笑[わら]える{時[とき]}は笑[わら]ってたい",
+    "Quand je peux rire, je veux rire.", "ねむい", null,
+    "笑える時 = « les moments où je peux rire » (potentiel de 笑う). 笑ってたい = 笑っていたい."));
 point("N4", "Forme potentielle", "« Pouvoir faire ». Verbes en -u : finale en -e + る (書く → 書ける). Verbes en -ru : 〜られる (食べる → 食べられる).",
   modele("漢字[かんじ]が{読[よ]めます}。", "Je sais lire les kanji."),
   aimyon("君[きみ]がいない夜[よる]を{越[こ]えられ}やしない", "Les nuits sans toi, je n'arriverai jamais à les traverser.", "君がいない夜を越えられやしない", 2022,
-    "越える (traverser) → 越えられる (pouvoir traverser). 〜やしない est une négation très appuyée, au-delà du N3. 君がいない夜 est aussi une proposition relative."));
+    "越える (traverser) → 越えられる (pouvoir traverser). La terminaison 〜やしない est une tournure négative qui sort du cadre de ces fiches. 君がいない夜 est aussi une proposition relative."));
 point("N4", "Forme volitive (〜よう)", "« Faisons… », « je vais… ». Forme familière de 〜ましょう (行く → 行こう, 食べる → 食べよう).",
   modele("そろそろ{帰[かえ]ろう}。", "Allez, rentrons."),
   aimyon("話[はなし]は{やめよう}",
@@ -15,10 +35,6 @@ point("N4", "〜ようと思う", "Volitif + と思う : « je pense faire… »
   aimyon("今週末[こんしゅうまつ]{切[き]ろうと思[おも]う}の",
     "Je pense les couper ce week-end.", "あなたのために", null,
     "切る → 切ろう (volitif) + と思う : une intention que l'on annonce."));
-point("N4", "〜つもり", "Verbe au dictionnaire + つもり : « avoir l'intention de… ».",
-  modele("来週[らいしゅう]、国[くに]へ{帰[かえ]るつもり}です。", "J'ai l'intention de rentrer dans mon pays la semaine prochaine."),
-  aimyon("いったいこのままいつまで 一人[ひとり]で{いるつもり}だろう", "Jusqu'à quand est-ce que je compte rester seule comme ça ?", "裸の心", 2020,
-    "いるつもり = « avoir l'intention de rester ». だろう ajoute une interrogation tournée vers soi : « je me demande… »."));
 point("N4", "Forme passive (〜られる)", "« Être …é ». Verbes en -u : finale en -a + れる (叱る → 叱られる). Sert aussi à exprimer qu'on subit quelque chose.",
   modele("先生[せんせい]に{褒[ほ]められました}。", "J'ai été félicité par le professeur."),
   aimyon("{嫌[きら]われる}ことを恐[おそ]れてる",
@@ -48,14 +64,6 @@ point("N4", "〜なさい", "Ordre adouci, d'un parent ou d'un professeur.",
   aimyon("ジュリアナ東京[とうきょう]を{見[み]てみなさい}",
     "Regarde donc le Juliana's Tokyo.", "ナウなヤングにバカウケするのは当たり前だのクラッ歌", null,
     "見てみる (essayer de regarder) + なさい : un ordre adouci."));
-point("N4", "Proposition relative", "Un verbe placé devant un nom le décrit, sans pronom relatif (« qui », « que »).",
-  modele("{昨日[きのう]買[か]った}本[ほん]は面白[おもしろ]いです。", "Le livre que j'ai acheté hier est intéressant."),
-  aimyon("{空[そら]の青[あお]さを知[し]る}人[ひと]よ", "Ô toi qui connais le bleu du ciel.", "空の青さを知る人よ", 2019,
-    "空の青さを知る (connaître le bleu du ciel) + 人 (personne) = « la personne qui connaît le bleu du ciel ». 青さ : voir la fiche 〜さ."),
-  aimyon("黄昏[たそがれ]に{バカ話[ばなし]をした}{あの日[ひ]を思[おも]い出[だ]す}時[とき]を", "Ces moments où je repense à ce jour où l'on disait des bêtises au crépuscule.", "黄昏にバカ話をしたあの日を思い出す時を", 2020,
-    "Deux relatives emboîtées : [バカ話をした] あの日 (ce jour où l'on a dit des bêtises), puis [あの日を思い出す] 時 (le moment où je repense à ce jour)."));
-
-// --- Formes en て composées ---
 point("N4", "〜てみる", "« Essayer de faire » pour voir ce que ça donne.",
   modele("この服[ふく]を{着[き]てみて}もいいですか。", "Puis-je essayer ce vêtement ?"),
   aimyon("{問[と]いかけてみた}けれど",
@@ -88,8 +96,6 @@ point("N4", "〜ないで / 〜ずに", "« Sans faire… ». ずに est plus é
   aimyon("{焦[あせ]らずに}いるよ",
     "Je reste là, sans m'impatienter.", "愛を伝えたいだとか", 2017,
     "焦る → 焦らずに = « sans s'impatienter »."));
-
-// --- Conditions ---
 point("N4", "〜たら", "« Si… », « quand… » : une fois la première action réalisée.",
   modele("雨[あめ]が{降[ふ]ったら}、家[いえ]にいます。", "S'il pleut, je resterai à la maison."),
   aimyon("これが夢[ゆめ]{だったら}",
@@ -105,7 +111,7 @@ point("N4", "〜なら", "« Si c'est… », « s'il s'agit de… » : reprend u
   aimyon("満月[まんげつ]の夜[よる]{なら}", "Si c'est une nuit de pleine lune…", "満月の夜なら", 2018,
     "Nom + なら : « s'il s'agit de… ». La phrase reste en suspens, à l'auditeur d'imaginer la suite."),
   aimyon("どうせ死[し]ぬ{なら}", "Quitte à mourir de toute façon…", "どうせ死ぬなら", null,
-    "Verbe + なら : « si (de toute façon) on doit… ». どうせ (N3) = « de toute façon », avec une nuance résignée."));
+    "Verbe + なら : « si (de toute façon) on doit… ». どうせ (N2) = « de toute façon » : ce qui suit est présenté comme inévitable."));
 point("N4", "〜と (conséquence)", "« Quand / si… alors toujours… » : conséquence automatique.",
   modele("春[はる]に{なると}、桜[さくら]が咲[さ]きます。", "Quand le printemps arrive, les cerisiers fleurissent."),
   aimyon("覚悟[かくご]はあると言[い]う{と}嘘[うそ]になる",
@@ -121,43 +127,21 @@ point("N4", "〜のに", "« Alors que », « bien que » : exprime surprise ou 
   aimyon("俺[おれ]だったらいい{のに}",
     "Si seulement c'était moi.", "ミニスカートとハイライト", null,
     "〜たらいいのに exprime un souhait irréalisé."));
-point("N4", "〜ので", "« Comme », « parce que » : plus doux et objectif que から.",
-  modele("頭[あたま]が痛[いた]い{ので}、早[はや]く帰[かえ]ります。", "Comme j'ai mal à la tête, je rentre tôt."));
 point("N4", "〜し", "Énumérer plusieurs raisons : « et puis… ».",
   modele("この店[みせ]は安[やす]い{し}、おいしい{し}、よく来[き]ます。", "Ce restaurant est bon marché, c'est bon : je viens souvent."),
   aimyon("あまり優[やさ]しくない{し}",
     "Il n'est pas très gentil, et puis…", "ふたりの世界", null,
     "し énumère une raison parmi d'autres ; la suite est sous-entendue."));
-
-// --- Pensée, parole, supposition ---
 point("N4", "〜と思う", "« Je pense que… ». Précédé de la forme neutre.",
   modele("明日[あした]は晴[は]れる{と思[おも]います}。", "Je pense qu'il fera beau demain."),
   aimyon("それでも恋[こい]をしたい{と思[おも]う}",
     "Malgré tout, je crois que j'ai envie d'aimer.", "漂白", null,
     "恋をしたい (vouloir aimer) + と思う."));
-point("N4", "〜と言う / 〜って", "Rapporter des paroles. って est la forme orale de と.",
-  modele("彼[かれ]は明日[あした]来[く]る{と言[い]いました}。", "Il a dit qu'il viendrait demain."),
-  aimyon("好[す]き{って言[い]って}よ", "Dis-moi que tu m'aimes.", "好きって言ってよ", null,
-    "好きって言う = 好きと言う (« dire je t'aime »). 言ってよ : forme en て employée comme demande familière, renforcée par よ."));
-point("N4", "〜という", "« Qui s'appelle… », « appelé… ».",
-  modele("「雪国[ゆきぐに]」{という}小説[しょうせつ]を読[よ]みました。", "J'ai lu un roman intitulé « Pays de neige »."),
-  aimyon("貴方[あなた]{という}森[もり]で彷徨[さまよ]って",
-    "Errant dans cette forêt qui a pour nom « toi ».", "森のくまさん", null,
-    "A という B = « le B qu'on appelle A », ici en métaphore."));
-point("N4", "〜んだ / 〜のだ", "Expliquer, souligner ou demander une explication. Poli : 〜んです.",
-  modele("どうして遅[おく]れた{んです}か。", "Pourquoi êtes-vous arrivé en retard ?"),
-  aimyon("生[い]きていた{んだ}よな", "Elle était bien vivante, hein.", "生きていたんだよな", 2016,
-    "生きていた (« elle vivait ») devient 生きていたんだ (« elle vivait bel et bien »). よな cherche l'approbation, comme un « hein ? » adressé autant à soi qu'aux autres."));
 point("N4", "〜かもしれない", "« Peut-être », « il se peut que… ».",
   modele("午後[ごご]は雨[あめ]が降[ふ]る{かもしれません}。", "Il se peut qu'il pleuve cet après-midi."),
   aimyon("一緒[いっしょ]に捨[す]ててしまった{かもしれない}",
     "Je l'ai peut-être jeté avec le reste.", "ねむい", null,
     "捨ててしまった (jeté par mégarde) + かもしれない."));
-point("N4", "〜だろう", "Supposition familière (« sans doute »). Forme neutre de でしょう.",
-  modele("彼[かれ]はもう帰[かえ]った{だろう}。", "Il est sans doute déjà rentré."),
-  aimyon("いつか溶[と]ける{だろう}か",
-    "Est-ce que ça fondra un jour ?", "ざらめ", null,
-    "だろうか : on se pose la question à soi-même."));
 point("N4", "〜はずだ", "« Normalement », « devrait » : attente fondée sur une raison.",
   modele("彼[かれ]は今日[きょう]来[く]る{はず}です。", "Il devrait venir aujourd'hui."),
   aimyon("二人[ふたり]は完璧[かんぺき]な{はず}だった",
@@ -169,8 +153,6 @@ point("N4", "〜そうだ (apparence)", "Base du verbe / radical de l'adjectif +
   aimyon("{溢[あふ]れちゃいそう}だ",
     "Ça va déborder.", "マトリョーシカ", null,
     "溢れちゃう (= 溢れてしまう) + そうだ : « sur le point de »."));
-point("N4", "〜そうだ (ouï-dire)", "Forme neutre + そうだ : « il paraît que… ».",
-  modele("明日[あした]は雪[ゆき]が{降[ふ]るそうです}。", "Il paraît qu'il neigera demain."));
 point("N4", "〜ようだ / 〜みたいだ", "« On dirait que… », « comme… ». みたい est plus familier.",
   modele("彼[かれ]は疲[つか]れている{ようです}。", "Il a l'air fatigué."),
   modele("夢[ゆめ]{みたいだ}。", "On dirait un rêve."),
@@ -185,13 +167,6 @@ point("N4", "〜らしい", "« Il semble que… » d'après ce qu'on a entendu 
 point("N4", "〜かどうか / question indirecte", "« Si… ou non ». Avec un mot interrogatif, か seul suffit.",
   modele("彼[かれ]が来[く]る{かどうか}分[わ]かりません。", "Je ne sais pas s'il viendra ou non."),
   modele("駅[えき]がどこにある{か}教[おし]えてください。", "Dites-moi où se trouve la gare, s'il vous plaît."));
-
-// --- But, capacité, habitude ---
-point("N4", "〜ために", "« Pour », « afin de » : le but, avec un verbe d'action volontaire. Nom + のために : « pour (quelqu'un, quelque chose) ».",
-  modele("日本[にほん]で働[はたら]く{ために}、日本語[にほんご]を勉強[べんきょう]しています。", "J'étudie le japonais pour travailler au Japon."),
-  aimyon("あなたの{為[ため]に}もう尽[つ]くせないわ",
-    "Je ne peux plus me dévouer pour toi.", "チカ", null,
-    "Nom + のために = « pour (quelqu'un) »."));
 point("N4", "〜ように", "« De façon que », « pour que » : but que l'on ne contrôle pas directement.",
   modele("{忘[わす]れないように}、メモを書[か]きます。", "Je prends des notes pour ne pas oublier."),
   aimyon("私[わたし]が{濡[ぬ]れないように}",
@@ -201,28 +176,6 @@ point("N4", "〜ようになる", "« En venir à… », « se mettre à pouvoir
   modele("日本語[にほんご]が{話[はな]せるようになりました}。", "Je suis devenu capable de parler japonais."));
 point("N4", "〜ことができる", "« Pouvoir », « être capable de ».",
   modele("彼女[かのじょ]はピアノを{弾[ひ]くことができます}。", "Elle sait jouer du piano."));
-point("N4", "〜たことがある", "Expérience passée : « il m'est déjà arrivé de… ».",
-  modele("富士山[ふじさん]に{登[のぼ]ったことがあります}。", "J'ai déjà gravi le mont Fuji."),
-  aimyon("自慢[じまん]できるほどの恋[こい]は{したことがない}けど",
-    "Je n'ai jamais vécu d'amour dont je puisse me vanter, mais…", "ハート", null,
-    "したことがない = « ne l'avoir jamais fait ». ほど (N3) indique le degré : « au point de pouvoir s'en vanter »."));
-point("N4", "〜ことにする", "« Décider de… » (décision personnelle).",
-  modele("毎朝[まいあさ]{走[はし]ることにしました}。", "J'ai décidé de courir tous les matins."));
-point("N4", "〜ことになる", "« Il a été décidé que… ».",
-  modele("来月[らいげつ]、大阪[おおさか]に引[ひ]っ越[こ]す{ことになりました}。", "Il a été décidé que je déménage à Osaka le mois prochain."));
-point("N4", "〜ほうがいい", "Conseil : forme en た + ほうがいい (« tu ferais mieux de… ») ; négatif : 〜ないほうがいい.",
-  modele("早[はや]く{寝[ね]たほうがいい}ですよ。", "Vous feriez mieux de vous coucher tôt."));
-point("N4", "〜の / 〜こと (nominalisation)", "Transforme un verbe en nom : « le fait de… ».",
-  modele("歌[うた]を{歌[うた]うのが}好[す]きです。", "J'aime chanter."),
-  aimyon("涙[なみだ]が{でることは}解[わか]る",
-    "Que les larmes coulent, ça, je le comprends.", "さよならの今日に", 2020,
-    "涙がでること = « le fait que les larmes coulent »."));
-
-// --- Autres ---
-point("N4", "〜すぎる", "« Trop ». Base du verbe ou radical de l'adjectif + すぎる.",
-  modele("昨日[きのう]は{食[た]べすぎました}。", "Hier, j'ai trop mangé."),
-  aimyon("風[かぜ]の強[つよ]さがちょっと 心[こころ]を{揺[ゆ]さぶりすぎて}", "La force du vent secoue un peu trop mon cœur…", "マリーゴールド", 2018,
-    "揺さぶります → 揺さぶりすぎる (« secouer trop »). La forme en て laisse la phrase en suspens. 強さ : voir la fiche 〜さ."));
 point("N4", "〜やすい / 〜にくい", "« Facile à… » / « difficile à… ».",
   modele("この靴[くつ]は{歩[ある]きやすい}です。", "Ces chaussures sont agréables pour marcher."),
   aimyon("{分[わ]かりやすい}なあ",
@@ -237,7 +190,7 @@ point("N4", "〜さ", "Transforme un adjectif en nom : 青い → 青さ (le ble
   modele("この川[かわ]の{深[ふか]さ}はどのくらいですか。", "Quelle est la profondeur de cette rivière ?"),
   aimyon("忘[わす]れないぞ あの日[ひ]の{悔[くや]しさ}を",
     "Je n'oublierai pas l'amertume de ce jour-là.", "ひかりもの", null,
-    "悔しい → 悔しさ. L'objet (を) est rejeté après le verbe : inversion fréquente dans les chansons."));
+    "悔しい → 悔しさ. L'objet (を) est placé après le verbe : l'ordre habituel est inversé."));
 point("N4", "〜ながら", "« Tout en… » : deux actions simultanées. L'action principale est à la fin.",
   modele("音楽[おんがく]を{聞[き]きながら}勉強[べんきょう]します。", "J'étudie en écoutant de la musique."),
   aimyon("君[きみ]との恋[こい]を{望[のぞ]みながら}",
@@ -248,18 +201,13 @@ point("N4", "〜しか〜ない", "« Ne… que » (insiste sur le peu). Toujour
   aimyon("ふたりだけに{しか}分[わ]からない話[はなし]がしたい",
     "Je veux qu'on parle de choses que nous seuls pouvons comprendre.", "姿", null,
     "しか + 分からない : « que personne d'autre ne comprend »."));
-point("N4", "〜ばかり", "« Rien que », « ne faire que… ».",
-  modele("弟[おとうと]はゲーム{ばかり}しています。", "Mon petit frère ne fait que jouer aux jeux vidéo."),
-  aimyon("聞[き]き飽[あ]きた台詞[せりふ]{ばかり}",
-    "Rien que des répliques entendues mille fois.", "風のささやき", null,
-    "Nom + ばかり = « rien que des… »."));
-point("N4", "〜ところ", "Situe l'action dans le temps : sur le point de (verbe au présent + ところ), venir juste de (forme en た + ところ).",
+point("N4", "〜ところ", "Situe l'action dans le temps : sur le point de (verbe au présent + ところ), en train de (〜ているところ), venir juste de (forme en た + ところ).",
   modele("今[いま]から{出[で]かけるところ}です。", "Je suis sur le point de sortir."));
 point("N4", "〜間 / 〜間に", "« Pendant tout le temps que… » (間) ou « à un moment pendant que… » (間に).",
   modele("留守[るす]の{間[あいだ]に}、荷物[にもつ]が届[とど]きました。", "Un colis est arrivé pendant mon absence."),
-  aimyon("知[し]らない{間[ま]に} 食[た]べてるそれは何[なに]？",
+  aimyon("知[し]らない{間[あいだ]に} 食[た]べてるそれは何[なに]？",
     "Qu'est-ce que tu manges là, sans que je m'en aperçoive ?", "私に見せてよ", null,
-    "知らない間に = « pendant que je ne le savais pas ». Dans cette expression, 間 se lit ま."));
+    "知らない間に = « pendant que je ne le savais pas »."));
 point("N4", "〜までに", "« D'ici… », « avant (une échéance) ».",
   modele("金曜日[きんようび]{までに}出[だ]してください。", "Rendez-le d'ici vendredi."),
   aimyon("この香[かお]りにたどり着[つ]く{までに}",
@@ -288,3 +236,30 @@ point("N4", "〜でも", "« Même… » ; ou proposition légère : « … ou a
 point("N4", "Langage honorifique (敬語)", "お + base + になる élève l'action de l'autre ; お + base + する abaisse la sienne.",
   modele("先生[せんせい]はもう{お帰[かえ]りになりました}。", "Le professeur est déjà rentré."),
   modele("お荷物[にもつ]を{お持[も]ちします}。", "Je vais porter vos bagages."));
+point("N4", "〜がする", "Percevoir une odeur, un son, un goût, une impression : 匂い / 音 / 味 / 気 + がする.",
+  modele("隣[となり]の部屋[へや]から音[おと]{がします}。", "On entend du bruit dans la pièce d'à côté."),
+  aimyon("真夏[まなつ]の夜[よる]の匂[にお]い{がする}", "Ça sent la nuit de plein été.", "真夏の夜の匂いがする", 2019,
+    "匂いがする = « il y a une odeur de… ». Trois noms reliés par の : 真夏の夜の匂い."));
+point("N4", "〜かな", "Se demander à soi-même : « je me demande si… ».",
+  modele("明日[あした]は晴[は]れる{かな}。", "Je me demande s'il fera beau demain."),
+  aimyon("出会[であ]うことは可能[かのう]なの{かな}",
+    "Je me demande s'il est possible qu'on se rencontre.", "猫", null,
+    "なのかな : on s'interroge à voix haute."));
+point("N4", "〜ばよかった", "Regret : « j'aurais dû… ».",
+  modele("もっと早[はや]く{起[お]きればよかった}。", "J'aurais dû me lever plus tôt."));
+point("N4", "〜てほしい", "Vouloir que quelqu'un d'autre fasse quelque chose.",
+  modele("もっとゆっくり{話[はな]してほしい}です。", "J'aimerais que vous parliez plus lentement."),
+  aimyon("心[こころ]を読[よ]み{聞[き]かせて欲[ほ]しい}",
+    "Je voudrais que tu me lises ton cœur à voix haute.", "ビーナスベルト", null,
+    "読み聞かせる (lire à voix haute pour quelqu'un) + てほしい."));
+point("N4", "〜ようにする", "« Faire en sorte de… », « s'efforcer de… ».",
+  modele("毎日[まいにち]野菜[やさい]を{食[た]べるようにしています}。", "Je m'efforce de manger des légumes tous les jours."));
+point("N4", "〜たばかり", "« Venir tout juste de… ».",
+  modele("日本[にほん]に{来[き]たばかり}です。", "Je viens tout juste d'arriver au Japon."));
+point("N4", "〜だけでなく / 〜ばかりでなく", "« Non seulement… mais aussi… ».",
+  modele("彼女[かのじょ]は歌[うた]{だけでなく}、ギターも上手[じょうず]です。", "Elle est douée non seulement pour le chant, mais aussi pour la guitare."));
+point("N4", "〜直す", "Base + 直[なお]す : refaire, recommencer en mieux.",
+  modele("作文[さくぶん]を{書[か]き直[なお]しました}。", "J'ai réécrit ma rédaction."),
+  aimyon("できれば {やり直[なお]したい}けれど",
+    "Si possible, j'aimerais tout recommencer, mais…", "さよならの今日に", 2020,
+    "やる → やり直す = « refaire »."));
