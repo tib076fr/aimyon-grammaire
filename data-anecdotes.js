@@ -270,5 +270,89 @@ const ANECDOTES = {
     sources: [
       { nom: "Real Sound, février 2020", url: "https://realsound.jp/2020/02/post-503687.html" }
     ]
+  },
+  "ハルノヒ": {
+    textes: [
+      "Écrite pour le film « Crayon Shin-chan » de 2019, consacré au voyage de noces tardif des parents de Shin-chan. Aimyon, fan de la série depuis l'enfance, a pris le point de vue du père, Hiroshi : la chanson s'ouvre sur le quai de la gare de Kita-Senju, là où il a demandé Misae en mariage.",
+      "Elle raconte que c'est un autre film de la série, « L'Empire des adultes » (2001), qui lui a fait découvrir la Tour du Soleil et l'a rendue fan de Tarō Okamoto."
+    ],
+    sources: [
+      { nom: "Real Sound, annonce et commentaire d'Aimyon, février 2019", url: "https://realsound.jp/2019/02/post-315373.html" }
+    ]
+  },
+  "3636": {
+    textes: [
+      "Aimyon dit être partie d'un souvenir : le jour où la boîte à colis de son immeuble ne s'ouvrait plus, elle a eu l'impression que quelqu'un lui fermait son cœur, et s'est lancée dans « un voyage imaginaire sans fin » : ne voulait-il plus d'elle ?",
+      "Le clip, réalisé par Classic 6, prend la boîte à colis comme fil conducteur."
+    ],
+    sources: [
+      { nom: "Real Sound, sortie du clip et commentaire d'Aimyon, août 2022", url: "https://realsound.jp/2022/08/post-1105075.html" }
+    ]
+  },
+  "マシマロ": {
+    textes: [
+      "Premier clip réalisé par Tonda Hayashi Ran, qui signait jusque-là ses pochettes et ses photos : un clip entièrement en collage. Aimyon dit ne s'être jamais vue ainsi, et que le tournage a été fait « de rires, et de larmes à force de rire »."
+    ],
+    sources: [
+      { nom: "Real Sound, sortie du clip et commentaire d'Aimyon, septembre 2020", url: "https://realsound.jp/2020/09/post-616680.html" }
+    ]
+  },
+  "双葉": {
+    textes: [
+      "Composée pour l'émission de la NHK « Aimyon 18-sai », à partir des messages et vidéos envoyés par 1 000 jeunes de 18 ans de tout le Japon. Le spectacle a eu lieu le 6 mars 2022, jour de l'anniversaire d'Aimyon."
+    ],
+    sources: [
+      { nom: "Real Sound, annonce de l'émission, mars 2022", url: "https://realsound.jp/2022/03/post-988794.html" }
+    ]
+  },
+  "愛の花": {
+    textes: [
+      "Chanson du générique du feuilleton du matin de la NHK « Ranman » (2023), inspiré de la vie du botaniste Tomitarō Makino.",
+      "À propos du clip, Aimyon dit qu'on croirait y entendre sa voix, sa respiration, les battements de son cœur et le froissement des arbres : « J'ai pu conserver le fait d'être vivante tel quel. » Une version guitare-voix a ensuite été filmée au jardin botanique Makino, à Kōchi."
+    ],
+    sources: [
+      { nom: "Real Sound, sortie du clip et commentaire d'Aimyon, mai 2023", url: "https://realsound.jp/2023/05/post-1323413.html" },
+      { nom: "Real Sound, clip guitare-voix, septembre 2023", url: "https://realsound.jp/2023/09/post-1439226.html" }
+    ]
+  },
+  "いちについて": {
+    textes: [
+      "Écrite pour le drame « 19-banme no Karte » (TBS, 2025). C'était la première fois qu'Aimyon signait le générique d'un « Nichiyō Gekijō », la case du dimanche soir de TBS, qu'elle dit adorer."
+    ],
+    sources: [
+      { nom: "Real Sound, annonce et commentaire d'Aimyon, juillet 2025", url: "https://realsound.jp/2025/07/post-2076113.html" }
+    ]
+  },
+  "スケッチ": {
+    textes: [
+      "Écrite pour le film « Doraemon : Nobita et le monde des tableaux » (2025), dont elle signe le générique ; « 君の夢を聞きながら、僕は笑えるアイデアを! », sur le même single, en est la chanson insérée."
+    ],
+    sources: [
+      { nom: "Real Sound, annonce du single, janvier 2025", url: "https://realsound.jp/2025/01/post-1912590.html" }
+    ]
+  },
+  "君の夢を聞きながら、僕は笑えるアイデアを!": {
+    textes: [
+      "Chanson insérée du film « Doraemon : Nobita et le monde des tableaux » (2025), écrite pour lui ; elle partage un single avec « スケッチ », le générique du film."
+    ],
+    sources: [
+      { nom: "Real Sound, annonce du single, janvier 2025", url: "https://realsound.jp/2025/01/post-1912590.html" }
+    ]
+  },
+  "愛を伝えたいだとか": {
+    textes: [
+      "Son clip a été tourné en une seule prise, avec une seule caméra et sans montage, dans un petit van aménagé, par le réalisateur Kyōtarō Hayashi. Pour ses dix ans de carrière en major, ce van a été exposé à Tokyo, Osaka et dans le département d'Aichi en 2026."
+    ],
+    sources: [
+      { nom: "Real Sound, reportage sur l'exposition, août 2026", url: "https://realsound.jp/2026/08/post-2486976.html" }
+    ]
+  },
+  "初恋が泣いている": {
+    textes: [
+      "Générique du drama « Koi nante, honki de yatte dō suru no? » (Kansai TV / Fuji TV, 2022). La pochette, signée Tonda Hayashi Ran, montre un cadenas en forme de cœur."
+    ],
+    sources: [
+      { nom: "Real Sound, annonce du single, avril 2022", url: "https://realsound.jp/2022/04/post-1011403.html" }
+    ]
   }
 };
