@@ -17,6 +17,7 @@
     <div class="nav-liens">
       <a href="index.html" aria-current="page">Sommaire</a>
       <a href="fiches.html">Fiches</a>
+      <a href="revision.html">Révision</a>
     </div>
   </nav>
 
@@ -52,6 +53,11 @@
           <span class="interrupteur-piste" aria-hidden="true"></span>
           Seulement les points illustrés par Aimyon
         </label>
+        <label class="interrupteur">
+          <input type="checkbox" id="filtre-connus">
+          <span class="interrupteur-piste" aria-hidden="true"></span>
+          Masquer les points que je connais
+        </label>
         <button type="button" id="reinitialiser" class="lien-bouton" hidden>Tout réafficher</button>
       </div>
     </section>
@@ -77,6 +83,9 @@
   <script src="data-pochettes.js"></script>
   <script src="data-categories.js"></script>
   <script src="data-lectures.js"></script>
+  <script src="data-details.js"></script>
+  <script src="data-liens.js"></script>
+  <script src="progres.js"></script>
   <script src="romaji.js"></script>
   <script src="sommaire.js"></script>
 </body>

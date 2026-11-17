@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1917" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-title" content="Aimyon 文法">
+  <link rel="apple-touch-icon" href="icone.png">
+  <link rel="icon" href="icone.png">
+  <title>Révision — Aimyon 文法</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="index.html" class="nav-logo">Aimyon <span lang="ja">文法</span></a>
+    <div class="nav-liens">
+      <a href="index.html">Sommaire</a>
+      <a href="fiches.html">Fiches</a>
+      <a href="revision.html" aria-current="page">Révision</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Révision</h1>
+    <p>Une phrase, un trou : quel point de grammaire manque ?</p>
+  </header>
+
+  <main class="page-revision">
+    <section class="panneau-filtres" aria-label="Réglages de la révision">
+      <div class="groupe-filtres">
+        <span class="etiquette-filtre">Niveau</span>
+        <div id="niveaux-revision" class="puces"></div>
+      </div>
+      <div class="groupe-filtres">
+        <span class="etiquette-filtre">Phrases</span>
+        <div id="sources-revision" class="puces"></div>
+      </div>
+      <div class="ligne-bas-filtres">
+        <label class="interrupteur">
+          <input type="checkbox" id="revision-inconnus">
+          <span class="interrupteur-piste" aria-hidden="true"></span>
+          Seulement les points que je ne connais pas encore
+        </label>
+        <span id="score" class="compteur" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <article id="question" class="fiche question" aria-live="polite"></article>
+    <p id="vide-revision" class="vide" hidden>Aucune phrase ne correspond à ces réglages.</p>
+  </main>
+
+  <footer>
+    Les extraits de chansons sont les mêmes courtes citations que sur les fiches. Paroles © Aimyon et ses ayants droit.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="data-n5.js"></script>
+  <script src="data-n4.js"></script>
+  <script src="data-n3.js"></script>
+  <script src="data-n2.js"></script>
+  <script src="data-n1.js"></script>
+  <script src="data-hors-jlpt.js"></script>
+  <script src="data-sources.js"></script>
+  <script src="data-paroles.js"></script>
+  <script src="data-contexte.js"></script>
+  <script src="data-anecdotes.js"></script>
+  <script src="data-pochettes.js"></script>
+  <script src="data-categories.js"></script>
+  <script src="data-lectures.js"></script>
+  <script src="data-details.js"></script>
+  <script src="data-liens.js"></script>
+  <script src="progres.js"></script>
+  <script src="romaji.js"></script>
+  <script src="revision.js"></script>
+</body>
+</html>

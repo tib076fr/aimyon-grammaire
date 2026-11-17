@@ -124,6 +124,30 @@ function creerSources(point) {
   return `<p class="sources">Sources : ${liens.join(" · ")}</p>`;
 }
 
+// Construction et mise en garde (data-details.js), quand elles existent
+function creerConstruction(point) {
+  const d = (typeof DETAILS !== "undefined" && DETAILS[point.titre]) || {};
+  let html = "";
+  if (d.construction && d.construction.length) {
+    html += `<div class="construction"><span class="etiquette">Construction</span><ul>${d.construction
+      .map((c) => `<li lang="ja">${echapper(c)}</li>`).join("")}</ul></div>`;
+  }
+  if (d.attention) {
+    html += `<p class="attention"><span class="etiquette">Attention</span> ${echapper(d.attention)}</p>`;
+  }
+  return html;
+}
+
+// Points proches (data-liens.js) : liens vers leurs fiches
+function creerVoirAussi(point) {
+  const proches = ((typeof VOIR_AUSSI !== "undefined" && VOIR_AUSSI[point.titre]) || [])
+    .filter((t) => POINTS.some((p) => p.titre === t));
+  if (!proches.length) return "";
+  return `<p class="voir-aussi"><span class="etiquette">Voir aussi</span> ${proches
+    .map((t) => `<a href="fiches.html?p=${encodeURIComponent(t)}" lang="ja">${echapper(t)}</a>`)
+    .join(" · ")}</p>`;
+}
+
 // Fabrique le HTML d'une fiche
 function creerFiche(point) {
   // Les extraits de chansons d'abord, les phrases modèles ensuite
@@ -138,8 +162,13 @@ function creerFiche(point) {
         <span class="niveau">${point.niveau}</span>
       </div>
       <p class="resume">${echapper(point.resume)}</p>
+      ${creerConstruction(point)}
       <div class="exemples">${exemples.map(creerExemple).join("")}</div>
-      ${creerSources(point)}
+      ${creerVoirAussi(point)}
+      <div class="fiche-pied">
+        ${creerSources(point)}
+        ${boutonConnu(point.titre)}
+      </div>
     </article>`;
 }
 
@@ -180,6 +209,33 @@ function noter(point) {
   return contenu.includes(sansAccents(texteCherche)) ? 1 : 0;
 }
 
+// Affichage par paquets
+const TAILLE_PAQUET = 25;
+let aAfficher = [];
+let dejaAffichees = 0;
+const sentinelle = document.createElement("div");
+sentinelle.className = "sentinelle";
+sentinelle.setAttribute("aria-hidden", "true");
+
+function afficherPaquet() {
+  const paquet = aAfficher.slice(dejaAffichees, dejaAffichees + TAILLE_PAQUET);
+  zoneFiches.insertAdjacentHTML("beforeend", paquet.map(creerFiche).join(""));
+  dejaAffichees += paquet.length;
+  if (dejaAffichees < aAfficher.length) {
+    zoneFiches.after(sentinelle);
+    // Sans IntersectionObserver, ou si la fin de liste est déjà visible,
+    // on enchaîne le paquet suivant
+    const proche = sentinelle.getBoundingClientRect().top < innerHeight + 1200;
+    if (!("IntersectionObserver" in window) || proche) requestAnimationFrame(afficherPaquet);
+  } else sentinelle.remove();
+}
+
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver((entrees) => {
+    if (entrees.some((e) => e.isIntersecting)) afficherPaquet();
+  }, { rootMargin: "1200px 0px" }).observe(sentinelle);
+}
+
 // (Re)dessine la liste des fiches
 function afficher() {
   const visibles = POINTS
@@ -187,7 +243,12 @@ function afficher() {
     .filter((x) => x.note > 0)
     .sort((a, b) => b.note - a.note) // les titres qui correspondent d'abord
     .map((x) => x.point);
-  zoneFiches.innerHTML = visibles.map(creerFiche).join("");
+  // Les fiches sont ajoutées par paquets, au fil du défilement :
+  // la page reste fluide même avec plus de 800 fiches.
+  aAfficher = visibles;
+  dejaAffichees = 0;
+  zoneFiches.innerHTML = "";
+  afficherPaquet();
   messageVide.hidden = visibles.length > 0;
 
   const avecChanson = visibles.filter(aUneChanson).length;

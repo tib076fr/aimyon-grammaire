@@ -492,3 +492,54 @@ blockquote.modele cite { display: block; }
 @media (prefers-color-scheme: dark) { :root { --point: #ff7aa2; } }
 mark { color: var(--point); border-bottom: 0; font-weight: 700; }
 .traduction mark { font-weight: 600; }
+
+/* ---- Construction, mise en garde, points proches ---- */
+.etiquette {
+  display: inline-block; margin-right: 6px; padding: 1px 8px; border-radius: 999px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  background: var(--accent-doux); color: var(--accent);
+}
+.construction { margin: 0 0 14px; }
+.construction ul { margin: 6px 0 0; padding-left: 1.2em; }
+.construction li { margin: 2px 0; font-size: 0.95rem; }
+.attention { margin: 0 0 14px; font-size: 0.95rem; }
+.attention .etiquette { background: #fde7d3; color: #b45309; }
+@media (prefers-color-scheme: dark) { .attention .etiquette { background: #3d2a1a; color: #f0a04b; } }
+.voir-aussi { margin: 14px 0 0; font-size: 0.95rem; line-height: 1.9; }
+.voir-aussi a { color: var(--accent); text-decoration: none; }
+.voir-aussi a:hover { text-decoration: underline; }
+
+/* ---- Bas de fiche : sources + « Je connais » ---- */
+.fiche-pied { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: 16px; }
+.fiche-pied .sources { margin: 0; }
+.bouton-connu {
+  font: inherit; font-size: 0.88rem; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--bord); background: transparent; color: var(--discret);
+}
+.bouton-connu:hover { border-color: var(--accent); color: var(--accent); }
+.bouton-connu[aria-pressed="true"] { background: #2f8a57; border-color: #2f8a57; color: #fff; }
+.carte-connu { color: #2f8a57; font-weight: 700; }
+.carte-point.connu { opacity: 0.72; }
+.sentinelle { height: 1px; }
+
+/* ---- Page Révision ---- */
+.page-revision .panneau-filtres { margin-bottom: 18px; }
+.question .trou { display: inline-block; min-width: 3em; border-bottom: 2px solid var(--accent); color: var(--accent); text-align: center; }
+.question .origine { margin: 10px 0 0; font-size: 0.9rem; color: var(--discret); }
+.question .indice { margin-top: 10px; color: var(--discret); }
+.question .indice summary { cursor: pointer; font-size: 0.9rem; }
+.choix { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+.choix-reponse {
+  font: inherit; font-size: 1.05rem; padding: 12px 10px; border-radius: 12px; cursor: pointer;
+  border: 1px solid var(--bord); background: var(--fond); color: inherit;
+}
+.choix-reponse:hover:not([disabled]) { border-color: var(--accent); }
+.choix-reponse.bonne { background: #2f8a57; border-color: #2f8a57; color: #fff; }
+.choix-reponse.mauvaise { background: #c2410c; border-color: #c2410c; color: #fff; }
+.choix-reponse[disabled] { cursor: default; }
+.verdict { margin: 16px 0 0; }
+.verdict-bon { color: #2f8a57; }
+.verdict-faux { color: #c2410c; }
+.verdict a { color: inherit; font-weight: 700; }
+#suivante { border: 0; cursor: pointer; font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 12px; }
+@media (max-width: 480px) { .choix { grid-template-columns: minmax(0, 1fr); } }
