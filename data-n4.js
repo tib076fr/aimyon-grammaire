@@ -98,7 +98,10 @@ point("N4", "〜ないで / 〜ずに", "« Sans faire… ». ずに est plus é
   modele("朝[あさ]ごはんを{食[た]べないで}出[で]かけました。", "Je suis sorti {sans prendre} de petit-déjeuner."),
   aimyon("{焦[あせ]らずに}いるよ",
     "{je ne me presse pas}.", "愛を伝えたいだとか", 2017,
-    "焦る → 焦らずに = « sans s'impatienter »."));
+    "焦る → 焦らずに = « sans s'impatienter »."),
+  aimyon("そんなの{気[き]にせず}歩[ある]く",
+    "Je marche {sans m'en soucier}.", "サラバ", 2020,
+    "する → せず : 気にせず = 気にしないで, « sans y prêter attention ». Chanson du CD bonus « 風とリボン » (édition limitée de « おいしいパスタがあると聞いて », 2020) ; texte absent des sites de paroles, transcrit à la main et non vérifié sur une source publique."));
 point("N4", "〜たら", "« Si… », « quand… » : une fois la première action réalisée.",
   modele("雨[あめ]が{降[ふ]ったら}、家[いえ]にいます。", "{S'il pleut}, je resterai à la maison."),
   aimyon("これが夢[ゆめ]{だったら}",
@@ -438,7 +441,10 @@ point("N4", "〜てすみません", "« Excusez-moi de… », « désolé d'avo
 point("N4", "〜てくれてありがとう", "« Merci de… », « merci d'avoir… » : remercier quelqu'un pour ce qu'il a fait pour nous.",
   modele("{手伝[てつだ]ってくれてありがとう}。", "{Merci de m'avoir aidé}."));
 point("N4", "〜てくれない？ / 〜てもらえない？", "Demande familière : « tu ne voudrais pas… ? », « tu pourrais… ? ».",
-  modele("ちょっと{手伝[てつだ]ってくれない}？", "{Tu ne voudrais pas m'aider} un peu ?"));
+  modele("ちょっと{手伝[てつだ]ってくれない}？", "{Tu ne voudrais pas m'aider} un peu ?"),
+  aimyon("誰[だれ]か{拾[ひろ]ってくれん}かな",
+    "Quelqu'un {ne viendrait pas me ramasser}, je me demande ?", "サラバ", 2020,
+    "拾って + くれん : くれない avec la négation ん, familière (et courante dans l'Ouest du Japon), puis かな. Chanson du CD bonus « 風とリボン » (édition limitée de « おいしいパスタがあると聞いて », 2020) ; texte absent des sites de paroles, transcrit à la main et non vérifié sur une source publique."));
 point("N4", "〜のだろうか", "« Je me demande si… » : question que l'on se pose à soi-même.",
   modele("彼[かれ]は本当[ほんとう]に来[く]る{のだろうか}。", "Viendra-t-il vraiment, {je me le demande}."),
   aimyon("どこまでも楽[らく]になれる{のだろうか}",

@@ -905,5 +905,11 @@ const CONTEXTE = {
   "キスだけで|きっと抱きしめてもらえないでしょう": {
     avant: { japonais: "私[わたし]今日[きょう]は女[おんな]だから　今日[きょう]は女[おんな]だから", traduction: "Aujourd'hui je suis une femme, aujourd'hui je suis une femme," },
     apres: { japonais: "今日[きょう]は女[おんな]だから　今日[きょう]は女[おんな]だから", traduction: "Aujourd'hui je suis une femme, aujourd'hui je suis une femme," }
+  },
+  "サラバ|誰か拾ってくれんかな": {
+    avant: { japonais: "駅前[えきまえ]で寝腐[ねくさ]るのもいいな", traduction: "Rester affalée devant la gare, ce serait pas mal," }
+  },
+  "サラバ|そんなの気にせず歩く": {
+    avant: { japonais: "どうでもいいから歩[ある]く", traduction: "Je marche, puisque tout m'est égal," }
   }
 };
