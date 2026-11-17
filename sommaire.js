@@ -10,8 +10,13 @@ const etat = {
   texte: "",
 };
 
-const NIVEAUX = ["N5", "N4", "N3", "N2", "N1"];
-const NOMS_NIVEAUX = { N5: "Débutant", N4: "Élémentaire", N3: "Intermédiaire", N2: "Avancé", N1: "Expert" };
+const NIVEAUX = ["N5", "N4", "N3", "N2", "N1", "Hors JLPT"];
+const NOMS_NIVEAUX = { N5: "Débutant", N4: "Élémentaire", N3: "Intermédiaire", N2: "Avancé", N1: "Expert", "Hors JLPT": "" };
+
+// « Hors JLPT » -> « Hors-JLPT » : un nom utilisable comme classe CSS
+function classeNiveau(niveau) {
+  return niveau.replace(/\s+/g, "-");
+};
 
 const zoneResultats = document.getElementById("resultats");
 const compteurSommaire = document.getElementById("compteur-sommaire");
@@ -70,7 +75,7 @@ function creerCarte(point) {
        <span class="carte-chansons" lang="ja">♪ ${echapper(chansons.slice(0, 2).join(" · "))}${chansons.length > 2 ? " …" : ""}</span>`
     : `<span class="carte-modele">Phrase modèle</span>`;
   return `
-    <a class="carte-point niveau-${point.niveau}" href="fiches.html?p=${encodeURIComponent(point.titre)}">
+    <a class="carte-point niveau-${classeNiveau(point.niveau)}" href="fiches.html?p=${encodeURIComponent(point.titre)}">
       <span class="carte-niveau">${point.niveau}</span>
       <span class="carte-titre" lang="ja">${echapper(point.titre)}</span>
       <span class="carte-resume">${echapper(point.resume)}</span>
@@ -116,7 +121,7 @@ function creerPuces(zone, valeurs, cle, libelle) {
   for (const valeur of ["Tous", ...valeurs]) {
     const puce = document.createElement("button");
     puce.type = "button";
-    puce.className = "puce" + (valeur !== "Tous" && cle === "niveau" ? " puce-" + valeur : "");
+    puce.className = "puce" + (valeur !== "Tous" && cle === "niveau" ? " puce-" + classeNiveau(valeur) : "");
     puce.innerHTML = libelle(valeur);
     puce.setAttribute("aria-pressed", etat[cle] === valeur);
     puce.addEventListener("click", () => {
@@ -135,7 +140,7 @@ function compterParNiveau(niveau) {
 creerPuces(document.getElementById("filtre-niveaux"), NIVEAUX, "niveau", (v) =>
   v === "Tous"
     ? "Tous"
-    : `<span class="pastille" aria-hidden="true"></span>${v} <span class="sous-libelle"><span class="nom-niveau">${NOMS_NIVEAUX[v]} · </span>${compterParNiveau(v)}</span>`
+    : `<span class="pastille" aria-hidden="true"></span>${v} <span class="sous-libelle"><span class="nom-niveau">${NOMS_NIVEAUX[v] ? NOMS_NIVEAUX[v] + " · " : ""}</span>${compterParNiveau(v)}</span>`
 );
 creerPuces(document.getElementById("filtre-themes"), Object.keys(CATEGORIES), "theme", (v) =>
   v === "Tous" ? "Tous les thèmes" : echapper(v)

@@ -348,27 +348,3 @@ point("N1", "〜に先駆けて", "« En avance sur… », « avant tous les aut
   modele("世界[せかい]{に先駆[さきが]けて}、日本[にほん]で発売[はつばい]された。", "Il a été mis en vente au Japon, {avant} le reste du monde."));
 point("N1", "〜を機に", "« À l'occasion de… », « profitant de… ».",
   modele("結婚[けっこん]{を機[き]に}、東京[とうきょう]へ引[ひ]っ越[こ]した。", "{À l'occasion de} mon mariage, j'ai déménagé à Tokyo."));
-point("N1", "〜ぞ / 〜ぜ", "Particules finales d'emphase, familières et plutôt masculines : ぞ affirme avec force, ぜ est plus complice.",
-  modele("さあ、{行[い]くぞ}。", "Allez, {on y va} !"));
-point("N1", "〜わ", "Particule finale d'emphase légère : exprime l'émotion ou l'avis de celui qui parle (ton montant : plutôt féminin ; ton descendant : courant dans le Kansai).",
-  modele("今日[きょう]は疲[つか]れた{わ}。", "Je suis fatiguée aujourd'hui, {tu sais}."));
-point("N1", "〜かい / 〜だい", "い adoucit か et だ en fin de question familière (かい, だい).",
-  modele("どうしたん{だい}？", "Qu'est-ce qui t'arrive, {dis} ?"));
-point("N1", "〜ん (contraction)", "À l'oral, ら, り, る, れ, ろ et の se contractent souvent en ん (分からない → 分かんない).",
-  modele("全然[ぜんぜん]{分[わ]かんない}。", "Je {comprends} rien du tout."));
-point("N1", "〜っつう / 〜っつった", "Contraction très familière de という, といった.",
-  modele("無理[むり]だ{っつってん}だろ。", "Je te {dis que} c'est impossible !"));
-point("N1", "〜やがる", "Radical du verbe (ou forme en て) + やがる : mépris ou colère envers celui qui agit (très rude).",
-  modele("あいつ、また{遅刻[ちこく]しやがった}。", "Ce type, il {a encore eu le culot d'arriver en retard}."));
-point("N1", "〜がいい", "Verbe au dictionnaire + がいい : « tu n'as qu'à… », « fais donc… » (ton vieilli, souvent une malédiction ou un souhait).",
-  modele("好[す]きに{するがいい}。", "{Fais donc} comme il te plaît."));
-point("N1", "〜かろう", "Adjectif en い → 〜かろう : conjecture classique, « ce doit être… » (équivalent de 〜いだろう).",
-  modele("さぞ{寒[さむ]かろう}。", "Il {doit faire bien froid}."));
-point("N1", "やや", "« Un peu », « légèrement » (formel).",
-  modele("今日[きょう]は昨日[きのう]より{やや}暖[あたた]かい。", "Aujourd'hui, il fait {légèrement} plus doux qu'hier."));
-point("N1", "いずれも", "« Tous », « l'un comme l'autre » ; avec une négation : « aucun ».",
-  modele("三[みっ]つの作品[さくひん]は{いずれも}すばらしい。", "Les trois œuvres sont {toutes} remarquables."));
-point("N1", "あわよくば", "« Avec un peu de chance », « si l'occasion se présente ».",
-  modele("{あわよくば}、優勝[ゆうしょう]したい。", "{Avec un peu de chance}, j'aimerais remporter le tournoi."));
-point("N1", "〜むず", "Auxiliaire de la langue classique (aussi んず) : intention ou conjecture, « je vais… », « il doit… ». Ne s'emploie plus en japonais moderne.",
-  modele("我[われ]、都[みやこ]へ{行[ゆ]かむず}。", "Je {m'en irai} à la capitale."));

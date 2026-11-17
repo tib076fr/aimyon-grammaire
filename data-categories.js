@@ -844,6 +844,28 @@ const CATEGORIES = {
     "〜ものとする",
     "〜かろう",
     "〜むず"
+  ],
+  "Dialecte du Kansai": [
+    "〜や (Kansai)",
+    "〜で / 〜わ (Kansai)",
+    "〜やん (Kansai)",
+    "〜やんか (Kansai)",
+    "〜ねん / 〜てん (Kansai)",
+    "〜な (Kansai)",
+    "〜へん (Kansai)",
+    "〜ちゃう (Kansai)",
+    "〜ない (adjectif, Kansai)",
+    "〜てる / 〜とる (Kansai)",
+    "〜とく / 〜たる / 〜てまう (Kansai)",
+    "Impératif du Kansai",
+    "Radical + な (Kansai)",
+    "〜なさんな (Kansai)",
+    "〜んといて (Kansai)",
+    "Volitif du Kansai",
+    "思う sans と (Kansai)",
+    "〜さす (Kansai)",
+    "Adjectif en 〜う (Kansai)",
+    "〜なあかん (Kansai)"
   ]
 };
 

@@ -3043,3 +3043,69 @@ SOURCES["〜むず"] = [
   { nom: "Bunpro", page: "もらう (JLPT N5)", url: "https://bunpro.jp/grammar_points/%E3%82%82%E3%82%89%E3%81%86" });
 (SOURCES["〜が / 〜けど"] = SOURCES["〜が / 〜けど"] || []).push(
   { nom: "Bunpro", page: "けれども (JLPT N5)", url: "https://bunpro.jp/grammar_points/%E3%81%91%E3%82%8C%E3%81%A9%E3%82%82" });
+
+// ---- Dialecte du Kansai (pages Bunpro, hors JLPT) ----
+(SOURCES["〜って (thème)"] = SOURCES["〜って (thème)"] || []).push(
+  { nom: "Bunpro", page: "って (JLPT N3)", url: "https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%A6-slang" });
+SOURCES["〜や (Kansai)"] = [
+  { nom: "Bunpro", page: "だ ⇒ や (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%A0-kansai" }
+];
+SOURCES["〜で / 〜わ (Kansai)"] = [
+  { nom: "Bunpro", page: "よ ⇒ で・わ (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%82%88-kansai" }
+];
+SOURCES["〜やん (Kansai)"] = [
+  { nom: "Bunpro", page: "だよね・でしょう ⇒ やん (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%A7%E3%81%97%E3%82%87%E3%81%86-kansai" }
+];
+SOURCES["〜やんか (Kansai)"] = [
+  { nom: "Bunpro", page: "じゃないか ⇒ やんか (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%A1%E3%81%8C%E3%81%86-kansai" }
+];
+SOURCES["〜ねん / 〜てん (Kansai)"] = [
+  { nom: "Bunpro", page: "のだ ⇒ ねん (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%AE%E3%81%A0-kansai" }
+];
+(SOURCES["〜ねん / 〜てん (Kansai)"] = SOURCES["〜ねん / 〜てん (Kansai)"] || []).push(
+  { nom: "Bunpro", page: "ているの ⇒ てん (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%82%8B%E3%81%AE-kansai" });
+SOURCES["〜な (Kansai)"] = [
+  { nom: "Bunpro", page: "ね ⇒ な (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%AD-kansai" }
+];
+SOURCES["〜へん (Kansai)"] = [
+  { nom: "Bunpro", page: "ない ⇒ へん (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84-kansai" }
+];
+SOURCES["〜ちゃう (Kansai)"] = [
+  { nom: "Bunpro", page: "じゃない ⇒ ちゃう (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%98%E3%82%83%E3%81%AA%E3%81%84-kansai" }
+];
+SOURCES["〜ない (adjectif, Kansai)"] = [
+  { nom: "Bunpro", page: "くない ⇒ ない (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%8F%E3%81%AA%E3%81%84-kansai" }
+];
+SOURCES["〜てる / 〜とる (Kansai)"] = [
+  { nom: "Bunpro", page: "ている ⇒ てる (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%84%E3%82%8B-kansai" }
+];
+SOURCES["〜とく / 〜たる / 〜てまう (Kansai)"] = [
+  { nom: "Bunpro", page: "とく・たる・てまう (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%A6%E3%81%8A%E3%81%8F-kansai" }
+];
+SOURCES["Impératif du Kansai"] = [
+  { nom: "Bunpro", page: "命令形 ⇒ ます形 + 長音 (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E5%91%BD%E4%BB%A4%E5%BD%A2-kansai" }
+];
+SOURCES["Radical + な (Kansai)"] = [
+  { nom: "Bunpro", page: "辞書形 + な ⇒ ます形 + な (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%AA-kansai" }
+];
+SOURCES["〜なさんな (Kansai)"] = [
+  { nom: "Bunpro", page: "ないで・な ⇒ なさんな (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%A7-kansai" }
+];
+SOURCES["〜んといて (Kansai)"] = [
+  { nom: "Bunpro", page: "ないで ⇒ んといて (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%A7%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84-kansai" }
+];
+SOURCES["Volitif du Kansai"] = [
+  { nom: "Bunpro", page: "Verb よう・う ⇒ Verb よ・お (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%82%88%E3%81%86-%E3%81%8A%E3%81%86-kansai" }
+];
+SOURCES["思う sans と (Kansai)"] = [
+  { nom: "Bunpro", page: "と思う ⇒ 思う (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%A8%E3%81%8A%E3%82%82%E3%81%86-kansai" }
+];
+SOURCES["〜さす (Kansai)"] = [
+  { nom: "Bunpro", page: "させる ⇒ さす (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%95%E3%81%9B%E3%82%8B-kansai" }
+];
+SOURCES["Adjectif en 〜う (Kansai)"] = [
+  { nom: "Bunpro", page: "[い] Adjective - [く] change (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%84adjective%E3%81%8F-kansai" }
+];
+SOURCES["〜なあかん (Kansai)"] = [
+  { nom: "Bunpro", page: "ないといけない ⇒ なあかん (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%AA%E3%81%84%E3%81%A8%E3%81%84%E3%81%91%E3%81%AA%E3%81%84-kansai" }
+];
