@@ -4,7 +4,7 @@
 // ============================================================
 
 const etat = {
-  niveau: "Tous",
+  niveaux: new Set(), // niveaux cochés ; vide = tous
   theme: "Tous",
   chanson: false,
   texte: "",
@@ -54,7 +54,7 @@ function noterRecherche(point) {
 }
 
 function correspond(point) {
-  if (etat.niveau !== "Tous" && point.niveau !== etat.niveau) return false;
+  if (etat.niveaux.size && !etat.niveaux.has(point.niveau)) return false;
   if (etat.theme !== "Tous" && CATEGORIE_DE[point.titre] !== etat.theme) return false;
   if (etat.chanson && chansonsDe(point).length === 0) return false;
   return true;
@@ -93,7 +93,7 @@ function afficherSommaire() {
     `${nbChanson} illustré${nbChanson > 1 ? "s" : ""} par Aimyon`;
   videSommaire.hidden = visibles.length > 0;
   boutonReinitialiser.hidden =
-    etat.niveau === "Tous" && etat.theme === "Tous" && !etat.chanson && !etat.texte;
+    !etat.niveaux.size && etat.theme === "Tous" && !etat.chanson && !etat.texte;
 
   // Avec une recherche : une seule grille, les meilleurs résultats d'abord.
   // Sans recherche : une section par thème.
@@ -121,7 +121,7 @@ function creerPuces(zone, valeurs, cle, libelle) {
   for (const valeur of ["Tous", ...valeurs]) {
     const puce = document.createElement("button");
     puce.type = "button";
-    puce.className = "puce" + (valeur !== "Tous" && cle === "niveau" ? " puce-" + classeNiveau(valeur) : "");
+    puce.className = "puce";
     puce.innerHTML = libelle(valeur);
     puce.setAttribute("aria-pressed", etat[cle] === valeur);
     puce.addEventListener("click", () => {
@@ -137,11 +137,33 @@ function compterParNiveau(niveau) {
   return POINTS.filter((p) => p.niveau === niveau).length;
 }
 
-creerPuces(document.getElementById("filtre-niveaux"), NIVEAUX, "niveau", (v) =>
-  v === "Tous"
+// Niveaux : des interrupteurs. Chaque niveau s'allume ou s'éteint d'un clic,
+// on peut en cocher plusieurs ; « Tous » éteint tout (= aucun filtre).
+const zoneNiveaux = document.getElementById("filtre-niveaux");
+function majPucesNiveaux() {
+  for (const puce of zoneNiveaux.children) {
+    const v = puce.dataset.niveau;
+    puce.setAttribute("aria-pressed", v === "Tous" ? !etat.niveaux.size : etat.niveaux.has(v));
+  }
+}
+for (const valeur of ["Tous", ...NIVEAUX]) {
+  const puce = document.createElement("button");
+  puce.type = "button";
+  puce.dataset.niveau = valeur;
+  puce.className = "puce" + (valeur !== "Tous" ? " puce-" + classeNiveau(valeur) : "");
+  puce.innerHTML = valeur === "Tous"
     ? "Tous"
-    : `<span class="pastille" aria-hidden="true"></span>${v} <span class="sous-libelle"><span class="nom-niveau">${NOMS_NIVEAUX[v] ? NOMS_NIVEAUX[v] + " · " : ""}</span>${compterParNiveau(v)}</span>`
-);
+    : `<span class="pastille" aria-hidden="true"></span>${valeur} <span class="sous-libelle"><span class="nom-niveau">${NOMS_NIVEAUX[valeur] ? NOMS_NIVEAUX[valeur] + " · " : ""}</span>${compterParNiveau(valeur)}</span>`;
+  puce.addEventListener("click", () => {
+    if (valeur === "Tous") etat.niveaux.clear();
+    else if (etat.niveaux.has(valeur)) etat.niveaux.delete(valeur);
+    else etat.niveaux.add(valeur);
+    majPucesNiveaux();
+    afficherSommaire();
+  });
+  zoneNiveaux.appendChild(puce);
+}
+majPucesNiveaux();
 creerPuces(document.getElementById("filtre-themes"), Object.keys(CATEGORIES), "theme", (v) =>
   v === "Tous" ? "Tous les thèmes" : echapper(v)
 );
@@ -165,12 +187,12 @@ champSommaire.addEventListener("input", () => {
 });
 
 boutonReinitialiser.addEventListener("click", () => {
-  Object.assign(etat, { niveau: "Tous", theme: "Tous", chanson: false, texte: "" });
+  Object.assign(etat, { theme: "Tous", chanson: false, texte: "" });
+  etat.niveaux.clear();
+  majPucesNiveaux();
   champSommaire.value = "";
   caseChanson.checked = false;
-  for (const zone of [document.getElementById("filtre-niveaux"), document.getElementById("filtre-themes")]) {
-    [...zone.children].forEach((p, i) => p.setAttribute("aria-pressed", i === 0));
-  }
+  [...document.getElementById("filtre-themes").children].forEach((p, i) => p.setAttribute("aria-pressed", i === 0));
   afficherSommaire();
 });
 
