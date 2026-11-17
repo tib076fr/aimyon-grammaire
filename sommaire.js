@@ -5,7 +5,7 @@
 
 const etat = {
   niveaux: new Set(), // niveaux cochés ; vide = tous
-  theme: "Tous",
+  themes: new Set(), // thèmes cochés ; vide = tous
   chanson: false,
   texte: "",
 };
@@ -55,7 +55,7 @@ function noterRecherche(point) {
 
 function correspond(point) {
   if (etat.niveaux.size && !etat.niveaux.has(point.niveau)) return false;
-  if (etat.theme !== "Tous" && CATEGORIE_DE[point.titre] !== etat.theme) return false;
+  if (etat.themes.size && !etat.themes.has(CATEGORIE_DE[point.titre])) return false;
   if (etat.chanson && chansonsDe(point).length === 0) return false;
   return true;
 }
@@ -93,7 +93,7 @@ function afficherSommaire() {
     `${nbChanson} illustré${nbChanson > 1 ? "s" : ""} par Aimyon`;
   videSommaire.hidden = visibles.length > 0;
   boutonReinitialiser.hidden =
-    !etat.niveaux.size && etat.theme === "Tous" && !etat.chanson && !etat.texte;
+    !etat.niveaux.size && !etat.themes.size && !etat.chanson && !etat.texte;
 
   // Avec une recherche : une seule grille, les meilleurs résultats d'abord.
   // Sans recherche : une section par thème.
@@ -115,58 +115,48 @@ function afficherSommaire() {
   zoneResultats.innerHTML = html.join("");
 }
 
-// Rangée de puces : un seul choix actif à la fois
-function creerPuces(zone, valeurs, cle, libelle) {
-  zone.innerHTML = "";
-  for (const valeur of ["Tous", ...valeurs]) {
-    const puce = document.createElement("button");
-    puce.type = "button";
-    puce.className = "puce";
-    puce.innerHTML = libelle(valeur);
-    puce.setAttribute("aria-pressed", etat[cle] === valeur);
-    puce.addEventListener("click", () => {
-      etat[cle] = valeur;
-      for (const p of zone.children) p.setAttribute("aria-pressed", p === puce);
-      afficherSommaire();
-    });
-    zone.appendChild(puce);
-  }
-}
-
 function compterParNiveau(niveau) {
   return POINTS.filter((p) => p.niveau === niveau).length;
 }
 
-// Niveaux : des interrupteurs. Chaque niveau s'allume ou s'éteint d'un clic,
-// on peut en cocher plusieurs ; « Tous » éteint tout (= aucun filtre).
-const zoneNiveaux = document.getElementById("filtre-niveaux");
-function majPucesNiveaux() {
-  for (const puce of zoneNiveaux.children) {
-    const v = puce.dataset.niveau;
-    puce.setAttribute("aria-pressed", v === "Tous" ? !etat.niveaux.size : etat.niveaux.has(v));
+// Rangée d'interrupteurs : chaque puce s'allume ou s'éteint d'un clic, on
+// peut en cocher plusieurs ; « Tous » éteint tout (= aucun filtre).
+// `choix` est l'ensemble (Set) des valeurs cochées.
+const majPuces = [];
+function creerInterrupteurs(zone, valeurs, choix, libelle, classe) {
+  zone.innerHTML = "";
+  const maj = () => {
+    for (const puce of zone.children) {
+      const v = puce.dataset.valeur;
+      puce.setAttribute("aria-pressed", v === "Tous" ? !choix.size : choix.has(v));
+    }
+  };
+  for (const valeur of ["Tous", ...valeurs]) {
+    const puce = document.createElement("button");
+    puce.type = "button";
+    puce.dataset.valeur = valeur;
+    puce.className = "puce" + (valeur !== "Tous" && classe ? " " + classe(valeur) : "");
+    puce.innerHTML = libelle(valeur);
+    puce.addEventListener("click", () => {
+      if (valeur === "Tous") choix.clear();
+      else if (choix.has(valeur)) choix.delete(valeur);
+      else choix.add(valeur);
+      maj();
+      afficherSommaire();
+    });
+    zone.appendChild(puce);
   }
+  maj();
+  majPuces.push(maj);
 }
-for (const valeur of ["Tous", ...NIVEAUX]) {
-  const puce = document.createElement("button");
-  puce.type = "button";
-  puce.dataset.niveau = valeur;
-  puce.className = "puce" + (valeur !== "Tous" ? " puce-" + classeNiveau(valeur) : "");
-  puce.innerHTML = valeur === "Tous"
+
+creerInterrupteurs(document.getElementById("filtre-niveaux"), NIVEAUX, etat.niveaux,
+  (v) => v === "Tous"
     ? "Tous"
-    : `<span class="pastille" aria-hidden="true"></span>${valeur} <span class="sous-libelle"><span class="nom-niveau">${NOMS_NIVEAUX[valeur] ? NOMS_NIVEAUX[valeur] + " · " : ""}</span>${compterParNiveau(valeur)}</span>`;
-  puce.addEventListener("click", () => {
-    if (valeur === "Tous") etat.niveaux.clear();
-    else if (etat.niveaux.has(valeur)) etat.niveaux.delete(valeur);
-    else etat.niveaux.add(valeur);
-    majPucesNiveaux();
-    afficherSommaire();
-  });
-  zoneNiveaux.appendChild(puce);
-}
-majPucesNiveaux();
-creerPuces(document.getElementById("filtre-themes"), Object.keys(CATEGORIES), "theme", (v) =>
-  v === "Tous" ? "Tous les thèmes" : echapper(v)
-);
+    : `<span class="pastille" aria-hidden="true"></span>${v} <span class="sous-libelle"><span class="nom-niveau">${NOMS_NIVEAUX[v] ? NOMS_NIVEAUX[v] + " · " : ""}</span>${compterParNiveau(v)}</span>`,
+  (v) => "puce-" + classeNiveau(v));
+creerInterrupteurs(document.getElementById("filtre-themes"), Object.keys(CATEGORIES), etat.themes,
+  (v) => (v === "Tous" ? "Tous les thèmes" : echapper(v)));
 
 caseChanson.addEventListener("change", () => {
   etat.chanson = caseChanson.checked;
@@ -187,12 +177,12 @@ champSommaire.addEventListener("input", () => {
 });
 
 boutonReinitialiser.addEventListener("click", () => {
-  Object.assign(etat, { theme: "Tous", chanson: false, texte: "" });
+  Object.assign(etat, { chanson: false, texte: "" });
   etat.niveaux.clear();
-  majPucesNiveaux();
+  etat.themes.clear();
+  majPuces.forEach((maj) => maj());
   champSommaire.value = "";
   caseChanson.checked = false;
-  [...document.getElementById("filtre-themes").children].forEach((p, i) => p.setAttribute("aria-pressed", i === 0));
   afficherSommaire();
 });
 
