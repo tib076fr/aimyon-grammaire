@@ -354,5 +354,93 @@ const ANECDOTES = {
     sources: [
       { nom: "Real Sound, annonce du single, avril 2022", url: "https://realsound.jp/2022/04/post-1011403.html" }
     ]
+  },
+  "貴方解剖純愛歌 ～死ね～": {
+    textes: [
+      "Son premier disque (2015). Aimyon raconte l'avoir écrite en une dizaine de minutes : le mot « ねえ », qu'on adresse à quelqu'un qu'on aime, a appelé de lui-même la rime « 死ね ». Elle n'avait pas cherché à placer ce mot.",
+      "Elle n'y parle pas d'elle : elle voulait donner voix à quelque chose de profond chez les femmes, une chanson d'amour « pure » et désespérée. Les radios ont refusé de la diffuser."
+    ],
+    sources: [
+      { nom: "BARKS, interview de mars 2015", url: "https://barks.jp/news/739856/" },
+      { nom: "BARKS, interview de mai 2015", url: "https://barks.jp/news/744738/" }
+    ]
+  },
+  "○○ちゃん": {
+    textes: [
+      "Écrite pour sa meilleure amie, environ un an avant la sortie de « tamago » (2015). Beaucoup de gens lui demandaient une chanson ; elle n'a accepté que pour cette amie, dont elle trouvait la vie passionnante.",
+      "Elle dit que rien de joyeux ne lui est venu, et qu'elle avait prévenu son amie que ce serait « un peu cru »."
+    ],
+    sources: [
+      { nom: "BARKS, interview de mai 2015", url: "https://barks.jp/news/744738/" }
+    ]
+  },
+  "幸せになりたい": {
+    textes: [
+      "Aimyon la décrit comme la chanson d'une femme qui subit des violences. Pendant l'enregistrement, on lui a demandé si c'était son histoire : elle répond que presque toutes ses chansons sont de l'imagination."
+    ],
+    sources: [
+      { nom: "BARKS, interview de mai 2015", url: "https://barks.jp/news/744738/" }
+    ]
+  },
+  "あした世界が終わるとしても": {
+    textes: [
+      "Générique du film d'animation du même titre (2019), dont « ら、のはなし » est aussi une chanson. Aimyon a écrit les deux en se mettant à la place du héros, Shin.",
+      "Elle a pu travailler à partir d'une maquette animée du film, et non d'un simple scénario, ce qui l'a aidée."
+    ],
+    sources: [
+      { nom: "SPICE, entretien avec le réalisateur Yūhei Sakuragi, février 2019", url: "https://spice.eplus.jp/articles/224742" }
+    ]
+  },
+  "ふたりの世界": {
+    textes: [
+      "Aimyon dit que cette chanson lui a permis, pour la première fois, de parler franchement de sexe dans un texte, et qu'elle compte continuer à écrire des chansons sensuelles."
+    ],
+    sources: [
+      { nom: "Numéro TOKYO, interview de mai 2018", url: "https://numero.jp/talks49/" }
+    ]
   }
 };
+
+// ---- Compléments tirés de BARKS, CINRA, Numéro TOKYO, SKREAM! et SPICE ----
+ANECDOTES["マリーゴールド"].textes.push(
+  "Elle raconte que l'image du refrain lui est « tombée dans la tête » d'un coup, et qu'il faut savoir saisir ce genre d'instant : c'est ce qui a donné son titre à l'album « 瞬間的シックスセンス » (« sixième sens du moment »).",
+  "Sûre d'elle dès le premier jet, elle avait annoncé à son équipe qu'elle en ferait un single, et que si le monde n'écoutait pas cette chanson-là, elle ne pourrait plus faire de musique.");
+ANECDOTES["マリーゴールド"].sources.push(
+  { nom: "CINRA, interview de 2018 (sortie de « 瞬間的シックスセンス »)", url: "https://www.cinra.net/article/interview-201902-aimyong" },
+  { nom: "SKREAM!, interview de février 2019", url: "https://skream.jp/interview/2019/02/aimyong.php" },
+  { nom: "Numéro TOKYO, interview de novembre 2020", url: "https://numero.jp/interview218/" });
+ANECDOTES["満月の夜なら"].textes.push(
+  "Elle voulait surprendre après « 君はロックを聴かない », très J-pop. Grande lectrice de romans érotiques pour apprendre l'art du sous-entendu, elle s'amuse de voir chacun imaginer ce que cache un mot aussi anodin qu'« アイスクリーム ».",
+  "Elle dit aussi adorer faire rimer les mots, ce qu'elle fait beaucoup ici.");
+ANECDOTES["満月の夜なら"].sources.push(
+  { nom: "CINRA, interview d'avril 2018", url: "https://www.cinra.net/article/interview-201804-aimyong" },
+  { nom: "Numéro TOKYO, interview de mai 2018", url: "https://numero.jp/talks49/" });
+ANECDOTES["わかってない"].textes.push(
+  "Écrite environ deux ans avant sa sortie en face B de « 満月の夜なら » (2018). Beaucoup d'auditeurs l'ont entendue comme la réponse de la femme de 満月の夜なら ; ce n'était pas voulu, mais Aimyon dit en être ravie.");
+ANECDOTES["わかってない"].sources.push(
+  { nom: "CINRA, interview d'avril 2018", url: "https://www.cinra.net/article/interview-201804-aimyong" });
+ANECDOTES["ひかりもの"].textes.push(
+  "Le titre ne parle pas de poisson : pour elle, « ひかりもの » était un mot négatif. En 2018, elle se voyait comme l'étoile la plus brillante du moment, celle qu'on regarde avant de se tourner vers une autre.");
+ANECDOTES["ひかりもの"].sources.push(
+  { nom: "CINRA, interview de 2018 (sortie de « 瞬間的シックスセンス »)", url: "https://www.cinra.net/article/interview-201902-aimyong" });
+ANECDOTES["君はロックを聴かない"].textes.push(
+  "Avec « マリーゴールド », c'est la chanson dont elle a senti tout de suite qu'elle « marcherait ». Elle dit que ces deux titres lui ont appris à faire confiance à son intuition.");
+ANECDOTES["君はロックを聴かない"].sources.push(
+  { nom: "CINRA, interview de 2018 (sortie de « 瞬間的シックスセンス »)", url: "https://www.cinra.net/article/interview-201902-aimyong" });
+ANECDOTES["生きていたんだよな"].textes.push(
+  "Elle avait écrit une autre chanson ouverte par un passage parlé, plus proche d'une chanson d'amour ordinaire ; c'est son label qui a choisi celle-ci pour ses débuts en major.",
+  "Aucun des personnages (celle qui saute, les badauds, les téléspectateurs) n'y parle à la première personne. Elle ne la voit pas comme une chanson négative.");
+ANECDOTES["生きていたんだよな"].sources.push(
+  { nom: "BARKS, interview de novembre 2016", url: "https://barks.jp/news/777907/" });
+ANECDOTES["19歳になりたくない"].textes.push(
+  "Écrite à 18 ans. Elle dit qu'à l'époque, elle regardait le suicide avec un esprit un peu tordu, et que son regard a changé après ses vingt ans.");
+ANECDOTES["19歳になりたくない"].sources.push(
+  { nom: "BARKS, interview de novembre 2016", url: "https://barks.jp/news/777907/" });
+ANECDOTES["愛を伝えたいだとか"].textes.push(
+  "Après « 生きていたんだよな », elle voulait éviter qu'on la range dans la case des chansons sombres. On lui a dit que le morceau sonnait « city pop » : elle refuse ce rapprochement et regrette qu'on juge la musique à travers les modes.");
+ANECDOTES["愛を伝えたいだとか"].sources.push(
+  { nom: "CINRA, entretien avec Tonda Hayashi Ran, 2017", url: "https://www.cinra.net/article/interview-201705-aimyongran" });
+ANECDOTES["ざらめ"].textes.push(
+  "C'est l'acteur et chanteur Takumi Kitamura qui lui a fait découvrir le groupe Bialystocks ; son membre Sora Hokimoto a ensuite réalisé le clip de « ざらめ ».");
+ANECDOTES["ざらめ"].sources.push(
+  { nom: "SPICE, émission « MUSIC FREAKS » (FM802), juin 2026", url: "https://spice.eplus.jp/articles/346742" });
