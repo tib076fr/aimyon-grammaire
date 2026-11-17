@@ -33,6 +33,7 @@ Le site compte deux pages, qui fonctionnent en ouvrant simplement le fichier dan
 | `data-details.js` | Construction et mises en garde de chaque fiche |
 | `data-liens.js` | Les points proches (« Voir aussi ») |
 | `revision.html`, `revision.js` | La page de révision |
+| `chansons.html`, `chansons.js`, `data-albums.js` | La liste des chansons par album, avec les points de grammaire de chacune |
 | `progres.js` | Le suivi « Je connais » (stocké dans le navigateur) |
 | `romaji.js`, `data-lectures.js` | La recherche des fiches en romaji, et la lecture en kana des titres écrits en kanji |
 

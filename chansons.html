@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1917" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-title" content="Aimyon 文法">
+  <link rel="apple-touch-icon" href="icone.png">
+  <link rel="icon" href="icone.png">
+  <title>Chansons — Aimyon 文法</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="index.html" class="nav-logo">Aimyon <span lang="ja">文法</span></a>
+    <div class="nav-liens">
+      <a href="index.html">Sommaire</a>
+      <a href="chansons.html" aria-current="page">Chansons</a>
+      <a href="fiches.html">Fiches</a>
+      <a href="revision.html">Révision</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Les chansons</h1>
+    <p>Choisissez une chanson pour voir les points de grammaire qu'elle illustre.</p>
+  </header>
+
+  <main class="page-chansons">
+    <section class="panneau-filtres" aria-label="Filtres">
+      <form id="formulaire-chansons" class="recherche" role="search">
+        <input type="search" id="recherche-chansons" placeholder="ハルノヒ, harunohi…" aria-label="Rechercher une chanson" autocapitalize="none" autocorrect="off" enterkeyhint="search">
+        <button type="submit">Chercher</button>
+      </form>
+      <div class="groupe-filtres">
+        <span class="etiquette-filtre">Album</span>
+        <div id="filtre-albums" class="puces puces-themes"></div>
+      </div>
+      <div class="ligne-bas-filtres">
+        <label class="interrupteur">
+          <input type="checkbox" id="filtre-cites">
+          <span class="interrupteur-piste" aria-hidden="true"></span>
+          Seulement les chansons citées dans les fiches
+        </label>
+        <span id="compteur-chansons" class="compteur" aria-live="polite"></span>
+      </div>
+    </section>
+
+    <div id="liste-chansons"></div>
+    <p id="vide-chansons" class="vide" hidden>Aucune chanson ne correspond.</p>
+  </main>
+
+  <footer>
+    Les extraits de chansons sont les mêmes courtes citations que sur les fiches. Paroles © Aimyon et ses ayants droit ; pochettes affichées depuis Apple Music.
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="data-n5.js"></script>
+  <script src="data-n4.js"></script>
+  <script src="data-n3.js"></script>
+  <script src="data-n2.js"></script>
+  <script src="data-n1.js"></script>
+  <script src="data-hors-jlpt.js"></script>
+  <script src="data-sources.js"></script>
+  <script src="data-paroles.js"></script>
+  <script src="data-contexte.js"></script>
+  <script src="data-anecdotes.js"></script>
+  <script src="data-pochettes.js"></script>
+  <script src="data-categories.js"></script>
+  <script src="data-albums.js"></script>
+  <script src="data-lectures.js"></script>
+  <script src="data-details.js"></script>
+  <script src="data-liens.js"></script>
+  <script src="progres.js"></script>
+  <script src="romaji.js"></script>
+  <script src="chansons.js"></script>
+</body>
+</html>

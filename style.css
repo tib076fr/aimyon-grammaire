@@ -549,3 +549,38 @@ mark { color: var(--point); border-bottom: 0; font-weight: 700; }
 .pochette-revision { width: 72px; height: 72px; border-radius: 10px; object-fit: cover; flex: none; box-shadow: var(--ombre); }
 .origine-titre { display: block; font-size: 1rem; color: inherit; font-weight: 600; }
 .origine-disque { display: block; font-size: 0.85rem; color: var(--discret); margin-top: 2px; }
+
+/* ---- Page Chansons ---- */
+.page-chansons .album { margin: 28px 0; }
+.album-tete { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.album-tete h2 { margin: 0; font-size: 1.25rem; }
+.album-pochette { width: 56px; height: 56px; border-radius: 8px; object-fit: cover; box-shadow: var(--ombre); }
+.album-type { margin: 2px 0 0; color: var(--discret); font-size: 0.9rem; }
+.grille-chansons { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; align-items: start; }
+.chanson { background: var(--carte); border: 1px solid var(--bord); border-radius: 14px; overflow: hidden; }
+.chanson-tete {
+  display: flex; align-items: center; gap: 12px; width: 100%; padding: 10px 12px; border: 0;
+  background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer;
+}
+.chanson-tete:hover { background: var(--accent-doux); }
+.chanson-pochette { width: 64px; height: 64px; border-radius: 8px; object-fit: cover; flex: none; }
+.chanson-pochette.sans-image { display: grid; place-items: center; background: var(--accent-doux); color: var(--accent); font-size: 1.6rem; }
+.chanson-infos { flex: 1; min-width: 0; }
+.chanson-titre { display: block; font-weight: 700; font-size: 1.05rem; }
+.chanson-disque { display: block; color: var(--discret); font-size: 0.82rem; margin-top: 2px; }
+.chanson-compte {
+  flex: none; min-width: 2em; padding: 2px 8px; border-radius: 999px; text-align: center;
+  background: var(--accent-doux); color: var(--accent); font-weight: 700; font-size: 0.9rem;
+}
+.chanson-tete[aria-expanded="true"] .chanson-compte { background: var(--accent); color: #1b1917; }
+.chanson-detail { padding: 4px 14px 14px; border-top: 1px solid var(--bord); }
+.points-chanson { list-style: none; margin: 0; padding: 0; }
+.points-chanson li { padding: 10px 0; border-bottom: 1px dashed var(--bord); }
+.points-chanson li:last-child { border-bottom: 0; }
+.point-chanson { display: inline-flex; align-items: center; gap: 8px; color: inherit; text-decoration: none; font-weight: 700; }
+.point-chanson:hover .point-titre { color: var(--accent); text-decoration: underline; }
+.points-chanson .japonais { margin: 6px 0 2px; font-size: 1.05rem; }
+.points-chanson .traduction { margin: 0; color: var(--discret); font-size: 0.92rem; }
+.pas-encore { color: var(--discret); font-style: italic; margin: 10px 0; }
+.lien-paroles { display: inline-block; margin-top: 8px; color: var(--accent); font-size: 0.9rem; }
+@media (max-width: 480px) { .grille-chansons { grid-template-columns: minmax(0, 1fr); } }
