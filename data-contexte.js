@@ -473,5 +473,429 @@ const CONTEXTE = {
   "私に見せてよ|内容によっては怒るけど": {
     avant: { japonais: "隠[かく]しているもの 私[わたし]に見[み]せてよ", traduction: "Ce que tu caches, montre-le-moi." },
     apres: { japonais: "些細[ささい]な発見[はっけん]も 私[わたし]に見[み]せてよ", traduction: "Tes moindres trouvailles, montre-les-moi aussi." }
+  },
+  "おばけがでるぞ|目が合えば捕まるぞ": {
+    avant: { japonais: "左手[ひだりて]に持[も]つ赤色[あかいろ]のエキス", traduction: "Dans sa main gauche, un élixir rouge." },
+    apres: { japonais: "おばけだぞ", traduction: "C'est un fantôme, attention !" }
+  },
+  "猫にジェラシー|なんか、僕もさどうしてか寄りかかる": {
+    avant: { japonais: "夜[よる]にフッと消[き]えるお前[まえ]に", traduction: "Toi qui disparais d'un coup dans la nuit," },
+    apres: { japonais: "猫[ねこ]にジェラシー", traduction: "Jaloux d'un chat." }
+  },
+  "die die die|ねっ?それが良いに決まってる": {
+    avant: { japonais: "明日[あす]の我[わ]が身[み]に備[そな]えよう", traduction: "Préparons-nous à ce qui peut nous arriver demain." },
+    apres: { japonais: "でも もしかして もしかして", traduction: "Mais peut-être, peut-être…" }
+  },
+  "die die die|いつ死ぬか分かんないし": {
+    avant: { japonais: "だってもう私[わたし]達[たち]", traduction: "Parce que nous deux, enfin," },
+    apres: { japonais: "手[て]、繋[つな]いで帰[かえ]ろうよ", traduction: "alors rentrons main dans la main." }
+  },
+  "die die die|いわゆる関係が落ち着いたってやつかも": {
+    avant: { japonais: "でも 分[わ]かんないの 分[わ]かんないの", traduction: "Mais je ne sais pas, je ne sais pas." },
+    apres: { japonais: "だけど 足[た]んないの もったいないもん", traduction: "Seulement ça ne me suffit pas, quel gâchis." }
+  },
+  "君の夢を聞きながら、僕は笑えるアイデアを!|数えきれないもしもの話して": {
+    avant: { japonais: "いつもヘンテコな友情[ゆうじょう]だ", traduction: "Une amitié toujours aussi farfelue." },
+    apres: { japonais: "不思議[ふしぎ]なもの もっと見[み]せてあげる", traduction: "Je te montrerai encore plus de merveilles." }
+  },
+  "君の夢を聞きながら、僕は笑えるアイデアを!|覚えたてのアイテムにも": {
+    avant: { japonais: "眠[ねむ]たくなるまで遊[あそ]ぼう", traduction: "jouons jusqu'à tomber de sommeil." },
+    apres: { japonais: "飽[あ]きられちゃうくらい", traduction: "on finira par s'en lasser." }
+  },
+  "君の夢を聞きながら、僕は笑えるアイデアを!|眠たくなるまで遊ぼう": {
+    avant: { japonais: "伸[の]びた影[かげ]を追[お]いかけて", traduction: "À la poursuite de nos ombres qui s'allongent," },
+    apres: { japonais: "覚[おぼ]えたてのアイテムにも", traduction: "Même les gadgets qu'on vient tout juste de découvrir," }
+  },
+  "愛の花|空が晴れずとも": {
+    avant: { japonais: "失[うしな]う未来[みらい]なんてこないで？", traduction: "Que ne vienne jamais l'avenir où on le perd." },
+    apres: { japonais: "愛[あい]を胸[むね]に祈[いの]るわ", traduction: "je prierai, l'amour au cœur." }
+  },
+  "愛の花|貴方の声が聴こえた気がする": {
+    avant: { japonais: "緑[みどり]ゆれてる", traduction: "La verdure se balance." },
+    apres: { japonais: "空[そら]が晴[は]れたら", traduction: "Quand le ciel se dégagera," }
+  },
+  "愛の花|涙は枯れないわ": {
+    avant: { japonais: "逢[あ]いに 逢[あ]いに来[き]て欲[ほ]しい", traduction: "viens, je voudrais que tu viennes me voir." },
+    apres: { japonais: "明日[あす]へと繋[つな]がる輪[わ]", traduction: "Un anneau qui relie à demain." }
+  },
+  "貴方解剖純愛歌 ～死ね～|あなたの最後の記憶は私であるはずよね": {
+    avant: { japonais: "あなたの両目[りょうめ]をくり抜[ぬ]いて 私[わたし]のポッケに入[い]れたなら", traduction: "Si je t'arrachais les deux yeux pour les glisser dans ma poche," },
+    apres: { japonais: "逃[にが]さないよ 離[はな]さないよ 私[わたし]だけのあなたになるの", traduction: "Je ne te laisserai ni fuir ni partir : tu seras à moi seule." }
+  },
+  "貴方解剖純愛歌 ～死ね～|ねえ?どうしてそばに来てくれないの": {
+    avant: { japonais: "今[いま]すぐ部屋[へや]においで", traduction: "Viens tout de suite dans ma chambre." },
+    apres: { japonais: "死[し]ね。 私[わたし]を好[す]きじゃないのならば", traduction: "Meurs. Si tu ne m'aimes pas." }
+  },
+  "貴方解剖純愛歌 ～死ね～|唇を縫い私だけのキスを味わえばいいの": {
+    avant: { japonais: "足[あし]を引[ひ]き裂[さ]き 歩[ある]かせやしない", traduction: "Je te déchirerai les jambes, je ne te laisserai plus marcher." },
+    apres: { japonais: "ねえ? 私[わたし]はどこかおかしいですか", traduction: "Dis… est-ce que quelque chose cloche chez moi ?" }
+  },
+  "いちについて|その先で腐るかは自分次第なのか": {
+    avant: { japonais: "お決[き]まりの不幸[ふこう]で", traduction: "dans un malheur des plus convenus," },
+    apres: { japonais: "残[のこ]された時間[じかん]が焦[あせ]りを誘[さそ]い戸惑[とまど]う", traduction: "Le temps qui reste attise l'impatience, et je me trouble." }
+  },
+  "いちについて|どこまでも楽になれるのだろうか": {
+    avant: { japonais: "透明[とうめい]な瞳[ひとみ]で世間[せけん]を見[み]られたら", traduction: "Si je pouvais regarder le monde avec des yeux limpides," },
+    apres: { japonais: "落[お]とされた世界[せかい]が少[すこ]し泥濘[ぬかる]んでいた", traduction: "Le monde où l'on m'a jeté était un peu boueux." }
+  },
+  "いちについて|運命があまりに静かに蝕んでくる": {
+    avant: { japonais: "汽笛[きてき]の音[おと]さえ誰[だれ]かが遮[さえぎ]る", traduction: "Même le sifflet du train, quelqu'un le couvre." },
+    apres: { japonais: "なぜ自由[じゆう]は優[やさ]しいふりをして", traduction: "Pourquoi la liberté fait-elle semblant d'être douce" }
+  },
+  "お互い様やん|お互い様やんそれお互い様やん": {
+    avant: { japonais: "許[ゆる]しちゃう私[わたし]も なんか嫌[いや]", traduction: "Et moi qui finis par pardonner, ça m'agace aussi." },
+    apres: { japonais: "お互[たが]い結局[けっきょく]めっちゃ 好[す]きなんやん", traduction: "Au fond, tous les deux, on s'aime à la folie, voilà." }
+  },
+  "お互い様やん|ケンカしたらしたですぐに無視をする": {
+    avant: { japonais: "俺[おれ]ってついてくる 意味[いみ]あるの?", traduction: "Et moi, à quoi ça sert que je te suive ?" },
+    apres: { japonais: "面倒[めんどう]なやつ", traduction: "Quelle plaie, celle-là." }
+  },
+  "お互い様やん|それでへらへら謝ってきて": {
+    avant: { japonais: "マジでムカつく 先[さき]帰[かえ]る", traduction: "Ça m'énerve vraiment, je rentre la première." },
+    apres: { japonais: "許[ゆる]しちゃう私[わたし]も なんか嫌[いや]", traduction: "et moi qui finis par pardonner, ça m'agace aussi." }
+  },
+  "おっぱい|揺れるんじゃなくて揺らしてみる": {
+    avant: { japonais: "揺[ゆ]れるたびに あの人[ひと]見[み]る", traduction: "À chaque balancement, c'est lui que je regarde." },
+    apres: { japonais: "揺[ゆ]れるたびにあの人[ひと]は見[み]ている", traduction: "À chaque balancement, lui, il regarde." }
+  },
+  "おっぱい|いつの間にかABCD.....": {
+    avant: { japonais: "揺[ゆ]れるたびに 愛[いと]おしくて", traduction: "À chaque balancement, je les trouve attendrissants." },
+    apres: { japonais: "変[へん]なあだ名[な]がついちゃったり", traduction: "On m'a même collé un drôle de surnom." }
+  },
+  "おっぱい|まさか破裂しちゃうんじゃないかって": {
+    avant: { japonais: "みるみるうちに 膨[ふく]らんで", traduction: "Ils gonflent à vue d'œil," },
+    apres: { japonais: "心配[しんぱい]で私[わたし]心配[しんぱい]で", traduction: "Je m'inquiète, moi, je m'inquiète." }
+  },
+  "鯉|誰が予想しましたか": {
+    avant: { japonais: "ああ ジーザス こんな結末[けつまつ]を", traduction: "Ah, Jésus, une fin pareille," },
+    apres: { japonais: "ああ 結局[けっきょく]私[わたし]がチョロいと", traduction: "Ah, au bout du compte, on me prend pour une fille facile," }
+  },
+  "鯉|思われて当然、ああ": {
+    avant: { japonais: "ああ 結局[けっきょく]私[わたし]がチョロいの", traduction: "Ah, au bout du compte, c'est moi la fille facile :" },
+    apres: { japonais: "なれない なれない", traduction: "Je ne peux pas, je ne peux pas," }
+  },
+  "鯉|魅力的だと言ったでしょ?": {
+    avant: { japonais: "馬鹿[ばか]でかい穴[あな]が空[あ]くよ", traduction: "un trou énorme s'y creuse." },
+    apres: { japonais: "私[わたし]のこの眼[め]を", traduction: "Ces yeux qui sont les miens." }
+  },
+  "幸せになりたい|ねえそれなら今針を飲める?": {
+    avant: { japonais: "私[わたし]のためならなんだってするんでしょ?", traduction: "Pour moi, tu ferais n'importe quoi, pas vrai ?" },
+    apres: { japonais: "上[うえ]から目線[めせん]の女[おんな]だって思[おも]っている? イエス オア ノー", traduction: "Tu me trouves hautaine ? Yes or no." }
+  },
+  "幸せになりたい|私それでも恋をやめれない女の執念深さよ": {
+    avant: { japonais: "親[おや]にだって心配[しんぱい]もかけてる 大丈夫[だいじょうぶ]が口癖[くちぐせ]", traduction: "J'inquiète même mes parents ; « ça va » est devenu mon refrain." },
+    apres: { japonais: "私[わたし]だって幸[しあわ]せになれるはず 思[おも]うくらいはいいでしょ?", traduction: "Moi aussi, je dois pouvoir être heureuse : j'ai bien le droit de le croire, non ?" }
+  },
+  "幸せになりたい|私だって誰かに愛されたいの尽くされたいの": {
+    avant: { japonais: "ねえ 本気[ほんき]ならちょっと聞[き]いて", traduction: "Dis, si tu es sérieux, écoute un peu." },
+    apres: { japonais: "ひとりぼっち そうひとりぼっち今[いま]は少[すこ]し辛[つら]いの", traduction: "Toute seule, oui, toute seule : en ce moment, c'est un peu dur." }
+  },
+  "シガレット|出来そうもない": {
+    avant: { japonais: "出来損[できそこ]ない", traduction: "Bonne à rien," },
+    apres: { japonais: "忘[わす]れること", traduction: "oublier," }
+  },
+  "シガレット|ふと吸い込まれてつい転んで": {
+    avant: { japonais: "うっかり落[お]ちてく地獄[じごく]に", traduction: "Dans l'enfer où je glisse par mégarde," },
+    apres: { japonais: "納得[なっとく]いかない全[すべ]てに", traduction: "À tout ce que je n'arrive pas à accepter," }
+  },
+  "シガレット|出会い頭でまたつまずく": {
+    avant: { japonais: "ありきたりに傷[きず]ついては", traduction: "Je me blesse de la façon la plus banale," },
+    apres: { japonais: "ありがと ごめんね さよなら", traduction: "Merci, pardon, adieu." }
+  },
+  "神秘の領域へ|若気の至りと被ってしまった": {
+    avant: { japonais: "白[しろ]のブラジャーを", traduction: "Un soutien-gorge blanc :" },
+    apres: { japonais: "ピンクのあの華[はな]に手[て]が届[とど]く気[き]がした", traduction: "J'ai cru pouvoir toucher cette fleur rose." }
+  },
+  "神秘の領域へ|青く波打つ海が見えた気がした": {
+    avant: { japonais: "青春[せいしゅん]と名付[なづ]けて被[かぶ]ってしまった", traduction: "je l'ai baptisée « jeunesse » et mise sur ma tête." },
+    apres: { japonais: "白[しろ]のブラジャーを", traduction: "Un soutien-gorge blanc :" }
+  },
+  "泥だんごの天才いたよね|どうよ私らイケてるでしょと言わんばかりの顔を見せる": {
+    avant: { japonais: "大口[おおくち]叩[たた]く大物[おおもの]気取[きど]り", traduction: "Elle fanfaronne et joue les caïds," },
+    apres: { japonais: "明[あき]らかに小学[しょうがく]三年生[さんねんせい]", traduction: "Visiblement en troisième année de primaire." }
+  },
+  "泥だんごの天才いたよね|背負う姿は可愛げのない高校生のようだ": {
+    avant: { japonais: "茶髪[ちゃぱつ]の髪[かみ]を揺[ゆ]らしランドセル", traduction: "Cheveux teints qui dansent, cartable sur le dos :" },
+    apres: { japonais: "隣[となり]には顔[かお]しかめる教師[きょうし]と", traduction: "À côté, un professeur qui grimace" }
+  },
+  "泥だんごの天才いたよね|小さなころから気取ってばかりいること": {
+    avant: { japonais: "窮屈[きゅうくつ]してるなあ", traduction: "Comme ils doivent se sentir à l'étroit." },
+    apres: { japonais: "教[おし]えてほしくないのさ", traduction: "je ne veux pas qu'on leur apprenne ça." }
+  },
+  "猫にジェラシー|相手が誰だろうと構わない": {
+    avant: { japonais: "馬鹿[ばか]で悪[わる]いか?", traduction: "C'est idiot, et alors ?" },
+    apres: { japonais: "僕[ぼく]は猫[ねこ]にジェラシー", traduction: "Moi, je suis jaloux d'un chat." }
+  },
+  "ハルノヒ|いつになく遠く遠くに見える": {
+    avant: { japonais: "藍色[あいいろ]のスカート", traduction: "une jupe indigo" },
+    apres: { japonais: "加速[かそく]する足音[あしおと]", traduction: "Des pas qui s'accélèrent." }
+  },
+  "ハルノヒ|僕らは何も見えない": {
+    avant: { japonais: "腰掛[こしか]けたベンチで", traduction: "Assis sur un banc," },
+    apres: { japonais: "未来[みらい]を誓[ちか]い合[あ]った", traduction: "nous nous le sommes juré l'un à l'autre." }
+  },
+  "二人だけの国|運命共同体同士": {
+    apres: { japonais: "ナンマイダ", traduction: "Namu Amida…" }
+  },
+  "ペルソナの記憶|気にしないで済むけど内心戸惑っているわ": {
+    avant: { japonais: "黙[だま]って過[す]ごしていればそんな事[こと]も", traduction: "Si je vivais sans rien dire, tout cela," },
+    apres: { japonais: "心[こころ]の中[なか]にいる貴方[あなた]の名残[なごり]を全[すべ]て刺[さ]し殺[ころ]して", traduction: "Poignarder tout ce qui reste de toi dans mon cœur," }
+  },
+  "マシマロ|むしろ夢であれよ、と思う": {
+    avant: { japonais: "こんな幸[しあわ]せできすぎている", traduction: "Un bonheur pareil, c'est trop beau." },
+    apres: { japonais: "目[め]の前[まえ]にあるマシマロの丘[おか]", traduction: "Devant moi, des collines de guimauve." }
+  },
+  "マシマロ|見たことのない大地を走る走る": {
+    avant: { japonais: "心地[ここち]よいリズムに乗[の]って", traduction: "Porté par un rythme agréable," },
+    apres: { japonais: "野暮[やぼ]な考[かんが]え思[おも]い描[えが]くよ", traduction: "Je me fais des idées bien vulgaires." }
+  },
+  "夜行バス|暗くて何も見えないから": {
+    avant: { japonais: "片道[かたみち]約[やく]8時間[じかん]の旅[たび]", traduction: "Un trajet d'environ huit heures, aller simple." },
+    apres: { japonais: "鼻[はな]すすりながらかーちゃんにメールした", traduction: "j'ai écrit à maman en reniflant." }
+  },
+  "夜行バス|涙こらえ聞いていたのは大好きな五つの音": {
+    avant: { japonais: "ギターかかえて イヤフォンをつけて", traduction: "La guitare dans les bras, les écouteurs aux oreilles," },
+    apres: { japonais: "ゆさゆさうとうと走[はし]っている", traduction: "Il roule, ballotté, somnolent." }
+  },
+  "私に彼氏ができない理由|この季節にかぎってひと肌も恋しくなる": {
+    avant: { japonais: "突然[とつぜん]現[あらわ]れること願[ねが]ってたのに", traduction: "moi qui souhaitais tant le voir apparaître d'un coup…" },
+    apres: { japonais: "で自信[じしん]がないの 今日[きょう]もこたつにうずくまる", traduction: "Et je manque d'assurance : aujourd'hui encore, je me blottis sous le kotatsu." }
+  },
+  "私に彼氏ができない理由|もうバレンタイン誰かにあげたい": {
+    avant: { japonais: "極度[きょくど]の人見知[ひとみし]りと 好[す]きな人[ひと]に気[き]づかない鈍感[どんかん]さかな?", traduction: "une timidité extrême, et cette lenteur à remarquer qui me plaît, peut-être ?" },
+    apres: { japonais: "私[わたし]にも今年[ことし]は愛[あい]する人[ひと]が", traduction: "Que cette année, pour moi aussi, quelqu'un à aimer" }
+  },
+  "私に彼氏ができない理由|もし私に彼氏ができた冬休みは": {
+    avant: { japonais: "でも逃[に]げ出[だ]したいな この空間[くうかん]は少[すこ]し照[て]れくさい", traduction: "Mais j'ai envie de fuir : cet endroit me gêne un peu." },
+    apres: { japonais: "恋人[こいびと]の定番[ていばん]のデートコースを歩[ある]きたい", traduction: "je veux suivre le parcours classique des amoureux." }
+  },
+  "今夜このまま|だんだん息もできなくなって": {
+    avant: { japonais: "泡[あわ]の中[なか]で眠[ねむ]れたらなぁ", traduction: "Si je pouvais m'endormir dans la mousse…" },
+    apres: { japonais: "心[こころ]の壁[かべ]も穴[あな]だらけで", traduction: "et les murs de mon cœur sont criblés de trous." }
+  },
+  "あのね|それなのに何故だろう君が遠い": {
+    avant: { japonais: "つま先[さき]立[だ]つ 沈[しず]まないように", traduction: "Je me dresse sur la pointe des pieds, pour ne pas sombrer." },
+    apres: { japonais: "伸[の]びてく影[かげ]が少[すこ]しだけ", traduction: "L'ombre qui s'allonge, un tout petit peu," }
+  },
+  "恋をしたから|貴方が思う以上に大好きで": {
+    avant: { japonais: "さらに言[い]えば私[わたし]は貴方[あなた]を", traduction: "Et pour en dire plus, moi, je t'aime," },
+    apres: { japonais: "好[す]きで 好[す]きで 好[す]きで", traduction: "je t'aime, je t'aime, je t'aime," }
+  },
+  "恋をしたから|さらに言えば私は貴方を": {
+    avant: { japonais: "運命[うんめい]に感[かん]じていたよ", traduction: "j'y voyais le destin." },
+    apres: { japonais: "貴方[あなた]が思[おも]う以上[いじょう]に大好[だいす]きで", traduction: "bien plus que tu ne le crois," }
+  },
+  "スケッチ|確かに100年繋がってるんだ": {
+    avant: { japonais: "同[おな]じ今[いま]を生[い]きる胴体[どうたい]は", traduction: "Nos corps qui vivent le même présent" },
+    apres: { japonais: "まっすぐに 揺[ゆ]れながら", traduction: "Tout droit, en tremblant un peu," }
+  },
+  "スケッチ|君が現れた時からずっと": {
+    avant: { japonais: "今[いま]だって光[ひか]るよ", traduction: "Maintenant encore, il brille," },
+    apres: { japonais: "誰[だれ]かと思[おも]えば運命[うんめい]の", traduction: "Je me demandais qui c'était : c'est le destin" }
+  },
+  "猫|昨日のことなど幻だと思おう": {
+    avant: { japonais: "家[いえ]まで帰[かえ]ろう 1人[ひとり]で帰[かえ]ろう", traduction: "Rentrons à la maison, rentrons seul." },
+    apres: { japonais: "君[きみ]の顔[かお]なんて忘[わす]れてやるさ", traduction: "Ton visage, je l'oublierai, tu vas voir." }
+  },
+  "猫|猫になってでも現れてほしい": {
+    avant: { japonais: "会[あ]いたいんだ忘[わす]れられない", traduction: "Je veux te voir, je n'arrive pas à oublier." },
+    apres: { japonais: "いつか君[きみ]がフラッと現[あらわ]れて", traduction: "Qu'un jour tu réapparaisses, comme ça," }
+  },
+  "駅前喫茶ポプラ|そういえば僕は君のこういうところが大好きで": {
+    avant: { japonais: "分[わ]かりやすいなあ", traduction: "Qu'est-ce que tu es transparente." },
+    apres: { japonais: "たまらないんだけれど知[し]っていた?", traduction: "j'en suis fou, tu le savais ?" }
+  },
+  "ほろ酔い|ほろ酔いは俺をダメな男にする": {
+    avant: { japonais: "すすむ酒[さけ]と時間[じかん]に身[み]を任[まか]せて", traduction: "Je m'abandonne à l'alcool qui descend et au temps qui passe." },
+    apres: { japonais: "あの時[とき]もそうだったろう", traduction: "C'était pareil ce jour-là, pas vrai ?" }
+  },
+  "ほろ酔い|お前結婚したんだってな": {
+    avant: { japonais: "行[い]きつけの店[みせ]で聞[き]いたよ", traduction: "Je l'ai appris au bar où j'ai mes habitudes :" },
+    apres: { japonais: "幸[しあわ]せか?聞[き]ける立場[たちば]ではないが", traduction: "Tu es heureuse ? Je suis mal placé pour le demander, mais…" }
+  },
+  "19歳になりたくない|強くはなりたいでも弱くもありたい": {
+    avant: { japonais: "何故[なぜ]人[ひと]は減[へ]る命[いのち]に祝[いわ]いを捧[ささ]げるの", traduction: "Pourquoi fête-t-on une vie qui diminue ?" },
+    apres: { japonais: "私[わたし]のままでいたい", traduction: "Je veux rester moi-même." }
+  },
+  "19歳になりたくない|見たくないものを見ては泣いちゃうし": {
+    avant: { japonais: "大人[おとな]になるたびに", traduction: "Chaque fois que je deviens un peu plus adulte," },
+    apres: { japonais: "本当[ほんとう]の自分[じぶん]に気[き]づくことは少[すこ]し怖[こわ]いんだ", traduction: "et découvrir qui je suis vraiment me fait un peu peur." }
+  },
+  "ラッキーカラー|叶うといいけどなぁ": {
+    avant: { japonais: "3回[かい]願[ねが]った大成功[だいせいこう]が", traduction: "Ce grand succès que j'ai souhaité trois fois," },
+    apres: { japonais: "でも散々[さんざん]迷[まよ]った恋[こい]の終[お]わりは", traduction: "Mais la fin d'un amour où j'ai tant hésité," }
+  },
+  "ラッキーカラー|恋がついに結末を迎える": {
+    avant: { japonais: "勘違[かんちが]いで終[お]わらせたかった", traduction: "J'aurais voulu que ça s'arrête sur un malentendu." },
+    apres: { japonais: "確定[かくてい]した失恋[しつれん]だったよ", traduction: "C'était un chagrin d'amour couru d'avance." }
+  },
+  "さよならの今日に|泥まみれの過去が": {
+    apres: { japonais: "纏[まと]わりつく日々[ひび]だ", traduction: "me colle à la peau, jour après jour." }
+  },
+  "朝が嫌い|この恋は死にかけてる": {
+    avant: { japonais: "私[わたし]の夢[ゆめ]は叶[かな]わないらしい", traduction: "Mon rêve ne se réalisera pas, on dirait." },
+    apres: { japonais: "知[し]らない間[あいだ]に忘[わす]れてしまって", traduction: "Que je l'oublie sans m'en apercevoir," }
+  },
+  "朝が嫌い|ちゃんと鍵はポストの中": {
+    avant: { japonais: "知[し]らない間[あいだ]にいなくなっても", traduction: "Même si tu t'en vas sans que je m'en aperçoive," },
+    apres: { japonais: "なんだか悔[くや]しくなるの", traduction: "Et ça me vexe, je ne sais pourquoi." }
+  },
+  "彼氏有無|そして僕以外の処方箋をください": {
+    avant: { japonais: "彼女[かのじょ]の脳[のう]みそを割[わ]って診[み]ておくれ", traduction: "Ouvrez-lui le crâne et examinez-la," },
+    apres: { japonais: "今[いま]の君[きみ]に足[た]りないものを", traduction: "Ce qui te manque aujourd'hui," }
+  },
+  "ひかりもの|だいたいのことでは傷ついてきた": {
+    apres: { japonais: "恋[こい]仕事[しごと]生活[せいかつ]家族[かぞく]や", traduction: "l'amour, le travail, le quotidien, la famille…" }
+  },
+  "初恋が泣いている|夢の中で悪魔が唱えた": {
+    avant: { japonais: "聞[き]こえてくる", traduction: "que j'entends monter," },
+    apres: { japonais: "変[へん]な呪文[じゅもん]が消[き]えるのだろうか", traduction: "cette étrange formule, quand s'effacera-t-elle ?" }
+  },
+  "会いに行くのに|そんなに変わってないのに": {
+    avant: { japonais: "あんなに近[ちか]くにいたのに", traduction: "Nous étions pourtant si proches," },
+    apres: { japonais: "やっぱり寒[さむ]さには弱[よわ]い", traduction: "Décidément, je supporte mal le froid." }
+  },
+  "3636|幸せの味付けを調べてみたんだけど": {
+    avant: { japonais: "今日[きょう]はカレーライスだよ", traduction: "Aujourd'hui, c'est riz au curry." },
+    apres: { japonais: "それぞれの“さじ”加減[かげん]らしいからさ", traduction: "il paraît que chacun a sa façon de doser." }
+  },
+  "さながらロンリー|人生は楽しまないとネ!": {
+    avant: { japonais: "「Let's go party night!」", traduction: "« Let's go party night ! »" }
+  },
+  "from 四階の角部屋|少しだけいいかい?": {
+    avant: { japonais: "from 四階[よんかい]の角部屋[かどべや]", traduction: "Depuis la chambre d'angle, au quatrième." },
+    apres: { japonais: "触[ふ]れてもいいかい?", traduction: "Je peux te toucher, dis ?" }
+  },
+  "from 四階の角部屋|それとももっかい忘れたフリして、する?": {
+    avant: { japonais: "なんて言[い]ったらどうする?殴[なぐ]る蹴[け]る?", traduction: "Si je disais ça, tu ferais quoi ? Des coups de poing, des coups de pied ?" },
+    apres: { japonais: "始[はじ]まった時[とき]から終[お]わってる", traduction: "C'était fini dès le début." }
+  },
+  "ジェニファー|クスクスと笑うのはどいつだい?": {
+    avant: { japonais: "夢[ゆめ]でも見[み]れたらいいけど", traduction: "Si au moins je pouvais te voir en rêve…" },
+    apres: { japonais: "そこにいるのかい?", traduction: "Tu es là, dis ?" }
+  },
+  "ハート|わがままかしら？": {
+    avant: { japonais: "さようならは嫌[いや]", traduction: "Je ne veux pas d'adieu." },
+    apres: { japonais: "ただ貴方[あなた]の、貴方[あなた]の心[こころ]を奪[うば]えたら...", traduction: "Si seulement je pouvais ravir ton cœur, le tien…" }
+  },
+  "愛を伝えたいだとか|それに割れてしまった目玉焼き": {
+    avant: { japonais: "すべて心地[ここち]いいさ", traduction: "Tout est agréable, vraiment." },
+    apres: { japonais: "ついてないなあ", traduction: "Pas de chance…" }
+  },
+  "そんな風に生きている|それでよければいつだって": {
+    avant: { japonais: "不幸[ふこう]みたいな顔[かお]はできる", traduction: "je sais prendre un air malheureux." },
+    apres: { japonais: "いつだってそうしてみせるわ", traduction: "quand tu veux, je te montrerai que j'en suis capable." }
+  },
+  "そんな風に生きている|いつだってそうしてみせるわ": {
+    avant: { japonais: "それでよければいつだって", traduction: "Si cela te suffit, quand tu veux," },
+    apres: { japonais: "そんなことで救[すく]われるなら", traduction: "Si cela suffit à me sauver," }
+  },
+  "スーパーガール|それでも君の世界とは離れがたい": {
+    avant: { japonais: "僕[ぼく]は尖[とが]った台詞[せりふ]で君[きみ]を斬[き]りつけたりしているんだ", traduction: "Moi, je te lacère de répliques acérées." },
+    apres: { japonais: "僕[ぼく]は矛盾[むじゅん]と理屈[りくつ]で君[きみ]を締[し]め付[つ]けている", traduction: "Je t'enserre de contradictions et de raisonnements." }
+  },
+  "満月の夜なら|イエスかノーかは別として": {
+    avant: { japonais: "僕[ぼく]は見逃[みのが]さない", traduction: "je ne le laisse pas passer." },
+    apres: { japonais: "君[きみ]の声仕草[こえしぐさ]が物語[ものがた]る", traduction: "ta voix, tes gestes parlent d'eux-mêmes." }
+  },
+  "ナウなヤングにバカウケするのは当たり前だのクラッ歌|するとまさかのあの女優にクリソツなちゃんねーロックオン": {
+    avant: { japonais: "それに明日[あす]も早[はや]いもんで お先[さき]にテクシーでアディオス", traduction: "Et puis demain je me lève tôt, alors adios, je file en taxi." },
+    apres: { japonais: "「ヘイ彼女[かのじょ] お茶[ちゃ]しない?」", traduction: "« Hé, mademoiselle, on va boire un thé ? »" }
+  },
+  "ねむい|洗濯物かなりめんどくさい": {
+    avant: { japonais: "なんで回[まわ]したんだろう", traduction: "Pourquoi ai-je lancé la machine ?" },
+    apres: { japonais: "彼[かれ]が脱[ぬ]いだ下着[したぎ]も", traduction: "Ses sous-vêtements qu'il a laissés là," }
+  },
+  "君はロックを聴かない|さあ腰を下ろしてよ": {
+    avant: { japonais: "息[いき]を止[と]めすぎたぜ", traduction: "J'ai trop retenu mon souffle." },
+    apres: { japonais: "フツフツと鳴[な]り出[だ]す青春[せいしゅん]の音[おと]", traduction: "Le son de la jeunesse se met à crépiter." }
+  },
+  "RING DING|明日晴れても晴れなくてもどこか行こう": {
+    avant: { japonais: "バカらしくなって気[き]づけばお腹[なか]が減[へ]ってるだろう", traduction: "Tout ça te paraîtra idiot et, sans t'en rendre compte, tu auras faim." },
+    apres: { japonais: "指切[ゆびき]りげんまん嘘[うそ]ついたら", traduction: "Croix de bois, croix de fer : si tu mens," }
+  },
+  "ら、のはなし|僕が生きるとすれば": {
+    avant: { japonais: "君[きみ]のいない世界[せかい]で", traduction: "Dans un monde sans toi," },
+    apres: { japonais: "それはそれはとても", traduction: "ce serait vraiment, vraiment" }
+  },
+  "ら、のはなし|誰かの不幸を願いつつあるよ": {
+    avant: { japonais: "君[きみ]との恋[こい]を望[のぞ]みながら", traduction: "Tout en espérant ton amour," },
+    apres: { japonais: "そんな僕[ぼく]の思[おも]いつきも", traduction: "Mais ces idées qui me viennent," }
+  },
+  "ビーナスベルト|つまりは僕にまだ可能性が有ることも": {
+    avant: { japonais: "蹴[け]り飛[と]ばした想[おも]いを教[おし]えて", traduction: "Dis-moi ces sentiments que tu as envoyés valser." },
+    apres: { japonais: "君[きみ]の表情[ひょうじょう]見[み]てれば分[わ]かったよ", traduction: "je l'ai compris rien qu'à voir ton visage." }
+  },
+  "ビーナスベルト|新しい場所が気になる事も": {
+    avant: { japonais: "卑怯[ひきょう]な女[おんな]だって思[おも]われるのが怖[こわ]い事[こと]も", traduction: "Que tu as peur de passer pour une lâche," },
+    apres: { japonais: "正直[しょうじき]辛[つら]いけど ちょっぴり慣[な]れてる", traduction: "Franchement c'est dur, mais j'y suis un peu habitué." }
+  },
+  "MIO|べつに優しさなんていらないよ": {
+    avant: { japonais: "したくはないよ", traduction: "et je n'en veux pas." },
+    apres: { japonais: "君[きみ]のことさ", traduction: "C'est de toi que je parle." }
+  },
+  "MIO|少しずつ変わっていったね": {
+    avant: { japonais: "あなたは会[あ]うたびに", traduction: "À chacune de nos rencontres," },
+    apres: { japonais: "ちっぽけなことでさえも", traduction: "Même les choses les plus infimes" }
+  },
+  "GOOD NIGHT BABY|2人きりだけど": {
+    avant: { japonais: "キスはしないでおこう?", traduction: "ne nous embrassons pas, d'accord ?" },
+    apres: { japonais: "さよならの後[あと]に", traduction: "Pour qu'après l'au revoir," }
+  },
+  "夢追いベンガル|どうせ暇だからあと5分寝かせて": {
+    avant: { japonais: "その時[とき]考[かんが]えりゃいい", traduction: "il sera bien temps d'y penser." },
+    apres: { japonais: "セックスピストルズ の目覚[めざ]ましがうるせー", traduction: "Ce réveil aux Sex Pistols, quel boucan." }
+  },
+  "ノット・オーケー|せめてそれまでは": {
+    avant: { japonais: "理解[りかい]はできるだろう", traduction: "tu peux le comprendre, non ?" },
+    apres: { japonais: "ふたりで ふたりで", traduction: "tous les deux, tous les deux," }
+  },
+  "おばけがでるぞ|暗闇の中を": {
+    avant: { japonais: "おばけがでるぞ", traduction: "Un fantôme va sortir !" },
+    apres: { japonais: "てかり ひかり", traduction: "ça luit, ça brille." }
+  },
+  "好きって言ってよ|貴方が謝らないかぎり私はあの子を狙い続ける": {
+    avant: { japonais: "貴方[あなた]が悪[わる]い 貴方[あなた]が", traduction: "C'est ta faute, c'est toi." },
+    apres: { japonais: "死体[したい]が二[ふた]つにならないといいね だから", traduction: "Espérons qu'il n'y aura pas deux cadavres. Alors" }
+  },
+  "真夏の夜の匂いがする|今夜も帰路にて頭を冷やす": {
+    avant: { japonais: "いろいろな問題[もんだい]も溢[あふ]れ出[だ]す", traduction: "Toutes sortes de problèmes débordent aussi." },
+    apres: { japonais: "もっと自由[じゆう]に グラスを片手[かたて]に", traduction: "Plus librement, un verre à la main," }
+  },
+  "○○ちゃん|得意なことも趣味もないおまけに勉強もできないけど": {
+    avant: { japonais: "私[わたし]のどこがいけないか そんなの自分[じぶん]が一番[いちばん]に知[し]ってる", traduction: "Ce qui cloche chez moi ? Je suis la mieux placée pour le savoir." },
+    apres: { japonais: "私[わたし]は立派[りっぱ]な女[おんな]なの 愛[あい]し愛[あい]されることを夢見[ゆめみ]るの", traduction: "je suis une femme, une vraie : je rêve d'aimer et d'être aimée." }
+  },
+  "○○ちゃん|私のどこがダメですか?料理だって人並みにできるのに": {
+    avant: { japonais: "こんな私[わたし]もおとなになって いろんなことを覚[おぼ]えたわ", traduction: "Même moi, j'ai grandi, et j'ai appris bien des choses." },
+    apres: { japonais: "将来[しょうらい]はきっといい女[おんな] 誰[だれ]かもらってね", traduction: "Je ferai sûrement une femme bien : que quelqu'un me prenne, hein." }
+  },
+  "生きていたんだよな|馬鹿騒ぎした奴らがアホみたいに撮りまくった": {
+    avant: { japonais: "そのセリフが集合[しゅうごう]の合図[あいず]なのにな", traduction: "Cette phrase-là, c'est pourtant le signal du rassemblement." },
+    apres: { japonais: "冷[つめ]たいアスファルトに流[なが]れるあの血[ち]の何[なん]とも言[い]えない", traduction: "ce sang qui coulait sur l'asphalte froid, d'un rouge indicible" }
+  },
+  "いつまでも|結局腐りやすい生物でしかないから": {
+    avant: { japonais: "結果[けっか]がなきゃ大人[おとな]は見捨[みす]てる", traduction: "sans résultats, les adultes vous laissent tomber." },
+    apres: { japonais: "生[い]き急[いそ]ぐ21", traduction: "alors je vis à toute allure, à 21 ans." }
+  },
+  "朝陽|私遅かれ早かれ後悔するから": {
+    avant: { japonais: "なんて言[い]われましても", traduction: "On a beau me dire ça…" },
+    apres: { japonais: "何[なん]でもいいよ もう何[なん]でも", traduction: "Peu importe, vraiment, peu importe." }
+  },
+  "テレパしい|目と目と心でどうにか乗り切ってみよう": {
+    avant: { japonais: "傷[きず]つき傷[きず]つけるなら", traduction: "si l'on se blesse et que l'on blesse," },
+    apres: { japonais: "言葉[ことば]にすることは難[むずか]しい", traduction: "Mettre des mots, c'est difficile." }
+  },
+  "強くなっちゃったんだ、ブルー|1ミリたりとも揺れない": {
+    avant: { japonais: "ジャックな心[こころ]", traduction: "Mon cœur de « Jack »" },
+    apres: { japonais: "それに落[お]ち込[こ]んじゃって、ブルー", traduction: "Et ça me déprime : blues." }
+  },
+  "憧れてきたんだ|ギターをまた握らせてやろう": {
+    avant: { japonais: "掘[ほ]り起[お]こせ 掘[ほ]り起[お]こそう", traduction: "Déterrez-le, déterrons-le," },
+    apres: { japonais: "私[わたし]の知[し]ってるシンガーソングライター", traduction: "L'auteur-compositeur-interprète que je connais" }
+  },
+  "マリーゴールド|吐き出せるほど強くはない": {
+    avant: { japonais: "本当[ほんとう]の気持[きも]ち全部[ぜんぶ]", traduction: "Tout ce que je ressens vraiment," },
+    apres: { japonais: "でも不思議[ふしぎ]なくらいに", traduction: "Mais, c'est étrange à quel point," }
   }
 };

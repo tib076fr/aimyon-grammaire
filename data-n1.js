@@ -53,9 +53,15 @@ point("N1", "〜なり", "Verbe au dictionnaire + なり : « à peine… que…
 point("N1", "〜ともなく / 〜ともなしに", "« Sans vraiment… », « distraitement ».",
   modele("{見[み]るともなく}テレビを見[み]ていた。", "Je regardais la télévision {sans vraiment la regarder}."));
 point("N1", "〜まみれ", "Nom + まみれ : « couvert de… », « maculé de… » (boue, sueur, sang…).",
-  modele("子供[こども]たちは{泥[どろ]まみれ}になって遊[あそ]んだ。", "Les enfants ont joué jusqu'à être {couverts de boue}."));
+  modele("子供[こども]たちは{泥[どろ]まみれ}になって遊[あそ]んだ。", "Les enfants ont joué jusqu'à être {couverts de boue}."),
+  aimyon("{泥[どろ]まみれ}の過去[かこ]が",
+    "Un passé {couvert de boue}", "さよならの今日に", 2020,
+    "泥 + まみれ : « tout couvert de boue »."));
 point("N1", "〜ようが / 〜ようと (〜まいが)", "Volitif + が ou と : « quoi que… », « que… ou non » (formel).",
-  modele("誰[だれ]が何[なん]と{言[い]おうが}、私[わたし]は行[い]く。", "{Quoi qu'on en dise}, j'irai."));
+  modele("誰[だれ]が何[なん]と{言[い]おうが}、私[わたし]は行[い]く。", "{Quoi qu'on en dise}, j'irai."),
+  aimyon("相手[あいて]が{誰[だれ]だろうと}構[かま]わない",
+    "{Peu importe qui} j'ai en face, ça m'est égal.", "猫にジェラシー", 2024,
+    "誰 + だろうと : « quel que soit… », forme en と du volitif de だ."));
 point("N1", "〜からする / 〜からある", "Après une quantité : « pas moins de… », « au bas mot… » (からする pour un prix, からある pour un poids, une distance…).",
   modele("十万円[じゅうまんえん]{からする}時計[とけい]をもらった。", "J'ai reçu une montre qui vaut {au bas mot} cent mille yens."));
 point("N1", "〜にして", "« À… seulement », « il a fallu… pour… » ; « c'est bien parce que c'est… que… » ; aussi « à la fois… et… » (formel).",
@@ -113,7 +119,10 @@ point("N1", "〜にまつわる", "« Lié à… », « qui entoure… » (histo
 point("N1", "〜たる", "Nom + たる + nom : « en sa qualité de… », « digne du nom de… » (formel).",
   modele("教師[きょうし]{たる}者[もの]、学生[がくせい]の手本[てほん]であるべきだ。", "{Qui se dit} enseignant doit être un modèle pour ses élèves."));
 point("N1", "〜なら〜で / 〜たら〜たで", "Le même mot répété : « si…, alors au moins… », « quitte à… , autant… » : exprime souvent le mécontentement de celui qui parle. 〜たら〜たで : « même si… ».",
-  modele("{行[い]かないなら行[い]かないで}、連絡[れんらく]ぐらいしてほしい。", "{Si tu ne viens pas, soit}, mais préviens-moi au moins."));
+  modele("{行[い]かないなら行[い]かないで}、連絡[れんらく]ぐらいしてほしい。", "{Si tu ne viens pas, soit}, mais préviens-moi au moins."),
+  aimyon("ケンカ{したらしたで} すぐに無視[むし]をする",
+    "Et {quand on se dispute, eh bien} tu m'ignores aussitôt.", "お互い様やん", 2015,
+    "Le même verbe répété (したらしたで) : « même dans ce cas… », avec agacement."));
 point("N1", "〜をものともせず", "« Sans se laisser arrêter par… », « au mépris de… ».",
   modele("彼[かれ]は雨[あめ]{をものともせず}、走[はし]り続[つづ]けた。", "Il a continué à courir {sans se soucier de} la pluie."));
 point("N1", "〜には当たらない", "« Il n'y a pas lieu de… », « cela ne mérite pas de… ».",
@@ -141,7 +150,10 @@ point("N1", "〜か否か", "« Si… ou non » : équivalent formel de 〜か�
 point("N1", "〜べくして", "Verbe + べくして + même verbe : « devait arriver et est arrivé », « inévitablement ».",
   modele("この事故[じこ]は{起[お]こるべくして}起[お]こった。", "Cet accident {devait arriver}."));
 point("N1", "〜かれ〜かれ", "Deux adjectifs opposés + かれ : « que ce soit… ou… » (遅かれ早かれ « tôt ou tard »).",
-  modele("{遅[おそ]かれ早[はや]かれ}、分[わ]かることだ。", "{Tôt ou tard}, cela se saura."));
+  modele("{遅[おそ]かれ早[はや]かれ}、分[わ]かることだ。", "{Tôt ou tard}, cela se saura."),
+  aimyon("私[わたし]{遅[おそ]かれ早[はや]かれ}後悔[こうかい]するから",
+    "{tôt ou tard}, moi, je le regretterai.", "朝陽", 2020,
+    "遅かれ早かれ, expression figée : « tôt ou tard »."));
 point("N1", "〜に〜ない", "Verbe + に + même verbe au potentiel négatif : « avoir envie de… sans le pouvoir ».",
   modele("みんなの前[まえ]では{泣[な]くに泣[な]けない}。", "Devant tout le monde, {j'ai envie de pleurer mais je ne peux pas}."));
 point("N1", "〜ようにも〜ない", "Volitif + にも + potentiel négatif : « j'aurais beau vouloir…, impossible ».",
@@ -159,7 +171,10 @@ point("N1", "〜くらいなら", "« Plutôt que de…, je préfère… », « 
 point("N1", "〜ってば / 〜ったら", "« Je te dis que… ! », « mais puisque… ! » : insistance agacée (familier).",
   modele("分[わ]かった{ってば}。", "J'ai compris, {je te dis} !"));
 point("N1", "〜ずとも", "Base négative + ずとも : « même sans… », « il n'est pas nécessaire de… pour… » (formel).",
-  modele("{言[い]わずとも}、気持[きも]ちは伝[つた]わる。", "{Même sans rien dire}, les sentiments se transmettent."));
+  modele("{言[い]わずとも}、気持[きも]ちは伝[つた]わる。", "{Même sans rien dire}, les sentiments se transmettent."),
+  aimyon("空[そら]が{晴[は]れずとも}",
+    "{Même si} le ciel {ne se dégage pas},", "愛の花", 2023,
+    "晴れる → 晴れず + とも : « même sans que… » (style soutenu)."));
 point("N1", "〜とあって", "« Comme… (rien d'étonnant à ce que…) » : circonstance particulière qui explique la suite (formel).",
   modele("連休[れんきゅう]{とあって}、どこも人[ひと]でいっぱいだ。", "{Comme} c'est un long week-end, il y a du monde partout."));
 point("N1", "〜でもなんでもない", "« N'être absolument pas… », « n'avoir rien de… ».",
@@ -205,7 +220,10 @@ point("N1", "〜を兼ねて", "« En même temps que… », « qui sert aussi d
 point("N1", "〜ないものだろうか", "Potentiel négatif + ものだろうか : « n'y aurait-il pas moyen de… ? » : souhait fort.",
   modele("もう少[すこ]し安[やす]く{ならないものだろうか}。", "{N'y aurait-il pas moyen que} ce soit un peu moins cher ?"));
 point("N1", "〜てみせる", "« Je… , tu verras ! » : ferme résolution ; aussi « montrer comment on fait ».",
-  modele("今度[こんど]こそ{勝[か]ってみせる}。", "Cette fois, {je gagnerai, tu verras}."));
+  modele("今度[こんど]こそ{勝[か]ってみせる}。", "Cette fois, {je gagnerai, tu verras}."),
+  aimyon("いつだってそう{してみせる}わ",
+    "quand tu veux, {je te montrerai que j'en suis capable}.", "そんな風に生きている", 2020,
+    "する → して + みせる : « je le ferai, tu verras »."));
 point("N1", "〜と相まって", "« Conjugué à… », « s'ajoutant à… » (formel).",
   modele("いい天気[てんき]{と相[あい]まって}、祭[まつ]りは大[おお]にぎわいだった。", "Le beau temps {aidant}, la fête a attiré la foule."));
 point("N1", "〜に足りない", "« Ne pas mériter de… », « insignifiant » (取るに足りない « sans importance »).",
@@ -213,7 +231,10 @@ point("N1", "〜に足りない", "« Ne pas mériter de… », « insignifiant 
 point("N1", "〜べからず / 〜べからざる", "« Défense de… », « il ne faut pas… » (classique, panneaux) ; べからざる + nom : « qu'on ne doit pas… ».",
   modele("芝生[しばふ]に{入[はい]るべからず}。", "{Défense de marcher} sur la pelouse."));
 point("N1", "〜んばかりに", "Base négative + んばかりに : « comme s'il allait… », « presque à… ».",
-  modele("彼女[かのじょ]は{泣[な]き出[だ]さんばかりの}顔[かお]をしていた。", "Elle avait le visage de quelqu'un {au bord des larmes}."));
+  modele("彼女[かのじょ]は{泣[な]き出[だ]さんばかりの}顔[かお]をしていた。", "Elle avait le visage de quelqu'un {au bord des larmes}."),
+  aimyon("「どうよ私[わたし]らイケてるでしょ」{と言[い]わんばかり}の顔[かお]を見[み]せる",
+    "avec une tête {qui a tout l'air de dire} : « Alors, on est stylées, nous, hein ? »", "泥だんごの天才いたよね", 2015,
+    "言う → 言わ + んばかり : « comme si elle allait dire… »."));
 point("N1", "〜に則って", "« Conformément à… », « selon… » (règles, traditions ; formel).",
   modele("ルール{に則[のっと]って}、試合[しあい]を行[おこな]う。", "Le match se déroule {conformément aux} règles."));
 point("N1", "〜限りだ", "Adjectif de sentiment + 限りだ : « on ne peut plus… », « extrêmement… » (formel).",
@@ -229,9 +250,15 @@ point("N1", "〜にもほどがある", "« Il y a des limites à… ! », « c'
 point("N1", "〜にもまして", "« Plus encore que… » (いつにもまして « plus que jamais »).",
   modele("今日[きょう]の彼女[かのじょ]はいつ{にもまして}きれいだ。", "Aujourd'hui, elle est {plus} belle {que} jamais."));
 point("N1", "〜まくる", "Radical du verbe + まくる : faire quelque chose sans retenue, « à tout-va », « comme un fou ».",
-  modele("一日中[いちにちじゅう]{歌[うた]いまくった}。", "J'ai {chanté à tue-tête} toute la journée."));
+  modele("一日中[いちにちじゅう]{歌[うた]いまくった}。", "J'ai {chanté à tue-tête} toute la journée."),
+  aimyon("馬鹿騒[ばかさわ]ぎした奴[やつ]らがアホみたいに{撮[と]りまくった}",
+    "Des types surexcités ont {mitraillé} la scène comme des idiots :", "生きていたんだよな", 2016,
+    "撮る → 撮り + まくる : faire sans retenue, encore et encore."));
 point("N1", "どうにか", "« Tant bien que mal », « d'une manière ou d'une autre ».",
-  modele("{どうにか}間[ま]に合[あ]った。", "Je suis arrivé à temps, {tant bien que mal}."));
+  modele("{どうにか}間[ま]に合[あ]った。", "Je suis arrivé à temps, {tant bien que mal}."),
+  aimyon("目[め]と目[め]と心[こころ]で{どうにか}乗[の]り切[き]ってみよう",
+    "essayons de nous en sortir {tant bien que mal}, par le regard et par le cœur.", "テレパしい", 2019,
+    "どうにか : « d'une manière ou d'une autre »."));
 point("N1", "〜や否や", "Verbe au dictionnaire + や否や (ou や) : « à peine… que… », « dès que… » (formel).",
   modele("ベルが{鳴[な]るや否[いな]や}、彼[かれ]は教室[きょうしつ]を出[で]た。", "{À peine} la sonnerie {eut-elle retenti qu'}il quitta la classe."));
 point("N1", "〜次第です", "« Voilà pourquoi… », « c'est ainsi que… » : exposer poliment les circonstances.",
@@ -239,7 +266,10 @@ point("N1", "〜次第です", "« Voilà pourquoi… », « c'est ainsi que… 
 point("N1", "〜というところだ / 〜といったところだ", "« Je dirais à peu près… », « tout au plus… ».",
   modele("駅[えき]まで歩[ある]いて十分[じゅっぷん]{というところだ}。", "À pied jusqu'à la gare, {disons} dix minutes."));
 point("N1", "〜たりとも〜ない", "Un + compteur + たりとも + négation : « pas même un seul… » (formel).",
-  modele("一秒[いちびょう]{たりとも}無駄[むだ]にでき{ない}。", "On ne peut {pas} gaspiller {ne serait-ce qu'}une seconde."));
+  modele("一秒[いちびょう]{たりとも}無駄[むだ]にでき{ない}。", "On ne peut {pas} gaspiller {ne serait-ce qu'}une seconde."),
+  aimyon("1ミリ{たりとも}揺[ゆ]れない",
+    "ne vacille {pas même d'un} millimètre.", "強くなっちゃったんだ、ブルー", 2022,
+    "1ミリ + たりとも + négation : « pas même un millimètre »."));
 point("N1", "〜といったらない / 〜ったらない", "« … à un point indescriptible », « je ne vous dis pas… » : expression familière, en bien comme en mal (aussi ったらありゃしない).",
   modele("その時[とき]のうれしさ{といったらなかった}。", "Ma joie à ce moment-là, {je ne saurais la décrire}."));
 point("N1", "〜に照らして", "« À la lumière de… », « au regard de… ».",
@@ -275,7 +305,10 @@ point("N1", "〜を顧みず", "« Sans égard pour… », « au mépris de… �
 point("N1", "〜まじき", "〜にあるまじき / としてあるまじき + nom : « indigne de… », « qu'un… ne devrait pas… » (formel).",
   modele("それは教師[きょうし]に{あるまじき}行為[こうい]だ。", "C'est un acte {indigne d'}un enseignant."));
 point("N1", "〜の至り", "« Le comble de… », « extrêmement… » (光栄の至り « un immense honneur » ; 若気の至り « une erreur de jeunesse »).",
-  modele("お会[あ]いできて、光栄[こうえい]{の至[いた]り}です。", "Vous rencontrer est {un immense} honneur."));
+  modele("お会[あ]いできて、光栄[こうえい]{の至[いた]り}です。", "Vous rencontrer est {un immense} honneur."),
+  aimyon("{若気[わかげ]の至[いた]り}と被[かぶ]ってしまった",
+    "je l'ai mis sur ma tête, en me disant : {folie de jeunesse}.", "神秘の領域へ", 2022,
+    "若気の至り, expression figée : « erreur de jeunesse »."));
 point("N1", "〜に恥じない", "« À la hauteur de… », « digne de… ».",
   modele("彼[かれ]は名前[なまえ]{に恥[は]じない}活躍[かつやく]をした。", "Il s'est montré {à la hauteur de} son nom."));
 point("N1", "〜ずじまい", "Base négative + ずじまい : « finalement, je n'ai pas… » (avec regret).",
@@ -329,7 +362,10 @@ point("N1", "〜てはかなわない", "« Je ne supporterais pas que… », «
 point("N1", "〜かたがた", "« En même temps que… », « par la même occasion » (formel, surtout à l'écrit).",
   modele("お礼[れい]{かたがた}、ご挨拶[あいさつ]に伺[うかが]いました。", "Je suis venu vous saluer {et, par la même occasion,} vous remercier."));
 point("N1", "〜てやる", "« Je vais… , tu vas voir ! » : ferme volonté ; aussi « faire… pour quelqu'un », d'un ton condescendant.",
-  modele("絶対[ぜったい]に{勝[か]ってやる}。", "{Je gagnerai}, coûte que coûte."));
+  modele("絶対[ぜったい]に{勝[か]ってやる}。", "{Je gagnerai}, coûte que coûte."),
+  aimyon("ギターをまた{握[にぎ]らせてやろう}",
+    "et {remettons-lui} une guitare entre les mains.", "憧れてきたんだ", 2017,
+    "握らせる (causatif) + てやる, au volitif : « faisons-lui… »."));
 point("N1", "ただ〜のみ", "« Il ne reste qu'à… », « seulement… » (formel).",
   modele("今[いま]は{ただ}祈[いの]る{のみ}だ。", "À présent, {il ne reste qu'à} prier."));
 point("N1", "〜ものとする", "« Il est entendu que… », « … devra… » (contrats, règlements).",
@@ -343,7 +379,10 @@ point("N1", "〜ともあろう", "Nom + ともあろう者 (人, 方) : « quel
 point("N1", "〜こそすれ〜ない", "« Tout au plus…, mais certainement pas… » (formel).",
   modele("感謝[かんしゃ]{こそすれ}、恨[うら]むことは{ない}。", "Je lui suis {plutôt} reconnaissant ; lui en vouloir, {certainement pas}."));
 point("N1", "〜並み", "Nom + 並み : « du niveau de… », « digne de… », « comme… ».",
-  modele("彼[かれ]の料理[りょうり]は{プロ並[な]み}だ。", "Sa cuisine est {du niveau d'un professionnel}."));
+  modele("彼[かれ]の料理[りょうり]は{プロ並[な]み}だ。", "Sa cuisine est {du niveau d'un professionnel}."),
+  aimyon("私[わたし]のどこがダメですか? 料理[りょうり]だって{人並[ひとな]み}にできるのに",
+    "Qu'est-ce qui ne va pas chez moi ? Je cuisine pourtant {comme tout le monde}.", "○○ちゃん", 2015,
+    "人 + 並み : « au niveau des gens ordinaires »."));
 point("N1", "〜に先駆けて", "« En avance sur… », « avant tous les autres ».",
   modele("世界[せかい]{に先駆[さきが]けて}、日本[にほん]で発売[はつばい]された。", "Il a été mis en vente au Japon, {avant} le reste du monde."));
 point("N1", "〜を機に", "« À l'occasion de… », « profitant de… ».",

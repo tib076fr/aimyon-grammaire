@@ -4,13 +4,25 @@
 // ============================================================
 
 point("Hors JLPT", "〜ぞ / 〜ぜ", "Particules finales d'emphase, familières et plutôt masculines : ぞ affirme avec force, ぜ est plus complice.",
-  modele("さあ、{行[い]くぞ}。", "Allez, {on y va} !"));
+  modele("さあ、{行[い]くぞ}。", "Allez, {on y va} !"),
+  aimyon("目[め]が合[あ]えば 捕[つか]まる{ぞ}",
+    "Si nos regards se croisent, je t'attrape{, gare à toi} !", "おばけがでるぞ", 2025,
+    "ぞ donne à l'avertissement un ton fort et joueur."));
 point("Hors JLPT", "〜わ", "Particule finale d'emphase : « tu sais », « vraiment ». Employée surtout par les femmes, mais les hommes peuvent aussi s'en servir.",
-  modele("今日[きょう]は疲[つか]れた{わ}。", "Je suis fatiguée aujourd'hui, {tu sais}."));
+  modele("今日[きょう]は疲[つか]れた{わ}。", "Je suis fatiguée aujourd'hui, {tu sais}."),
+  aimyon("涙[なみだ]は枯[か]れない{わ}",
+    "Mes larmes ne tariront pas{, tu sais}.", "愛の花", 2023,
+    "わ final : légère emphase sur ce qu'elle affirme."));
 point("Hors JLPT", "〜かい / 〜だい", "い ajoute une note de familiarité à か et だ en fin de phrase (かい, だい) ; employé surtout par les hommes, envers quelqu'un de rang inférieur.",
-  modele("どうしたん{だい}？", "Qu'est-ce qui t'arrive, {dis} ?"));
+  modele("どうしたん{だい}？", "Qu'est-ce qui t'arrive, {dis} ?"),
+  aimyon("クスクスと笑[わら]うのはどいつ{だい}?",
+    "Qui donc est-ce qui ricane{, hein} ?", "ジェニファー", 2017,
+    "だい : だ + い en fin de question, ton familier."));
 point("Hors JLPT", "〜ん (contraction)", "À l'oral, ら, り, る, れ, ろ et の se contractent souvent en ん (分からない → 分かんない).",
-  modele("全然[ぜんぜん]{分[わ]かんない}。", "Je {comprends} rien du tout."));
+  modele("全然[ぜんぜん]{分[わ]かんない}。", "Je {comprends} rien du tout."),
+  aimyon("いつ死[し]ぬか{分[わ]かんない}し",
+    "on {ne sait pas} quand on va mourir,", "die die die", 2023,
+    "分からない devient 分かんない à l'oral : ら se contracte en ん."));
 point("Hors JLPT", "〜っつう / 〜っつった", "Contraction très familière de という, といった.",
   modele("無理[むり]だ{っつってん}だろ。", "Je te {dis que} c'est impossible !"));
 point("Hors JLPT", "〜やがる", "Radical du verbe (ou forme en て) + やがる : exprime le mépris ou l'indignation devant l'action de quelqu'un, « avoir le culot de… » (familier, surtout masculin).",
@@ -34,7 +46,10 @@ point("Hors JLPT", "〜や (Kansai)", "Dans le dialecte du Kansai, la copule だ
 point("Hors JLPT", "〜で / 〜わ (Kansai)", "Particules finales d'insistance du Kansai, à la place de よ.",
   modele("めっちゃおいしい{で}。", "C'est super bon, {tu sais}."));
 point("Hors JLPT", "〜やん (Kansai)", "Équivalent de だよね, でしょう : « hein ? », « tu ne trouves pas ? ».",
-  modele("それ、ええ{やん}。", "C'est bien, ça, {non} ?"));
+  modele("それ、ええ{やん}。", "C'est bien, ça, {non} ?"),
+  aimyon("お互[たが]い様[さま]{やん}それ お互[たが]い様[さま]やん",
+    "On est pareils{, non} ? Tous les deux pareils.", "お互い様やん", 2015,
+    "やん, du Kansai, cherche l'accord comme じゃん ou でしょう."));
 point("Hors JLPT", "〜やんか (Kansai)", "Équivalent de じゃないか : « mais enfin… », « tu vois bien que… ».",
   modele("昨日[きのう]言[い]うた{やんか}。", "Je te l'ai dit hier, {enfin} !"));
 point("Hors JLPT", "〜ねん / 〜てん (Kansai)", "Équivalent explicatif de のだ / んだ : ねん au présent, てん au passé (たんだ) ou pour ているんだ.",

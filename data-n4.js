@@ -268,11 +268,17 @@ point("N4", "〜直す", "Base + 直[なお]す : refaire, recommencer en mieux.
 point("N4", "〜づらい", "Radical du verbe + づらい : « difficile à… », « pénible à… », souvent avec une gêne ressentie par celui qui parle.",
   modele("この靴[くつ]は{歩[ある]きづらい}。", "Ces chaussures sont {pénibles pour marcher}."));
 point("N4", "だんだん", "« Peu à peu », « progressivement » : un changement graduel.",
-  modele("{だんだん}暖[あたた]かくなってきました。", "Il se met à faire {peu à peu} plus doux."));
+  modele("{だんだん}暖[あたた]かくなってきました。", "Il se met à faire {peu à peu} plus doux."),
+  aimyon("{だんだん}息[いき]もできなくなって",
+    "{Peu à peu}, je n'arrive même plus à respirer,", "今夜このまま", 2018,
+    "だんだん : un changement progressif."));
 point("N4", "どんどん", "« De plus en plus », « à toute allure » : un changement rapide et continu (だんだん est plus graduel).",
   modele("日本語[にほんご]が{どんどん}上手[じょうず]になる。", "Mon japonais s'améliore {à vue d'œil}."));
 point("N4", "〜ら", "Pluriel après un pronom : 彼ら « eux », 僕ら « nous ». Familier ; peut sembler rude envers quelqu'un.",
-  modele("{彼[かれ]ら}は高校生[こうこうせい]です。", "{Eux}, ce sont des lycéens."));
+  modele("{彼[かれ]ら}は高校生[こうこうせい]です。", "{Eux}, ce sont des lycéens."),
+  aimyon("「どうよ{私[わたし]ら}イケてるでしょ」と言[い]わんばかりの顔[かお]を見[み]せる",
+    "avec une tête qui a tout l'air de dire : « Alors, {nous}, on est stylées, hein ? »", "泥だんごの天才いたよね", 2015,
+    "私 + ら : « nous », pluriel familier."));
 point("N4", "〜だけで", "« Rien qu'en… », « il suffit de… ».",
   modele("{見[み]るだけで}楽[たの]しい。", "{Rien qu'à regarder}, c'est amusant."));
 point("N4", "だが / ですが", "En début de phrase : « mais », « cependant » (soutenu).",
@@ -286,13 +292,22 @@ point("N4", "〜ということ", "Phrase + ということ : transforme toute u
 point("N4", "まず", "« D'abord », « pour commencer ».",
   modele("{まず}手[て]を洗[あら]ってください。", "{D'abord}, lavez-vous les mains."));
 point("N4", "また", "« Encore », « de nouveau » ; aussi « de plus », « également ».",
-  modele("{また}会[あ]いましょう。", "Revoyons-nous {une prochaine fois}."));
+  modele("{また}会[あ]いましょう。", "Revoyons-nous {une prochaine fois}."),
+  aimyon("出会[であ]い頭[がしら]で{また}つまずく",
+    "et dès la première rencontre je trébuche {encore}.", "シガレット", 2020,
+    "また : « encore », « de nouveau »."));
 point("N4", "〜ごろ / 〜ころ", "« Vers… », « aux alentours de… » (moment) ; avec un verbe ou の : « à l'époque où… ».",
-  modele("三時[さんじ]{ごろ}帰[かえ]ります。", "Je rentre {vers} trois heures."));
+  modele("三時[さんじ]{ごろ}帰[かえ]ります。", "Je rentre {vers} trois heures."),
+  aimyon("小[ちい]さな{ころから}気取[きど]ってばかりいること",
+    "Jouer les grands {depuis tout petit},", "泥だんごの天才いたよね", 2015,
+    "小さなころ : « l'époque où l'on était petit »."));
 point("N4", "〜あとで", "Verbe au passé (ou nom + の) + あとで : « après… », « après avoir… ». Seul : « plus tard ».",
   modele("ご飯[はん]を{食[た]べたあとで}、散歩[さんぽ]します。", "{Après avoir mangé}, je vais me promener."));
 point("N4", "〜ていた", "Passé de 〜ている : « était en train de… », ou état qui durait dans le passé.",
-  modele("その時[とき]、本[ほん]を{読[よ]んでいた}。", "À ce moment-là, je {lisais} un livre."));
+  modele("その時[とき]、本[ほん]を{読[よ]んでいた}。", "À ce moment-là, je {lisais} un livre."),
+  aimyon("涙[なみだ]こらえ{聞[き]いていた}のは 大好[だいす]きな五[いつ]つの音[おと]",
+    "ce que {j'écoutais} en retenant mes larmes, c'étaient cinq sons que j'aime tant.", "夜行バス", 2015,
+    "聞いていた : passé de 聞いている, une action qui durait."));
 point("N4", "に (fréquence)", "Période + に + nombre de fois : « … fois par… ».",
   modele("一週間[いっしゅうかん]{に}二回[にかい]泳[およ]ぎます。", "Je nage deux fois {par} semaine."));
 point("N4", "とうとう", "« Finalement », « pour finir », après une longue attente ou un long processus.",
@@ -302,19 +317,37 @@ point("N4", "〜ごとに", "« Chaque… », « tous les… », « à chaque fo
 point("N4", "なるべく", "« Autant que possible », « dans la mesure du possible ».",
   modele("{なるべく}早[はや]く来[き]てください。", "Venez {le plus} tôt {possible}."));
 point("N4", "〜など", "« … par exemple », « … et ainsi de suite », « etc. ».",
-  modele("りんごやバナナ{など}を買[か]いました。", "J'ai acheté des pommes, des bananes, {etc.}"));
+  modele("りんごやバナナ{など}を買[か]いました。", "J'ai acheté des pommes, des bananes, {etc.}"),
+  aimyon("昨日[きのう]のこと{など} 幻[まぼろし]だと思[おも]おう",
+    "Hier {et tout le reste}, disons que c'était un mirage.", "猫", null,
+    "など après 昨日のこと : « ce genre de choses », avec une nuance de dédain."));
 point("N4", "こういう / そういう / ああいう / どういう", "Devant un nom : « ce genre de… », « un tel… » ; どういう : « quel genre de… ».",
-  modele("{そういう}話[はなし]は聞[き]きたくない。", "Je ne veux pas entendre {ce genre d'}histoires."));
+  modele("{そういう}話[はなし]は聞[き]きたくない。", "Je ne veux pas entendre {ce genre d'}histoires."),
+  aimyon("そういえば僕[ぼく]は君[きみ]の{こういう}ところが大好[だいす]きで",
+    "Au fait, {ce côté-là} de toi, je l'adore,", "駅前喫茶ポプラ", 2024,
+    "こういう + nom : « ce genre de… » (こういうところ « ce côté-là »)."));
 point("N4", "あまり〜ない", "あまり + négation : « pas très », « pas beaucoup », « pas vraiment ».",
-  modele("この映画[えいが]は{あまり}面白[おもしろ]く{ない}。", "Ce film n'est {pas très} intéressant."));
+  modele("この映画[えいが]は{あまり}面白[おもしろ]く{ない}。", "Ce film n'est {pas très} intéressant."),
+  aimyon("{あまり}考[かんが]え込[こ]むのは好[す]きじゃないんだ",
+    "Je n'aime {pas trop} ruminer.", "分かってくれよ", 2015,
+    "あまり + négation (好きじゃない) : « pas tellement »."));
 point("N4", "〜をしている (porter, avoir)", "Nom + をしている : porter un accessoire (cravate, montre…) ou avoir un trait physique.",
   modele("父[ちち]はネクタイ{をしています}。", "Mon père {porte} une cravate."));
 point("N4", "〜くする / 〜にする (rendre)", "Adjectif en い → 〜くする, adjectif en な ou nom → 〜にする : « rendre… », « faire devenir… ».",
-  modele("部屋[へや]を{きれいにしました}。", "J'ai {rangé} la chambre."));
+  modele("部屋[へや]を{きれいにしました}。", "J'ai {rangé} la chambre."),
+  aimyon("ほろ酔[よ]いは 俺[おれ]を {ダメな男[おとこ]にする}",
+    "L'ivresse légère {fait de moi un pauvre type}.", "ほろ酔い", 2015,
+    "A を B にする : « faire de A un B »."));
 point("N4", "〜くは", "Adjectif en い à la forme く + は : met l'adjectif en relief ou en contraste, surtout avant une négation.",
-  modele("{高[たか]くは}ないが、安[やす]くもない。", "Ce n'est pas {vraiment cher}, mais pas bon marché non plus."));
+  modele("{高[たか]くは}ないが、安[やす]くもない。", "Ce n'est pas {vraiment cher}, mais pas bon marché non plus."),
+  aimyon("{強[つよ]くは}なりたい でも弱[よわ]くもありたい",
+    "{Forte}, je veux bien le devenir ; mais je veux aussi rester fragile.", "19歳になりたくない", 2015,
+    "強く + は : met l'adjectif en contraste avec 弱くも."));
 point("N4", "〜といい", "« J'espère que… », « ce serait bien que… » ; adressé à quelqu'un : « tu devrais… ».",
-  modele("明日[あした]晴[は]れる{といい}ですね。", "{J'espère qu'}il fera beau demain."));
+  modele("明日[あした]晴[は]れる{といい}ですね。", "{J'espère qu'}il fera beau demain."),
+  aimyon("叶[かな]う{といい}けどなぁ",
+    "{j'aimerais tant qu'}il se réalise…", "ラッキーカラー", 2024,
+    "叶う + といい : souhait, « ce serait bien que… »."));
 point("N4", "毎〜のように", "毎日のように, 毎週のように… : « presque chaque… ».",
   modele("{毎日[まいにち]のように}雨[あめ]が降[ふ]る。", "Il pleut {presque tous les jours}."));
 point("N4", "〜じゃないか", "« N'est-ce pas ? », « tu vois bien que… » : chercher l'accord, ou marquer la surprise ou le reproche.",
@@ -324,7 +357,10 @@ point("N4", "〜と聞いた", "« J'ai entendu dire que… ».",
 point("N4", "聞こえる", "« On entend… », « être audible » (sans effort volontaire) ; aussi « sonner comme… ».",
   modele("鳥[とり]の声[こえ]が{聞[き]こえる}。", "{On entend} le chant des oiseaux."));
 point("N4", "見える", "« On voit… », « être visible » ; aussi « avoir l'air… ».",
-  modele("窓[まど]から海[うみ]が{見[み]える}。", "De la fenêtre, {on voit} la mer."));
+  modele("窓[まど]から海[うみ]が{見[み]える}。", "De la fenêtre, {on voit} la mer."),
+  aimyon("青[あお]く波打[なみう]つ海[うみ]が{見[み]えた}気[き]がした",
+    "J'ai cru {voir} une mer bleue et houleuse.", "神秘の領域へ", 2022,
+    "見える : ce qui apparaît à la vue, sans qu'on le cherche."));
 point("N4", "〜代", "Après une dizaine : tranche d'âge (二十代 « la vingtaine ») ; 年代 pour une décennie.",
   modele("母[はは]は{五十代[ごじゅうだい]}です。", "Ma mère a {la cinquantaine}."));
 point("N4", "かかる (temps, argent)", "« Prendre » (du temps), « coûter » (de l'argent).",
@@ -346,13 +382,25 @@ point("N4", "〜以上 (quantité)", "Quantité + 以上 : « … ou plus », «
 point("N4", "〜以下", "Quantité + 以下 : « … ou moins », « au maximum… ».",
   modele("五歳[ごさい]{以下[いか]}の子供[こども]は無料[むりょう]です。", "C'est gratuit pour les enfants de cinq ans {et moins}."));
 point("N4", "〜以外", "« Sauf… », « à part… », « autre que… ».",
-  modele("日曜日[にちようび]{以外[いがい]}は開[あ]いています。", "C'est ouvert tous les jours {sauf} le dimanche."));
+  modele("日曜日[にちようび]{以外[いがい]}は開[あ]いています。", "C'est ouvert tous les jours {sauf} le dimanche."),
+  aimyon("そして「僕[ぼく]」{以外[いがい]}の処方箋[しょほうせん]をください",
+    "puis prescrivez-lui un remède {autre que} « moi ».", "彼氏有無", 2023,
+    "Nom + 以外 : « autre que… », « à part… »."));
 point("N4", "ずっと", "« Tout le temps », « sans arrêt », « depuis toujours ».",
-  modele("朝[あさ]から{ずっと}雨[あめ]が降[ふ]っている。", "Il pleut {sans arrêt} depuis ce matin."));
+  modele("朝[あさ]から{ずっと}雨[あめ]が降[ふ]っている。", "Il pleut {sans arrêt} depuis ce matin."),
+  aimyon("君[きみ]が現[あらわ]れた時[とき]から{ずっと}",
+    "depuis que tu es apparu, {sans jamais cesser}.", "スケッチ", 2025,
+    "〜からずっと : « depuis…, sans interruption »."));
 point("N4", "だいたい", "« À peu près », « dans l'ensemble », « la plupart du temps ».",
-  modele("話[はなし]は{だいたい}分[わ]かりました。", "J'ai {à peu près} compris l'histoire."));
+  modele("話[はなし]は{だいたい}分[わ]かりました。", "J'ai {à peu près} compris l'histoire."),
+  aimyon("{だいたい}のことでは傷[きず]ついてきた",
+    "J'ai été blessée par {à peu près tout} :", "ひかりもの", 2019,
+    "だいたいのこと : « la plupart des choses »."));
 point("N4", "〜の中で", "« Parmi… », « au sein de… » : désigne un élément à l'intérieur d'un groupe ; aussi « dans… » (un lieu).",
-  modele("果物[くだもの]{の中[なか]で}何[なに]が一番[いちばん]好[す]きですか。", "{Parmi} les fruits, lequel préférez-vous ?"));
+  modele("果物[くだもの]{の中[なか]で}何[なに]が一番[いちばん]好[す]きですか。", "{Parmi} les fruits, lequel préférez-vous ?"),
+  aimyon("夢[ゆめ]{の中[なか]で}悪魔[あくま]が唱[とな]えた",
+    "prononcée par un démon {dans} mon rêve,", "初恋が泣いている", 2022,
+    "Nom + の中で : « dans », « à l'intérieur de »."));
 point("N4", "Quantité + は", "Après une quantité : « au moins… », « dans les… ».",
   modele("毎日[まいにち]一時間[いちじかん]{は}勉強[べんきょう]します。", "J'étudie {au moins} une heure par jour."));
 point("N4", "何 + compteur + か", "何人か, 何回か, いくつか… : « quelques… », « plusieurs… ».",
@@ -376,7 +424,10 @@ point("N4", "〜てよかった", "« Heureusement que… », « je suis content
 point("N4", "〜と言ってもいい", "« On peut dire que… ».",
   modele("これは彼[かれ]の一番[いちばん]いい作品[さくひん]だ{と言[い]ってもいい}。", "{On peut dire que} c'est sa meilleure œuvre."));
 point("N4", "〜て (cause)", "La forme en て peut donner la cause de ce qui suit : « … et du coup… », « comme… ».",
-  modele("風邪[かぜ]を{ひいて}、学校[がっこう]を休[やす]みました。", "{J'ai attrapé} un rhume, {alors} j'ai manqué l'école."));
+  modele("風邪[かぜ]を{ひいて}、学校[がっこう]を休[やす]みました。", "{J'ai attrapé} un rhume, {alors} j'ai manqué l'école."),
+  aimyon("{暗[くら]くて}何[なに]も見[み]えないから",
+    "{Comme il fait noir} et qu'on ne voit rien,", "夜行バス", 2015,
+    "暗い → 暗くて : la forme en て donne la cause."));
 point("N4", "〜て / 〜で (moyen, manière)", "La forme en て (ou nom + で) indique le moyen ou la manière dont se fait l'action.",
   modele("{歩[ある]いて}学校[がっこう]に行[い]きます。", "Je vais à l'école {à pied}."));
 point("N4", "〜てすみません", "« Excusez-moi de… », « désolé d'avoir… ».",
@@ -386,7 +437,10 @@ point("N4", "〜てくれてありがとう", "« Merci de… », « merci d'avo
 point("N4", "〜てくれない？ / 〜てもらえない？", "Demande familière : « tu ne voudrais pas… ? », « tu pourrais… ? ».",
   modele("ちょっと{手伝[てつだ]ってくれない}？", "{Tu ne voudrais pas m'aider} un peu ?"));
 point("N4", "〜のだろうか", "« Je me demande si… » : question que l'on se pose à soi-même.",
-  modele("彼[かれ]は本当[ほんとう]に来[く]る{のだろうか}。", "Viendra-t-il vraiment, {je me le demande}."));
+  modele("彼[かれ]は本当[ほんとう]に来[く]る{のだろうか}。", "Viendra-t-il vraiment, {je me le demande}."),
+  aimyon("どこまでも楽[らく]になれる{のだろうか}",
+    "tout deviendrait-il infiniment plus léger{, je me le demande} ?", "いちについて", 2025,
+    "のだろうか : question que l'on se pose à soi-même."));
 point("N4", "〜ていただけませんか", "Demande très polie (langage d'humilité) : « pourriez-vous… s'il vous plaît ? ».",
   modele("もう一度[いちど]{説明[せつめい]していただけませんか}。", "{Pourriez-vous m'expliquer} encore une fois ?"));
 point("N4", "ほかに", "« D'autre », « à part cela », « en plus ».",
@@ -396,17 +450,32 @@ point("N4", "〜が必要", "« Avoir besoin de… », « … est nécessaire »
 point("N4", "〜必要がある", "Verbe + 必要がある : « il est nécessaire de… », « il faut… ».",
   modele("もっと{練習[れんしゅう]する必要[ひつよう]がある}。", "{Il faut s'entraîner} davantage."));
 point("N4", "そんなに", "« À ce point », « tant que ça » ; avec une négation : « pas tant que ça ».",
-  modele("{そんなに}食[た]べられません。", "Je ne peux pas manger {autant que ça}."));
+  modele("{そんなに}食[た]べられません。", "Je ne peux pas manger {autant que ça}."),
+  aimyon("{そんなに}変[か]わってないのに",
+    "et rien n'a {tellement} changé, pourtant.", "会いに行くのに", 2024,
+    "そんなに + négation : « pas tant que ça »."));
 point("N4", "例えば", "« Par exemple ».",
   modele("{例[たと]えば}、寿司[すし]や天[てん]ぷらが好[す]きです。", "{Par exemple}, j'aime les sushis et les tempuras."));
 point("N4", "〜んだけど / 〜んですが", "Pose le contexte avant une demande ou une question, souvent en laissant la suite en suspens.",
-  modele("ちょっと聞[き]きたい{んですが}。", "C'est que j'aurais une question…"));
+  modele("ちょっと聞[き]きたい{んですが}。", "C'est que j'aurais une question…"),
+  aimyon("幸[しあわ]せの味付[あじつ]けを調[しら]べてみた{んだけど}",
+    "J'ai bien cherché comment assaisonner le bonheur{, mais voilà} :", "3636", 2022,
+    "んだけど pose le contexte avant ce qui suit."));
 point("N4", "〜ないと", "« Il faut que… » : version familière et abrégée de 〜ないといけない.",
-  modele("もう{帰[かえ]らないと}。", "{Il faut que je rentre}, maintenant."));
+  modele("もう{帰[かえ]らないと}。", "{Il faut que je rentre}, maintenant."),
+  aimyon("「人生[じんせい]は{楽[たの]しまないと}ネ!」",
+    "« La vie, {il faut en profiter}, hein ! »", "さながらロンリー", 2026,
+    "楽しまないと(いけない) : « il faut… », la fin est sous-entendue."));
 point("N4", "〜かい", "Marque de question familière, d'un ton plutôt masculin.",
-  modele("元気[げんき]{かい}？", "Ça va {?}"));
+  modele("元気[げんき]{かい}？", "Ça va {?}"),
+  aimyon("少[すこ]しだけいい{かい}?",
+    "Juste un peu, tu veux bien{, dis} ?", "from 四階の角部屋", 2019,
+    "かい : marque de question familière."));
 point("N4", "もし", "« Si jamais… » : annonce et renforce une condition (〜たら, 〜ば, 〜なら, 〜ても).",
-  modele("{もし}雨[あめ]が降[ふ]ったら、行[い]きません。", "{Si jamais} il pleut, je n'irai pas."));
+  modele("{もし}雨[あめ]が降[ふ]ったら、行[い]きません。", "{Si jamais} il pleut, je n'irai pas."),
+  aimyon("{もし}私[わたし]に彼氏[かれし]ができた冬休[ふゆやす]みは",
+    "{Si jamais} j'ai un petit ami, ces vacances d'hiver-là,", "私に彼氏ができない理由", 2015,
+    "もし annonce l'hypothèse."));
 point("N4", "〜でできる / 〜からできる", "« Être fait en… », « être fait à partir de… ».",
   modele("この机[つくえ]は木[き]{でできています}。", "Ce bureau {est fait en} bois."));
 point("N4", "〜と〜と、どちらが", "« Entre… et…, lequel est le plus… ? ».",
@@ -420,11 +489,17 @@ point("N4", "〜ように祈る", "« Prier pour que… », « espérer que… �
 point("N4", "〜化する", "Nom + 化 : « -isation » ; avec する : « devenir… », « transformer en… ».",
   modele("社会[しゃかい]が{高齢化[こうれいか]している}。", "La société {vieillit}."));
 point("N4", "〜かしら", "« Je me demande si… », d'un ton plutôt féminin.",
-  modele("明日[あした]は晴[は]れる{かしら}。", "{Je me demande s'}il fera beau demain."));
+  modele("明日[あした]は晴[は]れる{かしら}。", "{Je me demande s'}il fera beau demain."),
+  aimyon("わがまま{かしら}？",
+    "Suis-je capricieuse{, je me le demande} ?", "ハート", 2021,
+    "かしら : « je me demande si… »."));
 point("N4", "〜って感じ", "« C'est un peu… », « ça fait genre… » (familier).",
   modele("やっと終[お]わった{って感[かん]じ}。", "{J'ai comme l'impression que} c'est enfin fini."));
 point("N4", "〜に見える", "« Avoir l'air… », « paraître… ».",
-  modele("彼[かれ]は元気[げんき]そう{に見[み]える}。", "Il {a l'air} en forme."));
+  modele("彼[かれ]は元気[げんき]そう{に見[み]える}。", "Il {a l'air} en forme."),
+  aimyon("いつになく遠[とお]く{遠[とお]くに見[み]える}",
+    "{me paraît lointaine}, si lointaine, comme jamais.", "ハルノヒ", 2019,
+    "遠くに見える : « paraître loin »."));
 point("N4", "〜と見える", "« Il semble que… », « on dirait bien que… » : déduction à partir de ce que l'on constate.",
   modele("彼[かれ]は疲[つか]れている{と見[み]える}。", "{On dirait qu'}il est fatigué."));
 point("N4", "〜風", "Nom + 風 (lu ふう) : « de style… », « à la manière… ».",
@@ -436,11 +511,20 @@ point("N4", "〜に気がつく", "« Remarquer… », « s'apercevoir de… ».
 point("N4", "〜ても〜ても / 〜でも〜でも", "« Que ce soit… ou… » : dans les deux cas, le résultat est le même.",
   modele("雨[あめ]{でも}雪[ゆき]{でも}行[い]きます。", "{Qu'il} pleuve {ou qu'il} neige, j'irai."));
 point("N4", "それに", "« En plus », « et puis », « d'ailleurs ».",
-  modele("この店[みせ]は安[やす]い。{それに}、おいしい。", "Ce restaurant est bon marché. {En plus}, c'est bon."));
+  modele("この店[みせ]は安[やす]い。{それに}、おいしい。", "Ce restaurant est bon marché. {En plus}, c'est bon."),
+  aimyon("{それに}割[わ]れてしまった目玉焼[めだまや]き",
+    "{Et en plus}, un œuf au plat au jaune crevé.", "愛を伝えたいだとか", 2017,
+    "それに ajoute un élément à ce qui vient d'être dit."));
 point("N4", "それで", "« C'est pourquoi », « du coup » ; en question : « et alors ? ».",
-  modele("熱[ねつ]がありました。{それで}、学校[がっこう]を休[やす]みました。", "J'avais de la fièvre. {C'est pourquoi} j'ai manqué l'école."));
+  modele("熱[ねつ]がありました。{それで}、学校[がっこう]を休[やす]みました。", "J'avais de la fièvre. {C'est pourquoi} j'ai manqué l'école."),
+  aimyon("{それで}へらへら謝[あやま]ってきて",
+    "{Et là-dessus} tu viens t'excuser avec ton sourire niais,", "お互い様やん", 2015,
+    "それで relie ce qui précède à sa suite : « et là-dessus », « du coup »."));
 point("N4", "それでも", "« Malgré cela », « et pourtant », « quand même ».",
-  modele("雨[あめ]が降[ふ]っていた。{それでも}、出[で]かけた。", "Il pleuvait. Je suis sorti {quand même}."));
+  modele("雨[あめ]が降[ふ]っていた。{それでも}、出[で]かけた。", "Il pleuvait. Je suis sorti {quand même}."),
+  aimyon("私[わたし]{それでも}恋[こい]をやめれない 女[おんな]の執念深[しゅうねんぶか]さよ",
+    "{Et malgré tout} je ne peux pas renoncer à l'amour : l'obstination d'une femme, voilà.", "幸せになりたい", 2015,
+    "それでも : « malgré cela », après la liste de ses déboires."));
 point("N4", "〜たらどう", "« Et si tu… ? », « pourquoi ne pas… ? » : suggestion.",
   modele("少[すこ]し{休[やす]んだらどう}ですか。", "{Et si vous vous reposiez} un peu ?"));
 point("N4", "〜と考えられている", "« On considère que… », « on pense que… » (〜と思われている a le même sens).",

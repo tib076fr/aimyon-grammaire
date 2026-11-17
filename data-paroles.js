@@ -1,9 +1,11 @@
 // ============================================================
-//  LIENS VERS LES PAROLES COMPLÈTES (site externe J-Lyric.net).
+//  LIENS VERS LES PAROLES COMPLÈTES (site externe J-Lyric.net ;
+//  UtaTen pour « 1995 », chanson de concert absente de J-Lyric).
 //  L'application ne contient jamais les paroles entières : elle y renvoie.
 // ============================================================
 
 const PAROLES = {
+  "1995": "https://utaten.com/lyric/mi19090426/",
   "19歳になりたくない": "https://j-lyric.net/artist/a05996f/l038972.html",
   "3636": "https://j-lyric.net/artist/a05996f/l059bd7.html",
   "die die die": "https://j-lyric.net/artist/a05996f/l05ef8a.html",
