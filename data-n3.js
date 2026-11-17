@@ -393,7 +393,10 @@ point("N3", "それぞれ", "« Chacun », « respectivement ».",
 point("N3", "そこで", "« Alors », « c'est pourquoi » : devant une situation, la mesure que l'on prend.",
   modele("道[みち]が分[わ]からなかった。{そこで}、交番[こうばん]で聞[き]いた。", "Je ne connaissais pas le chemin. {Alors} j'ai demandé au poste de police."));
 point("N3", "〜てもかまわない", "« Cela ne fait rien si… », « cela ne me dérange pas que… » : il n'y a pas de problème.",
-  modele("ここに{座[すわ]ってもかまいません}か。", "{Cela ne vous dérange pas si je m'assieds} ici ?"));
+  modele("ここに{座[すわ]ってもかまいません}か。", "{Cela ne vous dérange pas si je m'assieds} ici ?"),
+  aimyon("{傷[きず]つけてもかまわない}の？",
+    "{Ça t'est égal} de faire du mal ?", "キスだけで", 2019,
+    "傷つける → 傷つけて + もかまわない : « peu importe si… ». Chanson écrite par Aimyon pour Masaki Suda, qu'elle y accompagne (« feat. あいみょん »)."));
 point("N3", "〜ても〜なくても", "« Que… ou non » : le résultat est le même dans les deux cas.",
   modele("{行[い]っても行[い]かなくても}同[おな]じだ。", "{Que j'y aille ou non}, c'est pareil."),
   aimyon("明日[あした]{晴[は]れても晴[は]れなくても}どこか行[い]こう",

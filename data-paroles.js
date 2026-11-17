@@ -1,10 +1,12 @@
 // ============================================================
 //  LIENS VERS LES PAROLES COMPLÈTES (site externe J-Lyric.net ;
 //  UtaTen pour « 1995 », chanson de concert absente de J-Lyric).
+//  « キスだけで » : chanson écrite par Aimyon pour Masaki Suda (feat. あいみょん).
 //  L'application ne contient jamais les paroles entières : elle y renvoie.
 // ============================================================
 
 const PAROLES = {
+  "キスだけで": "https://j-lyric.net/artist/a05c7bf/l04c8bc.html",
   "1995": "https://utaten.com/lyric/mi19090426/",
   "19歳になりたくない": "https://j-lyric.net/artist/a05996f/l038972.html",
   "3636": "https://j-lyric.net/artist/a05996f/l059bd7.html",

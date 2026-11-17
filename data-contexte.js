@@ -897,5 +897,13 @@ const CONTEXTE = {
   "マリーゴールド|吐き出せるほど強くはない": {
     avant: { japonais: "本当[ほんとう]の気持[きも]ち全部[ぜんぶ]", traduction: "Tout ce que je ressens vraiment," },
     apres: { japonais: "でも不思議[ふしぎ]なくらいに", traduction: "Mais, c'est étrange à quel point," }
+  },
+  "キスだけで|傷つけてもかまわないの？": {
+    avant: { japonais: "キスだけでいけそうなの？", traduction: "Un baiser seulement, et ça suffirait ?" },
+    apres: { japonais: "キスだけでここにきたの？", traduction: "Tu es venu jusqu'ici pour un baiser seulement ?" }
+  },
+  "キスだけで|きっと抱きしめてもらえないでしょう": {
+    avant: { japonais: "私[わたし]今日[きょう]は女[おんな]だから　今日[きょう]は女[おんな]だから", traduction: "Aujourd'hui je suis une femme, aujourd'hui je suis une femme," },
+    apres: { japonais: "今日[きょう]は女[おんな]だから　今日[きょう]は女[おんな]だから", traduction: "Aujourd'hui je suis une femme, aujourd'hui je suis une femme," }
   }
 };

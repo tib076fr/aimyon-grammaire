@@ -85,7 +85,10 @@ point("N4", "〜てあげる / 〜てくれる / 〜てもらう", "Rendre servi
   modele("先生[せんせい]に作文[さくぶん]を{直[なお]してもらいました}。", "{J'ai fait corriger} ma rédaction par le professeur."),
   aimyon("{守[まも]ってあげたい}",
     "et {te protéger}.", "君のこゝろ", null,
-    "守ってあげる = « protéger (pour toi) », à la forme en 〜たい."));
+    "守ってあげる = « protéger (pour toi) », à la forme en 〜たい."),
+  aimyon("きっと　{抱[だ]きしめてもらえない}でしょう",
+    "Sûrement que {personne ne me serrera dans ses bras}.", "キスだけで", 2019,
+    "抱きしめて + もらえない (potentiel négatif de もらう) : « ne pas pouvoir obtenir qu'on me serre dans ses bras ». Chanson écrite par Aimyon pour Masaki Suda."));
 point("N4", "〜てある", "État résultant d'une action faite volontairement par quelqu'un.",
   modele("窓[まど]が{開[あ]けてあります}。", "La fenêtre {a été ouverte (et l'est restée)}."),
   aimyon("助[たす]けが来[く]るシステムに{してあるよ}",
