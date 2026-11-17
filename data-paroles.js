@@ -3,11 +3,16 @@
 //  UtaTen pour « 1995 », chanson de concert absente de J-Lyric).
 //  « サラバ » : texte absent des sites de paroles ; le lien mène à la fiche
 //  du disque sur UtaTen (piste 15 du CD bonus).
+//  « 怪物さん », « 泣き出しそうだよ », « 栞 » : collaborations où Aimyon chante
+//  un texte écrit par quelqu'un d'autre (précisé sur chaque exemple).
 //  « キスだけで » : chanson écrite par Aimyon pour Masaki Suda (feat. あいみょん).
 //  L'application ne contient jamais les paroles entières : elle y renvoie.
 // ============================================================
 
 const PAROLES = {
+  "怪物さん": "https://j-lyric.net/artist/a00060f/l04ff24.html",
+  "泣き出しそうだよ": "https://j-lyric.net/artist/a04ac97/l04a0e7.html",
+  "栞": "https://utaten.com/lyric/sa18082201/",
   "サラバ": "https://utaten.com/album/index/13007",
   "キスだけで": "https://j-lyric.net/artist/a05c7bf/l04c8bc.html",
   "1995": "https://utaten.com/lyric/mi19090426/",

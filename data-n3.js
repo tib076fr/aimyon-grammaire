@@ -66,7 +66,10 @@ point("N3", "〜もの / 〜もん", "En fin de phrase : donne une raison person
     "{puisque} tu as les yeux clos.", "ハッピー", null,
     "〜んだもの : justification sur un ton personnel."));
 point("N3", "〜っけ", "Chercher à se rappeler : « c'était quoi, déjà ? ».",
-  modele("試験[しけん]はいつだ{っけ}。", "C'était quand {déjà}, l'examen ?"));
+  modele("試験[しけん]はいつだ{っけ}。", "C'était quand {déjà}, l'examen ?"),
+  aimyon("どうやって　{眠[ねむ]るんだっけ}かな",
+    "Comment on fait pour dormir, {déjà} ?", "泣き出しそうだよ", 2016,
+    "眠るんだ + っけ (+ かな) : on cherche à se souvenir. Texte et musique de Yōjirō Noda ; RADWIMPS feat. あいみょん, album « 人間開花 » (2016)."));
 point("N3", "〜って (thème)", "Forme orale de は (ou de というのは) : marque familièrement le thème de la phrase.",
   modele("東京[とうきょう]{って}、人[ひと]が多[おお]いですね。", "{Tokyo,} il y a du monde, hein."),
   aimyon("結局[けっきょく]この世[よ]の表現[ひょうげん]{って}のは",
@@ -201,7 +204,10 @@ point("N3", "〜くらい / 〜ほど", "Degré : « au point de… », « à pe
   modele("泣[な]きたい{くらい}嬉[うれ]しかった。", "J'étais heureuse {à en pleurer}."),
   aimyon("どうせ死[し]ぬなら 死[し]にそうな{くらい}デカい声[こえ]で",
     "Quitte à mourir, c'est d'une voix {à en mourir}", "どうせ死ぬなら", null,
-    "死にそうなくらい = « au point d'en mourir »."));
+    "死にそうなくらい = « au point d'en mourir »."),
+  aimyon("うつむいてる{くらい}がちょうどいい",
+    "Garder la tête baissée, {à peu près}, c'est très bien comme ça.", "栞", 2018,
+    "うつむいてる + くらい : « à peu près à ce degré ». Texte et musique de Sekaiozaki (Creephyp) ; chanson chantée à plusieurs voix, dont celle d'Aimyon (Radio Bestsellers, 2018)."));
 point("N3", "〜ほど〜ない", "« Pas aussi… que… ».",
   modele("今年[ことし]の冬[ふゆ]は去年[きょねん]{ほど}{寒[さむ]くない}。", "Cet hiver {n'est pas aussi froid que} celui de l'an dernier."),
   aimyon("吐[は]き出[だ]せる{ほど}強[つよ]くはない",
@@ -530,7 +536,10 @@ point("N3", "〜なし", "Nom + なし : « sans… » (なしで « sans », �
 point("N3", "〜あり", "« Il y a… », « avec… » ; en langage familier : « ça se fait », « c'est une option ».",
   modele("それも{あり}だね。", "Ça aussi, {c'est possible}."));
 point("N3", "〜は考えられない", "« … est impensable », « on ne peut pas imaginer que… ».",
-  modele("彼[かれ]がうそをつくなんて{考[かんが]えられない}。", "Qu'il mente, c'est {impensable}."));
+  modele("彼[かれ]がうそをつくなんて{考[かんが]えられない}。", "Qu'il mente, c'est {impensable}."),
+  aimyon("あなたがいない私[わたし]なんて　本当[ほんとう]は{考[かんが]えられない}の",
+    "Moi sans toi, au fond, {c'est impensable}.", "怪物さん", 2020,
+    "なんて + 考えられない : « … est inconcevable ». Texte et musique de Ken Hirai ; Aimyon y chante en duo (« 平井堅 feat. あいみょん »)."));
 point("N3", "必ずしも〜ない", "« Pas forcément », « pas toujours », avec わけではない ou とは限らない.",
   modele("高[たか]い物[もの]が{必[かなら]ずしも}いいとは限[かぎ]ら{ない}。", "Ce qui est cher n'est {pas forcément} bon."));
 point("N3", "Forme conjonctive (連用形)", "À l'écrit, le radical en ます du verbe (ou la forme en く de l'adjectif) relie deux propositions, comme le ferait la forme en て.",

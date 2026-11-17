@@ -911,5 +911,11 @@ const CONTEXTE = {
   },
   "サラバ|そんなの気にせず歩く": {
     avant: { japonais: "どうでもいいから歩[ある]く", traduction: "Je marche, puisque tout m'est égal," }
+  },
+  "怪物さん|あなたがいない私なんて本当は考えられないの": {
+    avant: { japonais: "私[わたし]がそこらの女[おんな]と何[なに]が違[ちが]うか教[おし]えてよ", traduction: "Dis-moi ce qui me distingue des femmes ordinaires." }
+  },
+  "泣き出しそうだよ|どうやって眠るんだっけかな": {
+    avant: { japonais: "昔[むかし]好[す]きだった歌[うた]が今[いま]は　悲[かな]しく聞[き]こえてもう泣[な]き出[だ]しそうだよ", traduction: "La chanson que j'aimais autrefois sonne triste à présent, je suis au bord des larmes." }
   }
 };
