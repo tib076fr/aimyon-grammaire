@@ -91,8 +91,14 @@ function nouvelleQuestion() {
   questionEnCours = tirage;
   const { point, ex } = tirage;
   const choix = melanger([point, ...leurres(point)]);
+  const titreChanson = ex.chanson ? ex.chanson.replace(" (album)", "") : "";
+  const pochette = ex.chanson && typeof POCHETTES !== "undefined" ? POCHETTES[titreChanson] : null;
   const origine = ex.chanson
-    ? `<p class="origine">♪ <span lang="ja">${echapper(ex.chanson.replace(" (album)", ""))}</span></p>`
+    ? `<div class="origine">
+        ${pochette ? `<img class="pochette-revision" src="${echapper(pochette.image)}" alt="" width="72" height="72" loading="lazy" onerror="this.remove()">` : ""}
+        <div><span class="origine-titre" lang="ja">♪ ${echapper(titreChanson)}</span>
+        ${pochette ? `<span class="origine-disque">${pochette.type === "single" ? "Single" : "Album"} <span lang="ja">${echapper(pochette.disque)}</span>${pochette.annee ? " · " + echapper(pochette.annee) : ""}</span>` : ""}</div>
+      </div>`
     : `<p class="origine">Phrase modèle</p>`;
   zoneQuestion.innerHTML = `
     <div class="fiche-tete"><h2>Quel point manque ?</h2><span class="niveau">${point.niveau}</span></div>
