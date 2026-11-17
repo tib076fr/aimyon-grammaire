@@ -319,7 +319,7 @@ point("N4", "なるべく", "« Autant que possible », « dans la mesure du pos
 point("N4", "〜など", "« … par exemple », « … et ainsi de suite », « etc. ».",
   modele("りんごやバナナ{など}を買[か]いました。", "J'ai acheté des pommes, des bananes, {etc.}"),
   aimyon("昨日[きのう]のこと{など} 幻[まぼろし]だと思[おも]おう",
-    "Hier {et tout le reste}, disons que c'était un mirage.", "猫", null,
+    "Ce qui s'est passé hier, {ce genre de choses}, disons que ce n'était qu'un mirage.", "猫", null,
     "など après 昨日のこと : « ce genre de choses », avec une nuance de dédain."));
 point("N4", "こういう / そういう / ああいう / どういう", "Devant un nom : « ce genre de… », « un tel… » ; どういう : « quel genre de… ».",
   modele("{そういう}話[はなし]は聞[き]きたくない。", "Je ne veux pas entendre {ce genre d'}histoires."),
@@ -389,7 +389,7 @@ point("N4", "〜以外", "« Sauf… », « à part… », « autre que… ».",
 point("N4", "ずっと", "« Tout le temps », « sans arrêt », « depuis toujours ».",
   modele("朝[あさ]から{ずっと}雨[あめ]が降[ふ]っている。", "Il pleut {sans arrêt} depuis ce matin."),
   aimyon("君[きみ]が現[あらわ]れた時[とき]から{ずっと}",
-    "depuis que tu es apparu, {sans jamais cesser}.", "スケッチ", 2025,
+    "depuis ton arrivée, {sans jamais cesser}.", "スケッチ", 2025,
     "〜からずっと : « depuis…, sans interruption »."));
 point("N4", "だいたい", "« À peu près », « dans l'ensemble », « la plupart du temps ».",
   modele("話[はなし]は{だいたい}分[わ]かりました。", "J'ai {à peu près} compris l'histoire."),
