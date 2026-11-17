@@ -1,5 +1,5 @@
 // ============================================================
-//  LES DONNÉES — outils communs aux fichiers data-n5.js, data-n4.js, data-n3.js
+//  LES DONNÉES — outils communs aux fichiers data-n5.js … data-n1.js
 //
 //  Pour ajouter une fiche, ajoutez dans le fichier du bon niveau :
 //

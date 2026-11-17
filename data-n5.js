@@ -256,3 +256,57 @@ point("N5", "〜すぎる", "« Trop ». Base du verbe ou radical de l'adjectif 
   modele("昨日[きのう]は{食[た]べすぎました}。", "Hier, j'ai {trop mangé}."),
   aimyon("風[かぜ]の強[つよ]さがちょっと 心[こころ]を{揺[ゆ]さぶりすぎて}", "Le vent souffle un peu {trop} fort, il me chavire le cœur :", "マリーゴールド", 2018,
     "揺さぶります → 揺さぶりすぎる (« secouer trop »). La forme en て laisse la phrase en suspens. 強さ : voir la fiche 〜さ."));
+
+// ---- Points ajoutés depuis Bunpro (phrases modèles seulement) ----
+point("N5", "〜だ", "Copule neutre : « A est B » en style familier. S'emploie après un nom ou un adjectif en な, jamais après un adjectif en い.",
+  modele("これは本[ほん]{だ}。", "C'{est} un livre."));
+point("N5", "いい / よい", "Adjectif en い « bon, bien », irrégulier : ses autres formes partent de よ (よくない, よかった).",
+  modele("今日[きょう]は天気[てんき]が{いい}です。", "Aujourd'hui, il fait {beau}."));
+point("N5", "Verbes en る et en う", "Les deux groupes de verbes à la forme du dictionnaire, qui est aussi la forme neutre du présent : verbes en る (食べる) et verbes en う (書く, 飲む).",
+  modele("毎朝[まいあさ]パンを{食[た]べる}。", "Je {mange} du pain tous les matins."));
+point("N5", "〜の？ (question)", "の en fin de phrase forme une question familière qui demande une explication ou du contexte.",
+  modele("どこに行[い]く{の}？", "Tu vas où, {dis} ?"));
+point("N5", "する", "Verbe irrégulier « faire » ; accolé à un nom d'action, il en fait un verbe (勉強する).",
+  modele("宿題[しゅくだい]を{します}。", "Je {fais} mes devoirs."));
+point("N5", "来る", "Verbe irrégulier « venir » (来ます, 来ない, 来た).",
+  modele("友達[ともだち]が家[いえ]に{来[き]ます}。", "Un ami {vient} chez moi."));
+point("N5", "〜が嫌い", "« Ne pas aimer ». 嫌い est un adjectif en な malgré sa finale en い ; ce qu'on n'aime pas prend が.",
+  modele("私[わたし]は魚[さかな]{が嫌[きら]い}です。", "Je {n'aime pas} le poisson."));
+point("N5", "〜がある + nom", "Nom A + がある (ou のある) + nom B : « un B qui a A », « un B avec A ».",
+  modele("庭[にわ]{がある}家[いえ]に住[す]みたいです。", "Je veux habiter une maison {avec} un jardin."));
+point("N5", "〜なかった", "Passé négatif neutre : on remplace ない par なかった (食べなかった, 行かなかった).",
+  modele("昨日[きのう]は何[なに]も{食[た]べなかった}。", "Hier, je {n'ai} rien {mangé}."));
+point("N5", "誰", "Mot interrogatif « qui ».",
+  modele("あの人[ひと]は{誰[だれ]}ですか。", "{Qui} est cette personne ?"));
+point("N5", "なぜ / どうして / なんで", "« Pourquoi ». なぜ est le plus formel, どうして courant, なんで familier.",
+  modele("{どうして}日本語[にほんご]を勉強[べんきょう]していますか。", "{Pourquoi} étudiez-vous le japonais ?"));
+point("N5", "〜だった / 〜でした", "Passé de だ et de です : « était ». Ne s'emploie pas après un adjectif en い.",
+  modele("昨日[きのう]は休[やす]み{でした}。", "Hier, c'{était} un jour de repos."));
+point("N5", "〜じゃない / 〜じゃなかった", "Négation de だ après un nom ou un adjectif en な : « n'est pas », au passé « n'était pas ». Forme écrite : ではない.",
+  modele("これは私[わたし]の傘[かさ]{じゃない}。", "Ce {n'est pas} mon parapluie."));
+point("N5", "の (sujet d'une relative)", "Dans une proposition qui qualifie un nom, le sujet peut être marqué par の au lieu de が.",
+  modele("母[はは]{の}作[つく]った料理[りょうり]はおいしい。", "Les plats {que} ma mère prépare sont délicieux."));
+point("N5", "の (nom sous-entendu)", "の remplace un nom déjà mentionné : « celui de… », « le mien ».",
+  modele("この傘[かさ]は私[わたし]{の}です。", "Ce parapluie est {le mien}."));
+point("N5", "けっこう", "Adverbe : « assez », « plutôt », « pas mal ». けっこうです sert aussi à refuser poliment.",
+  modele("このケーキは{けっこう}おいしい。", "Ce gâteau est {plutôt} bon."));
+point("N5", "たくさん", "« Beaucoup », « plein de ». Se place souvent juste avant le verbe.",
+  modele("本[ほん]を{たくさん}読[よ]みました。", "J'ai lu {beaucoup} de livres."));
+point("N5", "〜くらい (environ)", "Après un nombre ou une durée : « environ », « à peu près ». ぐらい est une variante équivalente.",
+  modele("駅[えき]まで十分[じゅっぷん]{くらい}かかります。", "Il faut {environ} dix minutes jusqu'à la gare."));
+point("N5", "〜まで (jusqu'à ce que)", "Verbe + まで : « jusqu'à ce que » quelque chose se produise.",
+  modele("雨[あめ]が{止[や]むまで}待[ま]ちましょう。", "Attendons {jusqu'à ce que} la pluie {s'arrête}."));
+point("N5", "〜にする", "Nom + にする : « choisir », « opter pour » ; aussi « faire de… quelque chose ».",
+  modele("私[わたし]はコーヒー{にします}。", "Je {vais prendre} un café."));
+point("N5", "何か / 何も", "何か : « quelque chose ». 何も + négation : « rien ».",
+  modele("{何[なに]か}飲[の]みますか。", "Vous buvez {quelque chose} ?"));
+point("N5", "誰か / どこか / 誰も / どこも", "Mot interrogatif + か : « quelqu'un », « quelque part ». Mot interrogatif + も + négation : « personne », « nulle part ».",
+  modele("教室[きょうしつ]に{誰[だれ]も}いません。", "Il n'y a {personne} dans la salle de classe."));
+point("N5", "〜ましょうか", "« Voulez-vous que je… ? », « on… ? » : proposer son aide ou une action commune.",
+  modele("窓[まど]を{開[あ]けましょうか}。", "{Voulez-vous que j'ouvre} la fenêtre ?"));
+point("N5", "〜くて / 〜で (relier des adjectifs)", "Pour enchaîner des adjectifs ou des noms : adjectif en い → 〜くて ; adjectif en な ou nom → 〜で. « … et … ».",
+  modele("この部屋[へや]は{広[ひろ]くて}明[あか]るいです。", "Cette pièce est {grande et} lumineuse."));
+point("N5", "Adjectif + のは", "Adjectif + の : « celui qui est… », « ce qui est… ». の remplace un nom que l'on ne répète pas.",
+  modele("{大[おお]きいのは}私[わたし]のです。", "{Le grand}, c'est le mien."));
+point("N5", "あげる / くれる / もらう", "Donner et recevoir : あげる (je donne, on donne à un autre), くれる (on me donne), もらう (je reçois). Avec あげる et くれる, に marque celui qui reçoit ; avec もらう, に ou から marque celui qui donne.",
+  modele("友達[ともだち]に本[ほん]を{あげました}。", "J'{ai donné} un livre à un ami."));

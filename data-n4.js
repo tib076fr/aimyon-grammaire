@@ -263,3 +263,189 @@ point("N4", "〜直す", "Base + 直[なお]す : refaire, recommencer en mieux.
   aimyon("できれば {やり直[なお]したい}けれど",
     "Si je pouvais, {je recommencerais tout}, mais…", "さよならの今日に", 2020,
     "やる → やり直す = « refaire »."));
+
+// ---- Points ajoutés depuis Bunpro (phrases modèles seulement) ----
+point("N4", "〜づらい", "Radical du verbe + づらい : « difficile à… », « pénible à… », souvent avec une gêne ressentie par celui qui parle.",
+  modele("この靴[くつ]は{歩[ある]きづらい}。", "Ces chaussures sont {pénibles pour marcher}."));
+point("N4", "だんだん", "« Peu à peu », « progressivement » : un changement graduel.",
+  modele("{だんだん}暖[あたた]かくなってきました。", "Il se met à faire {peu à peu} plus doux."));
+point("N4", "どんどん", "« De plus en plus », « à toute allure » : un changement rapide et continu (だんだん est plus graduel).",
+  modele("日本語[にほんご]が{どんどん}上手[じょうず]になる。", "Mon japonais s'améliore {à vue d'œil}."));
+point("N4", "〜ら", "Pluriel après un pronom : 彼ら « eux », 僕ら « nous ». Familier ; peut sembler rude envers quelqu'un.",
+  modele("{彼[かれ]ら}は高校生[こうこうせい]です。", "{Eux}, ce sont des lycéens."));
+point("N4", "〜だけで", "« Rien qu'en… », « il suffit de… ».",
+  modele("{見[み]るだけで}楽[たの]しい。", "{Rien qu'à regarder}, c'est amusant."));
+point("N4", "だが / ですが", "En début de phrase : « mais », « cependant » (soutenu).",
+  modele("彼[かれ]は若[わか]い。{だが}、経験[けいけん]は多[おお]い。", "Il est jeune. {Pourtant}, il a beaucoup d'expérience."));
+point("N4", "〜なくて", "Forme en て de la négation : « ne pas… et… ». Sert à enchaîner, ou à donner la cause (« comme… ne… pas »).",
+  modele("お金[かね]が{なくて}、買[か]えませんでした。", "{Comme je n'avais pas} d'argent, je n'ai pas pu l'acheter."));
+point("N4", "Verbes transitifs et intransitifs", "Beaucoup de verbes vont par paires : le transitif (quelqu'un agit : を開ける « ouvrir ») et l'intransitif (cela se produit : が開く « s'ouvrir »).",
+  modele("ドア{が開[あ]きました}。", "La porte {s'est ouverte}."));
+point("N4", "〜ということ", "Phrase + ということ : transforme toute une phrase en nom, « le fait que… ».",
+  modele("彼[かれ]が来[こ]ない{ということ}を知[し]りませんでした。", "Je ne savais pas {qu'}il ne viendrait pas."));
+point("N4", "まず", "« D'abord », « pour commencer ».",
+  modele("{まず}手[て]を洗[あら]ってください。", "{D'abord}, lavez-vous les mains."));
+point("N4", "また", "« Encore », « de nouveau » ; aussi « de plus », « également ».",
+  modele("{また}会[あ]いましょう。", "Revoyons-nous {une prochaine fois}."));
+point("N4", "〜ごろ / 〜ころ", "« Vers… », « aux alentours de… » (moment) ; avec un verbe ou の : « à l'époque où… ».",
+  modele("三時[さんじ]{ごろ}帰[かえ]ります。", "Je rentre {vers} trois heures."));
+point("N4", "〜あとで", "Verbe au passé (ou nom + の) + あとで : « après… », « après avoir… ». Seul : « plus tard ».",
+  modele("ご飯[はん]を{食[た]べたあとで}、散歩[さんぽ]します。", "{Après avoir mangé}, je vais me promener."));
+point("N4", "〜ていた", "Passé de 〜ている : « était en train de… », ou état qui durait dans le passé.",
+  modele("その時[とき]、本[ほん]を{読[よ]んでいた}。", "À ce moment-là, je {lisais} un livre."));
+point("N4", "に (fréquence)", "Période + に + nombre de fois : « … fois par… ».",
+  modele("一週間[いっしゅうかん]{に}二回[にかい]泳[およ]ぎます。", "Je nage deux fois {par} semaine."));
+point("N4", "とうとう", "« Finalement », « pour finir », après une longue attente ou un long processus.",
+  modele("{とうとう}雨[あめ]が降[ふ]り出[だ]した。", "La pluie a {fini par} se mettre à tomber."));
+point("N4", "〜ごとに", "« Chaque… », « tous les… », « à chaque fois que… ».",
+  modele("二時間[にじかん]{ごとに}薬[くすり]を飲[の]みます。", "Je prends le médicament {toutes les} deux heures."));
+point("N4", "なるべく", "« Autant que possible », « dans la mesure du possible ».",
+  modele("{なるべく}早[はや]く来[き]てください。", "Venez {le plus} tôt {possible}."));
+point("N4", "〜など", "« … par exemple », « … et ainsi de suite », « etc. ».",
+  modele("りんごやバナナ{など}を買[か]いました。", "J'ai acheté des pommes, des bananes, {etc.}"));
+point("N4", "こういう / そういう / ああいう / どういう", "Devant un nom : « ce genre de… », « un tel… » ; どういう : « quel genre de… ».",
+  modele("{そういう}話[はなし]は聞[き]きたくない。", "Je ne veux pas entendre {ce genre d'}histoires."));
+point("N4", "あまり〜ない", "あまり + négation : « pas très », « pas beaucoup », « pas vraiment ».",
+  modele("この映画[えいが]は{あまり}面白[おもしろ]く{ない}。", "Ce film n'est {pas très} intéressant."));
+point("N4", "〜をしている (porter, avoir)", "Nom + をしている : porter un accessoire (cravate, montre…) ou avoir un trait physique.",
+  modele("父[ちち]はネクタイ{をしています}。", "Mon père {porte} une cravate."));
+point("N4", "〜くする / 〜にする (rendre)", "Adjectif en い → 〜くする, adjectif en な ou nom → 〜にする : « rendre… », « faire devenir… ».",
+  modele("部屋[へや]を{きれいにしました}。", "J'ai {rangé} la chambre."));
+point("N4", "〜くは", "Adjectif en い à la forme く + は : met l'adjectif en relief ou en contraste, surtout avant une négation.",
+  modele("{高[たか]くは}ないが、安[やす]くもない。", "Ce n'est pas {vraiment cher}, mais pas bon marché non plus."));
+point("N4", "〜といい", "« J'espère que… », « ce serait bien que… » ; adressé à quelqu'un : « tu devrais… ».",
+  modele("明日[あした]晴[は]れる{といい}ですね。", "{J'espère qu'}il fera beau demain."));
+point("N4", "毎〜のように", "毎日のように, 毎週のように… : « presque chaque… ».",
+  modele("{毎日[まいにち]のように}雨[あめ]が降[ふ]る。", "Il pleut {presque tous les jours}."));
+point("N4", "〜じゃないか", "« N'est-ce pas ? », « tu vois bien que… » : chercher l'accord, ou marquer la surprise ou le reproche.",
+  modele("いい天気[てんき]{じゃないか}。", "Il fait beau, {tu ne trouves pas} ?"));
+point("N4", "〜と聞いた", "« J'ai entendu dire que… ».",
+  modele("彼[かれ]は結婚[けっこん]した{と聞[き]いた}。", "{J'ai entendu dire qu'}il s'est marié."));
+point("N4", "聞こえる", "« On entend… », « être audible » (sans effort volontaire) ; aussi « sonner comme… ».",
+  modele("鳥[とり]の声[こえ]が{聞[き]こえる}。", "{On entend} le chant des oiseaux."));
+point("N4", "見える", "« On voit… », « être visible » (sans effort volontaire) ; aussi « avoir l'air… ».",
+  modele("窓[まど]から海[うみ]が{見[み]える}。", "De la fenêtre, {on voit} la mer."));
+point("N4", "〜代", "Après une dizaine : tranche d'âge (二十代 « la vingtaine ») ; 年代 pour une décennie.",
+  modele("母[はは]は{五十代[ごじゅうだい]}です。", "Ma mère a {la cinquantaine}."));
+point("N4", "かかる (temps, argent)", "« Prendre » (du temps), « coûter » (de l'argent).",
+  modele("駅[えき]まで三十分[さんじゅっぷん]{かかります}。", "{Il faut} trente minutes jusqu'à la gare."));
+point("N4", "する (prix)", "Prix + する : « coûter… ».",
+  modele("このかばんは一万円[いちまんえん]{します}。", "Ce sac {coûte} dix mille yens."));
+point("N4", "Nombre + も", "Après une quantité : insiste sur le fait qu'elle est grande (« pas moins de… ») ; avec une négation, « pas même… ».",
+  modele("三時間[さんじかん]{も}待[ま]ちました。", "J'ai attendu {pas moins de} trois heures."));
+point("N4", "ほとんど", "« Presque tout », « la plupart » ; avec une négation : « presque pas ».",
+  modele("宿題[しゅくだい]は{ほとんど}終[お]わりました。", "J'ai {presque} fini mes devoirs."));
+point("N4", "こんな / そんな / あんな / どんな", "Devant un nom : « un… comme ça », « un tel… » ; どんな : « quel genre de… ».",
+  modele("{そんな}ことは知[し]りません。", "Je ne sais rien d'{une chose pareille}."));
+point("N4", "各〜", "Préfixe : « chaque… », « chacun des… ».",
+  modele("{各[かく]}クラスに先生[せんせい]が二人[ふたり]います。", "Il y a deux professeurs dans {chaque} classe."));
+point("N4", "〜の次に", "« Après… », « juste derrière… » dans un ordre ou un classement.",
+  modele("東京[とうきょう]{の次[つぎ]に}大[おお]きい町[まち]は横浜[よこはま]です。", "La plus grande ville {après} Tokyo, c'est Yokohama."));
+point("N4", "〜以上 (quantité)", "Quantité + 以上 : « … ou plus », « au moins… ». これ以上 : « davantage ».",
+  modele("十人[じゅうにん]{以上[いじょう]}来[き]ました。", "Dix personnes {ou plus} sont venues."));
+point("N4", "〜以下", "Quantité + 以下 : « … ou moins », « au maximum… ».",
+  modele("五歳[ごさい]{以下[いか]}の子供[こども]は無料[むりょう]です。", "C'est gratuit pour les enfants de cinq ans {et moins}."));
+point("N4", "〜以外", "« Sauf… », « à part… », « autre que… ».",
+  modele("日曜日[にちようび]{以外[いがい]}は開[あ]いています。", "C'est ouvert tous les jours {sauf} le dimanche."));
+point("N4", "ずっと", "« Tout le temps », « sans arrêt », « depuis toujours ».",
+  modele("朝[あさ]から{ずっと}雨[あめ]が降[ふ]っている。", "Il pleut {sans arrêt} depuis ce matin."));
+point("N4", "だいたい", "« À peu près », « dans l'ensemble », « la plupart du temps ».",
+  modele("話[はなし]は{だいたい}分[わ]かりました。", "J'ai {à peu près} compris l'histoire."));
+point("N4", "〜の中で", "« Parmi… », « dans… » : délimite le groupe à l'intérieur duquel on compare.",
+  modele("果物[くだもの]{の中[なか]で}何[なに]が一番[いちばん]好[す]きですか。", "{Parmi} les fruits, lequel préférez-vous ?"));
+point("N4", "Quantité + は", "Après une quantité : « au moins… », « dans les… ».",
+  modele("毎日[まいにち]一時間[いちじかん]{は}勉強[べんきょう]します。", "J'étudie {au moins} une heure par jour."));
+point("N4", "何 + compteur + か", "何人か, 何回か, いくつか… : « quelques… », « plusieurs… ».",
+  modele("{何人[なんにん]か}の友達[ともだち]が来[き]ました。", "{Quelques} amis sont venus."));
+point("N4", "真っ〜", "Préfixe d'intensité : « tout… », « en plein… » (真っ白 « tout blanc », 真ん中 « en plein milieu »).",
+  modele("空[そら]が{真[ま]っ青[さお]}です。", "Le ciel est {tout bleu}."));
+point("N4", "〜は〜の一つだ", "« … est l'un des… ».",
+  modele("京都[きょうと]は日本[にほん]で有名[ゆうめい]な町[まち]{の一[ひと]つだ}。", "Kyoto est {l'une des} villes célèbres du Japon."));
+point("N4", "〜ない〜はない", "Double négation : « il n'y a pas de… qui ne… pas », donc « tous… ».",
+  modele("彼[かれ]を{知[し]らない}人[ひと]{はいない}。", "{Il n'y a personne} qui {ne} le {connaisse pas}."));
+point("N4", "少しも〜ない", "少しも + négation : « pas du tout », « pas le moins du monde ».",
+  modele("{少[すこ]しも}寒[さむ]く{ない}。", "Je n'ai {pas} froid {du tout}."));
+point("N4", "〜は少なくない", "Mot à mot « ne sont pas peu nombreux » : « il y en a pas mal », « nombreux sont… ».",
+  modele("そう考[かんが]える人[ひと]{は少[すく]なくない}。", "Les gens qui pensent ainsi {ne sont pas rares}."));
+point("N4", "〜場合は", "« Dans le cas où… », « en cas de… ».",
+  modele("雨[あめ]の{場合[ばあい]は}中止[ちゅうし]です。", "{En cas de} pluie, c'est annulé."));
+point("N4", "〜て (demande familière)", "Forme en て seule en fin de phrase : demande familière, 〜てください sans ください.",
+  modele("ちょっと{待[ま]って}。", "{Attends} un peu."));
+point("N4", "〜てよかった", "« Heureusement que… », « je suis content que… ».",
+  modele("傘[かさ]を{持[も]ってきてよかった}。", "{Heureusement que j'ai pris} un parapluie."));
+point("N4", "〜と言ってもいい", "« On peut dire que… ».",
+  modele("これは彼[かれ]の一番[いちばん]いい作品[さくひん]だ{と言[い]ってもいい}。", "{On peut dire que} c'est sa meilleure œuvre."));
+point("N4", "〜て (cause)", "La forme en て peut donner la cause de ce qui suit : « … et du coup… », « comme… ».",
+  modele("風邪[かぜ]を{ひいて}、学校[がっこう]を休[やす]みました。", "{J'ai attrapé} un rhume, {alors} j'ai manqué l'école."));
+point("N4", "〜て / 〜で (moyen, manière)", "La forme en て (ou nom + で) indique le moyen ou la manière dont se fait l'action.",
+  modele("{歩[ある]いて}学校[がっこう]に行[い]きます。", "Je vais à l'école {à pied}."));
+point("N4", "〜てすみません", "« Excusez-moi de… », « désolé d'avoir… ».",
+  modele("{遅[おそ]くなってすみません}。", "{Excusez-moi d'être en retard}."));
+point("N4", "〜てくれてありがとう", "« Merci de… », « merci d'avoir… » : remercier quelqu'un pour ce qu'il a fait pour nous.",
+  modele("{手伝[てつだ]ってくれてありがとう}。", "{Merci de m'avoir aidé}."));
+point("N4", "〜てくれない？ / 〜てもらえない？", "Demande familière : « tu ne voudrais pas… ? », « tu pourrais… ? ».",
+  modele("ちょっと{手伝[てつだ]ってくれない}？", "{Tu ne voudrais pas m'aider} un peu ?"));
+point("N4", "〜のだろうか", "« Je me demande si… » : question que l'on se pose à soi-même.",
+  modele("彼[かれ]は本当[ほんとう]に来[く]る{のだろうか}。", "Viendra-t-il vraiment, {je me le demande}."));
+point("N4", "〜ていただけませんか", "Demande très polie (langage d'humilité) : « pourriez-vous… s'il vous plaît ? ».",
+  modele("もう一度[いちど]{説明[せつめい]していただけませんか}。", "{Pourriez-vous m'expliquer} encore une fois ?"));
+point("N4", "ほかに", "« D'autre », « à part cela », « en plus ».",
+  modele("{ほかに}質問[しつもん]はありますか。", "Avez-vous {d'autres} questions ?"));
+point("N4", "〜が必要", "« Avoir besoin de… », « … est nécessaire ».",
+  modele("この仕事[しごと]には経験[けいけん]{が必要[ひつよう]}です。", "Pour ce travail, il {faut} de l'expérience."));
+point("N4", "〜必要がある", "Verbe + 必要がある : « il est nécessaire de… », « il faut… ».",
+  modele("もっと{練習[れんしゅう]する必要[ひつよう]がある}。", "{Il faut s'entraîner} davantage."));
+point("N4", "そんなに", "« À ce point », « tant que ça » ; avec une négation : « pas tant que ça ».",
+  modele("{そんなに}食[た]べられません。", "Je ne peux pas manger {autant que ça}."));
+point("N4", "例えば", "« Par exemple ».",
+  modele("{例[たと]えば}、寿司[すし]や天[てん]ぷらが好[す]きです。", "{Par exemple}, j'aime les sushis et les tempuras."));
+point("N4", "〜んだけど / 〜んですが", "Pose le contexte avant une demande ou une question, souvent en laissant la suite en suspens.",
+  modele("ちょっと聞[き]きたい{んですが}。", "C'est que j'aurais une question…"));
+point("N4", "〜ないと", "« Il faut que… » : version familière et abrégée de 〜ないといけない.",
+  modele("もう{帰[かえ]らないと}。", "{Il faut que je rentre}, maintenant."));
+point("N4", "〜かい", "Marque de question familière, d'un ton plutôt masculin.",
+  modele("元気[げんき]{かい}？", "Ça va {?}"));
+point("N4", "もし", "« Si jamais… » : annonce et renforce une condition (〜たら, 〜ば, 〜なら, 〜ても).",
+  modele("{もし}雨[あめ]が降[ふ]ったら、行[い]きません。", "{Si jamais} il pleut, je n'irai pas."));
+point("N4", "〜でできる / 〜からできる", "« Être fait en… », « être fait à partir de… ».",
+  modele("この机[つくえ]は木[き]{でできています}。", "Ce bureau {est fait en} bois."));
+point("N4", "〜と〜と、どちらが", "« Entre… et…, lequel est le plus… ? ».",
+  modele("犬[いぬ]{と}猫[ねこ]{と、どちらが}好[す]きですか。", "{Entre} les chiens {et} les chats, {lesquels} préférez-vous ?"));
+point("N4", "〜ように言う", "« Dire à quelqu'un de… » : rapporter une demande ou un ordre.",
+  modele("先生[せんせい]は学生[がくせい]に静[しず]かにする{ように言[い]った}。", "Le professeur {a dit} aux élèves {de} se taire."));
+point("N4", "〜予定だ", "« Il est prévu que… », « je compte… ».",
+  modele("来月[らいげつ]、日本[にほん]に{行[い]く予定[よてい]です}。", "{Je dois aller} au Japon le mois prochain."));
+point("N4", "〜ように祈る", "« Prier pour que… », « espérer que… ».",
+  modele("試験[しけん]に合格[ごうかく]する{ように祈[いの]っています}。", "{Je prie pour que} tu réussisses l'examen."));
+point("N4", "〜化する", "Nom + 化 : « -isation » ; avec する : « devenir… », « transformer en… ».",
+  modele("社会[しゃかい]が{高齢化[こうれいか]している}。", "La société {vieillit}."));
+point("N4", "〜かしら", "« Je me demande si… », d'un ton plutôt féminin.",
+  modele("明日[あした]は晴[は]れる{かしら}。", "{Je me demande s'}il fera beau demain."));
+point("N4", "〜って感じ", "« C'est un peu… », « ça fait genre… » (familier).",
+  modele("やっと終[お]わった{って感[かん]じ}。", "{J'ai comme l'impression que} c'est enfin fini."));
+point("N4", "〜に見える", "« Avoir l'air… », « paraître… ».",
+  modele("彼[かれ]は元気[げんき]そう{に見[み]える}。", "Il {a l'air} en forme."));
+point("N4", "〜と見える", "« Il semble que… », « on dirait bien que… » : déduction à partir de ce que l'on constate.",
+  modele("彼[かれ]は疲[つか]れている{と見[み]える}。", "{On dirait qu'}il est fatigué."));
+point("N4", "〜風", "Nom + 風 (lu ふう) : « de style… », « à la manière… ».",
+  modele("この店[みせ]は{日本風[にほんふう]}です。", "Ce restaurant est {de style japonais}."));
+point("N4", "〜が見られる", "« On peut voir… », « on observe… ».",
+  modele("ここでは珍[めずら]しい鳥[とり]{が見[み]られます}。", "Ici, {on peut voir} des oiseaux rares."));
+point("N4", "〜に気がつく", "« Remarquer… », « s'apercevoir de… ».",
+  modele("間違[まちが]い{に気[き]がつきました}。", "Je {me suis aperçu de} l'erreur."));
+point("N4", "〜ても〜ても / 〜でも〜でも", "« Que ce soit… ou… » : dans les deux cas, le résultat est le même.",
+  modele("雨[あめ]{でも}雪[ゆき]{でも}行[い]きます。", "{Qu'il} pleuve {ou qu'il} neige, j'irai."));
+point("N4", "それに", "« En plus », « et puis », « d'ailleurs ».",
+  modele("この店[みせ]は安[やす]い。{それに}、おいしい。", "Ce restaurant est bon marché. {En plus}, c'est bon."));
+point("N4", "それで", "« C'est pourquoi », « du coup » ; en question : « et alors ? ».",
+  modele("熱[ねつ]がありました。{それで}、学校[がっこう]を休[やす]みました。", "J'avais de la fièvre. {C'est pourquoi} j'ai manqué l'école."));
+point("N4", "それでも", "« Malgré cela », « et pourtant », « quand même ».",
+  modele("雨[あめ]が降[ふ]っていた。{それでも}、出[で]かけた。", "Il pleuvait. Je suis sorti {quand même}."));
+point("N4", "〜たらどう", "« Et si tu… ? », « pourquoi ne pas… ? » : suggestion.",
+  modele("少[すこ]し{休[やす]んだらどう}ですか。", "{Et si vous vous reposiez} un peu ?"));
+point("N4", "〜と考えられている", "« On considère que… », « on pense que… » (〜と思われている a le même sens).",
+  modele("これが原因[げんいん]だ{と考[かんが]えられている}。", "{On considère que} c'en est la cause."));
+point("N4", "〜とされている", "« Est considéré comme… », « on tient que… ».",
+  modele("納豆[なっとう]は体[からだ]にいい{とされている}。", "Le nattō {est réputé} bon pour la santé."));
+point("N4", "〜と言われている", "« On dit que… », « il est connu comme… ».",
+  modele("この山[やま]は日本[にほん]で一番[いちばん]美[うつく]しい{と言[い]われている}。", "{On dit que} cette montagne est la plus belle du Japon."));

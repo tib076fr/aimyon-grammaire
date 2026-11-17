@@ -105,7 +105,12 @@ function simplifierRomaji(texte) {
     .replace(/ou|oo/g, "o").replace(/uu/g, "u");
 }
 
-// Le romaji d'un titre de fiche : conversion automatique + compléments
+// Le titre écrit en kana quand il contient des kanji (voir data-lectures.js)
+// puis son romaji : conversion automatique + compléments
+function lectureDuTitre(titre) {
+  return (typeof LECTURES !== "undefined" && LECTURES[titre]) || titre;
+}
+
 function romajiDuTitre(titre) {
-  return (kanaVersRomaji(titre) + " " + (ROMAJI_EN_PLUS[titre] || "")).trim();
+  return (kanaVersRomaji(lectureDuTitre(titre)) + " " + (ROMAJI_EN_PLUS[titre] || "")).trim();
 }

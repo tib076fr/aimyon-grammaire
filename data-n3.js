@@ -260,3 +260,247 @@ point("N3", "〜込む", "Base + 込[こ]む : aller ou mettre à l'intérieur ;
   aimyon("あまり{考[かんが]え込[こ]む}のは好[す]きじゃないんだ",
     "Je n'aime pas trop {me perdre dans mes pensées}.", "分かってくれよ", null,
     "考える → 考え込む = « s'enfoncer dans ses pensées »."));
+
+// ---- Points ajoutés depuis Bunpro (phrases modèles seulement) ----
+point("N3", "〜ばいい / 〜たらいい", "« Il suffit de… », « tu n'as qu'à… » ; en question, demander conseil (« que dois-je faire ? ») ; aussi un souhait (« ce serait bien si… »).",
+  modele("分[わ]からないなら、先生[せんせい]に{聞[き]けばいい}。", "Si tu ne comprends pas, {tu n'as qu'à demander} au professeur."));
+point("N3", "〜中 / 〜中", "Nom + 中 : lu ちゅう, « en cours de… », « pendant… » ; lu じゅう, « tout au long de… », « partout dans… ».",
+  modele("今[いま]は{会議中[かいぎちゅう]}です。", "En ce moment, il est {en réunion}."));
+point("N3", "〜あまり", "« Tellement… que… » : un excès (souvent d'émotion) entraîne un résultat fâcheux.",
+  modele("{緊張[きんちょう]のあまり}、何[なに]も言[い]えなかった。", "{J'étais tellement tendu que} je n'ai rien pu dire."));
+point("N3", "すると / そうすると", "« Sur ce », « et alors » : ce qui s'est produit juste après ; aussi « dans ce cas ».",
+  modele("ドアを開[あ]けた。{すると}、猫[ねこ]が入[はい]ってきた。", "J'ai ouvert la porte. {Et là}, un chat est entré."));
+point("N3", "〜のは〜の方だ", "« C'est… qui… » : désigne, entre deux, celui auquel la description s'applique.",
+  modele("悪[わる]い{のは}私[わたし]{の方[ほう]だ}。", "{C'est moi qui} suis en tort."));
+point("N3", "〜型", "Nom + 型 : « de type… », « modèle… », « en forme de… ».",
+  modele("{新型[しんがた]}の車[くるま]を買[か]った。", "J'ai acheté une voiture {nouveau modèle}."));
+point("N3", "〜てごらん", "« Essaie donc de… » : invitation bienveillante, adressée à un proche ou à quelqu'un de plus jeune.",
+  modele("もう一度[いちど]{やってごらん}。", "{Essaie} encore une fois, {pour voir}."));
+point("N3", "Particule + の", "からの, への, での, との, までの : la particule garde son sens et の rattache le tout au nom qui suit.",
+  modele("母[はは]{からの}手紙[てがみ]を読[よ]んだ。", "J'ai lu la lettre {de} ma mère."));
+point("N3", "〜である", "Copule de l'écrit : équivalent formel de だ, d'un ton affirmé.",
+  modele("吾輩[わがはい]は猫[ねこ]{である}。", "Je {suis} un chat."));
+point("N3", "ところで", "« Au fait », « à propos » : changer de sujet.",
+  modele("{ところで}、週末[しゅうまつ]は何[なに]をしますか。", "{Au fait}, que faites-vous ce week-end ?"));
+point("N3", "では / それでは / じゃあ", "« Bon, alors », « dans ce cas » : じゃあ est familier, それでは plus poli.",
+  modele("{それでは}、始[はじ]めましょう。", "{Bien}, commençons."));
+point("N3", "〜のに (pour)", "Verbe + のに : « pour… », « afin de… », suivi de ce qu'il faut ou de ce qui sert (temps, argent, outil).",
+  modele("この辞書[じしょ]は漢字[かんじ]を調[しら]べる{のに}便利[べんり]だ。", "Ce dictionnaire est pratique {pour} chercher des kanji."));
+point("N3", "〜というのは", "« Ce qu'on appelle… , c'est… » : définir ou expliquer un mot ; aussi « c'est que… » pour donner une raison.",
+  modele("「文法[ぶんぽう]」{というのは}言葉[ことば]のルールのことだ。", "La « grammaire », {c'est} l'ensemble des règles de la langue."));
+point("N3", "〜的", "Nom + 的 : en fait un adjectif en な (« -ique », « -el ») ; avec に, un adverbe.",
+  modele("{国際的[こくさいてき]}な会議[かいぎ]に出[で]る。", "Je participe à une conférence {internationale}."));
+point("N3", "〜上で", "Verbe au passé (ou nom + の) + 上で : « après avoir… », « une fois… fait » (formel).",
+  modele("家族[かぞく]と{相談[そうだん]した上[うえ]で}決[き]めます。", "Je déciderai {après en avoir parlé} avec ma famille."));
+point("N3", "〜に基づいて", "« En se fondant sur… », « d'après… ».",
+  modele("この映画[えいが]は事実[じじつ]{に基[もと]づいて}作[つく]られた。", "Ce film a été réalisé {d'après} des faits réels."));
+point("N3", "〜点", "« Sur le plan de… », « en ce que… », « le fait que… ».",
+  modele("値段[ねだん]の{点[てん]}では、この店[みせ]が一番[いちばん]だ。", "{Pour ce qui est} du prix, c'est ce magasin le meilleur."));
+point("N3", "なぜなら〜から", "« Car… », « la raison, c'est que… » : なぜなら annonce l'explication, qui se termine par からだ.",
+  modele("行[い]けません。{なぜなら}、仕事[しごと]がある{から}です。", "Je ne peux pas y aller. {C'est que} j'ai du travail."));
+point("N3", "〜からこそ", "« C'est justement parce que… ».",
+  modele("好[す]きだ{からこそ}、厳[きび]しく言[い]うんだ。", "{C'est justement parce que} je t'aime que je suis sévère."));
+point("N3", "〜ばかりだ", "Verbe au dictionnaire + ばかりだ : « ne fait que… », « ne cesse de… » (changement à sens unique, souvent négatif).",
+  modele("物価[ぶっか]は{上[あ]がるばかりだ}。", "Les prix {ne cessent de monter}."));
+point("N3", "〜ばかりに", "« Simplement parce que… », suivi d'un résultat fâcheux.",
+  modele("うそを{ついたばかりに}、信[しん]じてもらえなくなった。", "{Pour avoir menti une fois}, on ne me croit plus."));
+point("N3", "〜ことがある", "Verbe au dictionnaire + ことがある : « il arrive que… », « parfois… ». (Avec le passé : 〜たことがある, l'expérience.)",
+  modele("朝[あさ]ご飯[はん]を{食[た]べないことがある}。", "{Il m'arrive de ne pas prendre} de petit-déjeuner."));
+point("N3", "〜ということなのだ", "« … cela veut dire que… » : expliquer ce que signifie quelque chose.",
+  modele("愛[あい]するというのは、相手[あいて]を信[しん]じる{ということなのだ}。", "Aimer, {cela veut dire} faire confiance à l'autre."));
+point("N3", "〜は〜で有名", "« … est célèbre pour… ».",
+  modele("京都[きょうと]{は}古[ふる]いお寺[てら]{で有名[ゆうめい]}です。", "Kyoto {est célèbre pour} ses vieux temples."));
+point("N3", "〜に合わせて", "« En s'accordant à… », « au rythme de… », « selon… ». 〜に合った + nom : « adapté à… ».",
+  modele("音楽[おんがく]{に合[あ]わせて}踊[おど]る。", "Danser {au rythme de} la musique."));
+point("N3", "〜姿", "« L'allure », « la silhouette », « la vue de quelqu'un en train de… », « vêtu de… ».",
+  modele("彼[かれ]の{働[はたら]く姿[すがた]}を見[み]た。", "Je l'ai vu {à l'ouvrage}."));
+point("N3", "〜と言える", "« On peut dire que… ».",
+  modele("これは成功[せいこう]だ{と言[い]える}だろう。", "{On peut} sans doute {dire que} c'est une réussite."));
+point("N3", "ちゃんと / きちんと", "« Comme il faut », « correctement », « soigneusement ».",
+  modele("{ちゃんと}朝[あさ]ご飯[はん]を食[た]べなさい。", "Prends ton petit-déjeuner {comme il faut}."));
+point("N3", "そのため(に)", "« Pour cette raison », « c'est pourquoi » ; aussi « dans ce but ».",
+  modele("雪[ゆき]が降[ふ]った。{そのため}、電車[でんしゃ]が遅[おく]れた。", "Il a neigé. {C'est pourquoi} le train a eu du retard."));
+point("N3", "どんなに〜ても / いくら〜ても", "« Peu importe à quel point… », « on a beau… ».",
+  modele("{どんなに}忙[いそが]しく{ても}、毎日[まいにち]電話[でんわ]する。", "{J'ai beau être} occupé, je téléphone tous les jours."));
+point("N3", "〜かは〜によって違う", "« … dépend de… », « … varie selon… ».",
+  modele("何[なに]が好[す]き{かは}人[ひと]{によって違[ちが]う}。", "Ce que l'on aime {varie selon} les gens."));
+point("N3", "かなり", "« Assez », « plutôt », « passablement ».",
+  modele("今日[きょう]は{かなり}寒[さむ]い。", "Aujourd'hui, il fait {plutôt} froid."));
+point("N3", "あまりに(も)", "« Trop », « à tel point que… » : un degré excessif.",
+  modele("{あまりにも}高[たか]くて、買[か]えなかった。", "C'était {beaucoup trop} cher, je n'ai pas pu l'acheter."));
+point("N3", "〜と同時に", "« Au moment même où… », « en même temps que… » ; aussi « à la fois… et… ».",
+  modele("ベルが鳴[な]る{と同時[どうじ]に}、学生[がくせい]が立[た]った。", "{Au moment même où} la sonnerie a retenti, les élèves se sont levés."));
+point("N3", "〜ところだった", "« J'ai failli… », « il s'en est fallu de peu que… ».",
+  modele("電車[でんしゃ]に{乗[の]り遅[おく]れるところだった}。", "{J'ai failli rater} le train."));
+point("N3", "だって", "Familier. En début de phrase : « mais c'est que… » (justification). Après un nom : « même… », « … aussi ».",
+  modele("{だって}、知[し]らなかったんだもん。", "{Mais} je ne savais pas, {moi} !"));
+point("N3", "〜んだって", "« Il paraît que… », « on m'a dit que… » (familier).",
+  modele("彼[かれ]、来月[らいげつ]結婚[けっこん]する{んだって}。", "{Il paraît qu'}il se marie le mois prochain."));
+point("N3", "〜に関係がある", "« Avoir un rapport avec… », « être lié à… » ; au négatif, « n'avoir rien à voir avec… ».",
+  modele("この問題[もんだい]は私[わたし]{に関係[かんけい]がない}。", "Ce problème {ne me concerne pas}."));
+point("N3", "〜は〜くらいだ", "« Il n'y a guère que… qui… », « le seul… c'est… ».",
+  modele("それができるの{は}彼[かれ]{くらいだ}。", "{Il n'y a guère que} lui {qui} en soit capable."));
+point("N3", "さあ", "Interjection : « allez ! », « bon ! » pour inviter à agir ; ou « eh bien… » quand on hésite.",
+  modele("{さあ}、行[い]こう。", "{Allez}, on y va."));
+point("N3", "〜さ (dans la phrase)", "さ glissé au milieu d'une phrase : petit mot de remplissage familier, « tu vois », « quoi ».",
+  modele("昨日[きのう]{さ}、変[へん]な夢[ゆめ]を見[み]たんだ。", "Hier, {tu vois}, j'ai fait un rêve bizarre."));
+point("N3", "〜さ (fin de phrase)", "さ en fin de phrase : affirmation familière et détachée, proche de よ.",
+  modele("大丈夫[だいじょうぶ]、何[なん]とかなる{さ}。", "T'inquiète, ça va s'arranger, {va}."));
+point("N3", "それぞれ", "« Chacun », « respectivement ».",
+  modele("人[ひと]には{それぞれ}考[かんが]えがある。", "{Chacun} a sa façon de penser."));
+point("N3", "そこで", "« Alors », « c'est pourquoi » : devant une situation, la mesure que l'on prend.",
+  modele("道[みち]が分[わ]からなかった。{そこで}、交番[こうばん]で聞[き]いた。", "Je ne connaissais pas le chemin. {Alors} j'ai demandé au poste de police."));
+point("N3", "〜てもかまわない", "« Cela ne fait rien si… », « vous pouvez… » : permission, un peu plus polie que 〜てもいい.",
+  modele("ここに{座[すわ]ってもかまいません}か。", "{Cela ne vous dérange pas si je m'assieds} ici ?"));
+point("N3", "〜ても〜なくても", "« Que… ou non » : le résultat est le même dans les deux cas.",
+  modele("{行[い]っても行[い]かなくても}同[おな]じだ。", "{Que j'y aille ou non}, c'est pareil."));
+point("N3", "〜んじゃない (interdiction)", "Verbe + んじゃない, sur un ton descendant : « ne fais pas ça ! » (familier, rude).",
+  modele("そんなことを{言[い]うんじゃない}。", "{Ne dis pas} des choses pareilles."));
+point("N3", "〜としたら / 〜とすれば / 〜とすると", "« À supposer que… », « si l'on admet que… ».",
+  modele("宝[たから]くじが{当[あ]たったとしたら}、何[なに]を買[か]う？", "{À supposer que tu gagnes} au loto, tu achètes quoi ?"));
+point("N3", "〜にしては", "« Pour… » : le résultat ne correspond pas à ce qu'on attendrait.",
+  modele("彼[かれ]は初[はじ]めて{にしては}上手[じょうず]だ。", "{Pour} une première fois, il se débrouille bien."));
+point("N3", "〜にしても", "« Même si… », « même pour… », « quand bien même… ».",
+  modele("冗談[じょうだん]{にしても}、ひどすぎる。", "{Même si} c'est une plaisanterie, c'est trop méchant."));
+point("N3", "〜というのは事実だ", "« C'est un fait que… ».",
+  modele("彼[かれ]が努力[どりょく]した{というのは事実[じじつ]だ}。", "{C'est un fait qu'}il a fait des efforts."));
+point("N3", "〜から言うと", "« Du point de vue de… », « si l'on en juge par… » (aussi から言えば, から言って).",
+  modele("結果[けっか]{から言[い]うと}、失敗[しっぱい]だった。", "{À en juger par} le résultat, c'était un échec."));
+point("N3", "〜ことから", "« Du fait que… », « c'est parce que… que… » : l'origine d'un nom ou le fondement d'un jugement.",
+  modele("富士山[ふじさん]が見[み]える{ことから}、この町[まち]は富士見[ふじみ]と呼[よ]ばれている。", "{Comme} on y voit le mont Fuji, cette ville s'appelle Fujimi."));
+point("N3", "さて", "« Bien », « bon, maintenant » : passer à un nouveau sujet.",
+  modele("{さて}、次[つぎ]の話[はなし]に移[うつ]りましょう。", "{Bien}, passons au sujet suivant."));
+point("N3", "むしろ", "« Plutôt », « au contraire » : entre deux choix, celui qui convient le mieux.",
+  modele("嫌[きら]いではない。{むしろ}好[す]きだ。", "Je ne déteste pas. J'aime {plutôt} ça, {même}."));
+point("N3", "つまり", "« Autrement dit », « bref », « en somme ».",
+  modele("父[ちち]の兄[あに]、{つまり}私[わたし]のおじです。", "Le frère aîné de mon père, {autrement dit} mon oncle."));
+point("N3", "すなわち", "« C'est-à-dire », « à savoir » (écrit, soutenu).",
+  modele("日本[にほん]の首都[しゅと]、{すなわち}東京[とうきょう]。", "La capitale du Japon, {à savoir} Tokyo."));
+point("N3", "かえって", "« Au contraire », « plutôt » : le résultat est l'inverse de celui qu'on attendait.",
+  modele("薬[くすり]を飲[の]んだら、{かえって}悪[わる]くなった。", "En prenant le médicament, ça a {au contraire} empiré."));
+point("N3", "〜ような気がする", "« Avoir l'impression que… ».",
+  modele("どこかで会[あ]った{ような気[き]がする}。", "{J'ai l'impression que} nous nous sommes déjà rencontrés quelque part."));
+point("N3", "とても〜ない", "とても + négation (souvent du potentiel) : « absolument pas », « impossible de… ».",
+  modele("こんなに{とても}食[た]べられ{ない}。", "Je {ne} pourrai {jamais} manger tout ça."));
+point("N3", "別に〜ない", "別に + négation : « pas particulièrement », « pas vraiment ».",
+  modele("{別[べつ]に}怒[おこ]ってい{ない}よ。", "Je {ne} suis {pas spécialement} fâché."));
+point("N3", "〜ではなくて / 〜じゃなくて", "« Non pas A, mais B ».",
+  modele("これは砂糖[さとう]{じゃなくて}、塩[しお]です。", "Ce {n'est pas} du sucre, {mais} du sel."));
+point("N3", "〜だけしか〜ない", "だけ et しか réunis pour insister : « rien d'autre que… », « seulement… ».",
+  modele("百円[ひゃくえん]{だけしか}持[も]ってい{ない}。", "Je {n'}ai {que} cent yens {en tout et pour tout}."));
+point("N3", "〜は言うまでもない", "« Il va sans dire que… », « inutile de dire que… ». En incise : 言うまでもなく.",
+  modele("健康[けんこう]が大切[たいせつ]なの{は言[い]うまでもない}。", "{Il va sans dire que} la santé est précieuse."));
+point("N3", "〜ようとしない", "Volitif + としない : « ne fait aucun effort pour… », « refuse de… ».",
+  modele("彼[かれ]は話[はなし]を{聞[き]こうとしない}。", "Il {ne veut rien entendre}."));
+point("N3", "もしかしたら / もしかして", "« Peut-être », « il se pourrait que… », souvent avec かもしれない.",
+  modele("{もしかしたら}、明日[あした]は雪[ゆき]かもしれない。", "{Il se pourrait qu'}il neige demain."));
+point("N3", "〜ことに", "Mot de sentiment + ことに : « à ma grande… », « chose…, … ».",
+  modele("{驚[おどろ]いたことに}、彼[かれ]はもう知[し]っていた。", "{À ma grande surprise}, il était déjà au courant."));
+point("N3", "〜ことか", "« Combien… ! », « que de… ! » : exclamation, souvent avec どんなに ou 何度.",
+  modele("この日[ひ]をどんなに{待[ま]ったことか}。", "{Combien j'ai attendu} ce jour !"));
+point("N3", "〜かというと", "« Si l'on demande pourquoi…, c'est que… » ; ou « s'il fallait dire…, ce serait plutôt… ».",
+  modele("なぜ好[す]き{かというと}、優[やさ]しいからだ。", "{Pourquoi} je l'aime ? Parce qu'il est gentil."));
+point("N3", "〜で言うと", "« En termes de… », « si on l'exprime en… ».",
+  modele("日本語[にほんご]{で言[い]うと}「ありがとう」です。", "{En} japonais, {cela se dit} « arigatō »."));
+point("N3", "〜ずつ", "Après une quantité : « … chacun », « … à la fois » ; 少しずつ : « petit à petit ».",
+  modele("一人[ひとり]{ずつ}入[はい]ってください。", "Entrez une personne {à la fois}."));
+point("N3", "ずっと (de loin)", "Devant un adjectif, dans une comparaison : « bien plus… », « de loin ».",
+  modele("こっちのほうが{ずっと}安[やす]い。", "Celui-ci est {bien} moins cher."));
+point("N3", "もっとも", "En début de phrase : « cela dit », « il est vrai que… » : nuancer ce qu'on vient de dire.",
+  modele("毎日[まいにち]走[はし]っている。{もっとも}、雨[あめ]の日[ひ]は休[やす]むが。", "Je cours tous les jours. {Cela dit}, les jours de pluie, je fais relâche."));
+point("N3", "再び", "« De nouveau », « une nouvelle fois » (plus soutenu que また).",
+  modele("{再[ふたた]び}この町[まち]に戻[もど]ってきた。", "Je suis revenu {une nouvelle fois} dans cette ville."));
+point("N3", "〜み", "Radical d'adjectif + み : en fait un nom qui exprime une qualité ressentie (痛み « la douleur », 楽しみ « le plaisir »).",
+  modele("この絵[え]には{温[あたた]かみ}がある。", "Ce tableau a {de la chaleur}."));
+point("N3", "〜と同じくらい", "« À peu près autant que… », « aussi… que… ».",
+  modele("弟[おとうと]は父[ちち]{と同[おな]じくらい}背[せ]が高[たか]い。", "Mon petit frère est {à peu près aussi} grand {que} mon père."));
+point("N3", "〜と同じで / 〜と違って", "« Comme… », « tout comme… » / « contrairement à… ».",
+  modele("兄[あに]{と違[ちが]って}、僕[ぼく]は運動[うんどう]が苦手[にがて]だ。", "{Contrairement à} mon grand frère, je ne suis pas doué en sport."));
+point("N3", "〜と並んで", "« Au même rang que… », « avec…, l'un des… » (formel).",
+  modele("京都[きょうと]は奈良[なら]{と並[なら]んで}古[ふる]い町[まち]だ。", "Kyoto est, {avec} Nara, une ville ancienne."));
+point("N3", "〜当たり", "Quantité + 当たり : « par… », « pour chaque… ».",
+  modele("一人[ひとり]{当[あ]たり}千円[せんえん]かかります。", "Cela coûte mille yens {par} personne."));
+point("N3", "〜に当たる", "« Correspondre à… », « équivaloir à… ».",
+  modele("一[いち]ドルは約[やく]百五十円[ひゃくごじゅうえん]{に当[あ]たる}。", "Un dollar {équivaut à} environ cent cinquante yens."));
+point("N3", "〜に限る", "« Rien ne vaut… », « le mieux, c'est… ».",
+  modele("夏[なつ]は冷[つめ]たいビール{に限[かぎ]る}。", "En été, {rien ne vaut} une bière fraîche."));
+point("N3", "〜わりに", "« Pour… », « par rapport à… » : le résultat ne correspond pas à ce que l'on attendrait.",
+  modele("この店[みせ]は安[やす]い{わりに}おいしい。", "{Pour} un restaurant bon marché, c'est bon."));
+point("N3", "〜そうもない", "Radical du verbe + そうもない : « il y a peu de chances que… ».",
+  modele("雨[あめ]は{止[や]みそうもない}。", "La pluie {n'a pas l'air près de s'arrêter}."));
+point("N3", "〜ないことはない", "Double négation : « ce n'est pas que… ne… pas », « ce n'est pas impossible ».",
+  modele("{食[た]べないことはない}が、あまり好[す]きではない。", "{Ce n'est pas que je n'en mange pas}, mais je n'aime pas trop ça."));
+point("N3", "〜と共に", "« Avec… », « en même temps que… », « à mesure que… ».",
+  modele("家族[かぞく]{と共[とも]に}日本[にほん]に来[き]た。", "Je suis venu au Japon {avec} ma famille."));
+point("N3", "直ちに", "« Immédiatement », « sur-le-champ » (formel).",
+  modele("{直[ただ]ちに}出発[しゅっぱつ]してください。", "Partez {immédiatement}."));
+point("N3", "〜おきに", "Quantité + おきに : « à intervalles de… », « un… sur deux ».",
+  modele("バスは十分[じゅっぷん]{おきに}来[き]ます。", "Le bus passe {toutes les} dix minutes."));
+point("N3", "あるいは", "« Ou bien » (formel) ; aussi « peut-être ».",
+  modele("電話[でんわ]{あるいは}メールで連絡[れんらく]してください。", "Contactez-nous par téléphone {ou} par e-mail."));
+point("N3", "〜ながらも", "« Bien que… », « tout en… » : concession.",
+  modele("{狭[せま]いながらも}、楽[たの]しい我[わ]が家[や]だ。", "{Si petite soit-elle}, notre maison est joyeuse."));
+point("N3", "第一", "« Premièrement », « avant tout » ; 〜第一だ : « … passe avant tout ».",
+  modele("安全[あんぜん]が{第一[だいいち]}だ。", "La sécurité {avant tout}."));
+point("N3", "ますます", "« De plus en plus », « toujours davantage ».",
+  modele("雨[あめ]が{ますます}強[つよ]くなった。", "La pluie est devenue {de plus en plus} forte."));
+point("N3", "ついに", "« Enfin », « finalement », après une longue attente.",
+  modele("{ついに}夢[ゆめ]がかなった。", "Mon rêve s'est {enfin} réalisé."));
+point("N3", "すでに", "« Déjà » (plus formel que もう).",
+  modele("会議[かいぎ]は{すでに}始[はじ]まっている。", "La réunion a {déjà} commencé."));
+point("N3", "〜ずにはいられない", "« Ne pas pouvoir s'empêcher de… ».",
+  modele("その話[はなし]を聞[き]いて、{笑[わら]わずにはいられなかった}。", "En entendant cette histoire, {je n'ai pas pu m'empêcher de rire}."));
+point("N3", "〜なし", "Nom + なし : « sans… » (なしで « sans », なしの + nom).",
+  modele("砂糖[さとう]{なしで}コーヒーを飲[の]む。", "Je bois mon café {sans} sucre."));
+point("N3", "〜あり", "« Il y a… », « avec… » ; en langage familier : « ça se fait », « c'est une option ».",
+  modele("それも{あり}だね。", "Ça aussi, {c'est possible}."));
+point("N3", "〜は考えられない", "« … est impensable », « on ne peut pas imaginer que… ».",
+  modele("彼[かれ]がうそをつくなんて{考[かんが]えられない}。", "Qu'il mente, c'est {impensable}."));
+point("N3", "必ずしも〜ない", "« Pas forcément », « pas toujours », avec わけではない ou とは限らない.",
+  modele("高[たか]い物[もの]が{必[かなら]ずしも}いいとは限[かぎ]ら{ない}。", "Ce qui est cher n'est {pas forcément} bon."));
+point("N3", "Forme conjonctive (連用形)", "À l'écrit, le radical en ます du verbe (ou la forme en く de l'adjectif) relie deux propositions, comme le ferait la forme en て.",
+  modele("春[はる]が{来[き]}、花[はな]が咲[さ]く。", "Le printemps {vient, et} les fleurs s'ouvrent."));
+point("N3", "〜上がる / 〜上げる", "Radical du verbe + 上がる (cela s'achève) / 上げる (on achève quelque chose) : mener à son terme.",
+  modele("ご飯[はん]が{炊[た]き上[あ]がった}。", "Le riz {est cuit}."));
+point("N3", "〜切れない", "Radical du verbe + 切れない : « ne pas pouvoir… jusqu'au bout », « ne pas arriver à tout… ».",
+  modele("料理[りょうり]が多[おお]すぎて、{食[た]べ切[き]れない}。", "Il y a trop à manger, {je n'arrive pas à tout finir}."));
+point("N3", "〜きり", "Après un nom ou un nombre : « seulement… ». Après un verbe au passé : « depuis que…, plus rien ».",
+  modele("彼[かれ]とは去年[きょねん]{会[あ]ったきり}だ。", "{Je ne l'ai pas revu depuis} l'an dernier."));
+point("N3", "〜たて", "Radical du verbe + たて : « tout juste… », « fraîchement… ».",
+  modele("{焼[や]きたて}のパンはおいしい。", "Le pain {tout juste sorti du four} est délicieux."));
+point("N3", "できれば / できたら", "« Si possible ».",
+  modele("{できれば}、明日[あした]までに返事[へんじ]をください。", "{Si possible}, répondez-moi d'ici demain."));
+point("N3", "〜でよければ", "« Si… vous convient », « si cela ne vous dérange pas que ce soit… ».",
+  modele("私[わたし]{でよければ}、手伝[てつだ]います。", "{Si je peux faire l'affaire}, je vous aide."));
+point("N3", "〜次第", "Radical du verbe + 次第 : « dès que… » (formel).",
+  modele("{分[わ]かり次第[しだい]}、ご連絡[れんらく]します。", "Je vous contacte {dès que je le sais}."));
+point("N3", "〜でもある", "« Être aussi… », « être en même temps… ».",
+  modele("彼[かれ]は医者[いしゃ]で、作家[さっか]{でもある}。", "Il est médecin, et {aussi} écrivain."));
+point("N3", "どうしても", "« À tout prix », « absolument » ; avec une négation : « malgré tous mes efforts, impossible de… ».",
+  modele("{どうしても}思[おも]い出[だ]せない。", "{J'ai beau faire}, je n'arrive pas à m'en souvenir."));
+point("N3", "〜同士", "Nom + 同士 : « entre… », personnes ou choses de même nature.",
+  modele("{友達[ともだち]同士[どうし]}で旅行[りょこう]する。", "Partir en voyage {entre amis}."));
+point("N3", "〜がたい", "Radical du verbe + がたい : « difficile à… », presque impossible moralement ou psychologiquement (soutenu).",
+  modele("それは{信[しん]じがたい}話[はなし]だ。", "C'est une histoire {difficile à croire}."));
+point("N3", "まさか", "« Jamais je n'aurais cru… », « ne me dis pas que… », « impossible ! ».",
+  modele("{まさか}彼[かれ]が犯人[はんにん]だとは思[おも]わなかった。", "{Jamais} je n'aurais pensé qu'il était le coupable."));
+point("N3", "前者は〜後者は", "« Le premier…, le second… » (écrit).",
+  modele("犬[いぬ]と猫[ねこ]がいる。{前者[ぜんしゃ]は}大[おお]きく、{後者[こうしゃ]は}小[ちい]さい。", "J'ai un chien et un chat. {Le premier} est grand, {le second} petit."));
+point("N3", "つい", "« Sans le vouloir », « malgré soi », souvent avec 〜てしまう.",
+  modele("{つい}食[た]べすぎてしまった。", "J'ai trop mangé, {c'était plus fort que moi}."));
+point("N3", "わざわざ", "« Exprès », « en se donnant la peine de… ».",
+  modele("{わざわざ}来[き]てくれてありがとう。", "Merci d'{avoir pris la peine} de venir."));
+point("N3", "一体", "Devant un mot interrogatif : « mais enfin », « diable », « au juste ».",
+  modele("{一体[いったい]}何[なに]があったの？", "{Mais enfin}, que s'est-il passé ?"));
+point("N3", "せっかく", "« Avec tant de peine », « pour une fois que… » : un effort ou une occasion rare, qu'il serait dommage de gâcher.",
+  modele("{せっかく}作[つく]ったのに、誰[だれ]も食[た]べなかった。", "Je m'étais {donné du mal} pour cuisiner, et personne n'a mangé."));
+point("N3", "〜に代わって", "« À la place de… », « au nom de… ».",
+  modele("父[ちち]{に代[か]わって}、私[わたし]が出席[しゅっせき]します。", "J'y assisterai {à la place de} mon père."));
+point("N3", "〜どころか", "« Loin de… », « bien au contraire ».",
+  modele("涼[すず]しい{どころか}、寒[さむ]いくらいだ。", "{Loin d'}être frais, il fait presque froid."));
+point("N3", "〜という理由で", "« Pour la raison que… », « au motif que… ».",
+  modele("高[たか]い{という理由[りゆう]で}、買[か]うのをやめた。", "J'ai renoncé à l'acheter {parce que} c'était cher."));
+point("N3", "〜となっている", "« Il est établi que… », « … est fixé à… » (formel, règles et annonces).",
+  modele("館内[かんない]は禁煙[きんえん]{となっております}。", "Il {est} interdit de fumer dans le bâtiment."));
+point("N3", "〜を左右する", "« Influer sur… », « décider de… ».",
+  modele("天気[てんき]は気分[きぶん]{を左右[さゆう]する}。", "Le temps {influe sur} l'humeur."));

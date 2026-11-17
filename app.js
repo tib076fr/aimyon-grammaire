@@ -161,7 +161,7 @@ function noter(point) {
   if (/^[a-zāīūēōâîûêô\s\-']+$/.test(texteCherche)) {
     const cherche = simplifierRomaji(texteCherche);
     const mots = romajiDuTitre(point.titre).split(" ").map(simplifierRomaji);
-    const titreEntier = simplifierRomaji(kanaVersRomaji(point.titre));
+    const titreEntier = simplifierRomaji(kanaVersRomaji(lectureDuTitre(point.titre)));
     // Une ou deux lettres ("wa", "ni") : il faut le mot exact, sinon trop de bruit
     if (mots.includes(cherche)) return 3; // le mot exact : tout en haut
     if (cherche.length <= 2) return 0;

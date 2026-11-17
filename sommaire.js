@@ -10,8 +10,8 @@ const etat = {
   texte: "",
 };
 
-const NIVEAUX = ["N5", "N4", "N3", "N2"];
-const NOMS_NIVEAUX = { N5: "Débutant", N4: "Élémentaire", N3: "Intermédiaire", N2: "Avancé" };
+const NIVEAUX = ["N5", "N4", "N3", "N2", "N1"];
+const NOMS_NIVEAUX = { N5: "Débutant", N4: "Élémentaire", N3: "Intermédiaire", N2: "Avancé", N1: "Expert" };
 
 const zoneResultats = document.getElementById("resultats");
 const compteurSommaire = document.getElementById("compteur-sommaire");
@@ -41,7 +41,7 @@ function noterRecherche(point) {
     const mots = romajiDuTitre(point.titre).split(" ").map(simplifierRomaji);
     if (mots.includes(simple)) return 3;
     if (simple.length > 2 && (mots.some((m) => m.startsWith(simple)) ||
-        simplifierRomaji(kanaVersRomaji(point.titre)).includes(simple))) return 2;
+        simplifierRomaji(kanaVersRomaji(lectureDuTitre(point.titre))).includes(simple))) return 2;
   }
   if (sansAccents(point.titre.toLowerCase()).includes(cherche)) return 2;
   const texte = sansAccents([point.resume, CATEGORIE_DE[point.titre] || "", ...chansonsDe(point)].join(" ").toLowerCase());
