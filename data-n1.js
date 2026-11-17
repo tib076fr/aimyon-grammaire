@@ -112,7 +112,7 @@ point("N1", "〜にまつわる", "« Lié à… », « qui entoure… » (histo
   modele("この池[いけ]{にまつわる}話[はなし]を聞[き]いた。", "J'ai entendu une histoire {liée à} cet étang."));
 point("N1", "〜たる", "Nom + たる + nom : « en sa qualité de… », « digne du nom de… » (formel).",
   modele("教師[きょうし]{たる}者[もの]、学生[がくせい]の手本[てほん]であるべきだ。", "{Qui se dit} enseignant doit être un modèle pour ses élèves."));
-point("N1", "〜なら〜で / 〜たら〜たで", "Le même mot répété : « si…, eh bien soit, mais… », « même dans ce cas… ».",
+point("N1", "〜なら〜で / 〜たら〜たで", "Le même mot répété : « si…, alors au moins… », « quitte à… , autant… » : exprime souvent le mécontentement de celui qui parle. 〜たら〜たで : « même si… ».",
   modele("{行[い]かないなら行[い]かないで}、連絡[れんらく]ぐらいしてほしい。", "{Si tu ne viens pas, soit}, mais préviens-moi au moins."));
 point("N1", "〜をものともせず", "« Sans se laisser arrêter par… », « au mépris de… ».",
   modele("彼[かれ]は雨[あめ]{をものともせず}、走[はし]り続[つづ]けた。", "Il a continué à courir {sans se soucier de} la pluie."));
@@ -168,9 +168,9 @@ point("N1", "〜くもなんともない", "Adjectif en い à la forme く + �
   modele("そんな話[はなし]は{面白[おもしろ]くもなんともない}。", "Cette histoire {n'a strictement rien de drôle}."));
 point("N1", "〜ぐるみ", "Nom + ぐるみ : « … tout entier », « à l'échelle de tout… ».",
   modele("{家族[かぞく]ぐるみ}で付[つ]き合[あ]っている。", "Nos {deux familles entières} se fréquentent."));
-point("N1", "〜そばから", "« À peine… que (déjà)… » : cela se répète chaque fois.",
+point("N1", "〜そばから", "« À peine… que (déjà)… » : ce qui suit est le plus souvent fâcheux, ou réduit à néant ce qu'on vient de faire.",
   modele("{聞[き]いたそばから}忘[わす]れてしまう。", "{À peine l'ai-je entendu que} je l'oublie."));
-point("N1", "訳あり", "« Qui a ses raisons », « avec une histoire particulière » ; pour un article : « à défaut ».",
+point("N1", "訳あり", "« Qui a ses raisons », « pour des raisons que l'on ne précise pas » : souvent un euphémisme (un article « à défaut », par exemple).",
   modele("彼[かれ]は{訳[わけ]あり}で、町[まち]を出[で]た。", "Il a quitté la ville {pour des raisons bien à lui}."));
 point("N1", "〜に至って", "« Ce n'est qu'arrivé à… que… », « quand on en est venu à… ».",
   modele("事故[じこ]が起[お]きる{に至[いた]って}、やっと対策[たいさく]が取[と]られた。", "{Il a fallu} un accident {pour qu'}on prenne enfin des mesures."));
@@ -190,7 +190,7 @@ point("N1", "〜でなくてなんだろう", "« Si ce n'est pas…, qu'est-ce 
   modele("これが愛[あい]{でなくてなんだろう}。", "{Si ce n'est pas} de l'amour, {qu'est-ce donc} ?"));
 point("N1", "〜はさておき", "« Laissons de côté… », « … mis à part ».",
   modele("冗談[じょうだん]{はさておき}、本題[ほんだい]に入[はい]りましょう。", "Trêve de plaisanterie, venons-en au sujet."));
-point("N1", "〜折(に)", "« À l'occasion de… », « lorsque… » (formel, poli).",
+point("N1", "〜折(に)", "« À l'occasion de… », « lorsque… » : équivalent formel de 〜時に.",
   modele("東京[とうきょう]へお越[こ]しの{折[おり]には}、ぜひお寄[よ]りください。", "{Lorsque} vous viendrez à Tokyo, passez donc nous voir."));
 point("N1", "〜とばかり(に)", "« Comme pour dire… », « l'air de dire… ».",
   modele("彼[かれ]は「帰[かえ]れ」{とばかりに}、ドアを開[あ]けた。", "Il a ouvert la porte, {comme pour dire} : « Va-t'en. »"));
@@ -240,11 +240,11 @@ point("N1", "〜というところだ / 〜といったところだ", "« Je dir
   modele("駅[えき]まで歩[ある]いて十分[じゅっぷん]{というところだ}。", "À pied jusqu'à la gare, {disons} dix minutes."));
 point("N1", "〜たりとも〜ない", "Un + compteur + たりとも + négation : « pas même un seul… » (formel).",
   modele("一秒[いちびょう]{たりとも}無駄[むだ]にでき{ない}。", "On ne peut {pas} gaspiller {ne serait-ce qu'}une seconde."));
-point("N1", "〜といったらない / 〜ったらない", "« … à un point indescriptible », « je ne vous dis pas… » (ったらありゃしない : familier, plutôt négatif).",
+point("N1", "〜といったらない / 〜ったらない", "« … à un point indescriptible », « je ne vous dis pas… » : expression familière, en bien comme en mal (aussi ったらありゃしない).",
   modele("その時[とき]のうれしさ{といったらなかった}。", "Ma joie à ce moment-là, {je ne saurais la décrire}."));
-point("N1", "〜に照らして", "« À la lumière de… », « au regard de… » (formel).",
+point("N1", "〜に照らして", "« À la lumière de… », « au regard de… ».",
   modele("法律[ほうりつ]{に照[て]らして}判断[はんだん]する。", "Juger {au regard de} la loi."));
-point("N1", "〜とあれば", "« S'il s'agit de… », « si c'est pour… » : dans ce cas précis, on est prêt à le faire.",
+point("N1", "〜とあれば", "« S'il s'agit de… », « si c'est pour… » : une circonstance particulière, devant laquelle on ne peut pas faire autrement.",
   modele("子供[こども]のため{とあれば}、何[なん]でもする。", "{Si c'est} pour mon enfant, je ferai n'importe quoi."));
 point("N1", "さぞ", "さぞ(かし) … だろう : « comme vous devez… ! », « j'imagine combien… ».",
   modele("{さぞ}お疲[つか]れでしょう。", "Vous {devez} être {bien} fatigué."));
@@ -300,7 +300,7 @@ point("N1", "〜にかこつけて", "« Sous prétexte de… ».",
   modele("仕事[しごと]{にかこつけて}、旅行[りょこう]に行[い]った。", "Il est parti en voyage {sous prétexte de} travail."));
 point("N1", "〜ようによっては", "Radical du verbe + ようによっては : « selon la façon de… ».",
   modele("{考[かんが]えようによっては}、これもいい経験[けいけん]だ。", "{Selon la façon de voir}, c'est aussi une bonne expérience."));
-point("N1", "〜べくもない", "« Impossible de… », « il n'y a pas lieu de… » (formel).",
+point("N1", "〜べくもない", "« Impossible de… », « aucun espoir de… ».",
   modele("プロの技術[ぎじゅつ]には{比[くら]べるべくもない}。", "{Impossible de comparer} avec la technique d'un professionnel."));
 point("N1", "〜ものとして", "« En considérant que… », « en partant du principe que… ».",
   modele("彼[かれ]は来[こ]ない{ものとして}、準備[じゅんび]を進[すす]める。", "Nous préparons tout {en partant du principe qu'}il ne viendra pas."));
@@ -326,17 +326,17 @@ point("N1", "〜を限りに", "« À compter de… (et plus après) » : marque
   modele("今日[きょう]{を限[かぎ]りに}、タバコをやめる。", "{À partir d'}aujourd'hui, j'arrête de fumer."));
 point("N1", "〜てはかなわない", "« Je ne supporterais pas que… », « c'est insupportable quand… ».",
   modele("毎日[まいにち]こう{暑[あつ]くてはかなわない}。", "{Une telle chaleur} tous les jours, {c'est insupportable}."));
-point("N1", "〜かたがた", "« En même temps que… », « par la même occasion » (formel, visites et lettres).",
+point("N1", "〜かたがた", "« En même temps que… », « par la même occasion » (formel, surtout à l'écrit).",
   modele("お礼[れい]{かたがた}、ご挨拶[あいさつ]に伺[うかが]いました。", "Je suis venu vous saluer {et, par la même occasion,} vous remercier."));
-point("N1", "〜てやる", "« Je vais te… , tu vas voir ! » : résolution ou menace ; aussi « faire… pour » un inférieur ou un animal.",
+point("N1", "〜てやる", "« Je vais… , tu vas voir ! » : ferme volonté ; aussi « faire… pour quelqu'un », d'un ton condescendant.",
   modele("絶対[ぜったい]に{勝[か]ってやる}。", "{Je gagnerai}, coûte que coûte."));
 point("N1", "ただ〜のみ", "« Il ne reste qu'à… », « seulement… » (formel).",
   modele("今[いま]は{ただ}祈[いの]る{のみ}だ。", "À présent, {il ne reste qu'à} prier."));
 point("N1", "〜ものとする", "« Il est entendu que… », « … devra… » (contrats, règlements).",
   modele("利用者[りようしゃ]は規則[きそく]を守[まも]る{ものとする}。", "L'usager {est tenu de} respecter le règlement."));
-point("N1", "〜との", "Phrase + との + nom : « … selon lequel… », « … disant que… » (formel).",
+point("N1", "〜との", "Phrase + との + nom : « … selon lequel… », « … disant que… » (連絡, 報告, 依頼…).",
   modele("明日[あした]来[く]る{との}連絡[れんらく]があった。", "J'ai reçu un message {disant qu'}il viendrait demain."));
-point("N1", "〜以前", "« Avant même… » : la question ne se pose même pas à ce niveau.",
+point("N1", "〜以前", "« Avant même… » : le minimum requis n'est même pas atteint (sert à critiquer).",
   modele("それは能力[のうりょく]{以前[いぜん]}の問題[もんだい]だ。", "Le problème se situe {bien en amont} des compétences."));
 point("N1", "〜ともあろう", "Nom + ともあろう者 (人, 方) : « quelqu'un d'aussi… que… », « un… , tout de même ! ».",
   modele("先生[せんせい]{ともあろう}人[ひと]が、そんなことを言[い]うとは。", "Qu'{une personne comme} un professeur dise une chose pareille…"));

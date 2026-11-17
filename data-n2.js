@@ -80,13 +80,13 @@ point("N2", "〜以上に", "« Plus que… », « au-delà de… ».",
   modele("思[おも]った{以上[いじょう]に}難[むずか]しかった。", "C'était {plus} difficile {que} je ne pensais."));
 point("N2", "〜途中で", "« En chemin », « au beau milieu de… ».",
   modele("学校[がっこう]に行[い]く{途中[とちゅう]で}、先生[せんせい]に会[あ]った。", "{En allant} à l'école, j'ai rencontré le professeur."));
-point("N2", "〜中を", "Nom + の中を : « sous… », « à travers… », « au milieu de… » (le cadre dans lequel on se déplace).",
+point("N2", "〜中を", "Nom + の中を : « dans… », « à l'intérieur de… », « au milieu de… » : le lieu ou le cadre où se déroule l'action.",
   modele("雨[あめ]の{中[なか]を}歩[ある]いて帰[かえ]った。", "Je suis rentré à pied {sous} la pluie."));
 point("N2", "〜のもとで", "« Sous… » (la direction, la protection, la condition de…).",
   modele("有名[ゆうめい]な先生[せんせい]{のもとで}勉強[べんきょう]した。", "J'ai étudié {sous la direction d'}un professeur célèbre."));
 point("N2", "あと〜 (restant)", "あと + quantité : « encore… », « plus que… » ; あとの + nom : « le reste de… ».",
   modele("{あと}五分[ごふん]で着[つ]きます。", "J'arrive dans cinq minutes {encore}."));
-point("N2", "〜手前", "« Juste avant… », « en deçà de… » (lieu) ; aussi « puisque j'ai… devant quelqu'un, je ne peux pas… ».",
+point("N2", "〜手前", "Après un nom : « juste avant… », « devant… ». Après un verbe : « maintenant que… », « dans la situation où… » (il ne reste qu'à en tirer les conséquences).",
   modele("銀行[ぎんこう]の{手前[てまえ]}で止[と]まってください。", "Arrêtez-vous {juste avant} la banque."));
 point("N2", "〜をめぐって", "« Autour de… », « au sujet de… » : ce qui fait l'objet d'un débat ou d'un conflit.",
   modele("その問題[もんだい]{をめぐって}、意見[いけん]が分[わ]かれた。", "Les avis se sont partagés {au sujet de} ce problème."));
@@ -114,7 +114,7 @@ point("N2", "〜に気をつける", "« Faire attention à… ».",
   modele("車[くるま]{に気[き]をつけて}ください。", "{Faites attention aux} voitures."));
 point("N2", "〜もかまわず", "« Sans se soucier de… ».",
   modele("人目[ひとめ]{もかまわず}、泣[な]いた。", "J'ai pleuré {sans me soucier du} regard des autres."));
-point("N2", "〜かねる", "Radical du verbe + かねる : « ne pas pouvoir… », « avoir du mal à… » (refus poli, formel).",
+point("N2", "〜かねる", "Radical du verbe + かねる : « ne pas pouvoir… », « avoir du mal à… » (formel et poli, courant dans le monde professionnel).",
   modele("その質問[しつもん]には{お答[こた]えしかねます}。", "{Je ne suis pas en mesure de répondre} à cette question."));
 point("N2", "〜かねない", "Radical du verbe + かねない : « risquer de… », « être bien capable de… » (issue fâcheuse).",
   modele("そんなに働[はたら]いたら、病気[びょうき]に{なりかねない}。", "À travailler autant, {tu risques de tomber} malade."));
@@ -124,7 +124,7 @@ point("N2", "〜にかかわらず", "« Indépendamment de… », « que… ou 
   modele("天気[てんき]{にかかわらず}、試合[しあい]は行[おこな]われる。", "Le match aura lieu {quel que soit} le temps."));
 point("N2", "〜にもかかわらず", "« Malgré… », « bien que… ».",
   modele("雨[あめ]{にもかかわらず}、大勢[おおぜい]の人[ひと]が集[あつ]まった。", "{Malgré} la pluie, beaucoup de monde s'est rassemblé."));
-point("N2", "〜に限って", "« Justement quand… », « comme par hasard… » ; « s'il y en a un qui ne… pas, c'est bien… ».",
+point("N2", "〜に限って", "Trois emplois : « justement quand… » (cela se vérifie presque toujours) ; « seulement… » (limité à) ; « s'il y en a un qui ne ferait pas cela, c'est bien… ».",
   modele("急[いそ]いでいる時[とき]{に限[かぎ]って}、バスが来[こ]ない。", "{C'est justement quand} on est pressé {que} le bus ne vient pas."));
 point("N2", "〜に限らず", "« Pas seulement… », « sans se limiter à… ».",
   modele("この歌[うた]は若者[わかもの]{に限[かぎ]らず}、誰[だれ]にでも人気[にんき]がある。", "Cette chanson plaît à tout le monde, {pas seulement} aux jeunes."));
@@ -150,11 +150,11 @@ point("N2", "〜なくはない", "Double négation : « ce n'est pas que… ne�
   modele("気持[きも]ちは{分[わ]からなくはない}。", "{Ce n'est pas que je ne comprenne pas} ce que tu ressens."));
 point("N2", "〜ないことには〜ない", "« Tant qu'on ne… pas, on ne… pas », « à moins de… ».",
   modele("{食[た]べてみないことには}、味[あじ]は分[わ]から{ない}。", "{Tant qu'on n'a pas goûté}, on {ne} peut {pas} connaître le goût."));
-point("N2", "〜ないではいられない", "« Ne pas pouvoir s'empêcher de… » (équivalent plus courant de 〜ずにはいられない).",
+point("N2", "〜ないではいられない", "« Ne pas pouvoir s'empêcher de… » (presque synonyme de 〜ずにはいられない).",
   modele("その歌[うた]を聞[き]くと、{泣[な]かないではいられない}。", "Quand j'entends cette chanson, {je ne peux pas m'empêcher de pleurer}."));
 point("N2", "〜ねばならない", "« Devoir… » : forme écrite et vieillie de 〜なければならない (する → せねばならない).",
   modele("約束[やくそく]は{守[まも]らねばならない}。", "Une promesse {doit être tenue}."));
-point("N2", "〜たまえ", "Radical du verbe + たまえ : ordre adressé à un inférieur, d'un ton masculin et vieilli.",
+point("N2", "〜たまえ", "Radical du verbe + たまえ : ordre adressé à quelqu'un de rang inférieur, employé surtout par les hommes.",
   modele("まあ、{座[すわ]りたまえ}。", "Allons, {asseyez-vous}."));
 point("N2", "〜のうち(で)", "« Parmi… », « sur… » (un ensemble dans lequel on choisit).",
   modele("三人[さんにん]{のうちで}、誰[だれ]が一番[いちばん]若[わか]いですか。", "{Des} trois, qui est le plus jeune ?"));
@@ -238,9 +238,9 @@ point("N2", "それとも", "« Ou bien » : dans une question qui propose deux 
   modele("コーヒーにしますか。{それとも}、紅茶[こうちゃ]にしますか。", "Vous prenez un café ? {Ou bien} un thé ?"));
 point("N2", "〜にしたら / 〜にすれば", "« Du point de vue de… », « pour… » (en se mettant à la place de quelqu'un).",
   modele("親[おや]{にしたら}、心配[しんぱい]なのは当[あ]たり前[まえ]だ。", "{Pour} des parents, il est normal de s'inquiéter."));
-point("N2", "〜にしても〜にしても / 〜にしろ〜にしろ", "« Que ce soit… ou… », « que… ou que… » (にせよ est plus formel).",
+point("N2", "〜にしても〜にしても / 〜にしろ〜にしろ", "« Que ce soit… ou… », « que… ou que… ». 〜にしろ et 〜にせよ, plus directs, s'emploient moins en situation formelle.",
   modele("行[い]く{にしても}行[い]かない{にしても}、連絡[れんらく]してください。", "{Que} vous veniez {ou non}, prévenez-moi."));
-point("N2", "〜にせよ / 〜にしろ", "« Même si… », « quel que soit… » : équivalents plus formels de 〜にしても.",
+point("N2", "〜にせよ / 〜にしろ", "« Même si… », « quel que soit… » : proches de 〜にしても, en plus direct.",
   modele("どんな理由[りゆう]がある{にせよ}、暴力[ぼうりょく]はいけない。", "{Quelle que soit} la raison, la violence est inadmissible."));
 point("N2", "〜としては", "« En tant que… », « pour ce qui est de… », « de mon côté ».",
   modele("私[わたし]{としては}、反対[はんたい]です。", "{Pour ma part}, je suis contre."));
@@ -254,7 +254,7 @@ point("N2", "〜にて", "Équivalent formel et écrit de で (lieu, moyen).",
   modele("会議[かいぎ]は東京[とうきょう]{にて}行[おこな]われます。", "La conférence se tiendra {à} Tokyo."));
 point("N2", "〜には (pour)", "Verbe + には : « pour… », « si l'on veut… ».",
   modele("駅[えき]へ{行[い]くには}、このバスが便利[べんり]です。", "{Pour aller} à la gare, ce bus est pratique."));
-point("N2", "思うように", "« Comme on le souhaite », « comme prévu » (souvent avec une négation).",
+point("N2", "思うように", "« Comme on le souhaite », « comme prévu » : dit si l'attente a été satisfaite ou non.",
   modele("{思[おも]うように}体[からだ]が動[うご]かない。", "Mon corps ne répond pas {comme je le voudrais}."));
 point("N2", "〜かと思うと / 〜かと思ったら", "« À peine… que… », « on croit que… et voilà que… ».",
   modele("泣[な]いた{かと思[おも]うと}、もう笑[わら]っている。", "{À peine} a-t-il pleuré {qu'}il rit déjà."));
@@ -286,7 +286,7 @@ point("N2", "そういえば", "« Au fait », « maintenant que j'y pense », �
   modele("{そういえば}、明日[あした]は彼[かれ]の誕生日[たんじょうび]だ。", "{Au fait}, demain, c'est son anniversaire."));
 point("N2", "お〜願う", "お + radical du verbe (ou ご + nom) + 願います : « veuillez… » (demande formelle, annonces).",
   modele("少々[しょうしょう]{お待[ま]ち願[ねが]います}。", "{Veuillez patienter} un instant."));
-point("N2", "〜てちょうだい", "« S'il te plaît, … » : demande familière, plutôt féminine ou adressée à un enfant.",
+point("N2", "〜てちょうだい", "« S'il te plaît, … » : demande informelle, par exemple en famille ; parfois perçue comme plus féminine que 〜てください.",
   modele("ちょっと{手伝[てつだ]ってちょうだい}。", "{Aide-moi} un peu, {s'il te plaît}."));
 point("N2", "〜とか (ouï-dire)", "En fin de phrase : « il paraît que… », « à ce qu'on dit » (information dont on n'est pas sûr).",
   modele("来月[らいげつ]、新[あたら]しい店[みせ]ができる{とか}。", "{Il paraît qu'}une nouvelle boutique ouvre le mois prochain."));
@@ -330,7 +330,7 @@ point("N2", "幸い / 幸いなことに", "« Heureusement », « par chance »
   modele("{幸[さいわ]い}、けがはなかった。", "{Heureusement}, personne n'a été blessé."));
 point("N2", "〜ようでは", "« Si tu en es à… », « si les choses en sont là… », suivi d'un jugement négatif (familier : ようじゃ).",
   modele("こんな問題[もんだい]ができない{ようでは}、合格[ごうかく]は難[むずか]しい。", "{Si tu n'arrives pas} à résoudre un problème pareil, tu auras du mal à réussir."));
-point("N2", "さすが", "« Comme on pouvait s'y attendre de… », « c'est bien digne de… » ; さすがに : « tout de même ».",
+point("N2", "さすが", "« Comme on pouvait s'y attendre de… », « c'est bien digne de… » ; plus rarement, avec une nuance négative : « même… ».",
   modele("{さすが}プロだ。上手[じょうず]だね。", "{On reconnaît bien là} un professionnel. Quel talent !"));
 point("N2", "〜ことは〜が", "Le même mot répété de part et d'autre de ことは : « pour ce qui est de…, oui, mais… ».",
   modele("{読[よ]んだことは読[よ]んだが}、よく分[わ]からなかった。", "{Pour l'avoir lu, je l'ai lu, mais} je n'ai pas bien compris."));
@@ -368,13 +368,13 @@ point("N2", "何といっても", "« Quoi qu'on en dise », « avant tout ».",
   modele("夏[なつ]は{何[なん]といっても}海[うみ]だ。", "L'été, {quoi qu'on en dise}, c'est la mer."));
 point("N2", "〜か何か", "« … ou quelque chose comme ça ».",
   modele("お茶[ちゃ]{か何[なに]か}飲[の]みませんか。", "Vous ne voulez pas un thé {ou quelque chose} ?"));
-point("N2", "〜てならない", "« Ne pas pouvoir s'empêcher de… », « terriblement… » : un sentiment qui s'impose (plus formel que てたまらない).",
+point("N2", "〜てならない", "« Ne pas pouvoir s'empêcher de… », « terriblement… » : un sentiment qui s'impose de lui-même et qui dure.",
   modele("試験[しけん]の結果[けっか]が{気[き]になってならない}。", "Le résultat de l'examen {m'obsède}."));
 point("N2", "〜のみ", "« Seulement », « uniquement » : équivalent formel de だけ.",
   modele("会員[かいいん]{のみ}入[はい]れます。", "{Seuls} les membres peuvent entrer."));
 point("N2", "〜のみならず", "« Non seulement…, mais aussi… » (formel).",
   modele("彼女[かのじょ]は日本[にほん]{のみならず}、海外[かいがい]でも有名[ゆうめい]だ。", "Elle est célèbre {non seulement} au Japon, {mais} aussi à l'étranger."));
-point("N2", "それなのに", "« Et pourtant », « malgré cela » (souvent avec reproche ou surprise).",
+point("N2", "それなのに", "« Et pourtant », « malgré cela » (souvent avec surprise).",
   modele("一生懸命[いっしょうけんめい]勉強[べんきょう]した。{それなのに}、不合格[ふごうかく]だった。", "J'ai travaillé d'arrache-pied. {Et pourtant}, j'ai échoué."));
 point("N2", "いわゆる", "Devant un nom : « ce qu'on appelle… », « le fameux… », « soi-disant ».",
   modele("彼[かれ]は{いわゆる}天才[てんさい]だ。", "Il est {ce qu'on appelle} un génie."));
@@ -390,7 +390,7 @@ point("N2", "〜はともかく", "« Laissons de côté… », « … passe enc
   modele("値段[ねだん]{はともかく}、デザインは好[す]きだ。", "{Laissons de côté} le prix : j'aime le design."));
 point("N2", "〜ならともかく", "« Si c'était…, passe encore, mais… ».",
   modele("子供[こども]{ならともかく}、大人[おとな]がそんなことをするとは。", "{Un enfant, passe encore, mais} qu'un adulte fasse cela…"));
-point("N2", "〜やら〜やら", "« … et…, et que sais-je encore » : énumération d'exemples, souvent pêle-mêle.",
+point("N2", "〜やら〜やら", "« … et…, et ainsi de suite » : énumération d'exemples parmi d'autres.",
   modele("宿題[しゅくだい]{やら}試験[しけん]{やら}で、今週[こんしゅう]は忙[いそが]しい。", "{Entre} les devoirs {et} les examens, cette semaine est chargée."));
 point("N2", "しかしながら", "« Cependant », « néanmoins » (formel).",
   modele("計画[けいかく]はよい。{しかしながら}、お金[かね]が足[た]りない。", "Le projet est bon. {Cependant}, l'argent manque."));

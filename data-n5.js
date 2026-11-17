@@ -290,7 +290,7 @@ point("N5", "の (nom sous-entendu)", "の remplace un nom déjà mentionné : �
   modele("この傘[かさ]は私[わたし]{の}です。", "Ce parapluie est {le mien}."));
 point("N5", "けっこう", "Adverbe : « assez », « plutôt », « pas mal ». けっこうです sert aussi à refuser poliment.",
   modele("このケーキは{けっこう}おいしい。", "Ce gâteau est {plutôt} bon."));
-point("N5", "たくさん", "« Beaucoup », « plein de ». Se place souvent juste avant le verbe.",
+point("N5", "たくさん", "« Beaucoup », « plein de ». S'emploie devant une phrase, ou devant un nom avec の.",
   modele("本[ほん]を{たくさん}読[よ]みました。", "J'ai lu {beaucoup} de livres."));
 point("N5", "〜くらい (environ)", "Après un nombre ou une durée : « environ », « à peu près ». ぐらい est une variante équivalente.",
   modele("駅[えき]まで十分[じゅっぷん]{くらい}かかります。", "Il faut {environ} dix minutes jusqu'à la gare."));

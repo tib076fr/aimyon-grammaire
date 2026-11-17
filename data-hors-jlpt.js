@@ -5,27 +5,27 @@
 
 point("Hors JLPT", "〜ぞ / 〜ぜ", "Particules finales d'emphase, familières et plutôt masculines : ぞ affirme avec force, ぜ est plus complice.",
   modele("さあ、{行[い]くぞ}。", "Allez, {on y va} !"));
-point("Hors JLPT", "〜わ", "Particule finale d'emphase légère : exprime l'émotion ou l'avis de celui qui parle (ton montant : plutôt féminin ; ton descendant : courant dans le Kansai).",
+point("Hors JLPT", "〜わ", "Particule finale d'emphase : « tu sais », « vraiment ». Employée surtout par les femmes, mais les hommes peuvent aussi s'en servir.",
   modele("今日[きょう]は疲[つか]れた{わ}。", "Je suis fatiguée aujourd'hui, {tu sais}."));
-point("Hors JLPT", "〜かい / 〜だい", "い adoucit か et だ en fin de question familière (かい, だい).",
+point("Hors JLPT", "〜かい / 〜だい", "い ajoute une note de familiarité à か et だ en fin de phrase (かい, だい) ; employé surtout par les hommes, envers quelqu'un de rang inférieur.",
   modele("どうしたん{だい}？", "Qu'est-ce qui t'arrive, {dis} ?"));
 point("Hors JLPT", "〜ん (contraction)", "À l'oral, ら, り, る, れ, ろ et の se contractent souvent en ん (分からない → 分かんない).",
   modele("全然[ぜんぜん]{分[わ]かんない}。", "Je {comprends} rien du tout."));
 point("Hors JLPT", "〜っつう / 〜っつった", "Contraction très familière de という, といった.",
   modele("無理[むり]だ{っつってん}だろ。", "Je te {dis que} c'est impossible !"));
-point("Hors JLPT", "〜やがる", "Radical du verbe (ou forme en て) + やがる : mépris ou colère envers celui qui agit (très rude).",
+point("Hors JLPT", "〜やがる", "Radical du verbe (ou forme en て) + やがる : exprime le mépris ou l'indignation devant l'action de quelqu'un, « avoir le culot de… » (familier, surtout masculin).",
   modele("あいつ、また{遅刻[ちこく]しやがった}。", "Ce type, il {a encore eu le culot d'arriver en retard}."));
-point("Hors JLPT", "〜がいい", "Verbe au dictionnaire + がいい : « tu n'as qu'à… », « fais donc… » (ton vieilli, souvent une malédiction ou un souhait).",
+point("Hors JLPT", "〜がいい", "Verbe au dictionnaire + がいい : « tu feras bien de… », presque un ordre donné de haut. Rare dans la vie réelle : ton de roi ou d'empereur, magnanime ou pompeux.",
   modele("好[す]きに{するがいい}。", "{Fais donc} comme il te plaît."));
-point("Hors JLPT", "〜かろう", "Adjectif en い → 〜かろう : conjecture classique, « ce doit être… » (équivalent de 〜いだろう).",
+point("Hors JLPT", "〜かろう", "Adjectif en い → 〜かろう : tournure vieillie, de même sens que 〜いだろう ; ne s'entend plus guère que dans les fictions.",
   modele("さぞ{寒[さむ]かろう}。", "Il {doit faire bien froid}."));
-point("Hors JLPT", "やや", "« Un peu », « légèrement » (formel).",
+point("Hors JLPT", "やや", "« Un peu », « légèrement ».",
   modele("今日[きょう]は昨日[きのう]より{やや}暖[あたた]かい。", "Aujourd'hui, il fait {légèrement} plus doux qu'hier."));
 point("Hors JLPT", "いずれも", "« Tous », « l'un comme l'autre » ; avec une négation : « aucun ».",
   modele("三[みっ]つの作品[さくひん]は{いずれも}すばらしい。", "Les trois œuvres sont {toutes} remarquables."));
 point("Hors JLPT", "あわよくば", "« Avec un peu de chance », « si l'occasion se présente ».",
   modele("{あわよくば}、優勝[ゆうしょう]したい。", "{Avec un peu de chance}, j'aimerais remporter le tournoi."));
-point("Hors JLPT", "〜むず", "Auxiliaire de la langue classique (aussi んず) : intention ou conjecture, « je vais… », « il doit… ». Ne s'emploie plus en japonais moderne.",
+point("Hors JLPT", "〜むず", "Auxiliaire de la langue classique (aussi んず) : conjecture ou ferme volonté, comme le う / よう moderne. Ne se rencontre presque que dans les textes très anciens.",
   modele("我[われ]、都[みやこ]へ{行[ゆ]かむず}。", "Je {m'en irai} à la capitale."));
 
 // ---- Dialecte du Kansai (la région d'Aimyon, née à Nishinomiya) ----

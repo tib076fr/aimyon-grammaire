@@ -323,7 +323,7 @@ point("N4", "〜と聞いた", "« J'ai entendu dire que… ».",
   modele("彼[かれ]は結婚[けっこん]した{と聞[き]いた}。", "{J'ai entendu dire qu'}il s'est marié."));
 point("N4", "聞こえる", "« On entend… », « être audible » (sans effort volontaire) ; aussi « sonner comme… ».",
   modele("鳥[とり]の声[こえ]が{聞[き]こえる}。", "{On entend} le chant des oiseaux."));
-point("N4", "見える", "« On voit… », « être visible » (sans effort volontaire) ; aussi « avoir l'air… ».",
+point("N4", "見える", "« On voit… », « être visible » ; aussi « avoir l'air… ».",
   modele("窓[まど]から海[うみ]が{見[み]える}。", "De la fenêtre, {on voit} la mer."));
 point("N4", "〜代", "Après une dizaine : tranche d'âge (二十代 « la vingtaine ») ; 年代 pour une décennie.",
   modele("母[はは]は{五十代[ごじゅうだい]}です。", "Ma mère a {la cinquantaine}."));
@@ -351,7 +351,7 @@ point("N4", "ずっと", "« Tout le temps », « sans arrêt », « depuis touj
   modele("朝[あさ]から{ずっと}雨[あめ]が降[ふ]っている。", "Il pleut {sans arrêt} depuis ce matin."));
 point("N4", "だいたい", "« À peu près », « dans l'ensemble », « la plupart du temps ».",
   modele("話[はなし]は{だいたい}分[わ]かりました。", "J'ai {à peu près} compris l'histoire."));
-point("N4", "〜の中で", "« Parmi… », « dans… » : délimite le groupe à l'intérieur duquel on compare.",
+point("N4", "〜の中で", "« Parmi… », « au sein de… » : désigne un élément à l'intérieur d'un groupe ; aussi « dans… » (un lieu).",
   modele("果物[くだもの]{の中[なか]で}何[なに]が一番[いちばん]好[す]きですか。", "{Parmi} les fruits, lequel préférez-vous ?"));
 point("N4", "Quantité + は", "Après une quantité : « au moins… », « dans les… ».",
   modele("毎日[まいにち]一時間[いちじかん]{は}勉強[べんきょう]します。", "J'étudie {au moins} une heure par jour."));
