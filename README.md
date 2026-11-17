@@ -4,6 +4,8 @@ La grammaire japonaise (JLPT N5 à N1) expliquée par les chansons d'Aimyon.
 
 - 831 points de grammaire : toutes les pages de grammaire de Bunpro, du N5 au N1, plus 32 points hors JLPT (dont le dialecte du Kansai). Chacun a une phrase modèle et, pour 250 d'entre eux, une courte citation d'une chanson (furigana, traduction, remarque).
 - Le point de grammaire est coloré dans la phrase japonaise et dans sa traduction.
+- Chaque fiche donne sa construction, une mise en garde quand la source en signale une, et des liens « Voir aussi » vers les points proches.
+- Page Révision : une phrase à trou, quatre choix. Bouton « Je connais » sur chaque fiche (mémorisé dans le navigateur).
 - Chaque fiche renvoie vers des guides de grammaire (Tae Kim, Tofugu, Imabi, Bunpro) et vers les paroles complètes sur un site externe.
 
 ## Utilisation
@@ -28,6 +30,10 @@ Le site compte deux pages, qui fonctionnent en ouvrant simplement le fichier dan
 | `data-contexte.js` | La ligne d'avant et d'après chaque extrait de chanson |
 | `data-pochettes.js` | Les pochettes (single ou album), chargées depuis Apple Music |
 | `data-anecdotes.js` | Les anecdotes sourcées sur les chansons (infobulles) |
+| `data-details.js` | Construction et mises en garde de chaque fiche |
+| `data-liens.js` | Les points proches (« Voir aussi ») |
+| `revision.html`, `revision.js` | La page de révision |
+| `progres.js` | Le suivi « Je connais » (stocké dans le navigateur) |
 | `romaji.js`, `data-lectures.js` | La recherche des fiches en romaji, et la lecture en kana des titres écrits en kanji |
 
 ## Paroles complètes (usage personnel)
