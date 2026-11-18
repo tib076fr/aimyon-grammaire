@@ -35,7 +35,7 @@ Le site compte deux pages, qui fonctionnent en ouvrant simplement le fichier dan
 | `revision.html`, `revision.js` | La page de révision |
 | `chansons.html`, `chansons.js`, `data-albums.js` | La liste des chansons par album, avec les points de grammaire de chacune |
 | `progres.js` | Le suivi « Je connais » (stocké dans le navigateur) |
-| `loupe-kanji.js`, `data-kanji.js` | La loupe kanji : au survol d'un kanji (ou en le touchant), ses lectures, son sens, ses traits, sa clé et ses éléments, avec des liens vers Jisho et le Wiktionnaire |
+| `loupe-kanji.js`, `deinflexion.js`, `data-mots.js`, `data-kanji.js` | La loupe : au survol d'un texte japonais (ou en le touchant), le mot qui commence là, même conjugué (onglet « Mots », JMdict), et la fiche du kanji (onglet « Kanji » : lectures, sens, traits, clé, éléments), avec des liens vers Jisho et le Wiktionnaire |
 | `romaji.js`, `data-lectures.js` | La recherche des fiches en romaji, et la lecture en kana des titres écrits en kanji |
 
 ## Paroles complètes (usage personnel)
@@ -46,18 +46,20 @@ Le texte entier des chansons n'est pas dans ce dépôt. Pour le récupérer en l
 python3 outils/telecharger-paroles.py
 ```
 
-## Loupe kanji : mettre à jour les données
+## Loupe : mettre à jour les données
 
-`data-kanji.js` est fabriqué à partir de KANJIDIC2 et de KRADFILE (les sources de l'extension 10ten), en ne gardant que les kanji présents sur le site. Après avoir ajouté des fiches :
+`data-mots.js` est fabriqué à partir de JMdict, et `data-kanji.js` à partir de KANJIDIC2 et de KRADFILE (les sources de l'extension 10ten), en ne gardant que les mots et les kanji présents sur le site. Après avoir ajouté des fiches :
 
 ```bash
 curl -O https://www.edrdg.org/kanjidic/kanjidic2.xml.gz && gunzip kanjidic2.xml.gz
 curl -O https://www.edrdg.org/pub/Nihongo/kradfile.gz && gunzip kradfile.gz
+curl -O https://www.edrdg.org/pub/Nihongo/JMdict.gz && gunzip JMdict.gz
 python3 outils/generer-kanji.py kanjidic2.xml kradfile
+node outils/generer-mots.js JMdict
 ```
 
 ## Droits
 
 Les extraits de chansons sont de courtes citations à but pédagogique. Paroles © Aimyon et ses ayants droit.
 
-Les données kanji (`data-kanji.js`) viennent de KANJIDIC2 et KRADFILE, propriété de l'[Electronic Dictionary Research and Development Group](https://www.edrdg.org/), utilisées selon [sa licence](https://www.edrdg.org/edrdg/licence.html) (CC BY-SA 4.0) ; `data-kanji.js` est sous la même licence.
+Les données de la loupe (`data-mots.js`, `data-kanji.js`) viennent de JMdict, KANJIDIC2 et KRADFILE, propriété de l'[Electronic Dictionary Research and Development Group](https://www.edrdg.org/), utilisées selon [sa licence](https://www.edrdg.org/edrdg/licence.html) (CC BY-SA 4.0) ; ces deux fichiers sont sous la même licence.

@@ -51,7 +51,7 @@ def est_kanji(c):
 def kanji_du_site():
     trouves = set()
     for f in list(RACINE.glob("*.js")) + list(RACINE.glob("*.html")):
-        if f.name == "data-kanji.js":
+        if f.name in ("data-kanji.js", "data-mots.js", "deinflexion.js", "loupe-kanji.js"):
             continue
         trouves.update(c for c in f.read_text(encoding="utf-8") if est_kanji(c))
     return trouves

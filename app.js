@@ -360,7 +360,7 @@ function afficherFicheSeule(titre) {
     <span class="actions-fiches">
       <button type="button" class="bouton-hasard lien-hasard" title="Ouvrir une autre fiche au hasard">🎲 Au hasard</button>
       <button type="button" class="bouton-furigana lien-hasard" aria-pressed="true">Furigana : oui</button>
-      <button type="button" class="bouton-loupe lien-hasard" aria-pressed="true" title="Fenêtre d'informations au survol des kanji">Loupe kanji : oui</button>
+      <button type="button" class="bouton-loupe lien-hasard" aria-pressed="true" title="Dictionnaire au survol des mots et des kanji">Loupe : oui</button>
     </span>`;
   appliquerFurigana(lireSansFurigana());
   if (window.majBoutonsLoupe) window.majBoutonsLoupe();

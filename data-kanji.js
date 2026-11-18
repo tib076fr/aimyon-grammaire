@@ -2,7 +2,7 @@
 // Données : KANJIDIC2 et KRADFILE, propriété de l'Electronic Dictionary Research and
 // Development Group (EDRDG), utilisées selon sa licence : https://www.edrdg.org/edrdg/licence.html
 // Licence CC BY-SA 4.0. Version KANJIDIC2 : 2026-322 (2026-11-18)
-const OUVRAGES_KANJI = {"heisig6": "Heisig, Remembering the Kanji (6e éd.)", "henshall": "Henshall, A Guide to Remembering Japanese Characters", "halpern_kkld_2ed": "Kodansha Kanji Learner's Dictionary (2e éd.)", "conning": "Conning, Kodansha Kanji Learner's Course", "sh_kk2": "Hadamitzky, Kanji & Kana (2011)", "nelson_c": "Classic Nelson", "nelson_n": "New Nelson"};
+const OUVRAGES_KANJI = {"heisig6": "Heisig, Remembering the Kanji (6e éd.)", "henshall": "Henshall, A Guide to Remembering Japanese Characters", "halpern_kkld_2ed": "Kodansha Kanji Learner's Dictionary (2e éd.)", "sh_kk2": "Hadamitzky, Kanji & Kana (2011)", "nelson_c": "Classic Nelson", "nelson_n": "New Nelson"};
 const KANJI = {
   "一": {"on":["イチ","イツ"],"kun":["ひと-","ひと.つ"],"traits":1,"radical":1,"fr":["un","radical un (no. 1)"],"classe":1,"frequence":2,"jlpt":4,"refs":{"nelson_c":"1","nelson_n":"1","halpern_kkld_2ed":"2850","heisig6":"1","henshall":"1","sh_kk2":"2","skip":"4-1-4"},"elements":[]},
   "七": {"on":["シチ"],"kun":["なな","なな.つ","なの"],"traits":2,"radical":1,"fr":["sept"],"classe":1,"frequence":115,"jlpt":4,"refs":{"nelson_c":"261","nelson_n":"3","halpern_kkld_2ed":"2854","heisig6":"7","henshall":"30","sh_kk2":"9","skip":"4-2-2"},"elements":["乙","匕","ノ"]},
