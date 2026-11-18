@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://is1-ssl.mzstatic.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://is1-ssl.mzstatic.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)">
@@ -58,6 +58,19 @@
         <label><input type="radio" name="langue" value="en"> Anglais</label>
         <p class="reglage-aide">Les dictionnaires (JMdict et KANJIDIC2) ne traduisent pas tout en français : environ un mot sur trois et la plupart des kanji du site ont une traduction française.</p>
       </fieldset>
+
+      <h2>Hors ligne</h2>
+      <p class="reglage-aide">Télécharge tout le site (fiches, chansons, révision) et les dictionnaires de la loupe dans ce navigateur, pour s'en servir sans connexion. Les pochettes, hébergées par Apple, ne sont pas incluses.</p>
+      <div id="hors-ligne" class="hors-ligne">
+        <p id="hors-ligne-etat" class="hors-ligne-etat">…</p>
+        <div class="hors-ligne-boutons">
+          <button type="button" id="hors-ligne-telecharger" class="lien-hasard" hidden>Télécharger pour l'utiliser hors ligne</button>
+          <button type="button" id="hors-ligne-maj" class="lien-hasard" hidden>Mettre à jour</button>
+          <button type="button" id="hors-ligne-supprimer" class="lien-hasard bouton-discret" hidden>Supprimer les données hors ligne</button>
+        </div>
+        <progress id="hors-ligne-progression" max="1" value="0" hidden></progress>
+        <p class="reglage-aide">Sur iPhone, Safari peut effacer ces données si le site n'est pas ouvert pendant plusieurs semaines, sauf s'il est ajouté à l'écran d'accueil.</p>
+      </div>
 
       <p class="reglage-pied">
         <button type="button" id="reglages-defaut" class="lien-hasard">Rétablir les réglages par défaut</button>

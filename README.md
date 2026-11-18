@@ -35,7 +35,8 @@ Le site compte deux pages, qui fonctionnent en ouvrant simplement le fichier dan
 | `revision.html`, `revision.js` | La page de révision |
 | `chansons.html`, `chansons.js`, `data-albums.js` | La liste des chansons par album, avec les points de grammaire de chacune |
 | `loupe-kanji.js`, `deinflexion.js`, `data-mots.js`, `data-kanji.js` | La loupe : au survol d'un texte japonais (ou en le touchant), le mot qui commence là, même conjugué (onglet « Mots », JMdict), et la fiche du kanji (onglet « Kanji » : lectures, sens, traits, clé, éléments), avec des liens vers Jisho et le Wiktionnaire |
-| `reglages.html`, `reglages.js` | La page Réglages (⚙) : furigana, loupe, surlignage et langue des explications de la loupe, gardés dans le navigateur |
+| `reglages.html`, `reglages.js` | La page Réglages (⚙) : furigana, loupe, surlignage, langue des explications de la loupe, et le mode hors ligne (télécharger, mettre à jour, supprimer) |
+| `sw.js` | Le service worker du mode hors ligne, installé seulement si l'on télécharge le site depuis les Réglages : réseau d'abord, copie téléchargée sans connexion |
 | `romaji.js`, `data-lectures.js` | La recherche des fiches en romaji, et la lecture en kana des titres écrits en kanji |
 
 ## Paroles complètes (usage personnel)

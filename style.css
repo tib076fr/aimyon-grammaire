@@ -689,3 +689,7 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
 .reglage-pied { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 20px 0 0; }
 .lien-hasard:disabled { opacity: 0.45; cursor: default; }
 @media (max-width: 360px) { .nav-liens { gap: 0; } .nav-liens a { padding: 8px 4px; font-size: 0.82rem; } .nav-liens a.nav-reglages { padding: 6px 3px; } }
+.hors-ligne-etat { margin: 6px 0 10px; }
+.hors-ligne-boutons { display: flex; flex-wrap: wrap; gap: 8px; }
+.hors-ligne progress { width: 100%; height: 8px; margin-top: 10px; accent-color: var(--accent); }
+.bouton-discret { color: var(--discret); }
