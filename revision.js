@@ -16,7 +16,7 @@ const zoneVide = document.getElementById("vide-revision");
 const zoneScore = document.getElementById("score");
 
 function echapper(texte) {
-  return String(texte).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  return String(texte).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
 
 // Furigana et mise en valeur, comme sur les fiches
@@ -95,7 +95,7 @@ function nouvelleQuestion() {
   const pochette = ex.chanson && typeof POCHETTES !== "undefined" ? POCHETTES[titreChanson] : null;
   const origine = ex.chanson
     ? `<div class="origine">
-        ${pochette ? `<img class="pochette-revision" src="${echapper(pochette.image)}" alt="" width="72" height="72" loading="lazy" onerror="this.remove()">` : ""}
+        ${pochette ? `<img class="pochette-revision" src="${echapper(urlSure(pochette.image))}" alt="" width="72" height="72" loading="lazy" data-retirer="soi">` : ""}
         <div><span class="origine-titre" lang="ja">♪ ${echapper(titreChanson)}</span>
         ${pochette ? `<span class="origine-disque">${pochette.type === "single" ? "Single" : "Album"} <span lang="ja">${echapper(pochette.disque)}</span>${pochette.annee ? " · " + echapper(pochette.annee) : ""}</span>` : ""}</div>
       </div>`

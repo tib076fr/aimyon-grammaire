@@ -15,7 +15,7 @@ const zoneCompteur = document.getElementById("compteur-chansons");
 const champChansons = document.getElementById("recherche-chansons");
 
 function echapper(texte) {
-  return String(texte).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  return String(texte).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
 function enHtml(texte) {
   return echapper(texte)
@@ -77,11 +77,11 @@ function carteChanson(titre, album) {
       </ul>`
     : `<p class="pas-encore">Aucune ligne de cette chanson n'est encore citée dans les fiches.</p>`;
   const paroles = PAROLES[titre]
-    ? `<a class="lien-paroles" href="${echapper(PAROLES[titre])}" target="_blank" rel="noopener">Paroles complètes ↗</a>` : "";
+    ? `<a class="lien-paroles" href="${echapper(urlSure(PAROLES[titre]))}" target="_blank" rel="noopener">Paroles complètes ↗</a>` : "";
   return `
     <article class="chanson" id="${id}">
       <button type="button" class="chanson-tete" aria-expanded="false" aria-controls="${id}-detail">
-        ${image ? `<img class="chanson-pochette" src="${echapper(image)}" alt="" width="64" height="64" loading="lazy" onerror="this.remove()">` : `<span class="chanson-pochette sans-image" aria-hidden="true">♪</span>`}
+        ${image ? `<img class="chanson-pochette" src="${echapper(urlSure(image))}" alt="" width="64" height="64" loading="lazy" data-retirer="soi">` : `<span class="chanson-pochette sans-image" aria-hidden="true">♪</span>`}
         <span class="chanson-infos">
           <span class="chanson-titre" lang="ja">${echapper(titre)}</span>
           <span class="chanson-disque">${disque}</span>
@@ -106,7 +106,7 @@ function afficherChansons() {
     html.push(`
       <section class="album">
         <header class="album-tete">
-          ${album.image ? `<img class="album-pochette" src="${echapper(album.image)}" alt="" width="56" height="56" loading="lazy" onerror="this.remove()">` : ""}
+          ${album.image ? `<img class="album-pochette" src="${echapper(urlSure(album.image))}" alt="" width="56" height="56" loading="lazy" data-retirer="soi">` : ""}
           <div>
             <h2 lang="ja">${echapper(album.nom)} <span class="compte">${titres.length}</span></h2>
             <p class="album-type">${echapper(album.type)}${album.annee ? " · " + echapper(album.annee) : ""}</p>

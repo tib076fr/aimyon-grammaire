@@ -16,7 +16,8 @@ const compteur = document.getElementById("compteur");
 
 // Rend un texte inoffensif avant de l'insérer dans du HTML
 function echapper(texte) {
-  return texte.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return String(texte).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
 
 // Transforme "帽子[ぼうし]" en <ruby>帽子<rt>ぼうし</rt></ruby> (furigana)
@@ -65,14 +66,14 @@ function creerExemple(ex) {
     const anneeConnue = ex.annee || (pochette && pochette.annee);
     const annee = anneeConnue ? ` (${anneeConnue})` : "";
     const vignette = pochette
-      ? `<a class="pochette" href="${echapper(pochette.lien)}" target="_blank" rel="noopener"
+      ? `<a class="pochette" href="${echapper(urlSure(pochette.lien))}" target="_blank" rel="noopener"
            title="${pochette.type === "single" ? "Single" : "Album"} : ${echapper(pochette.disque)}">
-           <img src="${echapper(pochette.image)}" alt="Pochette ${pochette.type === "single" ? "du single" : "de l'album"} ${echapper(pochette.disque)}"
-                width="56" height="56" loading="lazy" onerror="this.parentNode.remove()"></a>`
+           <img src="${echapper(urlSure(pochette.image))}" alt="Pochette ${pochette.type === "single" ? "du single" : "de l'album"} ${echapper(pochette.disque)}"
+                width="56" height="56" loading="lazy" data-retirer="parent"></a>`
       : "";
     const lienParoles = estAlbum
       ? ""
-      : ` <span class="ensemble">· <a href="${paroles}" target="_blank" rel="noopener">Paroles complètes ↗</a></span>`;
+      : ` <span class="ensemble">· <a href="${echapper(urlSure(paroles))}" target="_blank" rel="noopener">Paroles complètes ↗</a></span>`;
     // Si une anecdote existe (data-anecdotes.js), le titre devient un bouton
     const anecdote = ANECDOTES[titre];
     const titreAffiche = anecdote
@@ -82,12 +83,12 @@ function creerExemple(ex) {
       ? `<span class="infobulle" hidden>
           ${anecdote.textes.map((t) => `<span class="anecdote">${echapper(t)}</span>`).join("")}
           <span class="anecdote-source">Source : ${anecdote.sources
-            .map((s) => `<a href="${echapper(s.url)}" target="_blank" rel="noopener">${echapper(s.nom)} ↗</a>`)
+            .map((s) => `<a href="${echapper(urlSure(s.url))}" target="_blank" rel="noopener">${echapper(s.nom)} ↗</a>`)
             .join(" · ")}</span>
         </span>`
       : "";
     source = `<cite>${vignette}<span class="cite-texte">♪ ${titreAffiche}${annee}
-      <span class="ensemble">· <a href="${ecouter}" target="_blank" rel="noopener">Écouter ↗</a></span>${lienParoles}</span>${infobulle}</cite>`;
+      <span class="ensemble">· <a href="${echapper(urlSure(ecouter))}" target="_blank" rel="noopener">Écouter ↗</a></span>${lienParoles}</span>${infobulle}</cite>`;
   } else {
     source = `<cite>Phrase modèle</cite>`;
   }
@@ -119,7 +120,7 @@ function creerSources(point) {
   }
   const liens = sources.map(
     (s) =>
-      `<a href="${echapper(s.url)}" target="_blank" rel="noopener" title="${echapper(s.page)}">${echapper(s.nom)} ↗</a>`
+      `<a href="${echapper(urlSure(s.url))}" target="_blank" rel="noopener" title="${echapper(s.page)}">${echapper(s.nom)} ↗</a>`
   );
   return `<p class="sources">Sources : ${liens.join(" · ")}</p>`;
 }

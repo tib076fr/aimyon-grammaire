@@ -28,7 +28,18 @@ def lire_adresses():
     return dict(re.findall(r'^\s*("(?:[^"\\]|\\.)*"): ("(?:[^"\\]|\\.)*")', source, flags=re.M))
 
 
+SITES_AUTORISES = ("https://j-lyric.net/", "https://utaten.com/")
+
+
+def nom_de_fichier(titre):
+    """Nom de fichier sûr : ni dossier, ni « .. », ni caractère interdit."""
+    nom = re.sub(r'[\\/:*?"<>|\x00-\x1f]', "_", titre).strip(" .")
+    return (nom or "sans-titre")[:120]
+
+
 def telecharger(adresse):
+    if not adresse.startswith(SITES_AUTORISES):
+        return None  # on ne télécharge que depuis les sites de paroles connus
     requete = urllib.request.Request(adresse, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(requete, timeout=30) as reponse:
         page = reponse.read().decode("utf8", errors="ignore")
@@ -47,7 +58,7 @@ def main():
     faits = 0
     for titre_json, adresse_json in adresses.items():
         titre, adresse = json.loads(titre_json), json.loads(adresse_json)
-        fichier = os.path.join(DOSSIER, titre.replace("/", "／") + ".txt")
+        fichier = os.path.join(DOSSIER, nom_de_fichier(titre) + ".txt")
         if os.path.exists(fichier):
             continue
         texte = telecharger(adresse)

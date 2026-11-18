@@ -27,7 +27,7 @@ const caseChanson = document.getElementById("filtre-chanson");
 const boutonReinitialiser = document.getElementById("reinitialiser");
 
 function echapper(texte) {
-  return String(texte).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  return String(texte).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
 
 function sansAccents(texte) {
@@ -72,7 +72,7 @@ function creerCarte(point) {
     .slice(0, 3);
   const pied = chansons.length
     ? `<span class="carte-pochettes" aria-hidden="true">${pochettes
-        .map((p) => `<img src="${echapper(p.image)}" alt="" width="28" height="28" loading="lazy" onerror="this.remove()">`)
+        .map((p) => `<img src="${echapper(urlSure(p.image))}" alt="" width="28" height="28" loading="lazy" data-retirer="soi">`)
         .join("")}</span>
        <span class="carte-chansons" lang="ja">♪ ${echapper(chansons.slice(0, 2).join(" · "))}${chansons.length > 2 ? " …" : ""}</span>`
     : `<span class="carte-modele">Phrase modèle</span>`;
