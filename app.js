@@ -77,8 +77,8 @@ function creerExemple(ex) {
     // Si une anecdote existe (data-anecdotes.js), le titre devient un bouton
     const anecdote = ANECDOTES[titre];
     const titreAffiche = anecdote
-      ? `<button type="button" class="titre-chanson avec-anecdote" lang="ja" aria-expanded="false" title="Anecdotes sur cette chanson">${echapper(ex.chanson)}</button>`
-      : `<span class="titre-chanson" lang="ja">${echapper(ex.chanson)}</span>`;
+      ? `<button type="button" class="titre-chanson avec-anecdote" lang="ja" aria-expanded="false" title="Anecdotes sur cette chanson">${htmlTitre(ex.chanson)}</button>`
+      : `<span class="titre-chanson" lang="ja">${htmlTitre(ex.chanson)}</span>`;
     const infobulle = anecdote
       ? `<span class="infobulle" hidden>
           ${anecdote.textes.map((t) => `<span class="anecdote">${echapper(t)}</span>`).join("")}
@@ -359,10 +359,12 @@ function afficherFicheSeule(titre) {
     <span class="actions-fiches">
       <button type="button" class="bouton-hasard lien-hasard" title="Ouvrir une autre fiche au hasard">🎲 Au hasard</button>
       <button type="button" class="bouton-furigana lien-hasard" aria-pressed="true">Furigana : oui</button>
+      <button type="button" class="bouton-titres lien-hasard" aria-pressed="false" title="Titres des chansons : originaux ou titre anglais officiel">Titres : originaux</button>
       <button type="button" class="bouton-loupe lien-hasard" aria-pressed="true" title="Dictionnaire au survol des mots et des kanji">Loupe : oui</button>
       <button type="button" class="bouton-surlignage lien-hasard" aria-pressed="true" title="Surligner en jaune le mot trouvé par la loupe">Surlignage : oui</button>
     </span>`;
   appliquerFurigana(lireSansFurigana());
+  appliquerTitres(lireTitresInternationaux());
   if (window.majBoutonsLoupe) window.majBoutonsLoupe();
   zoneFiches.innerHTML = creerFiche(point);
   return true;

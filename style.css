@@ -693,3 +693,8 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
 .hors-ligne-boutons { display: flex; flex-wrap: wrap; gap: 8px; }
 .hors-ligne progress { width: 100%; height: 8px; margin-top: 10px; accent-color: var(--accent); }
 .bouton-discret { color: var(--discret); }
+
+/* Titres des chansons : originaux ou internationaux (classe sur <html>) */
+.titre-international { display: none; }
+.titres-internationaux .titre-international { display: inline; }
+.titres-internationaux .titre-original { display: none; }

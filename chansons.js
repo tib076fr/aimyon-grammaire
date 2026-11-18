@@ -68,6 +68,9 @@ function correspond(titre, album) {
   if (!filtres.texte) return true;
   const cherche = sansAccentsMin(filtres.texte);
   if (sansAccentsMin(titre).includes(cherche)) return true;
+  // le titre international officiel aussi (« marigold »)
+  const international = typeof TITRES_INTERNATIONAUX !== "undefined" && TITRES_INTERNATIONAUX[titre];
+  if (international && sansAccentsMin(international).includes(cherche)) return true;
   // recherche en romaji sur les titres en kana
   if (/^[a-z\s\-']+$/.test(cherche)) {
     const romaji = simplifierRomaji(kanaVersRomaji(titre));
@@ -101,7 +104,7 @@ function carteChanson(titre, album) {
       <button type="button" class="chanson-tete" aria-expanded="false" aria-controls="${id}-detail">
         ${image ? `<img class="chanson-pochette" src="${echapper(urlSure(image))}" alt="" width="64" height="64" loading="lazy" data-retirer="soi">` : `<span class="chanson-pochette sans-image" aria-hidden="true">♪</span>`}
         <span class="chanson-infos">
-          <span class="chanson-titre" lang="ja">${echapper(titre)}</span>
+          <span class="chanson-titre" lang="ja">${htmlTitre(titre)}</span>
           <span class="chanson-disque">${disque}</span>
         </span>
         ${anecdoteDe(titre) ? `<span class="chanson-anecdote" title="Anecdote disponible" aria-label="Anecdote disponible">💬</span>` : ""}

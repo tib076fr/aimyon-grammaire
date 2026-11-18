@@ -74,7 +74,7 @@ function creerCarte(point) {
     ? `<span class="carte-pochettes" aria-hidden="true">${pochettes
         .map((p) => `<img src="${echapper(urlSure(p.image))}" alt="" width="28" height="28" loading="lazy" data-retirer="soi">`)
         .join("")}</span>
-       <span class="carte-chansons" lang="ja">♪ ${echapper(chansons.slice(0, 2).join(" · "))}${chansons.length > 2 ? " …" : ""}</span>`
+       <span class="carte-chansons" lang="ja">♪ ${chansons.slice(0, 2).map(htmlTitre).join(" · ")}${chansons.length > 2 ? " …" : ""}</span>`
     : `<span class="carte-modele">Phrase modèle</span>`;
   return `
     <a class="carte-point niveau-${classeNiveau(point.niveau)}" href="fiches.html?p=${encodeURIComponent(point.titre)}">

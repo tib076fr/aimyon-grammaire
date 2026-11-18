@@ -94,7 +94,7 @@ function nouvelleQuestion() {
   const origine = ex.chanson
     ? `<div class="origine">
         ${pochette ? `<img class="pochette-revision" src="${echapper(urlSure(pochette.image))}" alt="" width="72" height="72" loading="lazy" data-retirer="soi">` : ""}
-        <div><span class="origine-titre" lang="ja">♪ ${echapper(titreChanson)}</span>
+        <div><span class="origine-titre" lang="ja">♪ ${htmlTitre(titreChanson)}</span>
         ${pochette ? `<span class="origine-disque">${pochette.type === "single" ? "Single" : "Album"} <span lang="ja">${echapper(pochette.disque)}</span>${pochette.annee ? " · " + echapper(pochette.annee) : ""}</span>` : ""}</div>
       </div>`
     : `<p class="origine">Phrase modèle</p>`;

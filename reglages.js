@@ -9,6 +9,7 @@ const REGLAGES = {
   surlignage: { cle: "aimyon-grammaire:sans-surlignage", id: "reglage-surlignage" },
 };
 const CLE_LANGUE = "aimyon-grammaire:langue";
+const CLE_TITRES_REGLAGE = "aimyon-grammaire:titres"; // "international" ou "original"
 
 function lireReglage(cle) {
   try { return localStorage.getItem(cle); } catch (e) { return null; }
@@ -35,6 +36,7 @@ function afficherReglages() {
   for (const { cle, id } of Object.values(REGLAGES)) {
     document.getElementById(id).checked = lireReglage(cle) !== "1";
   }
+  document.getElementById("reglage-titres").checked = lireReglage(CLE_TITRES_REGLAGE) === "international";
   const langue = lireReglage(CLE_LANGUE) === "en" ? "en" : "fr";
   for (const radio of document.querySelectorAll('input[name="langue"]')) radio.checked = radio.value === langue;
   document.getElementById(REGLAGES.surlignage.id).disabled = !document.getElementById(REGLAGES.loupe.id).checked;
@@ -48,6 +50,9 @@ for (const { cle, id } of Object.values(REGLAGES)) {
     annoncer(ok);
   });
 }
+document.getElementById("reglage-titres").addEventListener("change", (e) => {
+  annoncer(ecrireReglage(CLE_TITRES_REGLAGE, e.target.checked ? "international" : "original"));
+});
 for (const radio of document.querySelectorAll('input[name="langue"]')) {
   radio.addEventListener("change", () => annoncer(ecrireReglage(CLE_LANGUE, radio.value)));
 }
@@ -55,6 +60,7 @@ document.getElementById("reglages-defaut").addEventListener("click", () => {
   let ok = true;
   for (const { cle } of Object.values(REGLAGES)) ok = ecrireReglage(cle, null) && ok;
   ok = ecrireReglage(CLE_LANGUE, null) && ok;
+  ok = ecrireReglage(CLE_TITRES_REGLAGE, null) && ok;
   appliquerFurigana(false);
   afficherReglages();
   annoncer(ok);

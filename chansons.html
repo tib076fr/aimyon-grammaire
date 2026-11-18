@@ -33,7 +33,7 @@
   <main class="page-chansons">
     <section class="panneau-filtres" aria-label="Filtres">
       <form id="formulaire-chansons" class="recherche" role="search">
-        <input type="search" id="recherche-chansons" placeholder="ハルノヒ, harunohi…" aria-label="Rechercher une chanson" autocapitalize="none" autocorrect="off" enterkeyhint="search">
+        <input type="search" id="recherche-chansons" placeholder="ハルノヒ, harunohi, marigold…" aria-label="Rechercher une chanson" autocapitalize="none" autocorrect="off" enterkeyhint="search">
         <button type="submit">Chercher</button>
       </form>
       <div class="groupe-filtres">
@@ -51,6 +51,7 @@
           <span class="interrupteur-piste" aria-hidden="true"></span>
           Avec anecdote
         </label>
+        <button type="button" class="bouton-titres lien-hasard" aria-pressed="false" title="Titres des chansons : originaux ou titre anglais officiel">Titres : originaux</button>
         <span id="compteur-chansons" class="compteur" aria-live="polite"></span>
       </div>
     </section>
@@ -64,6 +65,7 @@
   </footer>
 
   <script src="commun.js"></script>
+  <script src="data-titres.js"></script>
   <script src="loupe-kanji.js"></script>
   <script src="data.js"></script>
   <script src="data-n5.js"></script>
