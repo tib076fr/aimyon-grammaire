@@ -398,6 +398,56 @@ const ANECDOTES = {
     sources: [
       { nom: "Numéro TOKYO, interview de mai 2018", url: "https://numero.jp/talks49/" }
     ]
+  },
+  "風のささやき": {
+    textes: [
+      "Le titre vient d'un disque de compilation du même nom qui traînait chez elle ; elle était aussi fascinée à l'époque par le « bleu Tiffany », et a bâti l'histoire à partir de là.",
+      "Elle la date d'une période où elle écrivait chaque jour sans savoir si ses chansons sortiraient un jour, et où les encouragements des adultes l'agaçaient plus qu'autre chose."
+    ],
+    sources: [
+      { nom: "Rakuten Books, interview de septembre 2017", url: "https://books.rakuten.co.jp/event/cd/interview/20170920-aimyong/" }
+    ]
+  },
+  "二人だけの国": {
+    textes: [
+      "Inspirée du roman « 失楽園 » (Le Paradis perdu, de Jun'ichi Watanabe). En chantant d'une traite un des vers, dont elle aimait l'allure à l'écrit, elle s'est rendu compte que cela sonnait comme une psalmodie bouddhiste."
+    ],
+    sources: [
+      { nom: "Mikiki (Tower Records), interview de février 2019", url: "https://mikiki.tokyo.jp/articles/-/20688" }
+    ]
+  },
+  "スーパーガール": {
+    textes: [
+      "Écrite chez elle, avec l'envie de faire autre chose que d'habitude. Aimyon la décrit comme la chanson la plus difficile à chanter de son répertoire : notes aiguës, voix chuchotée… elle y exploite sa voix au maximum.",
+      "Elle voulait depuis sa sortie (2022) en faire un clip avec le réalisateur Pennacky ; il est sorti en 2026, pour ses dix ans de carrière."
+    ],
+    sources: [
+      { nom: "Billboard Japan, sortie du clip, août 2026", url: "https://www.billboard-japan.com/d_news/detail/164332/2" }
+    ]
+  },
+  "おじゃまします": {
+    textes: [
+      "Face B du single « ビーナスベルト » (2025), coproduite par le guitariste Shigekazu Aida et Ryōsuke Nagaoka (Petrolz). Avec eux, Aimyon a ensuite formé le groupe OJAMASHIMA's."
+    ],
+    sources: [
+      { nom: "Billboard Japan, octobre 2025", url: "https://www.billboard-japan.com/d_news/detail/155181" }
+    ]
+  },
+  "1995": {
+    textes: [
+      "Écrite pour son premier concert au Budokan (février 2019), auquel elle a donné le même titre : 1995 est son année de naissance. Sa mère était si heureuse de ce concert qu'Aimyon a voulu lui rendre hommage, en partant du moment où sa vie a commencé, dans le ventre de sa mère."
+    ],
+    sources: [
+      { nom: "Modelpress, compte rendu du concert au Budokan, février 2019", url: "https://mdpr.jp/music/detail/1822627" }
+    ]
+  },
+  "愛を知るまでは": {
+    textes: [
+      "Générique du drama « コントが始まる » (2021), mais composée bien plus tôt : dès sa première année en major, comme elle le raconte dans une interview vidéo."
+    ],
+    sources: [
+      { nom: "Billboard Japan, août 2021", url: "https://www.billboard-japan.com/d_news/detail/102936" }
+    ]
   }
 };
 
@@ -444,3 +494,50 @@ ANECDOTES["ざらめ"].textes.push(
   "C'est l'acteur et chanteur Takumi Kitamura qui lui a fait découvrir le groupe Bialystocks ; son membre Sora Hokimoto a ensuite réalisé le clip de « ざらめ ».");
 ANECDOTES["ざらめ"].sources.push(
   { nom: "SPICE, émission « MUSIC FREAKS » (FM802), juin 2026", url: "https://spice.eplus.jp/articles/346742" });
+
+// ---- Compléments tirés de Rakuten Books, Mikiki, Modelpress et Billboard Japan ----
+ANECDOTES["君はロックを聴かない"].textes.push(
+  "Elle y imagine un garçon et une fille au collège ou au lycée, qui partagent leurs goûts pour se rapprocher. Le « son de la jeunesse » du texte est un disque, mais elle voulait que chacun y entende le sien, comme la sonnerie de l'école.",
+  "L'arrangeur lui a demandé de rendre un passage plus « jeunesse », puis de mieux faire voir la fille ; elle a aussi modifié le second refrain pour faire monter la tension.");
+ANECDOTES["君はロックを聴かない"].sources.push(
+  { nom: "Rakuten Books, interview de septembre 2017", url: "https://books.rakuten.co.jp/event/cd/interview/20170920-aimyong/" });
+ANECDOTES["憧れてきたんだ"].textes.push(
+  "Une réponse à ceux qui reprochent aux jeunes chanteuses d'imiter leurs aînés : quand on aime un artiste, dit-elle, on a forcément envie de l'imiter. Elle y pense aussi aux artistes disparus du jour au lendemain, dont elle ne veut pas qu'on efface la musique.");
+ANECDOTES["憧れてきたんだ"].sources.push(
+  { nom: "Rakuten Books, interview de septembre 2017", url: "https://books.rakuten.co.jp/event/cd/interview/20170920-aimyong/" });
+ANECDOTES["ふたりの世界"].textes.push(
+  "Produite par Sunday (Kenta Kurosawa), dont c'était la première production pour un autre artiste ; la flûte l'a surprise. Elle la voit comme une chanson positive : un couple tient en équilibre malgré ses tiraillements.");
+ANECDOTES["ふたりの世界"].sources.push(
+  { nom: "Rakuten Books, interview de septembre 2017", url: "https://books.rakuten.co.jp/event/cd/interview/20170920-aimyong/" });
+ANECDOTES["いつまでも"].textes.push(
+  "Elle l'a écrite agacée par le monde de la musique : elle refuse de vendre ses chansons en jouant sur la compassion, et préfère être traitée de génie de son vivant plutôt qu'après sa mort, comme Van Gogh.");
+ANECDOTES["いつまでも"].sources.push(
+  { nom: "Rakuten Books, interview de septembre 2017", url: "https://books.rakuten.co.jp/event/cd/interview/20170920-aimyong/" });
+ANECDOTES["漂白"].textes.push(
+  "Celle dont l'enregistrement lui a le plus plu ; elle savait d'emblée qu'elle fermerait l'album 青春のエキサイトメント.");
+ANECDOTES["漂白"].sources.push(
+  { nom: "Rakuten Books, interview de septembre 2017", url: "https://books.rakuten.co.jp/event/cd/interview/20170920-aimyong/" });
+ANECDOTES["ひかりもの"].textes.push(
+  "C'est la première fois qu'elle enregistrait avec un vrai quatuor à cordes, sous la direction de l'arrangeur Tōmi Yō, qu'elle admire.");
+ANECDOTES["ひかりもの"].sources.push(
+  { nom: "Mikiki (Tower Records), interview de février 2019", url: "https://mikiki.tokyo.jp/articles/-/20688" });
+ANECDOTES["from 四階の角部屋"].textes.push(
+  "Sa chanson la plus courte. Elle comptait finir l'album sur « GOOD NIGHT BABY » ; elle l'a finalement placée juste après, avec un petit silence, pour une fin abrupte qui laisse l'auditeur interloqué.");
+ANECDOTES["from 四階の角部屋"].sources.push(
+  { nom: "Mikiki (Tower Records), interview de février 2019", url: "https://mikiki.tokyo.jp/articles/-/20688" });
+ANECDOTES["恋をしたから"].textes.push(
+  "Aimyon la cite comme une chanson à écouter absolument : elle parle de la façon dont l'amour change tout, jusqu'au goût des choses, et de la peur du lendemain quand l'autre n'est plus là.");
+ANECDOTES["恋をしたから"].sources.push(
+  { nom: "Modelpress, interview de février 2019", url: "https://mdpr.jp/interview/detail/1821582" });
+ANECDOTES["リズム64"].textes.push(
+  "Aimyon dit qu'elle parle d'avancer dans la vie en faisant des choix, et souhaite qu'on y repense dans les moments d'hésitation.");
+ANECDOTES["リズム64"].sources.push(
+  { nom: "Billboard Japan, commentaire d'Aimyon, janvier 2024", url: "https://www.billboard-japan.com/d_news/detail/133721/2" });
+ANECDOTES["ハルノヒ"].textes.push(
+  "Au Budokan, elle a expliqué qu'elle écrit souvent sur sa propre famille, mais que c'était la première fois qu'elle chantait celle de quelqu'un d'autre : les Nohara, sa façon de les remercier pour tout ce qu'ils lui ont appris enfant.");
+ANECDOTES["ハルノヒ"].sources.push(
+  { nom: "Modelpress, compte rendu du concert au Budokan, février 2019", url: "https://mdpr.jp/music/detail/1822627" });
+ANECDOTES["マリーゴールド"].textes.push(
+  "Elle estime que c'est cette chanson qui a amené la plupart des spectateurs de ses concerts, un « trésor » qu'elle doit au morceau.");
+ANECDOTES["マリーゴールド"].sources.push(
+  { nom: "Billboard Japan, interview de 2019", url: "https://www.billboard-japan.com/special/detail/2692" });
