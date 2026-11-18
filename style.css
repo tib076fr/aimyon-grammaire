@@ -509,17 +509,9 @@ mark { color: var(--point); border-bottom: 0; font-weight: 700; }
 .voir-aussi a { color: var(--accent); text-decoration: none; }
 .voir-aussi a:hover { text-decoration: underline; }
 
-/* ---- Bas de fiche : sources + « Je connais » ---- */
+/* ---- Bas de fiche : sources ---- */
 .fiche-pied { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: 16px; }
 .fiche-pied .sources { margin: 0; }
-.bouton-connu {
-  font: inherit; font-size: 0.88rem; padding: 6px 14px; border-radius: 999px; cursor: pointer;
-  border: 1px solid var(--bord); background: transparent; color: var(--discret);
-}
-.bouton-connu:hover { border-color: var(--accent); color: var(--accent); }
-.bouton-connu[aria-pressed="true"] { background: #2f8a57; border-color: #2f8a57; color: #fff; }
-.carte-connu { color: #2f8a57; font-weight: 700; }
-.carte-point.connu { opacity: 0.72; }
 .sentinelle { height: 1px; }
 
 /* ---- Page Révision ---- */

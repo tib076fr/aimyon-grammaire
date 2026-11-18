@@ -7,7 +7,6 @@ const etat = {
   niveaux: new Set(), // niveaux cochés ; vide = tous
   themes: new Set(), // thèmes cochés ; vide = tous
   chanson: false,
-  masquerConnus: false,
   avecAnecdote: false,
   texte: "",
 };
@@ -59,7 +58,6 @@ function correspond(point) {
   if (etat.niveaux.size && !etat.niveaux.has(point.niveau)) return false;
   if (etat.themes.size && !etat.themes.has(CATEGORIE_DE[point.titre])) return false;
   if (etat.chanson && chansonsDe(point).length === 0) return false;
-  if (etat.masquerConnus && estConnu(point.titre)) return false;
   if (etat.avecAnecdote && !chansonsDe(point).some((c) => ANECDOTES[c.replace(" (album)", "")])) return false;
   return true;
 }
@@ -79,8 +77,8 @@ function creerCarte(point) {
        <span class="carte-chansons" lang="ja">♪ ${echapper(chansons.slice(0, 2).join(" · "))}${chansons.length > 2 ? " …" : ""}</span>`
     : `<span class="carte-modele">Phrase modèle</span>`;
   return `
-    <a class="carte-point niveau-${classeNiveau(point.niveau)}${estConnu(point.titre) ? " connu" : ""}" href="fiches.html?p=${encodeURIComponent(point.titre)}">
-      <span class="carte-niveau">${point.niveau}${estConnu(point.titre) ? ' <span class="carte-connu" title="Je connais">✓</span>' : ""}</span>
+    <a class="carte-point niveau-${classeNiveau(point.niveau)}" href="fiches.html?p=${encodeURIComponent(point.titre)}">
+      <span class="carte-niveau">${point.niveau}</span>
       <span class="carte-titre" lang="ja">${echapper(point.titre)}</span>
       <span class="carte-resume">${echapper(point.resume)}</span>
       <span class="carte-pied">${pied}</span>
@@ -97,7 +95,7 @@ function afficherSommaire() {
     `${nbChanson} illustré${nbChanson > 1 ? "s" : ""} par Aimyon`;
   videSommaire.hidden = visibles.length > 0;
   boutonReinitialiser.hidden =
-    !etat.niveaux.size && !etat.themes.size && !etat.chanson && !etat.masquerConnus && !etat.avecAnecdote && !etat.texte;
+    !etat.niveaux.size && !etat.themes.size && !etat.chanson && !etat.avecAnecdote && !etat.texte;
 
   // Avec une recherche : une seule grille, les meilleurs résultats d'abord.
   // Sans recherche : une section par thème.
@@ -119,10 +117,6 @@ function afficherSommaire() {
       </section>`);
   }
   zoneResultats.innerHTML = html.join("");
-}
-
-function compterConnus(niveau) {
-  return POINTS.filter((p) => p.niveau === niveau && estConnu(p.titre)).length;
 }
 
 function compterParNiveau(niveau) {
@@ -163,7 +157,7 @@ function creerInterrupteurs(zone, valeurs, choix, libelle, classe) {
 creerInterrupteurs(document.getElementById("filtre-niveaux"), NIVEAUX, etat.niveaux,
   (v) => v === "Tous"
     ? "Tous"
-    : `<span class="pastille" aria-hidden="true"></span>${v} <span class="sous-libelle"><span class="nom-niveau">${NOMS_NIVEAUX[v] ? NOMS_NIVEAUX[v] + " · " : ""}</span>${compterConnus(v) ? compterConnus(v) + "/" : ""}${compterParNiveau(v)}</span>`,
+    : `<span class="pastille" aria-hidden="true"></span>${v} <span class="sous-libelle"><span class="nom-niveau">${NOMS_NIVEAUX[v] ? NOMS_NIVEAUX[v] + " · " : ""}</span>${compterParNiveau(v)}</span>`,
   (v) => "puce-" + classeNiveau(v));
 creerInterrupteurs(document.getElementById("filtre-themes"), Object.keys(CATEGORIES), etat.themes,
   (v) => (v === "Tous" ? "Tous les thèmes" : echapper(v)));
@@ -171,12 +165,6 @@ creerInterrupteurs(document.getElementById("filtre-themes"), Object.keys(CATEGOR
 const caseAnecdote = document.getElementById("filtre-anecdote");
 caseAnecdote.addEventListener("change", () => {
   etat.avecAnecdote = caseAnecdote.checked;
-  afficherSommaire();
-});
-
-const caseConnus = document.getElementById("filtre-connus");
-caseConnus.addEventListener("change", () => {
-  etat.masquerConnus = caseConnus.checked;
   afficherSommaire();
 });
 
@@ -199,8 +187,7 @@ champSommaire.addEventListener("input", () => {
 });
 
 boutonReinitialiser.addEventListener("click", () => {
-  Object.assign(etat, { chanson: false, masquerConnus: false, avecAnecdote: false, texte: "" });
-  caseConnus.checked = false;
+  Object.assign(etat, { chanson: false, avecAnecdote: false, texte: "" });
   caseAnecdote.checked = false;
   etat.niveaux.clear();
   etat.themes.clear();
@@ -218,7 +205,6 @@ document.getElementById("chiffres").innerHTML = [
   [nbIllustres, "illustrés par Aimyon"],
   [nbChansons, "chansons citées"],
   [Object.keys(CATEGORIES).length, "thèmes"],
-  [POINTS.filter((p) => estConnu(p.titre)).length, "que je connais"],
 ].map(([n, l]) => `<li><strong>${n}</strong> ${l}</li>`).join("");
 
 afficherSommaire();

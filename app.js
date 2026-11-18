@@ -168,7 +168,6 @@ function creerFiche(point) {
       ${creerVoirAussi(point)}
       <div class="fiche-pied">
         ${creerSources(point)}
-        ${boutonConnu(point.titre)}
       </div>
     </article>`;
 }

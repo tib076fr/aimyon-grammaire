@@ -34,7 +34,6 @@ Le site compte deux pages, qui fonctionnent en ouvrant simplement le fichier dan
 | `data-liens.js` | Les points proches (« Voir aussi ») |
 | `revision.html`, `revision.js` | La page de révision |
 | `chansons.html`, `chansons.js`, `data-albums.js` | La liste des chansons par album, avec les points de grammaire de chacune |
-| `progres.js` | Le suivi « Je connais » (stocké dans le navigateur) |
 | `loupe-kanji.js`, `deinflexion.js`, `data-mots.js`, `data-kanji.js` | La loupe : au survol d'un texte japonais (ou en le touchant), le mot qui commence là, même conjugué (onglet « Mots », JMdict), et la fiche du kanji (onglet « Kanji » : lectures, sens, traits, clé, éléments), avec des liens vers Jisho et le Wiktionnaire |
 | `romaji.js`, `data-lectures.js` | La recherche des fiches en romaji, et la lecture en kana des titres écrits en kanji |
 

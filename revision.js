@@ -8,7 +8,6 @@ const NIVEAUX_REV = ["N5", "N4", "N3", "N2", "N1", "Hors JLPT"];
 const reglages = {
   niveaux: new Set(),          // vide = tous
   sources: new Set(["Aimyon"]), // "Aimyon" et/ou "Phrases modèles"
-  inconnus: false,
 };
 const score = { bonnes: 0, total: 0 };
 const zoneQuestion = document.getElementById("question");
@@ -55,7 +54,6 @@ function candidates() {
   const liste = [];
   for (const point of POINTS) {
     if (reglages.niveaux.size && !reglages.niveaux.has(point.niveau)) continue;
-    if (reglages.inconnus && estConnu(point.titre)) continue;
     for (const ex of point.exemples) {
       if (!/\{[^}]+\}/.test(ex.japonais)) continue;
       const source = ex.chanson ? "Aimyon" : "Phrases modèles";
@@ -135,7 +133,6 @@ function repondre(bouton) {
     <p class="verdict ${juste ? "verdict-bon" : "verdict-faux"}">${juste ? "Bonne réponse !" : "Ce n'est pas ça."}
       C'était <a href="fiches.html?p=${encodeURIComponent(point.titre)}" lang="ja">${echapper(point.titre)}</a> : ${echapper(point.resume)}</p>
     <div class="fiche-pied">
-      ${boutonConnu(point.titre)}
       <button type="button" class="bouton-principal" id="suivante">Phrase suivante →</button>
     </div>`;
   reponse.querySelector("#suivante").focus();
@@ -179,9 +176,5 @@ function interrupteurs(zone, valeurs, choix, avecTous, classe) {
 interrupteurs(document.getElementById("niveaux-revision"), NIVEAUX_REV, reglages.niveaux, true,
   (v) => "puce-" + v.replace(/\s+/g, "-"));
 interrupteurs(document.getElementById("sources-revision"), ["Aimyon", "Phrases modèles"], reglages.sources, false);
-document.getElementById("revision-inconnus").addEventListener("change", (e) => {
-  reglages.inconnus = e.target.checked;
-  nouvelleQuestion();
-});
 
 nouvelleQuestion();

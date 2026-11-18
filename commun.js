@@ -21,21 +21,19 @@ document.addEventListener("error", (evenement) => {
   (image.dataset.retirer === "parent" ? image.parentNode : image).remove();
 }, true);
 
-// Bouton « Au hasard » : ouvre une fiche tirée au sort, de préférence
-// parmi les points pas encore marqués « Je connais ».
+// Bouton « Au hasard » : ouvre une fiche tirée au sort.
 document.addEventListener("click", (evenement) => {
   const bouton = evenement.target.closest(".bouton-hasard");
   if (!bouton || typeof POINTS === "undefined" || !POINTS.length) return;
   evenement.preventDefault();
   const actuel = new URLSearchParams(location.search).get("p");
-  let choix = POINTS.filter((p) => p.titre !== actuel);
-  if (typeof estConnu === "function") {
-    const inconnus = choix.filter((p) => !estConnu(p.titre));
-    if (inconnus.length) choix = inconnus;
-  }
+  const choix = POINTS.filter((p) => p.titre !== actuel);
   const point = choix[Math.floor(Math.random() * choix.length)];
   location.href = "fiches.html?p=" + encodeURIComponent(point.titre);
 });
+
+// L'ancien suivi « Je connais » a été retiré : on efface ce qu'il avait gardé.
+try { localStorage.removeItem("aimyon-grammaire:connus"); } catch (e) { /* rien à effacer */ }
 
 // Furigana : affichées ou masquées (choix gardé dans ce navigateur).
 // La préférence s'applique à toutes les pages ; le bouton est sur les fiches.
