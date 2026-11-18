@@ -104,10 +104,9 @@ def main():
             "traits": int(misc.findtext("stroke_count")),
             "radical": int(rad.text) if rad is not None else None,
         }
+        fiche["en"] = en
         if fr:
             fiche["fr"] = fr
-        else:
-            fiche["en"] = en
         for champ, cle in (("grade", "classe"), ("freq", "frequence"), ("jlpt", "jlpt")):
             v = misc.findtext(champ)
             if v:

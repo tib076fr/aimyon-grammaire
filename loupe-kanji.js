@@ -13,8 +13,13 @@
   const MAX_MOTS = 6;
   // Mêmes caractères que dans outils/generer-mots.js
   const JAPONAIS = /[ぁ-ゖゝゞァ-ヺー-ヾ々一-鿿㐀-䶿豈-﫿]/;
-  let actif = true;
-  try { actif = localStorage.getItem(CLE) !== "1"; } catch (e) { /* choix par défaut */ }
+  const CLE_SURLIGNAGE = "aimyon-grammaire:sans-surlignage";
+  const CLE_LANGUE = "aimyon-grammaire:langue"; // "fr" (français si possible) ou "en"
+  function lire(cle) { try { return localStorage.getItem(cle); } catch (e) { return null; } }
+  function ecrire(cle, valeur) { try { localStorage.setItem(cle, valeur); } catch (e) { /* choix pour cette visite */ } }
+  let actif = lire(CLE) !== "1";
+  let avecSurlignage = lire(CLE_SURLIGNAGE) !== "1";
+  const enFrancais = () => lire(CLE_LANGUE) !== "en";
 
   let pret = false;
   let chargement = null;
@@ -34,6 +39,7 @@
   }
   function surligner(lettres) {
     effacerSurlignage();
+    if (!avecSurlignage) return;
     // Morceaux contigus dans un même nœud de texte : [nœud, début, fin]
     const morceaux = [];
     for (const l of lettres) {
@@ -189,7 +195,7 @@
     const titre = m.k.length ? m.k.slice(0, 3).join("、") : m.r[0];
     const lecture = m.k.length ? m.r.slice(0, 3).join("、") : m.r.slice(1, 3).join("、");
     const raisons = t.raisons.length ? `<span class="mot-raisons">◂ ${t.raisons.map(echapper).join(" ◂ ")}</span>` : "";
-    const fr = (m.fr || []).length
+    const fr = (m.fr || []).length && enFrancais()
       ? `<p class="mot-fr"><span class="loupe-etiquette">FR</span> ${m.fr.map(echapper).join(" · ")}</p>` : "";
     let posAvant = "";
     const sens = m.s.map((s) => {
@@ -226,9 +232,9 @@
     return "";
   }
   function blocKanji(kanji, f) {
-    const sens = f.fr
+    const sens = f.fr && enFrancais()
       ? `<p class="loupe-sens">${f.fr.map(echapper).join(" ; ")}</p>`
-      : `<p class="loupe-sens">${(f.en || []).map(echapper).join(" ; ")} <span class="loupe-note">(en anglais : pas de traduction française dans KANJIDIC2)</span></p>`;
+      : `<p class="loupe-sens" lang="en">${(f.en || []).map(echapper).join("; ")}${enFrancais() ? ` <span class="loupe-note" lang="fr">(en anglais : pas de traduction française dans KANJIDIC2)</span>` : ""}</p>`;
     const lectures = [];
     if (f.on.length) lectures.push(`<div><span class="loupe-etiquette">On</span> <span lang="ja">${f.on.map(echapper).join("、")}</span></div>`);
     if (f.kun.length) lectures.push(`<div><span class="loupe-etiquette">Kun</span> <span lang="ja">${f.kun.map(lectureKun).join("、")}</span></div>`);
@@ -387,15 +393,35 @@
       bouton.setAttribute("aria-pressed", actif);
       bouton.textContent = actif ? "Loupe : oui" : "Loupe : non";
     }
+    for (const bouton of document.querySelectorAll(".bouton-surlignage")) {
+      bouton.setAttribute("aria-pressed", avecSurlignage);
+      bouton.textContent = avecSurlignage ? "Surlignage : oui" : "Surlignage : non";
+      bouton.disabled = !actif;
+    }
   }
   function basculer(valeur) {
     actif = valeur;
-    try { localStorage.setItem(CLE, actif ? "0" : "1"); } catch (e) { /* choix pour cette visite */ }
+    ecrire(CLE, actif ? "0" : "1");
     if (!actif) fermer();
     majBoutons();
   }
+  function basculerSurlignage(valeur) {
+    avecSurlignage = valeur;
+    ecrire(CLE_SURLIGNAGE, avecSurlignage ? "0" : "1");
+    if (!avecSurlignage) effacerSurlignage();
+    majBoutons();
+  }
   document.addEventListener("click", (e) => {
-    if (e.target instanceof Element && e.target.closest(".bouton-loupe")) basculer(!actif);
+    if (!(e.target instanceof Element)) return;
+    if (e.target.closest(".bouton-loupe")) basculer(!actif);
+    else if (e.target.closest(".bouton-surlignage")) basculerSurlignage(!avecSurlignage);
+  });
+  // Un réglage changé dans un autre onglet (page Réglages) s'applique ici aussi.
+  window.addEventListener("storage", () => {
+    actif = lire(CLE) !== "1";
+    avecSurlignage = lire(CLE_SURLIGNAGE) !== "1";
+    fermer();
+    majBoutons();
   });
   window.majBoutonsLoupe = majBoutons;
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", majBoutons);

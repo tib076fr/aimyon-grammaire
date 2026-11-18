@@ -322,6 +322,7 @@ blockquote.modele cite { display: block; }
 .nav-liens a[aria-current="page"] { color: var(--accent); background: var(--accent-doux); }
 @media (max-width: 480px) {
   .nav-logo { display: none; }
+  .nav-liens a { padding: 8px 9px; }
   .nav { justify-content: center; }
 }
 
@@ -672,3 +673,19 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
   display: inline-block; font-size: 0.7rem; color: var(--discret); background: var(--accent-doux);
   border-radius: 5px; padding: 0 5px; margin-right: 4px;
 }
+
+/* ---------- Page Réglages ---------- */
+.nav-liens a.nav-reglages { font-size: 1.05rem; padding: 6px 10px; }
+@media (max-width: 480px) { .nav-liens a.nav-reglages { padding: 6px 6px; } }
+.reglages { background: var(--carte); border: 1px solid var(--bord); border-radius: 16px; padding: 8px 20px 18px; margin: 16px 0 32px; }
+.reglages h2 { font-size: 1.1rem; margin: 18px 0 4px; }
+.reglages .interrupteur { display: flex; margin: 4px 0; }
+.reglages .interrupteur input:disabled + .interrupteur-piste { opacity: 0.4; }
+.reglage-aide { color: var(--discret); font-size: 0.88rem; margin: 4px 0 8px; }
+.reglage-choix { border: none; padding: 0; margin: 14px 0 0; }
+.reglage-choix legend { font-weight: 700; font-size: 1.1rem; padding: 0; margin-bottom: 6px; }
+.reglage-choix label { display: flex; align-items: center; gap: 10px; min-height: 40px; cursor: pointer; }
+.reglage-choix input { accent-color: var(--accent); width: 18px; height: 18px; }
+.reglage-pied { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 20px 0 0; }
+.lien-hasard:disabled { opacity: 0.45; cursor: default; }
+@media (max-width: 360px) { .nav-liens { gap: 0; } .nav-liens a { padding: 8px 4px; font-size: 0.82rem; } .nav-liens a.nav-reglages { padding: 6px 3px; } }

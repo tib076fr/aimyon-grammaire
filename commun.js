@@ -56,3 +56,5 @@ document.addEventListener("click", (evenement) => {
   try { localStorage.setItem(CLE_FURIGANA, sans ? "1" : "0"); } catch (e) { /* tant pis : choix pour cette visite */ }
   appliquerFurigana(sans);
 });
+// Un réglage changé dans un autre onglet (page Réglages) s'applique ici aussi.
+window.addEventListener("storage", () => appliquerFurigana(lireSansFurigana()));

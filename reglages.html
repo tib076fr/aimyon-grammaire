@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://is1-ssl.mzstatic.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1917" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-title" content="Aimyon 文法">
+  <link rel="apple-touch-icon" href="icone.png">
+  <link rel="icon" href="icone.png">
+  <title>Réglages — Aimyon 文法</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="index.html" class="nav-logo">Aimyon <span lang="ja">文法</span></a>
+    <div class="nav-liens">
+      <a href="index.html">Sommaire</a>
+      <a href="chansons.html">Chansons</a>
+      <a href="fiches.html">Fiches</a>
+      <a href="revision.html">Révision</a>
+      <a href="reglages.html" class="nav-reglages" aria-current="page" title="Réglages" aria-label="Réglages">⚙</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Réglages</h1>
+    <p>Tes préférences, gardées dans ce navigateur pour toutes les pages</p>
+  </header>
+
+  <main>
+    <section class="reglages">
+      <h2>Fiches</h2>
+      <label class="interrupteur">
+        <input type="checkbox" id="reglage-furigana">
+        <span class="interrupteur-piste" aria-hidden="true"></span>
+        Afficher les furigana (la lecture en petits kana au-dessus des kanji)
+      </label>
+
+      <h2>Loupe</h2>
+      <p class="reglage-aide">Au survol d'un texte japonais (ou en le touchant sur téléphone), une fenêtre montre le mot et le kanji, comme l'extension 10ten.</p>
+      <label class="interrupteur">
+        <input type="checkbox" id="reglage-loupe">
+        <span class="interrupteur-piste" aria-hidden="true"></span>
+        Activer la loupe (mots et kanji)
+      </label>
+      <label class="interrupteur">
+        <input type="checkbox" id="reglage-surlignage">
+        <span class="interrupteur-piste" aria-hidden="true"></span>
+        Surligner en jaune le mot trouvé
+      </label>
+
+      <fieldset class="reglage-choix">
+        <legend>Langue des explications de la loupe</legend>
+        <label><input type="radio" name="langue" value="fr"> Français si possible, sinon anglais</label>
+        <label><input type="radio" name="langue" value="en"> Anglais</label>
+        <p class="reglage-aide">Les dictionnaires (JMdict et KANJIDIC2) ne traduisent pas tout en français : environ un mot sur trois et la plupart des kanji du site ont une traduction française.</p>
+      </fieldset>
+
+      <p class="reglage-pied">
+        <button type="button" id="reglages-defaut" class="lien-hasard">Rétablir les réglages par défaut</button>
+        <span id="reglages-statut" class="compteur" aria-live="polite"></span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Les réglages sont enregistrés dans ce navigateur seulement (stockage local) ; rien n'est envoyé ailleurs.
+  </footer>
+
+  <script src="commun.js"></script>
+  <script src="reglages.js"></script>
+</body>
+</html>
