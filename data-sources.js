@@ -3045,8 +3045,6 @@ SOURCES["〜むず"] = [
   { nom: "Bunpro", page: "けれども (JLPT N5)", url: "https://bunpro.jp/grammar_points/%E3%81%91%E3%82%8C%E3%81%A9%E3%82%82" });
 
 // ---- Dialecte du Kansai (pages Bunpro, hors JLPT) ----
-(SOURCES["〜って (thème)"] = SOURCES["〜って (thème)"] || []).push(
-  { nom: "Bunpro", page: "って (JLPT N3)", url: "https://bunpro.jp/grammar_points/%E3%81%A3%E3%81%A6-slang" });
 SOURCES["〜や (Kansai)"] = [
   { nom: "Bunpro", page: "だ ⇒ や (Kansai, hors JLPT)", url: "https://bunpro.jp/grammar_points/%E3%81%A0-kansai" }
 ];

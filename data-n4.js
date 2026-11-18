@@ -134,7 +134,7 @@ point("N4", "〜のに", "« Alors que », « bien que » : exprime surprise ou 
     "{si seulement} c'était moi.", "ミニスカートとハイライト", null,
     "〜たらいいのに exprime un souhait irréalisé."));
 point("N4", "〜し", "Énumérer plusieurs raisons : « et puis… ».",
-  modele("この店[みせ]は安[やす]い{し}、おいしい{し}、よく来[き]ます。", "Ce restaurant est bon marché, c'est bon : je viens souvent."),
+  modele("この店[みせ]は安[やす]い{し}、おいしい{し}、よく来[き]ます。", "Ce restaurant est bon marché, {et puis} c'est bon {: alors} j'y viens souvent."),
   aimyon("あまり優[やさ]しくない{し}",
     "Tu n'es pas très tendre, {et puis}", "ふたりの世界", null,
     "し énumère une raison parmi d'autres ; la suite est sous-entendue."));
@@ -232,7 +232,7 @@ point("N4", "〜がる / 〜たがる", "Décrire le sentiment ou l'envie d'une 
 point("N4", "〜とか", "Donner des exemples : « … ou … par exemple ». Familier.",
   modele("休[やす]みの日[ひ]は映画[えいが]{とか}買[か]い物[もの]{とか}に行[い]きます。", "Les jours de repos, je vais au cinéma, faire les magasins, {ce genre de choses}."),
   aimyon("胸[むね]のやわらかさ{とか}吐息[といき]{とか}",
-    "La douceur de ta poitrine, ton souffle…", "君がいない夜を越えられやしない", 2022,
+    "La douceur de ta poitrine, ton souffle{, tout ça}…", "君がいない夜を越えられやしない", 2022,
     "とか… とか énumère des exemples. やわらかさ : adjectif + さ."));
 point("N4", "〜でも", "« Même… » ; ou proposition légère : « … ou autre chose ».",
   modele("お茶[ちゃ]{でも}飲[の]みませんか。", "On ne prendrait pas un thé, {ou quelque chose} ?"),
@@ -466,7 +466,7 @@ point("N4", "そんなに", "« À ce point », « tant que ça » ; avec une n�
 point("N4", "例えば", "« Par exemple ».",
   modele("{例[たと]えば}、寿司[すし]や天[てん]ぷらが好[す]きです。", "{Par exemple}, j'aime les sushis et les tempuras."));
 point("N4", "〜んだけど / 〜んですが", "Pose le contexte avant une demande ou une question, souvent en laissant la suite en suspens.",
-  modele("ちょっと聞[き]きたい{んですが}。", "C'est que j'aurais une question…"),
+  modele("ちょっと聞[き]きたい{んですが}。", "{C'est que} j'aurais une question…"),
   aimyon("幸[しあわ]せの味付[あじつ]けを調[しら]べてみた{んだけど}",
     "J'ai bien cherché comment assaisonner le bonheur{, mais voilà} :", "3636", 2022,
     "んだけど pose le contexte avant ce qui suit."));

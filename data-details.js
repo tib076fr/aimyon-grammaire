@@ -92,7 +92,7 @@ const DETAILS = {
  "ほとんど": {
   "construction": [
    "ほとんど + Proposition",
-   "ほとんど + (négatif)"
+   "ほとんど + (forme négative)"
   ]
  },
  "〜極まりない / 〜極まる": {
@@ -330,10 +330,10 @@ const DETAILS = {
  },
  "いい / よい": {
   "construction": [
-   "Présent forme: いい",
-   "Présent négatif forme: よくない",
-   "Passé forme: よかった",
-   "Passé négatif forme: よくなかった"
+   "Présent : いい",
+   "Présent négatif : よくない",
+   "Passé : よかった",
+   "Passé négatif : よくなかった"
   ],
   "attention": "L'adverbe よく (« souvent », « bien ») n'est pas une forme de いい."
  },
@@ -914,8 +914,8 @@ const DETAILS = {
  },
  "〜てからでないと": {
   "construction": [
-   "Verbe[て] + からでないと + (négatif)",
-   "Verbe[て] + からでなければ + (négatif)"
+   "Verbe[て] + からでないと + (forme négative)",
+   "Verbe[て] + からでなければ + (forme négative)"
   ]
  },
  "〜や (Kansai)": {
@@ -1167,7 +1167,7 @@ const DETAILS = {
  },
  "ろくに〜ない": {
   "construction": [
-   "ろくに + (négatif)"
+   "ろくに + (forme négative)"
   ]
  },
  "〜に限る": {
@@ -1843,7 +1843,7 @@ const DETAILS = {
  },
  "〜あげく": {
   "construction": [
-   "Verbe[た] + あげく + (に) + (Passé",
+   "Verbe[た] + あげく + (に) + (résultat au passé)",
    "Verbe[た] + あげく + の + Nom"
   ],
   "attention": "S'écrit le plus souvent en hiragana, parfois 挙句 ou 挙げ句."
@@ -3088,8 +3088,8 @@ const DETAILS = {
  },
  "〜代": {
   "construction": [
-   "Dizaine d'âge + 代だい",
-   "Décennie + 年代ねんだい"
+   "Dizaine d'âge + 代",
+   "Décennie + 年代"
   ]
  },
  "〜との": {
@@ -3393,10 +3393,10 @@ const DETAILS = {
  },
  "〜あまり": {
   "construction": [
-   "Verbe + あまり + (négatif",
-   "Adjectif en い[さ] + の + あまり + (négatif",
-   "Adjectif en い[み] + の + あまり + (négatif",
-   "Adjectif en な + な + あまり + (négatif"
+   "Verbe + あまり + (conséquence négative)",
+   "Adjectif en い[さ] + の + あまり + (conséquence négative)",
+   "Adjectif en い[み] + の + あまり + (conséquence négative)",
+   "Adjectif en な + な + あまり + (conséquence négative)"
   ],
   "attention": "Le temps de la phrase est porté par la proposition principale ; le verbe devant あまり peut être au présent ou au passé."
  },
@@ -3820,7 +3820,7 @@ const DETAILS = {
   "construction": [
    "Verbe[る](A) + なり + Verbe[る](B) + なり + する",
    "Nom (A) + （Particule） + なり + Nom (B) + （Particule） + なり",
-   "Nom (A) + なり + Nom (B) + なり + （Particule",
+   "Nom (A) + なり + Nom (B) + なり",
    "Verbe[る] + なり + Mot interrogatif + （Particule） + なり + する"
   ],
   "attention": "Sert à proposer un choix (« soit…, soit… »), pas à donner des exemples comme など ou や."
@@ -4273,7 +4273,7 @@ const DETAILS = {
  },
  "どうにも〜ない": {
   "construction": [
-   "どうにも + (négatif)Verbe[できる]",
+   "どうにも + Verbe[potentiel négatif]",
    "どうにも + Verbe[radical] + ようがない",
    "どうにもできない",
    "どうにもならない"
@@ -4364,8 +4364,8 @@ const DETAILS = {
  },
  "もう / まだ": {
   "construction": [
-   "もう + (Passé)",
-   "もう + (négatif)",
+   "もう + (passé)",
+   "もう + (forme négative)",
    "まだ + Verbe[ている]",
    "まだ + Nom + が + いる"
   ]
@@ -4856,8 +4856,8 @@ const DETAILS = {
  },
  "すると / そうすると": {
   "construction": [
-   "Proposition。すると + (Résultat)",
-   "Proposition (A)。 そうすると + (Résultat)"
+   "Proposition。すると + (résultat)",
+   "Proposition (A)。 そうすると + (résultat)"
   ],
   "attention": "Ce qui suit est soit hors de notre contrôle, soit une conclusion que l'on vérifie."
  },
@@ -5009,7 +5009,7 @@ const DETAILS = {
    "Verbe [ない-radical] + ずには + おかない",
    "Verbe [ない] + では + おかない",
    "する→せずにはおかない",
-   "Verbe [négatif] + では + おかない"
+   "Verbe[ない] + では + おかない"
   ],
   "attention": "Souvent avec un causatif : on ne lâchera pas avant d'avoir fait faire quelque chose à quelqu'un."
  },
@@ -5041,7 +5041,7 @@ const DETAILS = {
   "construction": [
    "Verbe + 気がする",
    "Adjectif en い + 気がする",
-   "Nom + （の + ような",
+   "Nom + （の） + ような",
    "Adjectif en な + （な + ような） + 気がする"
   ],
   "attention": "Sans ような, 気がする est plus affirmatif ; ような adoucit quand on n'est pas sûr."
@@ -5255,7 +5255,7 @@ const DETAILS = {
  },
  "〜ようでは": {
   "construction": [
-   "Verbe + ようでは + (négatif"
+   "Verbe + ようでは + (conséquence négative)"
   ]
  },
  "〜ようとする": {

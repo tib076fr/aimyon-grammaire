@@ -7,19 +7,19 @@ point("N5", "〜です", "Copule polie : placée après un nom ou un adjectif, e
     "Je {suis} quelqu'un qui ne sait pas devenir quelqu'un.", "インタビュー", null,
     "人です = « je suis une personne ». 人になれない (qui ne peut pas devenir quelqu'un) est une proposition relative placée devant 人."));
 point("N5", "は", "Marque le thème de la phrase : « quant à… ». Se prononce « wa ».",
-  modele("今日[きょう]{は}暑[あつ]いです。", "Aujourd'hui, il fait chaud."),
+  modele("今日[きょう]{は}暑[あつ]いです。", "{Aujourd'hui}, il fait chaud."),
   aimyon("私[わたし]{は}朝[あさ]が嫌[きら]い",
     "{Moi}, je déteste le matin.", "朝が嫌い", null,
     "は pose le thème (« moi »), が marque ce qui est détesté : la structure « A は B が 嫌い / 好き »."));
 point("N5", "が", "Marque le sujet, souvent une information nouvelle ou mise en avant.",
-  modele("雨[あめ]{が}降[ふ]っています。", "Il pleut."),
+  modele("雨[あめ]{が}降[ふ]っています。", "{La pluie} tombe."),
   aimyon("それだけ{が}心配[しんぱい]",
-    "c'est mon unique souci.", "from 四階の角部屋", null,
+    "c'est {là} mon unique souci.", "from 四階の角部屋", null,
     "が met en avant le sujet : « c'est cela, et rien d'autre, qui m'inquiète »."));
 point("N5", "を", "Marque l'objet direct du verbe. Se prononce « o ».",
-  modele("水[みず]{を}飲[の]みます。", "Je bois de l'eau."),
+  modele("水[みず]{を}飲[の]みます。", "Je bois {de l'eau}."),
   aimyon("今[いま]{を}生[い]きる",
-    "je vis le présent.", "いつまでも", null,
+    "je vis {le présent}.", "いつまでも", null,
     "今 (maintenant) est l'objet de 生きる : littéralement « vivre le maintenant »."));
 point("N5", "に (lieu, temps, destinataire)", "Indique le moment précis, la destination, le lieu d'existence ou le destinataire.",
   modele("七時[しちじ]{に}起[お]きます。", "Je me lève {à} sept heures."),
@@ -61,7 +61,7 @@ point("N5", "か", "Placé en fin de phrase, forme une question. Entre deux noms
 point("N5", "や", "« Et » entre des noms, pour une liste non exhaustive (« entre autres »).",
   modele("パン{や}卵[たまご]を買[か]いました。", "J'ai acheté du pain, des œufs, {etc.}"),
   aimyon("悲壮感[ひそうかん]{や}憂鬱[ゆううつ]も",
-    "Mon désespoir, ma mélancolie aussi,", "スーパーガール", null,
+    "Mon désespoir {et} ma mélancolie aussi,", "スーパーガール", null,
     "や relie deux noms pris comme exemples parmi d'autres."));
 point("N5", "〜から〜まで", "« De… à… », « depuis… jusqu'à… » (lieu ou temps).",
   modele("九時[くじ]{から}五時[ごじ]{まで}働[はたら]きます。", "Je travaille {de} neuf heures {à} cinq heures."),
@@ -232,7 +232,7 @@ point("N5", "〜と言う / 〜って", "Rapporter des paroles. って est la fo
   aimyon("好[す]き{って言[い]って}よ", "{Dis-moi que} tu m'aimes.", "好きって言ってよ", null,
     "好きって言う = 好きと言う (« dire je t'aime »). 言ってよ : forme en て employée comme demande familière, renforcée par よ."));
 point("N5", "〜んだ / 〜のだ", "Expliquer, souligner ou demander une explication. Poli : 〜んです.",
-  modele("どうして遅[おく]れた{んです}か。", "Pourquoi êtes-vous arrivé en retard ?"),
+  modele("どうして遅[おく]れた{んです}か。", "{Comment se fait-il que} vous soyez arrivé en retard ?"),
   aimyon("生[い]きていた{んだ}よな", "Elle était {bien} vivante, n'est-ce pas.", "生きていたんだよな", 2016,
     "生きていた (« elle vivait ») devient 生きていたんだ (« elle vivait bel et bien »). よな, variante familière de よね, cherche l'assentiment : « hein ? »."));
 point("N5", "〜だろう", "Supposition familière (« sans doute »). Forme neutre de でしょう.",

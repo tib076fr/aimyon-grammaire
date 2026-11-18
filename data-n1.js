@@ -204,7 +204,7 @@ point("N1", "〜もさることながら", "« … est certes important, mais…
 point("N1", "〜でなくてなんだろう", "« Si ce n'est pas…, qu'est-ce donc ? » : affirmation emphatique (formel).",
   modele("これが愛[あい]{でなくてなんだろう}。", "{Si ce n'est pas} de l'amour, {qu'est-ce donc} ?"));
 point("N1", "〜はさておき", "« Laissons de côté… », « … mis à part ».",
-  modele("冗談[じょうだん]{はさておき}、本題[ほんだい]に入[はい]りましょう。", "Trêve de plaisanterie, venons-en au sujet."));
+  modele("冗談[じょうだん]{はさておき}、本題[ほんだい]に入[はい]りましょう。", "{Trêve de} plaisanterie, venons-en au sujet."));
 point("N1", "〜折(に)", "« À l'occasion de… », « lorsque… » : équivalent formel de 〜時に.",
   modele("東京[とうきょう]へお越[こ]しの{折[おり]には}、ぜひお寄[よ]りください。", "{Lorsque} vous viendrez à Tokyo, passez donc nous voir."));
 point("N1", "〜とばかり(に)", "« Comme pour dire… », « l'air de dire… ».",
