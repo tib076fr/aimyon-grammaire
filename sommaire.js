@@ -8,6 +8,7 @@ const etat = {
   themes: new Set(), // thèmes cochés ; vide = tous
   chanson: false,
   masquerConnus: false,
+  avecAnecdote: false,
   texte: "",
 };
 
@@ -59,6 +60,7 @@ function correspond(point) {
   if (etat.themes.size && !etat.themes.has(CATEGORIE_DE[point.titre])) return false;
   if (etat.chanson && chansonsDe(point).length === 0) return false;
   if (etat.masquerConnus && estConnu(point.titre)) return false;
+  if (etat.avecAnecdote && !chansonsDe(point).some((c) => ANECDOTES[c.replace(" (album)", "")])) return false;
   return true;
 }
 
@@ -95,7 +97,7 @@ function afficherSommaire() {
     `${nbChanson} illustré${nbChanson > 1 ? "s" : ""} par Aimyon`;
   videSommaire.hidden = visibles.length > 0;
   boutonReinitialiser.hidden =
-    !etat.niveaux.size && !etat.themes.size && !etat.chanson && !etat.masquerConnus && !etat.texte;
+    !etat.niveaux.size && !etat.themes.size && !etat.chanson && !etat.masquerConnus && !etat.avecAnecdote && !etat.texte;
 
   // Avec une recherche : une seule grille, les meilleurs résultats d'abord.
   // Sans recherche : une section par thème.
@@ -166,6 +168,12 @@ creerInterrupteurs(document.getElementById("filtre-niveaux"), NIVEAUX, etat.nive
 creerInterrupteurs(document.getElementById("filtre-themes"), Object.keys(CATEGORIES), etat.themes,
   (v) => (v === "Tous" ? "Tous les thèmes" : echapper(v)));
 
+const caseAnecdote = document.getElementById("filtre-anecdote");
+caseAnecdote.addEventListener("change", () => {
+  etat.avecAnecdote = caseAnecdote.checked;
+  afficherSommaire();
+});
+
 const caseConnus = document.getElementById("filtre-connus");
 caseConnus.addEventListener("change", () => {
   etat.masquerConnus = caseConnus.checked;
@@ -191,8 +199,9 @@ champSommaire.addEventListener("input", () => {
 });
 
 boutonReinitialiser.addEventListener("click", () => {
-  Object.assign(etat, { chanson: false, masquerConnus: false, texte: "" });
+  Object.assign(etat, { chanson: false, masquerConnus: false, avecAnecdote: false, texte: "" });
   caseConnus.checked = false;
+  caseAnecdote.checked = false;
   etat.niveaux.clear();
   etat.themes.clear();
   majPuces.forEach((maj) => maj());
