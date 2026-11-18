@@ -20,3 +20,19 @@ document.addEventListener("error", (evenement) => {
   if (!(image instanceof HTMLImageElement) || !image.dataset.retirer) return;
   (image.dataset.retirer === "parent" ? image.parentNode : image).remove();
 }, true);
+
+// Bouton « Au hasard » : ouvre une fiche tirée au sort, de préférence
+// parmi les points pas encore marqués « Je connais ».
+document.addEventListener("click", (evenement) => {
+  const bouton = evenement.target.closest(".bouton-hasard");
+  if (!bouton || typeof POINTS === "undefined" || !POINTS.length) return;
+  evenement.preventDefault();
+  const actuel = new URLSearchParams(location.search).get("p");
+  let choix = POINTS.filter((p) => p.titre !== actuel);
+  if (typeof estConnu === "function") {
+    const inconnus = choix.filter((p) => !estConnu(p.titre));
+    if (inconnus.length) choix = inconnus;
+  }
+  const point = choix[Math.floor(Math.random() * choix.length)];
+  location.href = "fiches.html?p=" + encodeURIComponent(point.titre);
+});

@@ -584,3 +584,16 @@ mark { color: var(--point); border-bottom: 0; font-weight: 700; }
 .pas-encore { color: var(--discret); font-style: italic; margin: 10px 0; }
 .lien-paroles { display: inline-block; margin-top: 8px; color: var(--accent); font-size: 0.9rem; }
 @media (max-width: 480px) { .grille-chansons { grid-template-columns: minmax(0, 1fr); } }
+
+/* Bouton « Au hasard » */
+button.bouton-secondaire { font: inherit; cursor: pointer; }
+.lien-hasard {
+  font: inherit; font-size: 0.95rem; font-weight: 600; cursor: pointer; padding: 6px 14px;
+  border-radius: 999px; border: 1px solid var(--bord); background: var(--carte); color: var(--accent);
+}
+.lien-hasard:hover { border-color: var(--accent); }
+.controles .lien-hasard { margin-top: 10px; }
+.navigation-fiche { flex-wrap: wrap; }
+
+/* Un élément marqué « hidden » reste caché, même si une règle lui donne un display */
+[hidden] { display: none !important; }

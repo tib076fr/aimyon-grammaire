@@ -356,7 +356,8 @@ function afficherFicheSeule(titre) {
     <span class="voisines">
       ${precedente ? `<a href="${lienFiche(precedente)}" title="Fiche précédente" lang="ja">‹ ${echapper(precedente.titre)}</a>` : ""}
       ${suivante ? `<a href="${lienFiche(suivante)}" title="Fiche suivante" lang="ja">${echapper(suivante.titre)} ›</a>` : ""}
-    </span>`;
+    </span>
+    <button type="button" class="bouton-hasard lien-hasard" title="Ouvrir une autre fiche au hasard">🎲 Au hasard</button>`;
   zoneFiches.innerHTML = creerFiche(point);
   return true;
 }
