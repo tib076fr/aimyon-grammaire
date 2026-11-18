@@ -728,3 +728,71 @@ main:focus { outline: none; }
 .texte-long h2 { font-size: 1.2rem; margin: 28px 0 8px; }
 .texte-long li { margin: 6px 0; }
 .texte-long a { color: var(--accent); }
+
+/* ---------- Page d'une fiche : en-tête sur une ligne, navigation en bas ---------- */
+.tete-fiche {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px;
+  padding-top: 18px; padding-bottom: 6px;
+}
+.fil-ariane { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.fil-ariane a { color: var(--accent); font-weight: 600; text-decoration: none; }
+.fil-ariane a:hover { text-decoration: underline; }
+.theme-fiche:not(:empty)::before { content: "·"; margin-right: 10px; color: var(--discret); }
+.theme-fiche { color: var(--discret); }
+.interrupteur-compact { min-height: 36px; font-size: 0.9rem; }
+.fiche-tete h1 { font-size: 1.6rem; margin: 0; }
+.navigation-fiche {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 10px;
+  margin: 18px 0 8px;
+}
+.navigation-fiche .voisine {
+  color: var(--accent); font-weight: 600; text-decoration: none; padding: 10px 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0;
+}
+.navigation-fiche .voisine:hover .voisine-titre { text-decoration: underline; }
+.navigation-fiche .suivante { text-align: right; }
+.navigation-fiche .lien-hasard { white-space: nowrap; }
+/* Sur téléphone : barre fixe en bas de l'écran, à portée de pouce */
+@media (max-width: 700px) {
+  .navigation-fiche {
+    position: sticky; bottom: 0; z-index: 5; margin: 12px -16px 0; padding: 8px 16px;
+    padding-bottom: max(8px, env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--fond) 92%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid var(--bord);
+  }
+  .navigation-fiche .voisine { font-size: 0.92rem; }
+  .navigation-fiche .hasard-texte { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+  .navigation-fiche .lien-hasard { padding: 6px 12px; }
+}
+
+/* ---------- Filtres repliables (téléphone) ---------- */
+.filtres-repliables > summary {
+  list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  min-height: 40px; padding: 6px 14px; margin-top: 10px; border-radius: 999px;
+  border: 1px solid var(--bord); background: var(--fond); font-weight: 600; color: var(--texte);
+}
+.filtres-repliables > summary::-webkit-details-marker { display: none; }
+.filtres-repliables > summary::after { content: "▾"; color: var(--discret); }
+.filtres-repliables[open] > summary::after { content: "▴"; }
+.filtres-repliables[open] > summary { margin-bottom: 12px; }
+.filtres-repliables > .groupe-filtres + .groupe-filtres, .filtres-repliables > .ligne-bas-filtres { margin-top: 12px; }
+@media (min-width: 701px) { .filtres-repliables > summary { display: none; } }
+
+/* ---------- Accueil plus court sur téléphone ---------- */
+@media (max-width: 600px) {
+  .hero { padding-top: 24px; padding-bottom: 16px; }
+  .hero-texte { font-size: 1rem; margin-top: 10px; }
+  .chiffres { gap: 0; margin-top: 14px; font-size: 0.82rem; flex-wrap: nowrap; white-space: nowrap; }
+  .chiffres li { border: 0; background: none; padding: 0; box-shadow: none; }
+  .chiffres li { font-size: inherit; }
+  .chiffres li + li::before { content: "·"; margin: 0 6px; color: var(--discret); }
+  .chiffres li:nth-child(4) { display: none; }
+  .hero h1 { font-size: 1.9rem; }
+  .hero-sur-titre { font-size: 0.9rem; margin-bottom: 6px; }
+  .hero-actions { flex-wrap: nowrap; }
+  .hero-actions > * { flex: 1 1 0; padding-left: 10px; padding-right: 10px; white-space: nowrap; }
+  .chiffres strong { font-size: inherit; }
+  .hero-actions { margin-top: 16px; }
+}
+@media (max-width: 360px) { .chiffres li:nth-child(3) { display: none; } }

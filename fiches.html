@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-title" content="Aimyon 文法">
   <link rel="apple-touch-icon" href="icone.png">
   <link rel="icon" href="icone.png">
-  <title>Fiches — Aimyon 文法</title>
+  <title>Fiche — Aimyon 文法</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,43 +18,27 @@
   <nav class="nav" aria-label="Navigation principale">
     <a href="index.html" class="nav-logo">Aimyon <span lang="ja">文法</span></a>
     <div class="nav-liens">
-      <a href="index.html">Sommaire</a>
+      <a href="index.html" aria-current="true">Sommaire</a>
       <a href="chansons.html">Chansons</a>
-      <a href="fiches.html" aria-current="page">Fiches</a>
       <a href="revision.html">Révision</a>
       <a href="reglages.html" class="nav-reglages" title="Réglages" aria-label="Réglages">⚙</a>
     </div>
   </nav>
 
-  <header>
-    <h1>Toutes les fiches</h1>
-    <p>La grammaire japonaise expliquée par les chansons d'Aimyon</p>
+  <header class="tete-fiche">
+    <p class="fil-ariane"><a href="index.html">← Sommaire</a><span id="theme-fiche" class="theme-fiche"></span></p>
+    <label class="interrupteur interrupteur-compact">
+      <input type="checkbox" class="case-furigana" checked>
+      <span class="interrupteur-piste" aria-hidden="true"></span>
+      Furigana
+    </label>
   </header>
 
   <main id="contenu" tabindex="-1">
-    <!-- Barre de recherche et filtres par niveau -->
-    <section class="controles">
-      <form id="formulaire" class="recherche" role="search">
-        <input type="search" id="recherche" placeholder="たい, tai, négation…" aria-label="Rechercher" autocapitalize="none" autocorrect="off" enterkeyhint="search">
-        <button type="submit">Chercher</button>
-      </form>
-      <div id="filtres" class="filtres"></div>
-      <div class="actions-fiches">
-        <button type="button" class="bouton-hasard lien-hasard"><span aria-hidden="true">🎲</span> Un point au hasard</button>
-        <button type="button" class="bouton-furigana lien-hasard" aria-pressed="true">Furigana : oui</button>
-        <button type="button" class="bouton-titres lien-hasard" aria-pressed="false" title="Titres des chansons : originaux ou titre anglais officiel">Titres : originaux</button>
-        <button type="button" class="bouton-loupe lien-hasard" aria-pressed="true" title="Dictionnaire au survol des mots et des kanji">Loupe : oui</button>
-        <button type="button" class="bouton-surlignage lien-hasard" aria-pressed="true" title="Surligner en jaune le mot trouvé par la loupe">Surlignage : oui</button>
-      </div>
-      <p id="compteur" class="compteur"></p>
-    </section>
-
-    <!-- Navigation d'une fiche à l'autre (mode « fiche seule ») -->
-    <nav id="navigation-fiche" class="navigation-fiche" hidden></nav>
-
-    <!-- Les fiches de grammaire sont insérées ici par app.js -->
+    <!-- La fiche demandée (fiches.html?p=<titre>) est insérée ici par app.js -->
     <section id="fiches" class="fiches"></section>
-    <p id="vide" class="vide" hidden>Aucun point de grammaire ne correspond.</p>
+    <!-- Fiche précédente, au hasard, suivante : barre fixe en bas sur téléphone -->
+    <nav id="navigation-fiche" class="navigation-fiche" aria-label="Autres fiches"></nav>
   </main>
 
   <footer>
@@ -83,7 +67,6 @@
   <script src="data-lectures.js"></script>
   <script src="data-details.js"></script>
   <script src="data-liens.js"></script>
-  <script src="romaji.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

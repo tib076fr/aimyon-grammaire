@@ -20,7 +20,6 @@
     <div class="nav-liens">
       <a href="index.html">Sommaire</a>
       <a href="chansons.html" aria-current="page">Chansons</a>
-      <a href="fiches.html">Fiches</a>
       <a href="revision.html">Révision</a>
       <a href="reglages.html" class="nav-reglages" title="Réglages" aria-label="Réglages">⚙</a>
     </div>
@@ -37,6 +36,8 @@
         <input type="search" id="recherche-chansons" placeholder="ハルノヒ, harunohi, marigold…" aria-label="Rechercher une chanson" autocapitalize="none" autocorrect="off" enterkeyhint="search">
         <button type="submit">Chercher</button>
       </form>
+      <details class="filtres-repliables" open>
+        <summary>Filtres<span class="nb-filtres"></span></summary>
       <div class="groupe-filtres">
         <span class="etiquette-filtre">Album</span>
         <div id="filtre-albums" class="puces puces-themes"></div>
@@ -52,9 +53,9 @@
           <span class="interrupteur-piste" aria-hidden="true"></span>
           Avec anecdote
         </label>
-        <button type="button" class="bouton-titres lien-hasard" aria-pressed="false" title="Titres des chansons : originaux ou titre anglais officiel">Titres : originaux</button>
-        <span id="compteur-chansons" class="compteur" aria-live="polite"></span>
       </div>
+      </details>
+      <p id="compteur-chansons" class="compteur" aria-live="polite"></p>
     </section>
 
     <div id="liste-chansons"></div>

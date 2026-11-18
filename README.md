@@ -13,14 +13,14 @@ La grammaire japonaise (JLPT N5 à N1) expliquée par les chansons d'Aimyon.
 Le site compte deux pages, qui fonctionnent en ouvrant simplement le fichier dans un navigateur :
 
 - `index.html` : le sommaire, toutes les fiches en cartes, avec filtres par niveau, par thème et par présence d'une chanson ;
-- `fiches.html` : les fiches complètes (`fiches.html?p=<titre>` affiche une seule fiche).
+- `fiches.html?p=<titre>` : une fiche, avec la fiche précédente, une au hasard et la suivante (sans `?p=`, la page renvoie au sommaire, qui sert de liste).
 
 ## Organisation
 
 | Fichier | Rôle |
 |---|---|
 | `index.html`, `sommaire.js` | Le sommaire et ses filtres |
-| `fiches.html`, `app.js` | Les fiches complètes |
+| `fiches.html`, `app.js` | La page d'une fiche |
 | `style.css` | L'apparence des deux pages |
 | `data-categories.js` | Le thème de chaque fiche |
 | `data.js` | Mode d'emploi et outils communs aux données |

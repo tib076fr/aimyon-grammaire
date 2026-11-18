@@ -201,9 +201,9 @@ boutonReinitialiser.addEventListener("click", () => {
 const nbIllustres = POINTS.filter((p) => chansonsDe(p).length).length;
 const nbChansons = new Set(POINTS.flatMap(chansonsDe)).size;
 document.getElementById("chiffres").innerHTML = [
-  [POINTS.length, "points de grammaire"],
+  [POINTS.length, "points"],
   [nbIllustres, "illustrés par Aimyon"],
-  [nbChansons, "chansons citées"],
+  [nbChansons, "chansons"],
   [Object.keys(CATEGORIES).length, "thèmes"],
 ].map(([n, l]) => `<li><strong>${n}</strong> ${l}</li>`).join("");
 

@@ -1,18 +1,10 @@
 // ============================================================
-//  LE CODE : lit la liste POINTS (fichiers data-*.js) et fabrique la page.
+//  PAGE D'UNE FICHE (fiches.html?p=<titre>) : lit la liste POINTS
+//  (fichiers data-*.js) et affiche la fiche demandée. La liste de
+//  toutes les fiches, elle, est le Sommaire (index.html).
 // ============================================================
 
-// Ce que l'utilisateur a choisi pour l'instant
-let niveauChoisi = "Tous";
-let texteCherche = "";
-let seulementChansons = false;
-
-// Les éléments de la page que l'on va remplir
 const zoneFiches = document.getElementById("fiches");
-const zoneFiltres = document.getElementById("filtres");
-const champRecherche = document.getElementById("recherche");
-const messageVide = document.getElementById("vide");
-const compteur = document.getElementById("compteur");
 
 // Rend un texte inoffensif avant de l'insérer dans du HTML
 function echapper(texte) {
@@ -39,11 +31,6 @@ function traduction(texte) {
 // Enlève les crochets de lecture : sert pour la recherche
 function sansFurigana(texte) {
   return texte.replace(/\[[^\]]+\]/g, "").replace(/[{}]/g, "");
-}
-
-// Une fiche a-t-elle au moins un extrait de chanson ?
-function aUneChanson(point) {
-  return point.exemples.some((ex) => ex.chanson);
 }
 
 // Fabrique le HTML d'un exemple (extrait d'Aimyon ou phrase modèle)
@@ -150,7 +137,7 @@ function creerVoirAussi(point) {
 }
 
 // Fabrique le HTML d'une fiche
-function creerFiche(point) {
+function creerFiche(point, balise = "h2") {
   // Les extraits de chansons d'abord, les phrases modèles ensuite
   const exemples = [...point.exemples].sort(
     (a, b) => (b.chanson ? 1 : 0) - (a.chanson ? 1 : 0)
@@ -159,7 +146,7 @@ function creerFiche(point) {
   return `
     <article class="fiche">
       <div class="fiche-tete">
-        <h2 lang="ja">${echapper(point.titre)}</h2>
+        <${balise} lang="ja">${echapper(point.titre)}</${balise}>
         <span class="niveau">${point.niveau}</span>
       </div>
       <p class="resume">${echapper(point.resume)}</p>
@@ -171,139 +158,6 @@ function creerFiche(point) {
       </div>
     </article>`;
 }
-
-// Enlève les accents : "negation" trouve aussi "négation"
-function sansAccents(texte) {
-  return texte.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-}
-
-// Note une fiche pour la recherche en cours :
-//   0 = ne correspond pas, 1 = correspond dans le texte,
-//   2 = correspond au titre, 3 = correspond exactement au titre en romaji
-// Les meilleures notes sont affichées en premier.
-function noter(point) {
-  if (niveauChoisi !== "Tous" && point.niveau !== niveauChoisi) return 0;
-  if (seulementChansons && !aUneChanson(point)) return 0;
-  if (texteCherche === "") return 1;
-
-  // Recherche en romaji, sur le titre de la fiche
-  if (/^[a-zāīūēōâîûêô\s\-']+$/.test(texteCherche)) {
-    const cherche = simplifierRomaji(texteCherche);
-    const mots = romajiDuTitre(point.titre).split(" ").map(simplifierRomaji);
-    const titreEntier = simplifierRomaji(kanaVersRomaji(lectureDuTitre(point.titre)));
-    // Une ou deux lettres ("wa", "ni") : il faut le mot exact, sinon trop de bruit
-    if (mots.includes(cherche)) return 3; // le mot exact : tout en haut
-    if (cherche.length <= 2) return 0;
-    if (mots.some((m) => m.startsWith(cherche)) || titreEntier.includes(cherche)) return 2;
-  }
-
-  // Le titre contient le texte cherché (en kana ou en français)
-  if (sansAccents(point.titre.toLowerCase()).includes(sansAccents(texteCherche))) return 2;
-
-  // Sinon, on cherche dans tout le texte de la fiche
-  const morceaux = [point.resume];
-  for (const ex of point.exemples) {
-    morceaux.push(sansFurigana(ex.japonais), sansFurigana(ex.traduction), ex.chanson || "", ex.note || "");
-  }
-  const contenu = sansAccents(morceaux.join(" ").toLowerCase());
-  return contenu.includes(sansAccents(texteCherche)) ? 1 : 0;
-}
-
-// Affichage par paquets
-const TAILLE_PAQUET = 25;
-let aAfficher = [];
-let dejaAffichees = 0;
-const sentinelle = document.createElement("div");
-sentinelle.className = "sentinelle";
-sentinelle.setAttribute("aria-hidden", "true");
-
-function afficherPaquet() {
-  const paquet = aAfficher.slice(dejaAffichees, dejaAffichees + TAILLE_PAQUET);
-  zoneFiches.insertAdjacentHTML("beforeend", paquet.map(creerFiche).join(""));
-  dejaAffichees += paquet.length;
-  if (dejaAffichees < aAfficher.length) {
-    zoneFiches.after(sentinelle);
-    // Sans IntersectionObserver, ou si la fin de liste est déjà visible,
-    // on enchaîne le paquet suivant
-    const proche = sentinelle.getBoundingClientRect().top < innerHeight + 1200;
-    if (!("IntersectionObserver" in window) || proche) requestAnimationFrame(afficherPaquet);
-  } else sentinelle.remove();
-}
-
-if ("IntersectionObserver" in window) {
-  new IntersectionObserver((entrees) => {
-    if (entrees.some((e) => e.isIntersecting)) afficherPaquet();
-  }, { rootMargin: "1200px 0px" }).observe(sentinelle);
-}
-
-// (Re)dessine la liste des fiches
-function afficher() {
-  const visibles = POINTS
-    .map((point) => ({ point, note: noter(point) }))
-    .filter((x) => x.note > 0)
-    .sort((a, b) => b.note - a.note) // les titres qui correspondent d'abord
-    .map((x) => x.point);
-  // Les fiches sont ajoutées par paquets, au fil du défilement :
-  // la page reste fluide même avec plus de 800 fiches.
-  aAfficher = visibles;
-  dejaAffichees = 0;
-  zoneFiches.innerHTML = "";
-  afficherPaquet();
-  messageVide.hidden = visibles.length > 0;
-
-  const avecChanson = visibles.filter(aUneChanson).length;
-  compteur.textContent =
-    `${visibles.length} point${visibles.length > 1 ? "s" : ""} de grammaire · ` +
-    `${avecChanson} illustré${avecChanson > 1 ? "s" : ""} par Aimyon`;
-}
-
-// Crée un bouton de filtre
-function creerBouton(texte, actif, auClic) {
-  const bouton = document.createElement("button");
-  bouton.textContent = texte;
-  bouton.setAttribute("aria-pressed", actif);
-  bouton.addEventListener("click", () => auClic(bouton));
-  zoneFiltres.appendChild(bouton);
-  return bouton;
-}
-
-// Un bouton par niveau, plus un bouton « Avec chanson »
-function creerFiltres() {
-  const niveaux = ["Tous", ...new Set(POINTS.map((p) => p.niveau))];
-  const boutonsNiveau = [];
-
-  for (const niveau of niveaux) {
-    const bouton = creerBouton(niveau, niveau === niveauChoisi, () => {
-      niveauChoisi = niveau;
-      for (const b of boutonsNiveau) b.setAttribute("aria-pressed", b === bouton);
-      afficher();
-    });
-    boutonsNiveau.push(bouton);
-  }
-
-  const boutonChanson = creerBouton("♪ Avec chanson", false, (bouton) => {
-    seulementChansons = !seulementChansons;
-    bouton.setAttribute("aria-pressed", seulementChansons);
-    afficher();
-  });
-  boutonChanson.classList.add("a-part");
-}
-
-// La recherche se lance en validant : bouton « Chercher » ou touche Entrée
-document.getElementById("formulaire").addEventListener("submit", (evenement) => {
-  evenement.preventDefault(); // empêche le navigateur de recharger la page
-  texteCherche = champRecherche.value.trim().toLowerCase();
-  champRecherche.blur(); // referme le clavier sur téléphone
-  afficher();
-});
-
-// Si on vide le champ, on réaffiche tout sans avoir à valider
-champRecherche.addEventListener("input", () => {
-  if (champRecherche.value.trim() === "" && texteCherche !== "") {
-    texteCherche = "";
-    afficher();
-  }
-});
 
 // Infobulles d'anecdotes : un clic sur le titre d'une chanson l'ouvre ou la
 // referme ; un clic ailleurs ou la touche Échap referme celle qui est ouverte.
@@ -335,9 +189,8 @@ function lienFiche(point) {
   return "fiches.html?p=" + encodeURIComponent(point.titre);
 }
 
-// Mode « fiche seule » : la page n'affiche que la fiche demandée,
-// avec des liens vers la précédente et la suivante.
-function afficherFicheSeule(titre) {
+// Affiche la fiche demandée, son thème et les liens vers les fiches voisines.
+function afficherFiche(titre) {
   const index = POINTS.findIndex((p) => p.titre === titre);
   if (index < 0) return false;
   const point = POINTS[index];
@@ -345,33 +198,19 @@ function afficherFicheSeule(titre) {
   const suivante = POINTS[index + 1];
 
   document.title = `${point.titre} — Aimyon 文法`;
-  document.querySelector("header h1").textContent = CATEGORIE_DE[point.titre] || "Fiche";
-  document.querySelector(".controles").hidden = true;
-
-  const navigation = document.getElementById("navigation-fiche");
-  navigation.hidden = false;
-  navigation.innerHTML = `
-    <a href="index.html" class="retour">← Sommaire</a>
-    <span class="voisines">
-      ${precedente ? `<a href="${lienFiche(precedente)}" title="Fiche précédente" lang="ja">‹ ${echapper(precedente.titre)}</a>` : ""}
-      ${suivante ? `<a href="${lienFiche(suivante)}" title="Fiche suivante" lang="ja">${echapper(suivante.titre)} ›</a>` : ""}
-    </span>
-    <span class="actions-fiches">
-      <button type="button" class="bouton-hasard lien-hasard" title="Ouvrir une autre fiche au hasard"><span aria-hidden="true">🎲</span> Au hasard</button>
-      <button type="button" class="bouton-furigana lien-hasard" aria-pressed="true">Furigana : oui</button>
-      <button type="button" class="bouton-titres lien-hasard" aria-pressed="false" title="Titres des chansons : originaux ou titre anglais officiel">Titres : originaux</button>
-      <button type="button" class="bouton-loupe lien-hasard" aria-pressed="true" title="Dictionnaire au survol des mots et des kanji">Loupe : oui</button>
-      <button type="button" class="bouton-surlignage lien-hasard" aria-pressed="true" title="Surligner en jaune le mot trouvé par la loupe">Surlignage : oui</button>
-    </span>`;
-  appliquerFurigana(lireSansFurigana());
-  appliquerTitres(lireTitresInternationaux());
-  if (window.majBoutonsLoupe) window.majBoutonsLoupe();
-  zoneFiches.innerHTML = creerFiche(point);
+  const theme = CATEGORIE_DE[point.titre];
+  document.getElementById("theme-fiche").textContent = theme ? theme : "";
+  zoneFiches.innerHTML = creerFiche(point, "h1");
+  document.getElementById("navigation-fiche").innerHTML = `
+    ${precedente
+      ? `<a class="voisine precedente" href="${lienFiche(precedente)}"><span class="lecteur-ecran">Fiche précédente : </span><span aria-hidden="true">‹</span> <span class="voisine-titre" lang="ja">${echapper(precedente.titre)}</span></a>`
+      : "<span></span>"}
+    <button type="button" class="bouton-hasard lien-hasard" title="Ouvrir une autre fiche au hasard"><span aria-hidden="true">🎲</span> <span class="hasard-texte">Au hasard</span></button>
+    ${suivante
+      ? `<a class="voisine suivante" href="${lienFiche(suivante)}"><span class="lecteur-ecran">Fiche suivante : </span><span class="voisine-titre" lang="ja">${echapper(suivante.titre)}</span> <span aria-hidden="true">›</span></a>`
+      : "<span></span>"}`;
   return true;
 }
 
-const ficheDemandee = new URLSearchParams(location.search).get("p");
-if (!ficheDemandee || !afficherFicheSeule(ficheDemandee)) {
-  creerFiltres();
-  afficher();
-}
+// Sans fiche demandée (ou fiche inconnue), on va au Sommaire.
+if (!afficherFiche(new URLSearchParams(location.search).get("p"))) location.replace("index.html");

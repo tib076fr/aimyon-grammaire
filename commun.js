@@ -43,16 +43,13 @@ function lireSansFurigana() {
 }
 function appliquerFurigana(sans) {
   document.documentElement.classList.toggle("sans-furigana", sans);
-  for (const bouton of document.querySelectorAll(".bouton-furigana")) {
-    bouton.setAttribute("aria-pressed", !sans);
-    bouton.textContent = sans ? "Furigana : non" : "Furigana : oui";
-  }
+  for (const caseACocher of document.querySelectorAll(".case-furigana")) caseACocher.checked = !sans;
 }
 appliquerFurigana(lireSansFurigana());
 document.addEventListener("DOMContentLoaded", () => appliquerFurigana(lireSansFurigana()));
-document.addEventListener("click", (evenement) => {
-  if (!evenement.target.closest(".bouton-furigana")) return;
-  const sans = !document.documentElement.classList.contains("sans-furigana");
+document.addEventListener("change", (evenement) => {
+  if (!evenement.target.classList.contains("case-furigana")) return;
+  const sans = !evenement.target.checked;
   try { localStorage.setItem(CLE_FURIGANA, sans ? "1" : "0"); } catch (e) { /* tant pis : choix pour cette visite */ }
   appliquerFurigana(sans);
 });
@@ -83,12 +80,6 @@ function htmlTitre(titre) {
 }
 appliquerTitres(lireTitresInternationaux());
 document.addEventListener("DOMContentLoaded", () => appliquerTitres(lireTitresInternationaux()));
-document.addEventListener("click", (evenement) => {
-  if (!evenement.target.closest(".bouton-titres")) return;
-  const international = !document.documentElement.classList.contains("titres-internationaux");
-  try { localStorage.setItem(CLE_TITRES, international ? "international" : "original"); } catch (e) { /* choix pour cette visite */ }
-  appliquerTitres(international);
-});
 
 // Un réglage changé dans un autre onglet (page Réglages) s'applique ici aussi.
 window.addEventListener("storage", () => {
@@ -133,3 +124,32 @@ function surveillerNouvellesFenetres() {
 }
 if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", surveillerNouvellesFenetres);
 else surveillerNouvellesFenetres();
+
+// ---------- Filtres repliables (Sommaire, Chansons) ----------
+// Sur téléphone, les filtres sont repliés derrière un bouton « Filtres (n) »
+// qui indique combien sont actifs ; sur grand écran, ils restent ouverts.
+const ECRAN_LARGE = window.matchMedia("(min-width: 701px)");
+function compterFiltres(bloc) {
+  const puces = [...bloc.querySelectorAll('.puce[aria-pressed="true"]')]
+    .filter((p) => !p.textContent.trim().startsWith("Tous"));
+  const cases = bloc.querySelectorAll('input[type="checkbox"]:checked');
+  const n = puces.length + cases.length;
+  bloc.querySelector(".nb-filtres").textContent = n ? ` (${n})` : "";
+}
+function preparerFiltresRepliables() {
+  for (const bloc of document.querySelectorAll(".filtres-repliables")) {
+    bloc.open = ECRAN_LARGE.matches;
+    compterFiltres(bloc);
+    // Après chaque choix (le clic est traité d'abord par la page)
+    for (const type of ["click", "change"]) bloc.addEventListener(type, () => setTimeout(() => compterFiltres(bloc)));
+  }
+}
+ECRAN_LARGE.addEventListener("change", () => {
+  for (const bloc of document.querySelectorAll(".filtres-repliables")) bloc.open = ECRAN_LARGE.matches;
+});
+// « Tout réafficher » (hors du bloc) remet aussi le compte à zéro
+document.addEventListener("click", (e) => {
+  if (e.target.closest && e.target.closest("#reinitialiser")) setTimeout(() => document.querySelectorAll(".filtres-repliables").forEach(compterFiltres));
+});
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", preparerFiltresRepliables);
+else preparerFiltresRepliables();
