@@ -24,9 +24,33 @@
   let dernierPointeur = "mouse";
   let enAttente = null;
 
-  const surlignage = typeof CSS !== "undefined" && CSS.highlights && typeof Highlight === "function"
-    ? new Highlight() : null;
-  if (surlignage) CSS.highlights.set("kanji-survole", surlignage);
+  // Surlignage : le mot est entouré de <span class="loupe-surligne"> le temps
+  // que la fenêtre est ouverte. (L'API CSS Highlight ne colore pas le texte
+  // sous les furigana dans Safari sur iPhone.) Les furigana ne sont pas surlignées.
+  let surlignes = [];
+  function effacerSurlignage() {
+    for (const span of surlignes) if (span.parentNode) span.replaceWith(...span.childNodes);
+    surlignes = [];
+  }
+  function surligner(lettres) {
+    effacerSurlignage();
+    // Morceaux contigus dans un même nœud de texte : [nœud, début, fin]
+    const morceaux = [];
+    for (const l of lettres) {
+      const dernier = morceaux[morceaux.length - 1];
+      if (dernier && dernier[0] === l.noeud && dernier[2] === l.i) dernier[2] = l.i + 1;
+      else morceaux.push([l.noeud, l.i, l.i + 1]);
+    }
+    for (const [noeud, debut, fin] of morceaux) {
+      if (fin < noeud.data.length) noeud.splitText(fin);
+      const milieu = debut > 0 ? noeud.splitText(debut) : noeud;
+      const span = document.createElement("span");
+      span.className = "loupe-surligne";
+      milieu.replaceWith(span);
+      span.appendChild(milieu);
+      surlignes.push(span);
+    }
+  }
 
   // Parties du discours et remarques de JMdict, en français
   const ETIQUETTES = {
@@ -290,22 +314,17 @@
     if (!lettres.length) { fermer(); return; }
     const texte = lettres.map((l) => l.c).join("");
     const premier = lettres[0].c;
-    const cle = texte + "|" + (lettres[0].noeud === position.noeud ? position.i : "");
+    // Même texte au même endroit : rien à refaire (le surlignage découpe les nœuds de texte).
+    const cle = `${texte}|${Math.round(position.rect.left + window.scrollX)},${Math.round(position.rect.top + window.scrollY)}`;
     if (!affiche || affiche.cle !== cle) {
       const mots = chercherMots(texte);
       const kanji = estKanji(premier) && typeof KANJI !== "undefined" && KANJI[premier] ? premier : null;
       if (!mots.length && !kanji) { fermer(); return; }
+      effacerSurlignage();
       affiche = { cle, mots, kanji, onglet: mots.length ? "mots" : "kanji" };
       creerFenetre();
       rendre();
-      if (surlignage) {
-        const lg = mots.length ? mots[0].lg : 1;
-        const plage = document.createRange();
-        plage.setStart(lettres[0].noeud, lettres[0].i);
-        plage.setEnd(lettres[lg - 1].noeud, lettres[lg - 1].i + 1);
-        surlignage.clear();
-        surlignage.add(plage);
-      }
+      surligner(lettres.slice(0, mots.length ? mots[0].lg : 1));
     }
     fenetre.hidden = false;
     placer(position.rect);
@@ -315,7 +334,7 @@
     clearTimeout(minuterie);
     if (fenetre) fenetre.hidden = true;
     affiche = null;
-    if (surlignage) surlignage.clear();
+    effacerSurlignage();
   }
 
   function programmerFermeture() {

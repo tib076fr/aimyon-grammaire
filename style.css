@@ -605,7 +605,7 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
 .bouton-furigana[aria-pressed="false"] { color: var(--discret); }
 
 /* ---------- Loupe kanji (fenêtre au survol d'un kanji) ---------- */
-::highlight(kanji-survole) { background-color: #ffe98a; color: #2a2622; }
+.loupe-surligne { background-color: #ffe98a; color: #2a2622; border-radius: 2px; }
 #loupe-kanji {
   position: absolute; z-index: 1000; width: min(360px, calc(100vw - 16px));
   max-height: min(70vh, 520px); overflow-y: auto;
