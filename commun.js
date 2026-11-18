@@ -95,3 +95,41 @@ window.addEventListener("storage", () => {
   appliquerFurigana(lireSansFurigana());
   appliquerTitres(lireTitresInternationaux());
 });
+
+// ---------- Accessibilité (RGAA 13.2) ----------
+// Tout lien qui s'ouvre dans un nouvel onglet le dit aux lecteurs d'écran,
+// et la flèche « ↗ », décorative, leur est masquée. Appliqué aussi au
+// contenu ajouté plus tard (fiches chargées au fil du défilement, loupe…).
+function signalerNouvellesFenetres(racine) {
+  for (const lien of racine.querySelectorAll('a[target="_blank"]:not([data-nf])')) {
+    lien.dataset.nf = "1";
+    for (const noeud of [...lien.childNodes]) {
+      if (noeud.nodeType === Node.TEXT_NODE && noeud.data.includes("↗")) {
+        const morceaux = noeud.data.split("↗");
+        const fragment = document.createDocumentFragment();
+        morceaux.forEach((texte, i) => {
+          if (texte) fragment.append(texte);
+          if (i < morceaux.length - 1) {
+            const fleche = document.createElement("span");
+            fleche.setAttribute("aria-hidden", "true");
+            fleche.textContent = "↗";
+            fragment.append(fleche);
+          }
+        });
+        noeud.replaceWith(fragment);
+      }
+    }
+    const note = document.createElement("span");
+    note.className = "lecteur-ecran";
+    note.textContent = " (nouvelle fenêtre)";
+    lien.append(note);
+  }
+}
+function surveillerNouvellesFenetres() {
+  signalerNouvellesFenetres(document);
+  new MutationObserver((changements) => {
+    for (const c of changements) for (const n of c.addedNodes) if (n.nodeType === Node.ELEMENT_NODE) signalerNouvellesFenetres(n.parentNode || n);
+  }).observe(document.body, { childList: true, subtree: true });
+}
+if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", surveillerNouvellesFenetres);
+else surveillerNouvellesFenetres();

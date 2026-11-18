@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' https://is1-ssl.mzstatic.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1917" media="(prefers-color-scheme: dark)">
+  <meta name="apple-mobile-web-app-title" content="Aimyon 文法">
+  <link rel="apple-touch-icon" href="icone.png">
+  <link rel="icon" href="icone.png">
+  <title>Accessibilité — Aimyon 文法</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="index.html" class="nav-logo">Aimyon <span lang="ja">文法</span></a>
+    <div class="nav-liens">
+      <a href="index.html">Sommaire</a>
+      <a href="chansons.html">Chansons</a>
+      <a href="fiches.html">Fiches</a>
+      <a href="revision.html">Révision</a>
+      <a href="reglages.html" class="nav-reglages" title="Réglages" aria-label="Réglages">⚙</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Déclaration d'accessibilité</h1>
+    <p>Établie le 18 novembre 2026</p>
+  </header>
+
+  <main id="contenu" tabindex="-1" class="texte-long">
+    <p>Aimyon 文法 s'engage à rendre son site accessible, en suivant le <a href="https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/" target="_blank" rel="noopener">référentiel général d'amélioration de l'accessibilité (RGAA) version 4.1.2 ↗</a>. Cette déclaration porte sur le site <span lang="en">https://tib076fr.github.io/aimyon-grammaire/</span>.</p>
+
+    <h2>État de conformité</h2>
+    <p>Le site est <strong>non conforme</strong> au RGAA 4.1.2 : aucun audit complet des 106 critères n'a encore été réalisé, et le RGAA demande de déclarer « non conforme » un site qui n'a pas été audité.</p>
+
+    <h2>Ce qui a été fait</h2>
+    <ul>
+      <li>Contrastes du texte d'au moins 4,5:1, en thème clair comme en thème sombre ; contour des interrupteurs visible même éteints.</li>
+      <li>Lien « Aller au contenu » en tête de chaque page, et focus clavier toujours visible.</li>
+      <li>Langue indiquée pour chaque passage en japonais ou en anglais ; titre de page propre à chaque fiche.</li>
+      <li>Liens qui s'ouvrent dans un nouvel onglet signalés aux lecteurs d'écran.</li>
+      <li>Boutons à deux états (furigana, loupe, surlignage, titres, filtres) annoncés comme tels (<code>aria-pressed</code>).</li>
+      <li>Messages de résultats (nombre de fiches, score, enregistrement des réglages) annoncés aux lecteurs d'écran.</li>
+      <li>Fenêtre de la loupe : se ferme avec Échap, reste ouverte quand on la survole ; utilisable au clavier en navigation au curseur (F7).</li>
+      <li>Animations désactivées si le système demande de réduire les animations ; mise en page sans défilement horizontal à 320 px de large.</li>
+      <li>Vérification automatique avec axe-core (règles WCAG 2.2 A et AA) de toutes les pages, en thème clair et sombre, sur ordinateur et sur téléphone : aucune erreur.</li>
+    </ul>
+
+    <h2>Limites connues</h2>
+    <ul>
+      <li>Pas encore d'audit manuel complet, ni de test avec un lecteur d'écran (NVDA, VoiceOver).</li>
+      <li>La loupe est pensée pour la souris et le toucher ; au clavier, elle demande la navigation au curseur.</li>
+      <li>Les extraits de chansons n'ont pas de version audio ; les liens « Écouter » mènent à des sites extérieurs dont l'accessibilité ne dépend pas de ce site.</li>
+    </ul>
+
+    <h2>Retour d'information et contact</h2>
+    <p>Si vous n'arrivez pas à accéder à un contenu ou à un service, vous pouvez le signaler en ouvrant un ticket sur <a href="https://github.com/tib076fr/aimyon-grammaire/issues" target="_blank" rel="noopener">la page GitHub du projet ↗</a>.</p>
+  </main>
+
+  <footer>
+    Aimyon 文法 — site personnel d'apprentissage du japonais.
+    <p class="pied-liens"><a href="accessibilite.html" aria-current="page">Accessibilité : non conforme</a></p>
+  </footer>
+
+  <script src="commun.js"></script>
+</body>
+</html>

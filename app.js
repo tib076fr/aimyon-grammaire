@@ -357,7 +357,7 @@ function afficherFicheSeule(titre) {
       ${suivante ? `<a href="${lienFiche(suivante)}" title="Fiche suivante" lang="ja">${echapper(suivante.titre)} ›</a>` : ""}
     </span>
     <span class="actions-fiches">
-      <button type="button" class="bouton-hasard lien-hasard" title="Ouvrir une autre fiche au hasard">🎲 Au hasard</button>
+      <button type="button" class="bouton-hasard lien-hasard" title="Ouvrir une autre fiche au hasard"><span aria-hidden="true">🎲</span> Au hasard</button>
       <button type="button" class="bouton-furigana lien-hasard" aria-pressed="true">Furigana : oui</button>
       <button type="button" class="bouton-titres lien-hasard" aria-pressed="false" title="Titres des chansons : originaux ou titre anglais officiel">Titres : originaux</button>
       <button type="button" class="bouton-loupe lien-hasard" aria-pressed="true" title="Dictionnaire au survol des mots et des kanji">Loupe : oui</button>

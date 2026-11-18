@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
   <nav class="nav" aria-label="Navigation principale">
     <a href="index.html" class="nav-logo">Aimyon <span lang="ja">文法</span></a>
     <div class="nav-liens">
@@ -30,7 +31,7 @@
     <p>Tes préférences, gardées dans ce navigateur pour toutes les pages</p>
   </header>
 
-  <main>
+  <main id="contenu" tabindex="-1">
     <section class="reglages">
       <h2>Fiches</h2>
       <label class="interrupteur">
@@ -89,6 +90,7 @@
 
   <footer>
     Les réglages sont enregistrés dans ce navigateur seulement (stockage local) ; rien n'est envoyé ailleurs.
+    <p class="pied-liens"><a href="accessibilite.html">Accessibilité : non conforme</a></p>
   </footer>
 
   <script src="commun.js"></script>

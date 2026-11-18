@@ -3,10 +3,11 @@
   --fond: #faf6ef;
   --carte: #ffffff;
   --texte: #2a2622;
-  --discret: #6f675e;
-  --accent: #d9731a;        /* orange souci (マリーゴールド) */
+  --discret: #655d54;
+  --accent: #a15513;        /* orange souci (マリーゴールド), assez foncé pour un contraste de 4,5:1 (RGAA 3.2) */
   --accent-doux: #fbe9d5;
   --bord: #e8dfd2;
+  --sur-accent: #ffffff;    /* texte posé sur la couleur d'accent */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +19,7 @@
     --accent: #f0a04b;
     --accent-doux: #3d2e1e;
     --bord: #3a3531;
+    --sur-accent: #1b1917;
   }
 }
 
@@ -69,7 +71,7 @@ header p { margin: 4px 0 0; color: var(--discret); }
 .filtres button[aria-pressed="true"] {
   background: var(--accent);
   border-color: var(--accent);
-  color: #1b1917;
+  color: var(--sur-accent);
   font-weight: 600;
 }
 
@@ -171,7 +173,7 @@ cite a, .sources a { display: inline-block; padding: 6px 0; }
   min-height: 44px;
   font: inherit;
   font-weight: 600;
-  color: #1b1917;
+  color: var(--sur-accent);
   background: var(--accent);
   border: 1px solid var(--accent);
   border-radius: 10px;
@@ -278,12 +280,12 @@ blockquote.modele cite { display: block; }
    NAVIGATION COMMUNE AUX PAGES
    ============================================================ */
 :root {
-  --n5: #2f8f57; --n5-doux: #e2f3e8;
-  --n4: #2a7bb0; --n4-doux: #e1eef8;
-  --n3: #c9681a; --n3-doux: #fbe9d5;
-  --n2: #b0436a; --n2-doux: #f8e2ea;
+  --n5: #277849; --n5-doux: #e2f3e8;
+  --n4: #266f9e; --n4-doux: #e1eef8;
+  --n3: #a35415; --n3-doux: #fbe9d5;
+  --n2: #ab4167; --n2-doux: #f8e2ea;
   --n1: #6b4fbb; --n1-doux: #e9e3f8;
-  --hj: #6f6a63; --hj-doux: #ebe7e0;
+  --hj: #6b665f; --hj-doux: #ebe7e0;
   --ombre: 0 1px 2px rgba(60, 40, 20, 0.06), 0 6px 20px rgba(60, 40, 20, 0.07);
   --ombre-forte: 0 2px 4px rgba(60, 40, 20, 0.08), 0 14px 34px rgba(60, 40, 20, 0.14);
 }
@@ -355,7 +357,8 @@ blockquote.modele cite { display: block; }
 .bouton-principal, .bouton-secondaire {
   display: inline-block; padding: 12px 22px; border-radius: 12px; font-weight: 700; text-decoration: none;
 }
-.bouton-principal { background: var(--accent); color: #1b1917; box-shadow: var(--ombre); }
+.bouton-principal { background: var(--accent); color: #fff; box-shadow: var(--ombre); }
+@media (prefers-color-scheme: dark) { .bouton-principal { color: #1b1917; } }
 .bouton-secondaire { background: var(--carte); color: var(--texte); border: 1px solid var(--bord); }
 .bouton-principal:hover, .bouton-secondaire:hover { transform: translateY(-1px); }
 
@@ -403,7 +406,8 @@ blockquote.modele cite { display: block; }
   content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%;
   background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); transition: transform 0.2s;
 }
-.interrupteur input:checked + .interrupteur-piste { background: var(--accent); }
+.interrupteur-piste { box-shadow: inset 0 0 0 2px var(--discret); } /* contour visible même éteint (RGAA 3.3) */
+.interrupteur input:checked + .interrupteur-piste { background: var(--accent); box-shadow: none; }
 .interrupteur input:checked + .interrupteur-piste::after { transform: translateX(18px); }
 .interrupteur input:focus-visible + .interrupteur-piste { outline: 2px solid var(--accent); outline-offset: 2px; }
 .lien-bouton { font: inherit; color: var(--accent); background: none; border: 0; cursor: pointer; font-weight: 600; padding: 8px 0; }
@@ -429,7 +433,7 @@ blockquote.modele cite { display: block; }
   content: ""; position: absolute; inset: 0 0 auto 0; height: 4px; background: var(--couleur);
 }
 .carte-point:hover, .carte-point:focus-visible {
-  transform: translateY(-3px); box-shadow: var(--ombre-forte); border-color: var(--couleur); outline: none;
+  transform: translateY(-3px); box-shadow: var(--ombre-forte); border-color: var(--couleur);
 }
 .carte-point.niveau-N5 { --couleur: var(--n5); --couleur-douce: var(--n5-doux); }
 .carte-point.niveau-N4 { --couleur: var(--n4); --couleur-douce: var(--n4-doux); }
@@ -489,7 +493,7 @@ blockquote.modele cite { display: block; }
 }
 
 /* Le point de grammaire et sa traduction partagent la même couleur */
-:root { --point: #d6336c; }
+:root { --point: #cd3168; }
 @media (prefers-color-scheme: dark) { :root { --point: #ff7aa2; } }
 mark { color: var(--point); border-bottom: 0; font-weight: 700; }
 .traduction mark { font-weight: 600; }
@@ -504,10 +508,10 @@ mark { color: var(--point); border-bottom: 0; font-weight: 700; }
 .construction ul { margin: 6px 0 0; padding-left: 1.2em; }
 .construction li { margin: 2px 0; font-size: 0.95rem; }
 .attention { margin: 0 0 14px; font-size: 0.95rem; }
-.attention .etiquette { background: #fde7d3; color: #b45309; }
+.attention .etiquette { background: #fde7d3; color: #a94e08; }
 @media (prefers-color-scheme: dark) { .attention .etiquette { background: #3d2a1a; color: #f0a04b; } }
 .voir-aussi { margin: 14px 0 0; font-size: 0.95rem; line-height: 1.9; }
-.voir-aussi a { color: var(--accent); text-decoration: none; }
+.voir-aussi a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
 .voir-aussi a:hover { text-decoration: underline; }
 
 /* ---- Bas de fiche : sources ---- */
@@ -527,12 +531,13 @@ mark { color: var(--point); border-bottom: 0; font-weight: 700; }
   border: 1px solid var(--bord); background: var(--fond); color: inherit;
 }
 .choix-reponse:hover:not([disabled]) { border-color: var(--accent); }
-.choix-reponse.bonne { background: #2f8a57; border-color: #2f8a57; color: #fff; }
+.choix-reponse.bonne { background: #2b7e4f; border-color: #2b7e4f; color: #fff; }
 .choix-reponse.mauvaise { background: #c2410c; border-color: #c2410c; color: #fff; }
 .choix-reponse[disabled] { cursor: default; }
 .verdict { margin: 16px 0 0; }
-.verdict-bon { color: #2f8a57; }
+.verdict-bon { color: #2b7e4f; }
 .verdict-faux { color: #c2410c; }
+@media (prefers-color-scheme: dark) { .verdict-bon { color: #6fcf94; } .verdict-faux { color: #f08a5d; } }
 .verdict a { color: inherit; font-weight: 700; }
 #suivante { border: 0; cursor: pointer; font: inherit; font-weight: 700; padding: 10px 18px; border-radius: 12px; }
 @media (max-width: 480px) { .choix { grid-template-columns: minmax(0, 1fr); } }
@@ -565,7 +570,7 @@ mark { color: var(--point); border-bottom: 0; font-weight: 700; }
   flex: none; min-width: 2em; padding: 2px 8px; border-radius: 999px; text-align: center;
   background: var(--accent-doux); color: var(--accent); font-weight: 700; font-size: 0.9rem;
 }
-.chanson-tete[aria-expanded="true"] .chanson-compte { background: var(--accent); color: #1b1917; }
+.chanson-tete[aria-expanded="true"] .chanson-compte { background: var(--accent); color: var(--sur-accent); }
 .chanson-detail { padding: 4px 14px 14px; border-top: 1px solid var(--bord); }
 .points-chanson { list-style: none; margin: 0; padding: 0; }
 .points-chanson li { padding: 10px 0; border-bottom: 1px dashed var(--bord); }
@@ -653,12 +658,12 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
   font: inherit; font-size: 0.85rem; font-weight: 700; cursor: pointer; background: none; color: var(--discret);
   border: none; border-bottom: 2px solid transparent; padding: 4px 10px 6px; margin-bottom: -1px;
 }
-.loupe-onglet[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.loupe-onglet[aria-pressed="true"] { color: var(--accent); border-bottom-color: var(--accent); }
 .loupe-onglet:disabled { opacity: 0.4; cursor: default; }
 .mot + .mot { border-top: 1px dashed var(--bord); margin-top: 10px; padding-top: 10px; }
 .mot-tete { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
 .mot-forme { font-size: 1.45rem; color: var(--accent); line-height: 1.2; }
-.mot-lecture { font-size: 1.05rem; color: #2e8b57; }
+.mot-lecture { font-size: 1.05rem; color: #2a7e4f; }
 @media (prefers-color-scheme: dark) { .mot-lecture { color: #7fd1a0; } }
 .mot-courant {
   font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--discret);
@@ -698,3 +703,28 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
 .titre-international { display: none; }
 .titres-internationaux .titre-international { display: inline; }
 .titres-internationaux .titre-original { display: none; }
+
+/* ---------- Accessibilité (RGAA) ---------- */
+/* Focus toujours visible au clavier (RGAA 10.7) */
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+main:focus { outline: none; }
+/* Lien d'évitement : visible dès qu'il reçoit le focus (RGAA 12.7) */
+.lien-evitement {
+  position: absolute; left: 8px; top: -100px; z-index: 2000; padding: 10px 16px; border-radius: 10px;
+  background: var(--texte); color: var(--fond); font-weight: 700; text-decoration: none;
+}
+.lien-evitement:focus { top: 8px; }
+/* Texte lu par les lecteurs d'écran seulement */
+.lecteur-ecran {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.pied-liens { margin-top: 8px; }
+.pied-liens a { color: inherit; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+.texte-long > * { max-width: 70ch; }
+.texte-long h2 { font-size: 1.2rem; margin: 28px 0 8px; }
+.texte-long li { margin: 6px 0; }
+.texte-long a { color: var(--accent); }

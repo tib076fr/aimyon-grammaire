@@ -32,6 +32,7 @@ Le site compte deux pages, qui fonctionnent en ouvrant simplement le fichier dan
 | `data-anecdotes.js` | Les anecdotes sourcées sur les chansons (infobulles) |
 | `data-details.js` | Construction et mises en garde de chaque fiche |
 | `data-liens.js` | Les points proches (« Voir aussi ») |
+| `accessibilite.html` | La déclaration d'accessibilité (RGAA 4.1.2), liée depuis le pied de chaque page |
 | `data-titres.js` | Le titre anglais officiel des chansons (catalogue Apple Music international), pour l'option « Titres : internationaux » |
 | `revision.html`, `revision.js` | La page de révision |
 | `chansons.html`, `chansons.js`, `data-albums.js` | La liste des chansons par album, avec les points de grammaire de chacune |

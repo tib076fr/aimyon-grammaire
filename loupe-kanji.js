@@ -271,9 +271,9 @@
     const { onglet, mots, kanji } = affiche;
     const ficheKanji = kanji && typeof KANJI !== "undefined" ? KANJI[kanji] : null;
     const onglets = `
-      <div class="loupe-onglets" role="tablist">
-        <button type="button" role="tab" class="loupe-onglet" data-onglet="mots" aria-selected="${onglet === "mots"}" ${mots.length ? "" : "disabled"}>Mots</button>
-        <button type="button" role="tab" class="loupe-onglet" data-onglet="kanji" aria-selected="${onglet === "kanji"}" ${ficheKanji ? "" : "disabled"}>Kanji${ficheKanji ? ` <span lang="ja">${echapper(kanji)}</span>` : ""}</button>
+      <div class="loupe-onglets" role="group" aria-label="Affichage">
+        <button type="button" class="loupe-onglet" data-onglet="mots" aria-pressed="${onglet === "mots"}" ${mots.length ? "" : "disabled"}>Mots</button>
+        <button type="button" class="loupe-onglet" data-onglet="kanji" aria-pressed="${onglet === "kanji"}" ${ficheKanji ? "" : "disabled"}>Kanji${ficheKanji ? ` <span lang="ja">${echapper(kanji)}</span>` : ""}</button>
       </div>`;
     const corps = onglet === "mots" ? mots.map(blocMot).join("") : blocKanji(kanji, ficheKanji);
     const sources = onglet === "mots" ? "JMdict" : "KANJIDIC2 et KRADFILE";
@@ -288,7 +288,7 @@
     if (fenetre) return fenetre;
     fenetre = document.createElement("div");
     fenetre.id = "loupe-kanji";
-    fenetre.setAttribute("role", "dialog");
+    fenetre.setAttribute("role", "region");
     fenetre.setAttribute("aria-label", "Dictionnaire");
     fenetre.hidden = true;
     fenetre.addEventListener("mouseenter", () => clearTimeout(minuterie));
@@ -384,6 +384,36 @@
   });
 
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") fermer(); });
+
+  // Clavier (RGAA 7.3) : en navigation au curseur (touche F7 dans la plupart
+  // des navigateurs) ou en sélectionnant du texte au clavier, la loupe s'ouvre
+  // sur le caractère où se trouve le curseur. Ses liens se trouvent ensuite
+  // à la fin de la page, dans l'ordre de tabulation.
+  let derniereTouche = 0;
+  let dernierPointeurA = 0;
+  let attenteSelection = null;
+  document.addEventListener("keydown", () => { derniereTouche = Date.now(); }, true);
+  document.addEventListener("pointerdown", () => { dernierPointeurA = Date.now(); }, true);
+  document.addEventListener("selectionchange", () => {
+    if (!actif || derniereTouche < dernierPointeurA) return;
+    clearTimeout(attenteSelection);
+    attenteSelection = setTimeout(() => {
+      const selection = document.getSelection();
+      if (!selection || !selection.rangeCount) return;
+      const noeud = selection.focusNode;
+      let i = selection.focusOffset;
+      if (!noeud || noeud.nodeType !== Node.TEXT_NODE) return;
+      if (!selection.isCollapsed && selection.anchorNode === noeud && selection.anchorOffset < i) i = selection.anchorOffset;
+      if (i >= noeud.data.length || !JAPONAIS.test(noeud.data[i])) return;
+      const parent = noeud.parentElement;
+      if (!parent || parent.closest("rt, input, textarea, #loupe-kanji, .sans-loupe")) return;
+      const plage = document.createRange();
+      plage.setStart(noeud, i);
+      plage.setEnd(noeud, i + 1);
+      const rect = plage.getBoundingClientRect();
+      charger().then(() => afficher({ noeud, i, rect }), () => {});
+    }, 250);
+  });
   window.addEventListener("scroll", () => { if (dernierPointeur !== "touch") fermer(); }, { passive: true });
   window.addEventListener("resize", fermer);
 

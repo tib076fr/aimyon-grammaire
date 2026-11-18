@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
   <nav class="nav" aria-label="Navigation principale">
     <a href="index.html" class="nav-logo">Aimyon <span lang="ja">文法</span></a>
     <div class="nav-liens">
@@ -30,7 +31,7 @@
     <p>Choisissez une chanson pour voir les points de grammaire qu'elle illustre.</p>
   </header>
 
-  <main class="page-chansons">
+  <main id="contenu" tabindex="-1" class="page-chansons">
     <section class="panneau-filtres" aria-label="Filtres">
       <form id="formulaire-chansons" class="recherche" role="search">
         <input type="search" id="recherche-chansons" placeholder="ハルノヒ, harunohi, marigold…" aria-label="Rechercher une chanson" autocapitalize="none" autocorrect="off" enterkeyhint="search">
@@ -62,6 +63,7 @@
 
   <footer>
     Les extraits de chansons sont les mêmes courtes citations que sur les fiches. Paroles © Aimyon et ses ayants droit ; pochettes affichées depuis Apple Music.
+    <p class="pied-liens"><a href="accessibilite.html">Accessibilité : non conforme</a></p>
   </footer>
 
   <script src="commun.js"></script>
