@@ -611,3 +611,47 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
 .controles .actions-fiches { margin-top: 10px; }
 .controles .actions-fiches .lien-hasard { margin-top: 0; }
 .bouton-furigana[aria-pressed="false"] { color: var(--discret); }
+
+/* ---------- Loupe kanji (fenêtre au survol d'un kanji) ---------- */
+::highlight(kanji-survole) { background-color: #ffe98a; color: #2a2622; }
+#loupe-kanji {
+  position: absolute; z-index: 1000; width: min(360px, calc(100vw - 16px));
+  max-height: min(70vh, 520px); overflow-y: auto;
+  background: var(--carte); color: var(--texte); border: 1px solid var(--bord);
+  border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+  padding: 14px 16px; font-size: 0.92rem; line-height: 1.5;
+}
+#loupe-kanji[hidden] { display: none !important; }
+#loupe-kanji p { margin: 6px 0; }
+.loupe-tete { display: flex; gap: 14px; align-items: center; }
+.loupe-kanji { font-size: 3rem; line-height: 1; color: var(--accent); }
+.loupe-lectures { font-size: 1.05rem; }
+.loupe-etiquette {
+  display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  color: var(--discret); border: 1px solid var(--bord); border-radius: 6px; padding: 0 5px; margin-right: 4px;
+}
+.loupe-okuri { color: var(--discret); }
+.loupe-sens { font-size: 1.05rem; font-weight: 600; }
+.loupe-note { font-size: 0.8rem; font-weight: 400; color: var(--discret); }
+.loupe-infos { color: var(--discret); }
+.loupe-liste { margin: 4px 0; padding-left: 18px; color: var(--discret); font-size: 0.85rem; }
+.loupe-elements { margin: 8px 0; }
+.loupe-element {
+  display: inline-block; min-width: 1.8em; text-align: center; font-size: 1.1rem;
+  background: var(--accent-doux); border-radius: 6px; padding: 0 4px; margin: 2px 3px 2px 0;
+}
+.loupe-refs { margin: 6px 0; font-size: 0.85rem; }
+.loupe-refs summary { cursor: pointer; color: var(--discret); }
+.loupe-refs ul { margin: 4px 0; padding-left: 18px; }
+.loupe-liens { display: flex; gap: 14px; font-weight: 600; }
+.loupe-liens a { color: var(--accent); }
+.loupe-pied {
+  display: flex; flex-wrap: wrap; gap: 6px 12px; justify-content: space-between; align-items: center;
+  border-top: 1px solid var(--bord); padding-top: 8px; font-size: 0.75rem; color: var(--discret);
+}
+.loupe-pied a { color: inherit; }
+.bouton-loupe-off {
+  font: inherit; cursor: pointer; background: none; border: 1px solid var(--bord);
+  border-radius: 999px; padding: 2px 10px; color: var(--discret);
+}
+.bouton-loupe-off:hover { border-color: var(--accent); color: var(--accent); }
