@@ -597,3 +597,10 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
 
 /* Un élément marqué « hidden » reste caché, même si une règle lui donne un display */
 [hidden] { display: none !important; }
+
+/* Anecdote sur la page Chansons */
+.chanson-anecdote { flex: none; font-size: 1.05rem; }
+.anecdote-chanson { margin: 12px 0 6px; padding: 12px 14px; border-radius: 12px; background: var(--accent-doux); }
+.anecdote-chanson p { margin: 6px 0; font-size: 0.95rem; line-height: 1.55; }
+.anecdote-chanson .etiquette { background: var(--carte); margin: 0 0 4px; }
+.anecdote-chanson .sources { font-size: 0.82rem; }

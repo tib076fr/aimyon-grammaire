@@ -8,6 +8,7 @@ const filtres = {
   albums: new Set(), // albums cochés ; vide = tous
   texte: "",
   seulementCitees: false,
+  avecAnecdote: false,
 };
 const zoneListe = document.getElementById("liste-chansons");
 const zoneVideChansons = document.getElementById("vide-chansons");
@@ -44,9 +45,26 @@ function sansAccentsMin(t) {
   return t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 }
 
+// Anecdote d'une chanson (data-anecdotes.js), s'il y en a une
+function anecdoteDe(titre) {
+  return (typeof ANECDOTES !== "undefined" && ANECDOTES[titre]) || null;
+}
+
+function blocAnecdote(titre) {
+  const a = anecdoteDe(titre);
+  if (!a) return "";
+  return `<div class="anecdote-chanson">
+      <p class="etiquette">Anecdote</p>
+      ${a.textes.map((t) => `<p>${echapper(t)}</p>`).join("")}
+      <p class="sources">Sources : ${a.sources.map((s) =>
+        `<a href="${echapper(urlSure(s.url))}" target="_blank" rel="noopener">${echapper(s.nom)} ↗</a>`).join(" · ")}</p>
+    </div>`;
+}
+
 function correspond(titre, album) {
   if (filtres.albums.size && !filtres.albums.has(album.nom)) return false;
   if (filtres.seulementCitees && !PAR_CHANSON[titre]) return false;
+  if (filtres.avecAnecdote && !anecdoteDe(titre)) return false;
   if (!filtres.texte) return true;
   const cherche = sansAccentsMin(filtres.texte);
   if (sansAccentsMin(titre).includes(cherche)) return true;
@@ -86,9 +104,11 @@ function carteChanson(titre, album) {
           <span class="chanson-titre" lang="ja">${echapper(titre)}</span>
           <span class="chanson-disque">${disque}</span>
         </span>
+        ${anecdoteDe(titre) ? `<span class="chanson-anecdote" title="Anecdote disponible" aria-label="Anecdote disponible">💬</span>` : ""}
         <span class="chanson-compte" title="Points de grammaire illustrés">${exemples.length}</span>
       </button>
       <div class="chanson-detail" id="${id}-detail" hidden>
+        ${blocAnecdote(titre)}
         ${liste}
         ${paroles}
       </div>
@@ -154,6 +174,10 @@ for (const valeur of ["Tous", ...ALBUMS.map((a) => a.nom)]) {
 }
 majAlbums();
 
+document.getElementById("filtre-anecdotes").addEventListener("change", (e) => {
+  filtres.avecAnecdote = e.target.checked;
+  afficherChansons();
+});
 document.getElementById("filtre-cites").addEventListener("change", (e) => {
   filtres.seulementCitees = e.target.checked;
   afficherChansons();
