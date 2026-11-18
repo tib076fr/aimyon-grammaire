@@ -604,3 +604,10 @@ button.bouton-secondaire { font: inherit; cursor: pointer; }
 .anecdote-chanson p { margin: 6px 0; font-size: 0.95rem; line-height: 1.55; }
 .anecdote-chanson .etiquette { background: var(--carte); margin: 0 0 4px; }
 .anecdote-chanson .sources { font-size: 0.82rem; }
+
+/* Furigana masquées : on garde la place pour que le texte ne saute pas */
+.sans-furigana rt { visibility: hidden; }
+.actions-fiches { display: flex; flex-wrap: wrap; gap: 8px; }
+.controles .actions-fiches { margin-top: 10px; }
+.controles .actions-fiches .lien-hasard { margin-top: 0; }
+.bouton-furigana[aria-pressed="false"] { color: var(--discret); }

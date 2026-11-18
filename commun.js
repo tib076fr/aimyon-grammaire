@@ -36,3 +36,25 @@ document.addEventListener("click", (evenement) => {
   const point = choix[Math.floor(Math.random() * choix.length)];
   location.href = "fiches.html?p=" + encodeURIComponent(point.titre);
 });
+
+// Furigana : affichées ou masquées (choix gardé dans ce navigateur).
+// La préférence s'applique à toutes les pages ; le bouton est sur les fiches.
+const CLE_FURIGANA = "aimyon-grammaire:sans-furigana";
+function lireSansFurigana() {
+  try { return localStorage.getItem(CLE_FURIGANA) === "1"; } catch (e) { return false; }
+}
+function appliquerFurigana(sans) {
+  document.documentElement.classList.toggle("sans-furigana", sans);
+  for (const bouton of document.querySelectorAll(".bouton-furigana")) {
+    bouton.setAttribute("aria-pressed", !sans);
+    bouton.textContent = sans ? "Furigana : non" : "Furigana : oui";
+  }
+}
+appliquerFurigana(lireSansFurigana());
+document.addEventListener("DOMContentLoaded", () => appliquerFurigana(lireSansFurigana()));
+document.addEventListener("click", (evenement) => {
+  if (!evenement.target.closest(".bouton-furigana")) return;
+  const sans = !document.documentElement.classList.contains("sans-furigana");
+  try { localStorage.setItem(CLE_FURIGANA, sans ? "1" : "0"); } catch (e) { /* tant pis : choix pour cette visite */ }
+  appliquerFurigana(sans);
+});

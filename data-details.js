@@ -221,13 +221,6 @@ const DETAILS = {
    "Verbe[radical] + なさんな"
   ]
  },
- "〜とく / 〜たる / 〜てまう (Kansai)": {
-  "construction": [
-   "Verbe[] + とく",
-   "Verbe[] + たる",
-   "Verbe[] + てまう"
-  ]
- },
  "〜わ〜わ": {
   "construction": [
    "Verbe[る] + わ + Verbe[る] + わ"
@@ -301,8 +294,7 @@ const DETAILS = {
  "〜ている": {
   "construction": [
    "Verbe[て] + いる",
-   "Verbe[て] + る",
-   "Verbe[] + とる"
+   "Verbe[て] + る"
   ]
  },
  "〜切る": {
@@ -388,9 +380,9 @@ const DETAILS = {
  "〜びる": {
   "construction": [
    "Nom + びる",
-   "Adjectif en い[] + びる",
+   "Adjectif en い (sans le い final) + びる",
    "Nom + びた + Nom",
-   "Adjectif en い[] + びた + Nom"
+   "Adjectif en い (sans le い final) + びた + Nom"
   ]
  },
  "〜が気になる": {
@@ -455,7 +447,7 @@ const DETAILS = {
  "〜すぎる": {
   "construction": [
    "Verbe[radical] + すぎる",
-   "Adjectif en い[] + すぎる",
+   "Adjectif en い (sans le い final) + すぎる",
    "Adjectif en な + すぎる",
    "Verbe[base en ない] + な + すぎる"
   ]
@@ -1395,8 +1387,7 @@ const DETAILS = {
  },
  "〜てはかなわない": {
   "construction": [
-   "Verbe[られる][]＋ては＋かなわない",
-   "Adjectif en い[]＋くては＋かなわない",
+   "Adjectif en い (sans le い final)＋くては＋かなわない",
    "Adjectif en な＋では＋かなわない",
    "Nom＋では＋かなわない ちゃじゃ"
   ],
@@ -1434,7 +1425,7 @@ const DETAILS = {
  "〜げ": {
   "construction": [
    "Verbe[radical] + げ + に",
-   "Adjectif en い[] + げ + に",
+   "Adjectif en い (sans le い final) + げ + に",
    "Adjectif en な + げ + に な + Nom"
   ]
  },
@@ -1478,7 +1469,7 @@ const DETAILS = {
  },
  "〜さ": {
   "construction": [
-   "Adjectif en い[] + さ",
+   "Adjectif en い (sans le い final) + さ",
    "Adjectif en な + さ"
   ]
  },
@@ -1754,7 +1745,7 @@ const DETAILS = {
  },
  "〜かれ〜かれ": {
   "construction": [
-   "Adjectif en い[] + かれ + Adjectif en い[](Antonyme) + かれ"
+   "Adjectif en い (sans le い final) + かれ + Adjectif en い (sans le い final)(Antonyme) + かれ"
   ],
   "attention": "Avec 良い / 悪い, on dit 良かれ悪しかれ (« en bien ou en mal »), forme figée."
  },
@@ -2661,8 +2652,7 @@ const DETAILS = {
  },
  "〜ておく": {
   "construction": [
-   "Verbe[て] + おく",
-   "Verbe[] + とく"
+   "Verbe[て] + おく"
   ]
  },
  "〜ゆえに": {
@@ -2856,8 +2846,7 @@ const DETAILS = {
  },
  "〜へん (Kansai)": {
   "construction": [
-   "Verbe[base en ない] + へん",
-   "Verbe[] + へんかった"
+   "Verbe[base en ない] + へん"
   ],
   "attention": "Remplace la négation des verbes, pas celle des adjectifs en い. ある devient あらへん."
  },
@@ -3156,7 +3145,7 @@ const DETAILS = {
  },
  "〜ば": {
   "construction": [
-   "Adjectif en い[] + ければ",
+   "Adjectif en い (sans le い final) + ければ",
    "Adjectif en な + なら",
    "Nom + なら",
    "[る1]Verbe ￫ 見 + れば"
@@ -3288,7 +3277,7 @@ const DETAILS = {
  },
  "〜くて / 〜で (relier des adjectifs)": {
   "construction": [
-   "Adjectif en い[] + く + て",
+   "Adjectif en い (sans le い final) + く + て",
    "おもしろ + く + て",
    "新し + く + て",
    "Adjectif en な + で"
@@ -3640,7 +3629,7 @@ const DETAILS = {
  "〜っぽい": {
   "construction": [
    "Verbe[radical] + っぽい",
-   "Adjectif en い[] + っぽい",
+   "Adjectif en い (sans le い final) + っぽい",
    "Adjectif en な + っぽい",
    "Nom + っぽい"
   ]
@@ -3780,7 +3769,6 @@ const DETAILS = {
  },
  "〜てもいい": {
   "construction": [
-   "Adjectif en い [] + く + ても + いい",
    "Adjectif en な + でも + いい",
    "Nom + でも + いい",
    "Verbe[て] + も + いい"
@@ -4278,7 +4266,7 @@ const DETAILS = {
  "〜そうだ (apparence)": {
   "construction": [
    "Verbe[radical] + そう + だ",
-   "Adjectif en い[] + そう + だ",
+   "Adjectif en い (sans le い final) + そう + だ",
    "Adjectif en な + そう + だ",
    "Verbe[base en ない] + な + そう + だ"
   ]
@@ -4352,7 +4340,7 @@ const DETAILS = {
  "〜なくて": {
   "construction": [
    "Verbe[base en ない] + な + くて",
-   "Adjectif en い[] + くな + くて",
+   "Adjectif en い (sans le い final) + くな + くて",
    "Adjectif en な + ではbase en ない + な + くて",
    "Nom + ではbase en ない + な + くて"
   ],
@@ -4427,7 +4415,7 @@ const DETAILS = {
  },
  "〜がる / 〜たがる": {
   "construction": [
-   "Adjectif en い[] + がる",
+   "Adjectif en い (sans le い final) + がる",
    "Adjectif en な + がる",
    "Verbe[た] + がる"
   ]
@@ -4443,7 +4431,6 @@ const DETAILS = {
  "〜方": {
   "construction": [
    "Verbe[radical] + 方",
-   "[]Verbe + の + 仕方",
    "Nom + の + Verbe[radical] + 方",
    "飲み + 方"
   ]
@@ -4530,7 +4517,7 @@ const DETAILS = {
  },
  "〜かろう": {
   "construction": [
-   "Adjectif en い[] + かろう"
+   "Adjectif en い (sans le い final) + かろう"
   ]
  },
  "〜といおうか〜といおうか": {
@@ -4882,7 +4869,7 @@ const DETAILS = {
  "〜に見える": {
   "construction": [
    "Verbe + よう + に + みえる",
-   "Adjectif en い[] + そうに + みえる",
+   "Adjectif en い (sans le い final) + そうに + みえる",
    "Adjectif en な + に + みえる",
    "Nom + （の + よう） + に + みえる"
   ],
@@ -4972,7 +4959,7 @@ const DETAILS = {
  "〜み": {
   "construction": [
    "Adjectif en な + み",
-   "Adjectif en い[] + み"
+   "Adjectif en い (sans le い final) + み"
   ],
   "attention": "Ne mesure pas un degré : désigne une qualité que l'on perçoit (甘み, 深み). Ne se forme qu'avec certains adjectifs."
  },
@@ -5061,8 +5048,7 @@ const DETAILS = {
  },
  "〜てしまう": {
   "construction": [
-   "Verbe[て] + しまう",
-   "Verbe[] + ちゃう"
+   "Verbe[て] + しまう"
   ]
  },
  "〜てやる": {
@@ -5128,8 +5114,7 @@ const DETAILS = {
  },
  "〜てる / 〜とる (Kansai)": {
   "construction": [
-   "Verbe[て] + る",
-   "Verbe[] + とる"
+   "Verbe[て] + る"
   ],
   "attention": "Comme て devient で (読んで), とる devient どる (読んどる)."
  },
@@ -5143,13 +5128,12 @@ const DETAILS = {
   "construction": [
    "Verbe[て] + は",
    "Adjectif en い[て] + は",
-   "Adjectif en な + では",
-   "Nom + では Verbe[] + ちゃ"
+   "Adjectif en な + では"
   ]
  },
  "Forme conjonctive (連用形)": {
   "construction": [
-   "Adjectif en い[] + Proposition"
+   "Adjectif en い (sans le い final) + Proposition"
   ],
   "attention": "Surtout à l'écrit soutenu ; à l'oral, on emploie la forme en て."
  },
